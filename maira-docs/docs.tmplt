@@ -1,0 +1,30 @@
+# {{ .Name }}
+
+{{ .Summary }}
+
+## Description
+
+{{ .Description }}
+
+## Synopsis
+
+`{{ .Synopsis }}`
+
+## Arguments
+
+{{ range $arg := .Arguments }}
+#### `{{ $arg.Name }}` - ({{ $arg.Type }})
+
+&nbsp;&nbsp;&nbsp;&nbsp; {{ $arg.Description }}  
+
+&nbsp;&nbsp;&nbsp;&nbsp; Example: {{ range $index, $example := getExample $arg }}
+{{- if $index }} , {{ end }} `{{ $example }}`
+{{ end }}
+&nbsp;&nbsp;&nbsp;&nbsp; Default: `{{ getDefault $arg }}`
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: _{{ getAttributes $arg }}_  
+
+{{ end }}
+
+## Examples
+
+{{ .GetExamples }}
