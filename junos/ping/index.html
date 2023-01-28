@@ -5071,6 +5071,19 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>!junos ping &quot;10.100.14.2&quot; --count 3
+</code></pre>
+<p>Output: </p>
+<pre><code>PING 10.100.14.2 (10.100.14.2): 56 data bytes
+64 bytes from 10.100.14.2: icmp_seq=0 ttl=64 time=9.320 ms
+64 bytes from 10.100.14.2: icmp_seq=1 ttl=64 time=1.907 ms
+64 bytes from 10.100.14.2: icmp_seq=2 ttl=64 time=1.470 ms
+
+--- 10.100.14.2 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 1.470/4.232/9.320/3.602 ms
+</code></pre>
+<p>Input: </p>
 <pre><code>x = !junos ping &quot;10.100.14.2&quot; --count 3
 </code></pre>
 <p>Output: </p>

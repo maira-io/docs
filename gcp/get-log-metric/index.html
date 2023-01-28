@@ -5031,6 +5031,193 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x=! gcp get-log-metric --site &quot;localhost:8081&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;metric&quot;: [
+    {
+      &quot;name&quot;: &quot;testMetric1&quot;,
+      &quot;filter&quot;: &quot;severity=\&quot;INFO\&quot;&quot;,
+      &quot;metricDescriptor&quot;: {
+        &quot;name&quot;: &quot;projects/macro-context-293714/metricDescriptors/logging.googleapis.com/user/testMetric1&quot;,
+        &quot;type&quot;: &quot;logging.googleapis.com/user/testMetric1&quot;,
+        &quot;metricKind&quot;: &quot;DELTA&quot;,
+        &quot;valueType&quot;: &quot;INT64&quot;,
+        &quot;unit&quot;: &quot;1&quot;
+      },
+      &quot;createTime&quot;: &quot;2022-10-12T10:48:23.869119110Z&quot;,
+      &quot;updateTime&quot;: &quot;2022-10-12T10:48:23.869119110Z&quot;
+    },
+    {
+      &quot;name&quot;: &quot;testMetric2&quot;,
+      &quot;description&quot;: &quot;testDesc2&quot;,
+      &quot;filter&quot;: &quot;severity=\&quot;INFO\&quot;&quot;,
+      &quot;metricDescriptor&quot;: {
+        &quot;name&quot;: &quot;projects/macro-context-293714/metricDescriptors/logging.googleapis.com/user/testMetric2&quot;,
+        &quot;type&quot;: &quot;logging.googleapis.com/user/testMetric2&quot;,
+        &quot;metricKind&quot;: &quot;DELTA&quot;,
+        &quot;valueType&quot;: &quot;INT64&quot;,
+        &quot;unit&quot;: &quot;1&quot;,
+        &quot;description&quot;: &quot;testDesc2&quot;
+      },
+      &quot;createTime&quot;: &quot;2022-10-12T13:33:38.884929622Z&quot;,
+      &quot;updateTime&quot;: &quot;2022-10-12T14:00:28.715224167Z&quot;
+    },
+    {
+      &quot;name&quot;: &quot;testMetric3&quot;,
+      &quot;description&quot;: &quot;testDesc2&quot;,
+      &quot;filter&quot;: &quot;severity=\&quot;INFO\&quot;&quot;,
+      &quot;metricDescriptor&quot;: {
+        &quot;name&quot;: &quot;projects/macro-context-293714/metricDescriptors/logging.googleapis.com/user/testMetric3&quot;,
+        &quot;type&quot;: &quot;logging.googleapis.com/user/testMetric3&quot;,
+        &quot;metricKind&quot;: &quot;DELTA&quot;,
+        &quot;valueType&quot;: &quot;INT64&quot;,
+        &quot;unit&quot;: &quot;1&quot;,
+        &quot;description&quot;: &quot;testDesc2&quot;
+      },
+      &quot;createTime&quot;: &quot;2022-10-14T08:33:18.198693597Z&quot;,
+      &quot;updateTime&quot;: &quot;2022-10-14T08:35:44.706415294Z&quot;
+    }
+  ]
+}
+</code></pre>
+<p>Input: </p>
+<pre><code>! gcp get-log-metric --site &quot;localhost:8081&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>NAME            DESCRIPTION     FILTER                                                  TYPE                                    
+testMetric1     testDesc2       severity=&quot;INFO&quot;                                         logging.googleapis.com/user/testMetric1
+testMetric2     testDesc2       severity=&quot;INFO&quot;                                         logging.googleapis.com/user/testMetric2
+testMetric3     testDesc        severity=&quot;INFO&quot;                                         logging.googleapis.com/user/testMetric3
+testMetric4     testDesc        protoPayload.status &gt;= 400 AND sample(insertId, 0.1)    logging.googleapis.com/user/testMetric4
+testMetric5     -               protoPayload.status &gt;= 400 AND sample(insertId, 0.1)    logging.googleapis.com/user/testMetric5
+</code></pre>
+<p>Input: </p>
+<pre><code>! gcp get-log-metric --site &quot;localhost:8081&quot; &quot;testMetric1&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>NAME            DESCRIPTION     FILTER                                                  TYPE                                    
+testMetric1     testDesc2       severity=&quot;INFO&quot;                                         logging.googleapis.com/user/testMetric1
+</code></pre>
+<p>Input: </p>
+<pre><code>! gcp create-bucket --site &quot;localhost:8081&quot; &quot;prabhsimran-bucket-3&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>Bucket prabhsimran-bucket-3 is created
+</code></pre>
+<p>Input: </p>
+<pre><code>x=! gcp get-buckets --site &quot;localhost:8081&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;buckets&quot;: [
+    {
+      &quot;name&quot;: &quot;prabhsimran-bucket-1&quot;,
+      &quot;created&quot;: &quot;2022-10-28T06:35:42.135Z&quot;,
+      &quot;labels&quot;: {
+        &quot;owner&quot;: &quot;prabhsimran&quot;,
+        &quot;use&quot;: &quot;testing&quot;
+      },
+      &quot;location&quot;: &quot;US&quot;,
+      &quot;etag&quot;: &quot;CAE=&quot;
+    },
+    {
+      &quot;name&quot;: &quot;prabhsimran-bucket-2&quot;,
+      &quot;created&quot;: &quot;2022-10-28T06:36:14.403Z&quot;,
+      &quot;location&quot;: &quot;US&quot;,
+      &quot;etag&quot;: &quot;CAE=&quot;
+    }
+  ]
+}
+</code></pre>
+<p>Input: </p>
+<pre><code>! gcp get-buckets --site &quot;localhost:8081&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>NAME                    CREATED                         LOCATION        ETAG 
+prabhsimran-bucket-1    2022-10-28T06:35:42.135Z        US              CAE=
+</code></pre>
+<p>Input: </p>
+<pre><code>! gcp delete-bucket --site &quot;localhost:8081&quot; &quot;prabhsimran-bucket-3&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>Bucket prabhsimran-bucket-3 is deleted
+</code></pre>
+<p>Input: </p>
+<pre><code>! gcp create-object --site &quot;localhost:8081&quot; &quot;testobject-2&quot; --bucket &quot;prabhsimran-bucket-2&quot; --body &quot;test-body&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>Object testobject-2 is created
+</code></pre>
+<p>Input: </p>
+<pre><code>! gcp get-object --site &quot;localhost:8081&quot; &quot;testobject-2&quot; --bucket &quot;prabhsimran-bucket-2&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>test-body
+</code></pre>
+<p>Input: </p>
+<pre><code>x=! gcp list-objects --site &quot;localhost:8081&quot; --bucket &quot;prabhsimran-bucket-1&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;objects&quot;: [
+    {
+      &quot;name&quot;: &quot;testobject-1&quot;,
+      &quot;created&quot;: &quot;2022-10-28T06:56:02.183Z&quot;,
+      &quot;updated&quot;: &quot;2022-10-28T06:56:02.183Z&quot;,
+      &quot;deleted&quot;: &quot;0001-01-01T00:00:00Z&quot;,
+      &quot;etag&quot;: &quot;CLTs54GsgvsCEAE=&quot;,
+      &quot;bucket&quot;: &quot;prabhsimran-bucket-1&quot;,
+      &quot;size&quot;: &quot;9&quot;,
+      &quot;contentType&quot;: &quot;text/plain; charset=utf-8&quot;
+    }
+  ]
+}
+</code></pre>
+<p>Input: </p>
+<pre><code>! gcp list-objects --site &quot;localhost:8081&quot; --bucket &quot;prabhsimran-bucket-1&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>NAME            BUCKET                  SIZE    CREATED                         UPDATED                         DELETED              
+testobject-1    prabhsimran-bucket-1    9       2022-10-28T06:56:02.183Z        2022-10-28T06:56:02.183Z        0001-01-01T00:00:00Z
+</code></pre>
+<p>Input: </p>
+<pre><code>x=! gcp get-instances --site &quot;localhost:8081&quot; --zone &quot;us-central1-a&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;instances&quot;: [
+    {
+      &quot;name&quot;: &quot;test-instance-1&quot;,
+      &quot;created&quot;: &quot;2022-10-28T00:26:21.770-07:00&quot;,
+      &quot;status&quot;: &quot;RUNNING&quot;,
+      &quot;zone&quot;: &quot;https://www.googleapis.com/compute/v1/projects/prabhsimran-project/zones/us-central1-a&quot;,
+      &quot;machineType&quot;: &quot;https://www.googleapis.com/compute/v1/projects/prabhsimran-project/zones/us-central1-a/machineTypes/f1-micro&quot;
+    }
+  ]
+}
+</code></pre>
+<p>Input: </p>
+<pre><code>! gcp get-instances --site &quot;localhost:8081&quot; --zone &quot;us-central1-a&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>NAME            CREATED                         STATUS          ZONE                                                                                    MACHINE TYPE                                                                                                 
+test-instance-1 2022-10-28T00:26:21.770-07:00   TERMINATED      https://www.googleapis.com/compute/v1/projects/prabhsimran-project/zones/us-central1-a  https://www.googleapis.com/compute/v1/projects/prabhsimran-project/zones/us-central1-a/machineTypes/f1-micro
+</code></pre>
+<p>Input: </p>
+<pre><code>! gcp stop-instance --site &quot;localhost:8081&quot; &quot;test-instance-1&quot; --zone &quot;us-central1-a&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>Instance test-instance-1 is stopped
+</code></pre>
+<p>Input: </p>
+<pre><code>! gcp start-instance --site &quot;localhost:8081&quot; &quot;test-instance-1&quot; --zone &quot;us-central1-a&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>Instance test-instance-1 is started
+</code></pre>
+<p>Input: </p>
 <pre><code>! gcp delete-instance --site &quot;localhost:8081&quot; &quot;test-instance-1&quot; --zone &quot;us-central1-a&quot;
 </code></pre>
 <p>Output: </p>

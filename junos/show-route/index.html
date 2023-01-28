@@ -5051,6 +5051,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>!junos show-route &quot;10.100.14.2&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>inet.0: 21 destinations, 21 routes (21 active, 0 holddown, 0 hidden)
++ = Active Route, - = Last Active, * = Both
+
+10.100.14.0/24     *[Direct/0] 04:21:52
+                    &amp;gt;  via ge-0/0/2.0
+</code></pre>
+<p>Input: </p>
 <pre><code>x = !junos show-route &quot;10.100.14.2&quot;
 </code></pre>
 <p>Output: </p>

@@ -5051,6 +5051,44 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x = ! appd get-server --site &quot;localhost:8081&quot; 418
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;id&quot;: 418,
+  &quot;version&quot;: 0,
+  &quot;name&quot;: &quot;test&quot;,
+  &quot;nameUnique&quot;: true,
+  &quot;nodeId&quot;: 932032,
+  &quot;configId&quot;: 562,
+  &quot;role&quot;: &quot;STANDALONE&quot;,
+  &quot;type&quot;: &quot;MONGO&quot;,
+  &quot;backendIds&quot;: [],
+  &quot;internalName&quot;: &quot;dbmon:562&quot;,
+  &quot;createdOn&quot;: 1664451698000,
+  &quot;modifiedOn&quot;: 1664524182000,
+  &quot;host&quot;: &quot;LOCALHOST&quot;,
+  &quot;port&quot;: 27017,
+  &quot;ipAddress&quot;: &quot;192.168.49.1|172.18.0.1|172.17.0.1|192.168.5.159&quot;,
+  &quot;simMachineId&quot;: 0,
+  &quot;cpuCores&quot;: 4,
+  &quot;uniqueHostId&quot;: &quot;beehyv-Default-string&quot;,
+  &quot;metadataProps&quot;: [
+    {
+      &quot;key&quot;: &quot;version&quot;,
+      &quot;value&quot;: &quot;4.4&quot;
+    }
+  ]
+}
+</code></pre>
+<p>Input: </p>
+<pre><code>! appd get-server --site &quot;localhost:8081&quot; 418
+</code></pre>
+<p>Output: </p>
+<pre><code>ID  VERSION NAME    CONFIG ID   ROLE        TYPE    CREATED ON              MODIFIED ON             HOST        PORT    IP ADDRESS                                       
+418       0 test          562   STANDALONE  MONGO   2022-09-29T11:41:38Z    2022-09-30T07:49:42Z    LOCALHOST   27017   192.168.49.1|172.18.0.1|172.17.0.1|192.168.5.159
+</code></pre>
+<p>Input: </p>
 <pre><code>! appd get-server --site &quot;localhost:8081&quot;
 </code></pre>
 <p>Output: </p>

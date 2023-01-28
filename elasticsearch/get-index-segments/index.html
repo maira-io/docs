@@ -5111,6 +5111,117 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>! elasticsearch get-index-segments --site &quot;localhost&quot; --cluster &quot;elastic-1&quot; &quot;students&quot; --verbose --raw 
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;_shards&quot;: {
+    &quot;total&quot;: 2,
+    &quot;successful&quot;: 1,
+    &quot;failed&quot;: 0
+  },
+  &quot;indices&quot;: {
+    &quot;students&quot;: {
+      &quot;shards&quot;: {
+        &quot;0&quot;: [
+          {
+            &quot;routing&quot;: {
+              &quot;state&quot;: &quot;STARTED&quot;,
+              &quot;primary&quot;: true,
+              &quot;node&quot;: &quot;qQmwEJbkTdW-ixce6PgTFQ&quot;
+            },
+            &quot;num_committed_segments&quot;: 1,
+            &quot;num_search_segments&quot;: 1,
+            &quot;segments&quot;: {
+              &quot;_0&quot;: {
+                &quot;generation&quot;: 0,
+                &quot;num_docs&quot;: 4,
+                &quot;deleted_docs&quot;: 0,
+                &quot;size_in_bytes&quot;: 4165,
+                &quot;memory_in_bytes&quot;: 1188,
+                &quot;committed&quot;: true,
+                &quot;search&quot;: true,
+                &quot;version&quot;: &quot;8.9.0&quot;,
+                &quot;compound&quot;: true,
+                &quot;ram_tree&quot;: [
+                  {
+                    &quot;description&quot;: &quot;postings [PerFieldPostings(segment=_0 formats=1)]&quot;,
+                    &quot;size_in_bytes&quot;: 512,
+                    &quot;children&quot;: [
+                      {
+                        &quot;description&quot;: &quot;format 'Lucene84_0' [BlockTreeTermsReader(fields=2,delegate=Lucene84PostingsReader(positions=true,payloads=false))]&quot;,
+                        &quot;size_in_bytes&quot;: 464,
+                        &quot;children&quot;: [
+                          {
+                            &quot;description&quot;: &quot;field '_id' [BlockTreeTerms(seg=_0 terms=4,postings=4,positions=4,docs=4)]&quot;,
+                            &quot;size_in_bytes&quot;: 216,
+                            &quot;children&quot;: [
+                              {
+                                &quot;description&quot;: &quot;term index [FST(input=BYTE1,output=ByteSequenceOutputs]&quot;,
+                                &quot;size_in_bytes&quot;: 72
+                              }
+                            ]
+                          },
+                          {
+                            &quot;description&quot;: &quot;field 'name' [BlockTreeTerms(seg=_0 terms=5,postings=6,positions=6,docs=4)]&quot;,
+                            &quot;size_in_bytes&quot;: 216,
+                            &quot;children&quot;: [
+                              {
+                                &quot;description&quot;: &quot;term index [FST(input=BYTE1,output=ByteSequenceOutputs]&quot;,
+                                &quot;size_in_bytes&quot;: 72
+                              }
+                            ]
+                          },
+                          {
+                            &quot;description&quot;: &quot;delegate [Lucene84PostingsReader(positions=true,payloads=false)]&quot;,
+                            &quot;size_in_bytes&quot;: 32
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    &quot;description&quot;: &quot;norms [Lucene80NormsProducer(fields=1)]&quot;,
+                    &quot;size_in_bytes&quot;: 64
+                  },
+                  {
+                    &quot;description&quot;: &quot;docvalues [PerFieldDocValues(formats=1)]&quot;,
+                    &quot;size_in_bytes&quot;: 124,
+                    &quot;children&quot;: [
+                      {
+                        &quot;description&quot;: &quot;format 'Lucene80_0' [org.apache.lucene.codecs.lucene80.Lucene80DocValuesProducer@378ad8c7]&quot;,
+                        &quot;size_in_bytes&quot;: 104
+                      }
+                    ]
+                  },
+                  {
+                    &quot;description&quot;: &quot;stored fields [CompressingStoredFieldsReader(mode=BEST_SPEED,chunksize=614400)]&quot;,
+                    &quot;size_in_bytes&quot;: 488,
+                    &quot;children&quot;: [
+                      {
+                        &quot;description&quot;: &quot;stored field index [org.apache.lucene.codecs.compressing.FieldsIndexReader@6ed117fe]&quot;,
+                        &quot;size_in_bytes&quot;: 488
+                      }
+                    ]
+                  },
+                  {
+                    &quot;description&quot;: &quot;points [org.apache.lucene.codecs.lucene86.Lucene86PointsReader@55fd9d38]&quot;,
+                    &quot;size_in_bytes&quot;: 0
+                  }
+                ],
+                &quot;attributes&quot;: {
+                  &quot;Lucene87StoredFieldsFormat.mode&quot;: &quot;BEST_SPEED&quot;
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+</code></pre>
+<p>Input: </p>
 <pre><code>! elasticsearch get-index-segments --site &quot;localhost&quot;
 </code></pre>
 <p>Output: </p>

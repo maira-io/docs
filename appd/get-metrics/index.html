@@ -5074,6 +5074,49 @@
 <pre><code>x = ! appd get-metrics --site &quot;localhost:8081&quot; &quot;bookinfo&quot;
 </code></pre>
 <p>Output: </p>
+<pre><code>[
+  {
+    &quot;name&quot;: &quot;Overall Application Performance&quot;,
+    &quot;type&quot;: &quot;folder&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Business Transaction Performance&quot;,
+    &quot;type&quot;: &quot;folder&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Information Points&quot;,
+    &quot;type&quot;: &quot;folder&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Application Infrastructure Performance&quot;,
+    &quot;type&quot;: &quot;folder&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Errors&quot;,
+    &quot;type&quot;: &quot;folder&quot;
+  },
+  {
+    &quot;name&quot;: &quot;End User Experience&quot;,
+    &quot;type&quot;: &quot;folder&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Mobile&quot;,
+    &quot;type&quot;: &quot;folder&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Backends&quot;,
+    &quot;type&quot;: &quot;folder&quot;
+  },
+  {
+    &quot;name&quot;: &quot;Service Endpoints&quot;,
+    &quot;type&quot;: &quot;folder&quot;
+  }
+]
+</code></pre>
+<p>Input: </p>
+<pre><code>x = ! appd get-metrics --site &quot;localhost:8081&quot; &quot;bookinfo&quot;
+</code></pre>
+<p>Output: </p>
 <pre><code>TYPE    NAME                                   
 folder  Overall Application Performance         
 folder  Business Transaction Performance        

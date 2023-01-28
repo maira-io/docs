@@ -5091,6 +5091,61 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>! elasticsearch get-index-settings --site &quot;localhost&quot; --cluster &quot;elastic-1&quot; &quot;my_source_index&quot; &quot;test&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;test&quot;: {
+    &quot;settings&quot;: {
+      &quot;index&quot;: {
+        &quot;routing&quot;: {
+          &quot;allocation&quot;: {
+            &quot;include&quot;: {
+              &quot;_tier_preference&quot;: &quot;data_content&quot;
+            }
+          }
+        },
+        &quot;number_of_shards&quot;: &quot;1&quot;,
+        &quot;provided_name&quot;: &quot;test&quot;,
+        &quot;creation_date&quot;: &quot;1633061676252&quot;,
+        &quot;number_of_replicas&quot;: &quot;1&quot;,
+        &quot;uuid&quot;: &quot;vpk0XgasRcGGTfpvF7R-SQ&quot;,
+        &quot;version&quot;: {
+          &quot;created&quot;: &quot;7140299&quot;
+        }
+      }
+    }
+  },
+  &quot;my_source_index&quot;: {
+    &quot;settings&quot;: {
+      &quot;index&quot;: {
+        &quot;routing&quot;: {
+          &quot;allocation&quot;: {
+            &quot;include&quot;: {
+              &quot;_tier_preference&quot;: &quot;data_content&quot;
+            },
+            &quot;require&quot;: {
+              &quot;_name&quot;: &quot;shrink_node_name&quot;
+            }
+          }
+        },
+        &quot;number_of_shards&quot;: &quot;4&quot;,
+        &quot;blocks&quot;: {
+          &quot;write&quot;: &quot;true&quot;
+        },
+        &quot;provided_name&quot;: &quot;my_source_index&quot;,
+        &quot;creation_date&quot;: &quot;1632834248780&quot;,
+        &quot;number_of_replicas&quot;: &quot;0&quot;,
+        &quot;uuid&quot;: &quot;tkkO4G2UQ_KDXfOUgZVuGQ&quot;,
+        &quot;version&quot;: {
+          &quot;created&quot;: &quot;7140299&quot;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<p>Input: </p>
 <pre><code>! elasticsearch get-index-settings --site &quot;localhost&quot; --cluster &quot;elastic-1&quot; &quot;my_source_index&quot; --settings &quot;index.number_of_shards&quot; --settings &quot;index.number_of_replicas&quot;
 </code></pre>
 <p>Output: </p>

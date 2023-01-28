@@ -5051,6 +5051,19 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>!jira list-issue-types
+</code></pre>
+<p>Output: </p>
+<pre><code>ID      NAME        DESCRIPTION                                                                 SCOPE 
+10006   Sub-task    A small piece of work that's part of a larger task.                         -       
+10004   Improvement An improvement or enhancement to an existing feature or task.               -       
+10005   Task        A small, distinct piece of work.                                            -       
+10007   New Feature A new feature of the product, which has yet to be developed.                -       
+10008   Bug         A problem or error.                                                         -       
+10009   Story       Created by Jira Agile - do not edit or delete. Issue type for a user story. -       
+10000   Epic        A collection of related bugs, stories, and tasks.                           -       
+</code></pre>
+<p>Input: </p>
 <pre><code>!jira list-issue-types --project &quot;10002&quot;
 </code></pre>
 <p>Output: </p>

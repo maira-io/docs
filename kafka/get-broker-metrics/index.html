@@ -5071,6 +5071,133 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x = ! kafka get-broker-metrics --site &quot;localhost&quot; --broker 1 --beans &quot;kafka.server&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;brokerMetrics&quot;: [
+    {
+      &quot;brokerId&quot;: 1,
+      &quot;beanMetrics&quot;: [
+        {
+          &quot;bean&quot;: &quot;kafka.server&quot;,
+          &quot;mbeanMetrics&quot;: [
+            {
+              &quot;mbean&quot;: &quot;kafka.server:type=KafkaServer,name=linux-disk-read-bytes&quot;,
+              &quot;metrics&quot;: [
+                {
+                  &quot;attribute&quot;: &quot;linux-disk-read-bytes&quot;,
+                  &quot;value&quot;: 22417408
+                }
+              ]
+            },
+            {
+              &quot;mbean&quot;: &quot;kafka.server:type=KafkaServer,name=linux-disk-write-bytes&quot;,
+              &quot;metrics&quot;: [
+                {
+                  &quot;attribute&quot;: &quot;linux-disk-write-bytes&quot;,
+                  &quot;value&quot;: 11833344
+                }
+              ]
+            },
+            {
+              &quot;mbean&quot;: &quot;kafka.server:type=ReplicaManager,name=*&quot;,
+              &quot;metrics&quot;: [
+                {
+                  &quot;attribute&quot;: &quot;PartitionCount&quot;,
+                  &quot;value&quot;: 3
+                },
+                {
+                  &quot;attribute&quot;: &quot;LeaderCount&quot;,
+                  &quot;value&quot;: 2
+                },
+                {
+                  &quot;attribute&quot;: &quot;AtMinIsrPartitionCount&quot;,
+                  &quot;value&quot;: 1
+                },
+                {
+                  &quot;attribute&quot;: &quot;IsrExpands&quot;,
+                  &quot;value&quot;: 0.0001234603991556604
+                }
+              ]
+            },
+            {
+              &quot;mbean&quot;: &quot;kafka.server:type=DelayedOperationPurgatory,name=PurgatorySize,delayedOperation=Produce&quot;,
+              &quot;metrics&quot;: []
+            },
+            {
+              &quot;mbean&quot;: &quot;kafka.server:type=DelayedOperationPurgatory,name=PurgatorySize,delayedOperation=Fetch&quot;,
+              &quot;metrics&quot;: [
+                {
+                  &quot;attribute&quot;: &quot;PurgatorySize&quot;,
+                  &quot;value&quot;: 121
+                }
+              ]
+            },
+            {
+              &quot;mbean&quot;: &quot;kafka.server:type=BrokerTopicMetrics,name=*&quot;,
+              &quot;metrics&quot;: [
+                {
+                  &quot;attribute&quot;: &quot;TotalFetchRequests&quot;,
+                  &quot;value&quot;: 1.9917576217462
+                }
+              ]
+            },
+            {
+              &quot;mbean&quot;: &quot;kafka.server:type=KafkaRequestHandlerPool,name=RequestHandlerAvgIdlePercent&quot;,
+              &quot;metrics&quot;: [
+                {
+                  &quot;attribute&quot;: &quot;RequestHandlerAvgIdlePercentMeanRate&quot;,
+                  &quot;value&quot;: 0.9999090453002375
+                }
+              ]
+            },
+            {
+              &quot;mbean&quot;: &quot;kafka.server:type=Produce&quot;,
+              &quot;metrics&quot;: []
+            },
+            {
+              &quot;mbean&quot;: &quot;kafka.server:type=socket-server-metrics,listener={listener_name},networkProcessor={#},name=connection-count&quot;,
+              &quot;metrics&quot;: []
+            },
+            {
+              &quot;mbean&quot;: &quot;kafka.server:type=socket-server-metrics,listener={listener_name},networkProcessor={#},name=connection-creation-rate&quot;,
+              &quot;metrics&quot;: []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+<p>Input: </p>
+<pre><code>x = ! kafka get-broker-metrics --site &quot;localhost&quot; --broker 1
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;brokerMetrics&quot;: [
+    {
+      &quot;brokerId&quot;: 1,
+      &quot;metrics&quot;: [
+        {
+          &quot;attribute&quot;: &quot;TotalFetchRequests&quot;,
+          &quot;value&quot;: 1.9856422065406367
+        },
+        {
+          &quot;attribute&quot;: &quot;HeapMemoryUsed&quot;,
+          &quot;value&quot;: 192278112
+        },
+        {
+          &quot;attribute&quot;: &quot;NonHeapMemoryUsed&quot;,
+          &quot;value&quot;: 67263000
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+<p>Input: </p>
 <pre><code>! kafka get-broker-metrics --site &quot;localhost&quot; --broker 1
 </code></pre>
 <p>Output: </p>

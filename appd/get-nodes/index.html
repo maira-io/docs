@@ -5091,6 +5091,56 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x = ! appd get-nodes --site &quot;localhost:8081&quot; &quot;bookinfo&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>[
+  {
+    &quot;appAgentVersion&quot;: &quot;21.4.0.0 compatible with 4.4.1.0&quot;,
+    &quot;machineAgentVersion&quot;: &quot;&quot;,
+    &quot;agentType&quot;: &quot;NODEJS_APP_AGENT&quot;,
+    &quot;type&quot;: &quot;Other&quot;,
+    &quot;machineName&quot;: &quot;ac0015dd9de4&quot;,
+    &quot;appAgentPresent&quot;: true,
+    &quot;nodeUniqueLocalId&quot;: &quot;&quot;,
+    &quot;machineId&quot;: 86338,
+    &quot;machineOSType&quot;: &quot;Linux&quot;,
+    &quot;tierId&quot;: 939705,
+    &quot;tierName&quot;: &quot;ratings&quot;,
+    &quot;machineAgentPresent&quot;: false,
+    &quot;name&quot;: &quot;ratings-v1-0&quot;,
+    &quot;ipAddresses&quot;: null,
+    &quot;id&quot;: 919391
+  },
+  {
+    &quot;appAgentVersion&quot;: &quot;21.4.0.0 compatible with 4.4.1.0&quot;,
+    &quot;machineAgentVersion&quot;: &quot;&quot;,
+    &quot;agentType&quot;: &quot;NODEJS_APP_AGENT&quot;,
+    &quot;type&quot;: &quot;Other&quot;,
+    &quot;machineName&quot;: &quot;3105e31e1b26&quot;,
+    &quot;appAgentPresent&quot;: true,
+    &quot;nodeUniqueLocalId&quot;: &quot;&quot;,
+    &quot;machineId&quot;: 85825,
+    &quot;machineOSType&quot;: &quot;Linux&quot;,
+    &quot;tierId&quot;: 939705,
+    &quot;tierName&quot;: &quot;ratings&quot;,
+    &quot;machineAgentPresent&quot;: false,
+    &quot;name&quot;: &quot;ratings-v1-0&quot;,
+    &quot;ipAddresses&quot;: null,
+    &quot;id&quot;: 919393
+  }
+]
+</code></pre>
+<p>Input: </p>
+<pre><code>x = ! appd get-business-transactions --site &quot;localhost:8081&quot; &quot;bookinfo&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>ID      NAME            TYPE    TIER    MACHINE-NAME                  MACHINE-OS    MACHINE-AGT-VERSION APP-AGT-VERSION                     AGENT-TYPE       
+919391  ratings-v1-0    Other   ratings ac0015dd9de4                  Linux                             21.4.0.0 compatible with 4.4.1.0    NODEJS_APP_AGENT    
+919393  ratings-v1-0    Other   ratings 3105e31e1b26                  Linux                             21.4.0.0 compatible with 4.4.1.0    NODEJS_APP_AGENT
+919418  details-v1    Other details details-v1-84cf9665d8-wvwdz Linux                           4.5.3.0 compatible with 4.4.1.0   NATIVE_SDK
+</code></pre>
+<p>Input: </p>
 <pre><code>x = ! appd get-nodes --site &quot;localhost:8081&quot; &quot;bookinfo&quot; --tier &quot;ratings-v1-0&quot;
 </code></pre>
 <p>Output: </p>

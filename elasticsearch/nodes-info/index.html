@@ -5111,6 +5111,1404 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>! elasticsearch nodes-info --site &quot;localhost&quot; --cluster &quot;elastic-1&quot; --nodes &quot;beehyv-H81M-S&quot; --raw
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;_nodes&quot;: {
+    &quot;total&quot;: 1,
+    &quot;successful&quot;: 1,
+    &quot;failed&quot;: 0
+  },
+  &quot;cluster_name&quot;: &quot;default&quot;,
+  &quot;nodes&quot;: {
+    &quot;qQmwEJbkTdW-ixce6PgTFQ&quot;: {
+      &quot;name&quot;: &quot;beehyv-H81M-S&quot;,
+      &quot;transport_address&quot;: &quot;127.0.0.1:9300&quot;,
+      &quot;host&quot;: &quot;localhost&quot;,
+      &quot;ip&quot;: &quot;127.0.0.1&quot;,
+      &quot;version&quot;: &quot;7.14.2&quot;,
+      &quot;build_flavor&quot;: &quot;default&quot;,
+      &quot;build_type&quot;: &quot;deb&quot;,
+      &quot;build_hash&quot;: &quot;6bc13727ce758c0e943c3c21653b3da82f627f75&quot;,
+      &quot;total_indexing_buffer&quot;: 107374182,
+      &quot;roles&quot;: [
+        &quot;data&quot;,
+        &quot;data_cold&quot;,
+        &quot;data_content&quot;,
+        &quot;data_frozen&quot;,
+        &quot;data_hot&quot;,
+        &quot;data_warm&quot;,
+        &quot;ingest&quot;,
+        &quot;master&quot;,
+        &quot;ml&quot;,
+        &quot;remote_cluster_client&quot;,
+        &quot;transform&quot;
+      ],
+      &quot;attributes&quot;: {
+        &quot;ml.machine_memory&quot;: &quot;16714604544&quot;,
+        &quot;xpack.installed&quot;: &quot;true&quot;,
+        &quot;transform.node&quot;: &quot;true&quot;,
+        &quot;ml.max_open_jobs&quot;: &quot;512&quot;,
+        &quot;ml.max_jvm_size&quot;: &quot;1073741824&quot;
+      },
+      &quot;settings&quot;: {
+        &quot;cluster&quot;: {
+          &quot;name&quot;: &quot;default&quot;,
+          &quot;election&quot;: {
+            &quot;strategy&quot;: &quot;supports_voting_only&quot;
+          }
+        },
+        &quot;node&quot;: {
+          &quot;attr&quot;: {
+            &quot;transform&quot;: {
+              &quot;node&quot;: &quot;true&quot;
+            },
+            &quot;xpack&quot;: {
+              &quot;installed&quot;: &quot;true&quot;
+            },
+            &quot;ml&quot;: {
+              &quot;max_jvm_size&quot;: &quot;1073741824&quot;,
+              &quot;machine_memory&quot;: &quot;16714604544&quot;,
+              &quot;max_open_jobs&quot;: &quot;512&quot;
+            }
+          },
+          &quot;name&quot;: &quot;beehyv-H81M-S&quot;,
+          &quot;pidfile&quot;: &quot;/var/run/elasticsearch/elasticsearch.pid&quot;
+        },
+        &quot;path&quot;: {
+          &quot;data&quot;: &quot;/var/lib/elasticsearch&quot;,
+          &quot;logs&quot;: &quot;/var/log/elasticsearch&quot;,
+          &quot;home&quot;: &quot;/usr/share/elasticsearch&quot;
+        },
+        &quot;client&quot;: {
+          &quot;type&quot;: &quot;node&quot;
+        },
+        &quot;http&quot;: {
+          &quot;type&quot;: &quot;security4&quot;,
+          &quot;port&quot;: &quot;9200&quot;,
+          &quot;type.default&quot;: &quot;netty4&quot;
+        },
+        &quot;transport&quot;: {
+          &quot;type&quot;: &quot;security4&quot;,
+          &quot;features&quot;: {
+            &quot;x-pack&quot;: &quot;true&quot;
+          },
+          &quot;type.default&quot;: &quot;netty4&quot;
+        },
+        &quot;network&quot;: {
+          &quot;host&quot;: &quot;localhost&quot;
+        }
+      },
+      &quot;os&quot;: {
+        &quot;refresh_interval_in_millis&quot;: 1000,
+        &quot;name&quot;: &quot;Linux&quot;,
+        &quot;pretty_name&quot;: &quot;Ubuntu 18.04.6 LTS&quot;,
+        &quot;arch&quot;: &quot;amd64&quot;,
+        &quot;version&quot;: &quot;4.15.0-159-generic&quot;,
+        &quot;available_processors&quot;: 4,
+        &quot;allocated_processors&quot;: 4
+      },
+      &quot;process&quot;: {
+        &quot;refresh_interval_in_millis&quot;: 1000,
+        &quot;id&quot;: 1992,
+        &quot;mlockall&quot;: false
+      },
+      &quot;jvm&quot;: {
+        &quot;pid&quot;: 1992,
+        &quot;version&quot;: &quot;16.0.2&quot;,
+        &quot;vm_name&quot;: &quot;OpenJDK 64-Bit Server VM&quot;,
+        &quot;vm_version&quot;: &quot;16.0.2+7&quot;,
+        &quot;vm_vendor&quot;: &quot;Eclipse Foundation&quot;,
+        &quot;bundled_jdk&quot;: true,
+        &quot;using_bundled_jdk&quot;: true,
+        &quot;start_time_in_millis&quot;: 1633259576295,
+        &quot;mem&quot;: {
+          &quot;heap_init_in_bytes&quot;: 1073741824,
+          &quot;heap_max_in_bytes&quot;: 1073741824,
+          &quot;non_heap_init_in_bytes&quot;: 7667712,
+          &quot;non_heap_max_in_bytes&quot;: 0,
+          &quot;direct_max_in_bytes&quot;: 0
+        },
+        &quot;gc_collectors&quot;: [&quot;G1 Young Generation&quot;, &quot;G1 Old Generation&quot;],
+        &quot;memory_pools&quot;: [
+          &quot;CodeHeap 'non-nmethods'&quot;,
+          &quot;Metaspace&quot;,
+          &quot;CodeHeap 'profiled nmethods'&quot;,
+          &quot;Compressed Class Space&quot;,
+          &quot;G1 Eden Space&quot;,
+          &quot;G1 Old Gen&quot;,
+          &quot;G1 Survivor Space&quot;,
+          &quot;CodeHeap 'non-profiled nmethods'&quot;
+        ],
+        &quot;using_compressed_ordinary_object_pointers&quot;: &quot;true&quot;,
+        &quot;input_arguments&quot;: [
+          &quot;-Xshare:auto&quot;,
+          &quot;-Des.networkaddress.cache.ttl=60&quot;,
+          &quot;-Des.networkaddress.cache.negative.ttl=10&quot;,
+          &quot;-XX:+AlwaysPreTouch&quot;,
+          &quot;-Xss1m&quot;,
+          &quot;-Djava.awt.headless=true&quot;,
+          &quot;-Dfile.encoding=UTF-8&quot;,
+          &quot;-Djna.nosys=true&quot;,
+          &quot;-XX:-OmitStackTraceInFastThrow&quot;,
+          &quot;-XX:+ShowCodeDetailsInExceptionMessages&quot;,
+          &quot;-Dio.netty.noUnsafe=true&quot;,
+          &quot;-Dio.netty.noKeySetOptimization=true&quot;,
+          &quot;-Dio.netty.recycler.maxCapacityPerThread=0&quot;,
+          &quot;-Dio.netty.allocator.numDirectArenas=0&quot;,
+          &quot;-Dlog4j.shutdownHookEnabled=false&quot;,
+          &quot;-Dlog4j2.disable.jmx=true&quot;,
+          &quot;-Djava.locale.providers=SPI,COMPAT&quot;,
+          &quot;--add-opens=java.base/java.io=ALL-UNNAMED&quot;,
+          &quot;-Xms1g&quot;,
+          &quot;-Xmx1g&quot;,
+          &quot;-XX:+UseG1GC&quot;,
+          &quot;-Djava.io.tmpdir=/tmp/elasticsearch-10743714864597630075&quot;,
+          &quot;-XX:+HeapDumpOnOutOfMemoryError&quot;,
+          &quot;-XX:HeapDumpPath=/var/lib/elasticsearch&quot;,
+          &quot;-XX:ErrorFile=/var/log/elasticsearch/hs_err_pid%p.log&quot;,
+          &quot;-Xlog:gc*,gc+age=trace,safepoint:file=/var/log/elasticsearch/gc.log:utctime,pid,tags:filecount=32,filesize=64m&quot;,
+          &quot;-XX:MaxDirectMemorySize=536870912&quot;,
+          &quot;-XX:G1HeapRegionSize=4m&quot;,
+          &quot;-XX:InitiatingHeapOccupancyPercent=30&quot;,
+          &quot;-XX:G1ReservePercent=15&quot;,
+          &quot;-Des.path.home=/usr/share/elasticsearch&quot;,
+          &quot;-Des.path.conf=/etc/elasticsearch&quot;,
+          &quot;-Des.distribution.flavor=default&quot;,
+          &quot;-Des.distribution.type=deb&quot;,
+          &quot;-Des.bundled_jdk=true&quot;
+        ]
+      },
+      &quot;thread_pool&quot;: {
+        &quot;force_merge&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 1,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;ml_datafeed&quot;: {
+          &quot;type&quot;: &quot;scaling&quot;,
+          &quot;core&quot;: 1,
+          &quot;max&quot;: 512,
+          &quot;keep_alive&quot;: &quot;1m&quot;,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;searchable_snapshots_cache_fetch_async&quot;: {
+          &quot;type&quot;: &quot;scaling&quot;,
+          &quot;core&quot;: 0,
+          &quot;max&quot;: 12,
+          &quot;keep_alive&quot;: &quot;30s&quot;,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;snapshot_meta&quot;: {
+          &quot;type&quot;: &quot;scaling&quot;,
+          &quot;core&quot;: 1,
+          &quot;max&quot;: 12,
+          &quot;keep_alive&quot;: &quot;30s&quot;,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;fetch_shard_started&quot;: {
+          &quot;type&quot;: &quot;scaling&quot;,
+          &quot;core&quot;: 1,
+          &quot;max&quot;: 8,
+          &quot;keep_alive&quot;: &quot;5m&quot;,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;listener&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 2,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;rollup_indexing&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 1,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;search&quot;: {
+          &quot;type&quot;: &quot;fixed_auto_queue_size&quot;,
+          &quot;size&quot;: 7,
+          &quot;queue_size&quot;: 1000
+        },
+        &quot;security-crypto&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 2,
+          &quot;queue_size&quot;: 1000
+        },
+        &quot;ccr&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 32,
+          &quot;queue_size&quot;: 100
+        },
+        &quot;flush&quot;: {
+          &quot;type&quot;: &quot;scaling&quot;,
+          &quot;core&quot;: 1,
+          &quot;max&quot;: 2,
+          &quot;keep_alive&quot;: &quot;5m&quot;,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;fetch_shard_store&quot;: {
+          &quot;type&quot;: &quot;scaling&quot;,
+          &quot;core&quot;: 1,
+          &quot;max&quot;: 8,
+          &quot;keep_alive&quot;: &quot;5m&quot;,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;ml_utility&quot;: {
+          &quot;type&quot;: &quot;scaling&quot;,
+          &quot;core&quot;: 1,
+          &quot;max&quot;: 2048,
+          &quot;keep_alive&quot;: &quot;10m&quot;,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;get&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 4,
+          &quot;queue_size&quot;: 1000
+        },
+        &quot;system_read&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 2,
+          &quot;queue_size&quot;: 2000
+        },
+        &quot;system_critical_read&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 2,
+          &quot;queue_size&quot;: 2000
+        },
+        &quot;transform_indexing&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 4,
+          &quot;queue_size&quot;: 4
+        },
+        &quot;write&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 4,
+          &quot;queue_size&quot;: 10000
+        },
+        &quot;watcher&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 20,
+          &quot;queue_size&quot;: 1000
+        },
+        &quot;security-token-key&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 1,
+          &quot;queue_size&quot;: 1000
+        },
+        &quot;system_critical_write&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 2,
+          &quot;queue_size&quot;: 1500
+        },
+        &quot;refresh&quot;: {
+          &quot;type&quot;: &quot;scaling&quot;,
+          &quot;core&quot;: 1,
+          &quot;max&quot;: 2,
+          &quot;keep_alive&quot;: &quot;5m&quot;,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;system_write&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 2,
+          &quot;queue_size&quot;: 1000
+        },
+        &quot;generic&quot;: {
+          &quot;type&quot;: &quot;scaling&quot;,
+          &quot;core&quot;: 4,
+          &quot;max&quot;: 128,
+          &quot;keep_alive&quot;: &quot;30s&quot;,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;warmer&quot;: {
+          &quot;type&quot;: &quot;scaling&quot;,
+          &quot;core&quot;: 1,
+          &quot;max&quot;: 2,
+          &quot;keep_alive&quot;: &quot;5m&quot;,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;auto_complete&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 1,
+          &quot;queue_size&quot;: 100
+        },
+        &quot;management&quot;: {
+          &quot;type&quot;: &quot;scaling&quot;,
+          &quot;core&quot;: 1,
+          &quot;max&quot;: 4,
+          &quot;keep_alive&quot;: &quot;5m&quot;,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;analyze&quot;: {
+          &quot;type&quot;: &quot;fixed&quot;,
+          &quot;size&quot;: 1,
+          &quot;queue_size&quot;: 16
+        },
+        &quot;searchable_snapshots_cache_prewarming&quot;: {
+          &quot;type&quot;: &quot;scaling&quot;,
+          &quot;core&quot;: 0,
+          &quot;max&quot;: 16,
+          &quot;keep_alive&quot;: &quot;30s&quot;,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;ml_job_comms&quot;: {
+          &quot;type&quot;: &quot;scaling&quot;,
+          &quot;core&quot;: 4,
+          &quot;max&quot;: 2048,
+          &quot;keep_alive&quot;: &quot;1m&quot;,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;snapshot&quot;: {
+          &quot;type&quot;: &quot;scaling&quot;,
+          &quot;core&quot;: 1,
+          &quot;max&quot;: 2,
+          &quot;keep_alive&quot;: &quot;5m&quot;,
+          &quot;queue_size&quot;: -1
+        },
+        &quot;search_throttled&quot;: {
+          &quot;type&quot;: &quot;fixed_auto_queue_size&quot;,
+          &quot;size&quot;: 1,
+          &quot;queue_size&quot;: 100
+        }
+      },
+      &quot;transport&quot;: {
+        &quot;bound_address&quot;: [&quot;127.0.0.1:9300&quot;],
+        &quot;publish_address&quot;: &quot;127.0.0.1:9300&quot;,
+        &quot;profiles&quot;: {}
+      },
+      &quot;http&quot;: {
+        &quot;bound_address&quot;: [&quot;127.0.0.1:9200&quot;],
+        &quot;publish_address&quot;: &quot;localhost/127.0.0.1:9200&quot;,
+        &quot;max_content_length_in_bytes&quot;: 104857600
+      },
+      &quot;plugins&quot;: [],
+      &quot;modules&quot;: [
+        {
+          &quot;name&quot;: &quot;aggs-matrix-stats&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Adds aggregations whose input are a list of numeric fields and output includes a matrix.&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.search.aggregations.matrix.MatrixAggregationPlugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;analysis-common&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Adds \&quot;built in\&quot; analyzers to Elasticsearch.&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.analysis.common.CommonAnalysisPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;lang-painless&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;constant-keyword&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Module for the constant-keyword field type, which is a specialization of keyword for the case when all documents have the same value.&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.constantkeyword.ConstantKeywordMapperPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;frozen-indices&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;A plugin for the frozen indices functionality&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.frozen.FrozenIndices&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;ingest-common&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Module for ingest processors that do not require additional security permissions or have large dependencies and resources&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.ingest.common.IngestCommonPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;lang-painless&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;ingest-geoip&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Ingest processor that uses looksup geo data based on ip adresses using the Maxmind geo database&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.ingest.geoip.IngestGeoIpPlugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;ingest-user-agent&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Ingest processor that extracts information from a user agent&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.ingest.useragent.IngestUserAgentPlugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;kibana&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Plugin exposing APIs for Kibana system indices&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.kibana.KibanaPlugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;lang-expression&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Lucene expressions integration for Elasticsearch&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.script.expression.ExpressionPlugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;lang-mustache&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Mustache scripting integration for Elasticsearch&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.script.mustache.MustachePlugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;lang-painless&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;An easy, safe and fast scripting language for Elasticsearch&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.painless.PainlessPlugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;mapper-extras&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Adds advanced field mappers&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.index.mapper.MapperExtrasPlugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;mapper-version&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;A plugin for a field type to store sofware versions&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.versionfield.VersionFieldPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;, &quot;lang-painless&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;parent-join&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;This module adds the support parent-child queries and aggregations&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.join.ParentJoinPlugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;percolator&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Percolator module adds capability to index queries and query these queries by specifying documents&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.percolator.PercolatorPlugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;rank-eval&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;The Rank Eval module adds APIs to evaluate ranking quality.&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.index.rankeval.RankEvalPlugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;reindex&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;The Reindex module adds APIs to reindex from one index to another or update documents in place.&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.index.reindex.ReindexPlugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;repositories-metering-api&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Repositories metering API&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.repositories.metering.RepositoriesMeteringPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;repository-encrypted&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - client-side encrypted repositories.&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.repositories.encrypted.EncryptedRepositoryPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;repository-url&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Module for URL repository&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.plugin.repository.url.URLRepositoryPlugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;runtime-fields-common&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Module for runtime fields features and extensions that have large dependencies&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.runtimefields.RuntimeFieldsCommonPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;lang-painless&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;search-business-rules&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;A plugin for applying business rules to search result rankings&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.searchbusinessrules.SearchBusinessRules&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;searchable-snapshots&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;A plugin for the searchable snapshots functionality&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.searchablesnapshots.SearchableSnapshots&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;snapshot-repo-test-kit&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;A plugin for a test kit for snapshot repositories&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.repositories.blobstore.testkit.SnapshotRepositoryTestKit&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;spatial&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;A plugin for Basic Spatial features&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.spatial.SpatialPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;systemd&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Integrates Elasticsearch with systemd&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.systemd.SystemdPlugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;transform&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;A plugin to transform data&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.transform.Transform&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;transport-netty4&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Netty 4 based transport implementation&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.transport.Netty4Plugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;unsigned-long&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Module for the unsigned long field type&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.unsignedlong.UnsignedLongMapperPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;, &quot;lang-painless&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;vectors&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;A plugin for working with vectors&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.vectors.Vectors&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;, &quot;lang-painless&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;wildcard&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;A plugin for a keyword field type with efficient wildcard search&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.wildcard.Wildcard&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-aggregate-metric&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Module for the aggregate_metric field type, which allows pre-aggregated fields to be stored a single field.&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.aggregatemetric.AggregateMetricMapperPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-analytics&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Analytics&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.analytics.AnalyticsPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-async&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;A module which handles common async operations&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.async.AsyncResultsIndexPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-async-search&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;A module which allows to track the progress of a search asynchronously.&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.search.AsyncSearch&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-autoscaling&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Autoscaling&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.autoscaling.Autoscaling&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-ccr&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - CCR&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.ccr.Ccr&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-core&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Core&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.core.XPackPlugin&quot;,
+          &quot;extended_plugins&quot;: [],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-data-streams&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Data Streams&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.datastreams.DataStreamsPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-deprecation&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Deprecation&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.deprecation.Deprecation&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-enrich&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Enrich&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.enrich.EnrichPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-eql&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;The Elasticsearch plugin that powers EQL for Elasticsearch&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.eql.plugin.EqlPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-ql&quot;, &quot;lang-painless&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-fleet&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Plugin exposing APIs for Fleet system indices&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.fleet.Fleet&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-graph&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Graph&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.graph.Graph&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-identity-provider&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Identity Provider&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.idp.IdentityProviderPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-ilm&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Index Lifecycle Management&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.ilm.IndexLifecycle&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-logstash&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Logstash&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.logstash.Logstash&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-ml&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Machine Learning&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.ml.MachineLearning&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-autoscaling&quot;, &quot;lang-painless&quot;],
+          &quot;has_native_controller&quot;: true,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-monitoring&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Monitoring&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.monitoring.Monitoring&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-ql&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch infrastructure plugin for EQL and SQL for Elasticsearch&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.ql.plugin.QlPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-rollup&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Rollup&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.rollup.Rollup&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-security&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Security&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.security.Security&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-shutdown&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Shutdown&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.shutdown.ShutdownPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-sql&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;The Elasticsearch plugin that powers SQL for Elasticsearch&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.sql.plugin.SqlPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-ql&quot;, &quot;lang-painless&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-stack&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Stack&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.stack.StackPlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-text-structure&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Text Structure&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.textstructure.TextStructurePlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-voting-only-node&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Voting-only node&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.cluster.coordination.votingonly.VotingOnlyNodePlugin&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        },
+        {
+          &quot;name&quot;: &quot;x-pack-watcher&quot;,
+          &quot;version&quot;: &quot;7.14.2&quot;,
+          &quot;elasticsearch_version&quot;: &quot;7.14.2&quot;,
+          &quot;java_version&quot;: &quot;1.8&quot;,
+          &quot;description&quot;: &quot;Elasticsearch Expanded Pack Plugin - Watcher&quot;,
+          &quot;classname&quot;: &quot;org.elasticsearch.xpack.watcher.Watcher&quot;,
+          &quot;extended_plugins&quot;: [&quot;x-pack-core&quot;, &quot;lang-painless&quot;],
+          &quot;has_native_controller&quot;: false,
+          &quot;licensed&quot;: false,
+          &quot;type&quot;: &quot;isolated&quot;
+        }
+      ],
+      &quot;ingest&quot;: {
+        &quot;processors&quot;: [
+          {
+            &quot;type&quot;: &quot;append&quot;
+          },
+          {
+            &quot;type&quot;: &quot;bytes&quot;
+          },
+          {
+            &quot;type&quot;: &quot;circle&quot;
+          },
+          {
+            &quot;type&quot;: &quot;community_id&quot;
+          },
+          {
+            &quot;type&quot;: &quot;convert&quot;
+          },
+          {
+            &quot;type&quot;: &quot;csv&quot;
+          },
+          {
+            &quot;type&quot;: &quot;date&quot;
+          },
+          {
+            &quot;type&quot;: &quot;date_index_name&quot;
+          },
+          {
+            &quot;type&quot;: &quot;dissect&quot;
+          },
+          {
+            &quot;type&quot;: &quot;dot_expander&quot;
+          },
+          {
+            &quot;type&quot;: &quot;drop&quot;
+          },
+          {
+            &quot;type&quot;: &quot;enrich&quot;
+          },
+          {
+            &quot;type&quot;: &quot;fail&quot;
+          },
+          {
+            &quot;type&quot;: &quot;fingerprint&quot;
+          },
+          {
+            &quot;type&quot;: &quot;foreach&quot;
+          },
+          {
+            &quot;type&quot;: &quot;geoip&quot;
+          },
+          {
+            &quot;type&quot;: &quot;grok&quot;
+          },
+          {
+            &quot;type&quot;: &quot;gsub&quot;
+          },
+          {
+            &quot;type&quot;: &quot;html_strip&quot;
+          },
+          {
+            &quot;type&quot;: &quot;inference&quot;
+          },
+          {
+            &quot;type&quot;: &quot;join&quot;
+          },
+          {
+            &quot;type&quot;: &quot;json&quot;
+          },
+          {
+            &quot;type&quot;: &quot;kv&quot;
+          },
+          {
+            &quot;type&quot;: &quot;lowercase&quot;
+          },
+          {
+            &quot;type&quot;: &quot;network_direction&quot;
+          },
+          {
+            &quot;type&quot;: &quot;pipeline&quot;
+          },
+          {
+            &quot;type&quot;: &quot;registered_domain&quot;
+          },
+          {
+            &quot;type&quot;: &quot;remove&quot;
+          },
+          {
+            &quot;type&quot;: &quot;rename&quot;
+          },
+          {
+            &quot;type&quot;: &quot;script&quot;
+          },
+          {
+            &quot;type&quot;: &quot;set&quot;
+          },
+          {
+            &quot;type&quot;: &quot;set_security_user&quot;
+          },
+          {
+            &quot;type&quot;: &quot;sort&quot;
+          },
+          {
+            &quot;type&quot;: &quot;split&quot;
+          },
+          {
+            &quot;type&quot;: &quot;trim&quot;
+          },
+          {
+            &quot;type&quot;: &quot;uppercase&quot;
+          },
+          {
+            &quot;type&quot;: &quot;uri_parts&quot;
+          },
+          {
+            &quot;type&quot;: &quot;urldecode&quot;
+          },
+          {
+            &quot;type&quot;: &quot;user_agent&quot;
+          }
+        ]
+      },
+      &quot;aggregations&quot;: {
+        &quot;adjacency_matrix&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;auto_date_histogram&quot;: {
+          &quot;types&quot;: [&quot;boolean&quot;, &quot;date&quot;, &quot;numeric&quot;]
+        },
+        &quot;avg&quot;: {
+          &quot;types&quot;: [
+            &quot;aggregate_metric&quot;,
+            &quot;boolean&quot;,
+            &quot;date&quot;,
+            &quot;histogram&quot;,
+            &quot;numeric&quot;
+          ]
+        },
+        &quot;boxplot&quot;: {
+          &quot;types&quot;: [&quot;histogram&quot;, &quot;numeric&quot;]
+        },
+        &quot;cardinality&quot;: {
+          &quot;types&quot;: [
+            &quot;boolean&quot;,
+            &quot;date&quot;,
+            &quot;geopoint&quot;,
+            &quot;geoshape&quot;,
+            &quot;ip&quot;,
+            &quot;keyword&quot;,
+            &quot;numeric&quot;,
+            &quot;range&quot;
+          ]
+        },
+        &quot;children&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;composite&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;date_histogram&quot;: {
+          &quot;types&quot;: [&quot;boolean&quot;, &quot;date&quot;, &quot;numeric&quot;, &quot;range&quot;]
+        },
+        &quot;date_range&quot;: {
+          &quot;types&quot;: [&quot;boolean&quot;, &quot;date&quot;, &quot;numeric&quot;]
+        },
+        &quot;diversified_sampler&quot;: {
+          &quot;types&quot;: [&quot;boolean&quot;, &quot;date&quot;, &quot;keyword&quot;, &quot;numeric&quot;]
+        },
+        &quot;extended_stats&quot;: {
+          &quot;types&quot;: [&quot;boolean&quot;, &quot;date&quot;, &quot;numeric&quot;]
+        },
+        &quot;filter&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;filters&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;geo_bounds&quot;: {
+          &quot;types&quot;: [&quot;geopoint&quot;, &quot;geoshape&quot;]
+        },
+        &quot;geo_centroid&quot;: {
+          &quot;types&quot;: [&quot;geopoint&quot;, &quot;geoshape&quot;]
+        },
+        &quot;geo_distance&quot;: {
+          &quot;types&quot;: [&quot;geopoint&quot;]
+        },
+        &quot;geo_line&quot;: {
+          &quot;types&quot;: [&quot;geopoint&quot;]
+        },
+        &quot;geohash_grid&quot;: {
+          &quot;types&quot;: [&quot;geopoint&quot;, &quot;geoshape&quot;]
+        },
+        &quot;geotile_grid&quot;: {
+          &quot;types&quot;: [&quot;geopoint&quot;, &quot;geoshape&quot;]
+        },
+        &quot;global&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;histogram&quot;: {
+          &quot;types&quot;: [&quot;boolean&quot;, &quot;date&quot;, &quot;histogram&quot;, &quot;numeric&quot;, &quot;range&quot;]
+        },
+        &quot;ip_range&quot;: {
+          &quot;types&quot;: [&quot;ip&quot;]
+        },
+        &quot;matrix_stats&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;max&quot;: {
+          &quot;types&quot;: [
+            &quot;aggregate_metric&quot;,
+            &quot;boolean&quot;,
+            &quot;date&quot;,
+            &quot;histogram&quot;,
+            &quot;numeric&quot;
+          ]
+        },
+        &quot;median_absolute_deviation&quot;: {
+          &quot;types&quot;: [&quot;numeric&quot;]
+        },
+        &quot;min&quot;: {
+          &quot;types&quot;: [
+            &quot;aggregate_metric&quot;,
+            &quot;boolean&quot;,
+            &quot;date&quot;,
+            &quot;histogram&quot;,
+            &quot;numeric&quot;
+          ]
+        },
+        &quot;missing&quot;: {
+          &quot;types&quot;: [
+            &quot;boolean&quot;,
+            &quot;date&quot;,
+            &quot;geopoint&quot;,
+            &quot;ip&quot;,
+            &quot;keyword&quot;,
+            &quot;numeric&quot;,
+            &quot;range&quot;
+          ]
+        },
+        &quot;multi_terms&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;nested&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;parent&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;percentile_ranks&quot;: {
+          &quot;types&quot;: [&quot;boolean&quot;, &quot;date&quot;, &quot;histogram&quot;, &quot;numeric&quot;]
+        },
+        &quot;percentiles&quot;: {
+          &quot;types&quot;: [&quot;boolean&quot;, &quot;date&quot;, &quot;histogram&quot;, &quot;numeric&quot;]
+        },
+        &quot;range&quot;: {
+          &quot;types&quot;: [&quot;boolean&quot;, &quot;date&quot;, &quot;histogram&quot;, &quot;numeric&quot;]
+        },
+        &quot;rare_terms&quot;: {
+          &quot;types&quot;: [&quot;boolean&quot;, &quot;date&quot;, &quot;ip&quot;, &quot;keyword&quot;, &quot;numeric&quot;]
+        },
+        &quot;rate&quot;: {
+          &quot;types&quot;: [&quot;histogram&quot;, &quot;numeric&quot;]
+        },
+        &quot;reverse_nested&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;sampler&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;scripted_metric&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;significant_terms&quot;: {
+          &quot;types&quot;: [&quot;boolean&quot;, &quot;date&quot;, &quot;ip&quot;, &quot;keyword&quot;, &quot;numeric&quot;]
+        },
+        &quot;significant_text&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;stats&quot;: {
+          &quot;types&quot;: [&quot;boolean&quot;, &quot;date&quot;, &quot;numeric&quot;]
+        },
+        &quot;string_stats&quot;: {
+          &quot;types&quot;: [&quot;keyword&quot;]
+        },
+        &quot;sum&quot;: {
+          &quot;types&quot;: [
+            &quot;aggregate_metric&quot;,
+            &quot;boolean&quot;,
+            &quot;date&quot;,
+            &quot;histogram&quot;,
+            &quot;numeric&quot;
+          ]
+        },
+        &quot;t_test&quot;: {
+          &quot;types&quot;: [&quot;numeric&quot;]
+        },
+        &quot;terms&quot;: {
+          &quot;types&quot;: [&quot;boolean&quot;, &quot;date&quot;, &quot;ip&quot;, &quot;keyword&quot;, &quot;numeric&quot;]
+        },
+        &quot;top_hits&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;top_metrics&quot;: {
+          &quot;types&quot;: [&quot;other&quot;]
+        },
+        &quot;value_count&quot;: {
+          &quot;types&quot;: [
+            &quot;aggregate_metric&quot;,
+            &quot;boolean&quot;,
+            &quot;date&quot;,
+            &quot;geopoint&quot;,
+            &quot;geoshape&quot;,
+            &quot;histogram&quot;,
+            &quot;ip&quot;,
+            &quot;keyword&quot;,
+            &quot;numeric&quot;,
+            &quot;range&quot;
+          ]
+        },
+        &quot;variable_width_histogram&quot;: {
+          &quot;types&quot;: [&quot;numeric&quot;]
+        },
+        &quot;weighted_avg&quot;: {
+          &quot;types&quot;: [&quot;numeric&quot;]
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<p>Input: </p>
 <pre><code>! elasticsearch nodes-info --site &quot;localhost&quot;
 </code></pre>
 <p>Output: </p>

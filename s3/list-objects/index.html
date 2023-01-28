@@ -5071,6 +5071,80 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x = ! s3 list-objects --site &quot;localhost:8081&quot; &quot;test1&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;objects&quot;: [
+    {
+      &quot;name&quot;: &quot;a/&quot;,
+      &quot;createdTime&quot;: &quot;2022-09-19T13:04:08Z&quot;,
+      &quot;size&quot;: &quot;0&quot;
+    },
+    {
+      &quot;name&quot;: &quot;maira123/&quot;,
+      &quot;createdTime&quot;: &quot;2022-09-20T05:31:12Z&quot;,
+      &quot;size&quot;: &quot;0&quot;
+    },
+    {
+      &quot;name&quot;: &quot;maira123/myfile.txt&quot;,
+      &quot;createdTime&quot;: &quot;2022-09-20T16:21:35Z&quot;,
+      &quot;size&quot;: &quot;16&quot;
+    },
+    {
+      &quot;name&quot;: &quot;maira123/test/&quot;,
+      &quot;createdTime&quot;: &quot;2022-09-20T16:17:11Z&quot;,
+      &quot;size&quot;: &quot;0&quot;
+    },
+    {
+      &quot;name&quot;: &quot;maira456/&quot;,
+      &quot;createdTime&quot;: &quot;2022-09-20T05:31:24Z&quot;,
+      &quot;size&quot;: &quot;0&quot;
+    }
+  ]
+}
+</code></pre>
+<p>Input: </p>
+<pre><code>! s3 list-objects --site &quot;localhost:8081&quot; &quot;test1&quot; --prefix &quot;m&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;objects&quot;: [
+    {
+      &quot;name&quot;: &quot;maira123/&quot;,
+      &quot;createdTime&quot;: &quot;2022-09-20T05:31:12Z&quot;,
+      &quot;size&quot;: &quot;0&quot;
+    },
+    {
+      &quot;name&quot;: &quot;maira123/myfile.txt&quot;,
+      &quot;createdTime&quot;: &quot;2022-09-20T16:21:35Z&quot;,
+      &quot;size&quot;: &quot;16&quot;
+    },
+    {
+      &quot;name&quot;: &quot;maira123/test/&quot;,
+      &quot;createdTime&quot;: &quot;2022-09-20T16:17:11Z&quot;,
+      &quot;size&quot;: &quot;0&quot;
+    },
+    {
+      &quot;name&quot;: &quot;maira456/&quot;,
+      &quot;createdTime&quot;: &quot;2022-09-20T05:31:24Z&quot;,
+      &quot;size&quot;: &quot;0&quot;
+    }
+  ]
+}
+</code></pre>
+<p>Input: </p>
+<pre><code>! s3 list-objects --site &quot;localhost:8081&quot; &quot;test1&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>CREATION_TIME                   SIZE                   NAME
+2022-09-19 13:04:08 +0000 UTC      0                     a/
+2022-09-20 05:31:12 +0000 UTC      0              maira123/
+2022-09-20 16:21:35 +0000 UTC     16    maira123/myfile.txt
+2022-09-20 16:17:11 +0000 UTC      0         maira123/test/
+2022-09-20 05:31:24 +0000 UTC      0              maira456/
+</code></pre>
+<p>Input: </p>
 <pre><code>! s3 list-objects --site &quot;localhost:8081&quot; &quot;test1&quot; --prefix &quot;m&quot;
 </code></pre>
 <p>Output: </p>

@@ -5051,6 +5051,41 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x=! dynamodb describe-table --site &quot;localhost:8081&quot; &quot;testtable1&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;name&quot;: &quot;testtable1&quot;,
+  &quot;region&quot;: &quot;us-east-1&quot;,
+  &quot;provisionedThroughput&quot;: {
+    &quot;writeCapacityUnits&quot;: &quot;1&quot;,
+    &quot;readCapacityUnits&quot;: &quot;1&quot;
+  },
+  &quot;status&quot;: &quot;ACTIVE&quot;,
+  &quot;billingMode&quot;: &quot;PROVISIONED&quot;,
+  &quot;keySchemas&quot;: [
+    {
+      &quot;attributeName&quot;: &quot;testpk1&quot;,
+      &quot;type&quot;: &quot;HASH&quot;
+    },
+    {
+      &quot;attributeName&quot;: &quot;testsk1&quot;,
+      &quot;type&quot;: &quot;RANGE&quot;
+    }
+  ],
+  &quot;attributeDefinitions&quot;: [
+    {
+      &quot;attributeName&quot;: &quot;testpk1&quot;,
+      &quot;attributeType&quot;: &quot;S&quot;
+    },
+    {
+      &quot;attributeName&quot;: &quot;testsk1&quot;,
+      &quot;attributeType&quot;: &quot;S&quot;
+    }
+  ]
+}
+</code></pre>
+<p>Input: </p>
 <pre><code>! dynamodb describe-table --site &quot;localhost:8081&quot; &quot;testtable1&quot;
 </code></pre>
 <p>Output: </p>

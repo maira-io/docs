@@ -5091,6 +5091,31 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x=! rds run-sql --site &quot;localhost:8081&quot; --host &quot;host1&quot; &quot;create database testdb&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>
+</code></pre>
+<p>Input: </p>
+<pre><code>x=! rds run-sql --site &quot;localhost:8081&quot; --host &quot;host1&quot; &quot;select * from movies.movies&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>[                                                                                                                                                                  
+  {
+    &quot;director&quot;: &quot;Todd Phillips&quot;,
+    &quot;genre&quot;: &quot;psychological thriller&quot;,
+    &quot;release_year&quot;: 2019,
+    &quot;title&quot;: &quot;Joker&quot;
+  },
+  {
+    &quot;director&quot;: &quot;Karan Johar&quot;,
+    &quot;genre&quot;: &quot;psychological thriller&quot;,
+    &quot;release_year&quot;: 2020,
+    &quot;title&quot;: &quot;Movie1&quot;
+  }
+]
+</code></pre>
+<p>Input: </p>
 <pre><code>! rds run-sql --site &quot;localhost:8081&quot; --host &quot;host1&quot; &quot;select * from movies.movies&quot;
 </code></pre>
 <p>Output: </p>

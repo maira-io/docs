@@ -5071,6 +5071,39 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x = ! appd get-tiers --site &quot;localhost:8081&quot; &quot;bookinfo&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>[
+  {
+    &quot;agentType&quot;: &quot;NATIVE_SDK&quot;,
+    &quot;name&quot;: &quot;details&quot;,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;id&quot;: 939728,
+    &quot;numberOfNodes&quot;: 1,
+    &quot;type&quot;: &quot;C/C++ SDK&quot;
+  },
+  {
+    &quot;agentType&quot;: &quot;PYTHON_APP_AGENT&quot;,
+    &quot;name&quot;: &quot;productpage&quot;,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;id&quot;: 939727,
+    &quot;numberOfNodes&quot;: 1,
+    &quot;type&quot;: &quot;Python Server&quot;
+  }
+]
+</code></pre>
+<p>Input: </p>
+<pre><code>x = ! appd get-business-transactions --site &quot;localhost:8081&quot; &quot;bookinfo&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>ID      NAME        TYPE                AGENT-TYPE          NODES 
+939728  details     C/C++ SDK           NATIVE_SDK              1   
+939727  productpage Python Server       PYTHON_APP_AGENT        1   
+939705  ratings     Node.JS Server      NODEJS_APP_AGENT        2   
+939711  reviews     Application Server  APP_AGENT               3   
+</code></pre>
+<p>Input: </p>
 <pre><code>x = ! appd get-business-transactions --site &quot;localhost:8081&quot; &quot;bookinfo&quot; --tier &quot;details&quot;
 </code></pre>
 <p>Output: </p>

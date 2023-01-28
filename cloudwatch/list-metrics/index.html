@@ -5091,6 +5091,30 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x=! cloudwatch list-metrics --site &quot;localhost:8081&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>[
+  {
+    &quot;metric_name&quot;: &quot;CallCount&quot;,
+    &quot;namespace&quot;: &quot;AWS/Usage&quot;,
+    &quot;dimensions&quot;: {
+      &quot;Class&quot;: &quot;None&quot;,
+      &quot;Resource&quot;: &quot;ListBuckets&quot;,
+      &quot;Service&quot;: &quot;S3&quot;,
+      &quot;Type&quot;: &quot;API&quot;
+    }
+  },
+  {
+    &quot;metric_name&quot;: &quot;DatabaseConnections&quot;,
+    &quot;namespace&quot;: &quot;AWS/RDS&quot;,
+    &quot;dimensions&quot;: {
+      &quot;DatabaseClass&quot;: &quot;db.t3.micro&quot;
+    }
+  }
+]
+</code></pre>
+<p>Input: </p>
 <pre><code>! cloudwatch list-metrics --site &quot;localhost:8081&quot;
 </code></pre>
 <p>Output: </p>

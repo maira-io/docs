@@ -5191,6 +5191,140 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x = !bitbucket list-issues --site &quot;localhost:8080&quot; --repo &quot;simulage/daccosim&quot; --type &quot;proposal&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+    &quot;values&quot;: [
+        {
+            &quot;type&quot;: &quot;issue&quot;,
+            &quot;id&quot;: 32,
+            &quot;repository&quot;: {
+                &quot;type&quot;: &quot;repository&quot;,
+                &quot;full_name&quot;: &quot;simulage/daccosim&quot;,
+                &quot;links&quot;: {
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;https://api.bitbucket.org/2.0/repositories/simulage/daccosim&quot;
+                    },
+                    &quot;html&quot;: {
+                        &quot;href&quot;: &quot;https://bitbucket.org/simulage/daccosim&quot;
+                    },
+                    &quot;avatar&quot;: {
+                        &quot;href&quot;: &quot;https://bytebucket.org/ravatar/%7B23007f73-93bd-4f68-952a-72c16c7e2cc6%7D?ts=1973243&quot;
+                    }
+                },
+                &quot;name&quot;: &quot;daccosim&quot;,
+                &quot;uuid&quot;: &quot;{23007f73-93bd-4f68-952a-72c16c7e2cc6}&quot;
+            },
+            &quot;links&quot;: {
+                &quot;self&quot;: {
+                    &quot;href&quot;: &quot;https://api.bitbucket.org/2.0/repositories/simulage/daccosim/issues/32&quot;
+                },
+                &quot;html&quot;: {
+                    &quot;href&quot;: &quot;https://bitbucket.org/simulage/daccosim/issues/32/what-is-matryoshkajar&quot;
+                },
+                &quot;comments&quot;: {
+                    &quot;href&quot;: &quot;https://api.bitbucket.org/2.0/repositories/simulage/daccosim/issues/32/comments&quot;
+                },
+                &quot;attachments&quot;: {
+                    &quot;href&quot;: &quot;https://api.bitbucket.org/2.0/repositories/simulage/daccosim/issues/32/attachments&quot;
+                },
+                &quot;watch&quot;: {
+                    &quot;href&quot;: &quot;https://api.bitbucket.org/2.0/repositories/simulage/daccosim/issues/32/watch&quot;
+                },
+                &quot;vote&quot;: {
+                    &quot;href&quot;: &quot;https://api.bitbucket.org/2.0/repositories/simulage/daccosim/issues/32/vote&quot;
+                }
+            },
+            &quot;title&quot;: &quot;what is Matryoshka.jar&quot;,
+            &quot;content&quot;: {
+                &quot;type&quot;: &quot;rendered&quot;,
+                &quot;raw&quot;: &quot;I ran the develop branch code through IDEA, and ran the example \&quot;1-equationsPair\&quot;, with no results. Later, it was discovered that Matryoshka.jar was missing, and it was enough to add it to the resource folder. I searched for relevant information and found that it was used when the Java.fmi package was built. Does this package have any other functions? Where can I read the relevant source code&quot;,
+                &quot;markup&quot;: &quot;markdown&quot;,
+                &quot;html&quot;: &quot;&lt;p&gt;I ran the develop branch code through IDEA, and ran the example \&quot;1-equationsPair\&quot;, with no results. Later, it was discovered that Matryoshka.jar was missing, and it was enough to add it to the resource folder. I searched for relevant information and found that it was used when the Java.fmi package was built. Does this package have any other functions? Where can I read the relevant source code&lt;/p&gt;&quot;
+            },
+            &quot;reporter&quot;: null,
+            &quot;assignee&quot;: null,
+            &quot;created_on&quot;: &quot;2021-05-14T03:22:30.320396+00:00&quot;,
+            &quot;edited_on&quot;: null,
+            &quot;updated_on&quot;: &quot;2021-07-26T13:53:49.611631+00:00&quot;,
+            &quot;state&quot;: &quot;closed&quot;,
+            &quot;kind&quot;: &quot;proposal&quot;,
+            &quot;milestone&quot;: null,
+            &quot;component&quot;: null,
+            &quot;priority&quot;: &quot;major&quot;,
+            &quot;version&quot;: null,
+            &quot;votes&quot;: 0,
+            &quot;watches&quot;: null
+        },
+        {
+            &quot;type&quot;: &quot;issue&quot;,
+            &quot;id&quot;: 8,
+            &quot;repository&quot;: {
+                &quot;type&quot;: &quot;repository&quot;,
+                &quot;full_name&quot;: &quot;simulage/daccosim&quot;,
+                &quot;links&quot;: {
+                    &quot;self&quot;: {
+                        &quot;href&quot;: &quot;https://api.bitbucket.org/2.0/repositories/simulage/daccosim&quot;
+                    },
+                    &quot;html&quot;: {
+                        &quot;href&quot;: &quot;https://bitbucket.org/simulage/daccosim&quot;
+                    },
+                    &quot;avatar&quot;: {
+                        &quot;href&quot;: &quot;https://bytebucket.org/ravatar/%7B23007f73-93bd-4f68-952a-72c16c7e2cc6%7D?ts=1973243&quot;
+                    }
+                },
+                &quot;name&quot;: &quot;daccosim&quot;,
+                &quot;uuid&quot;: &quot;{23007f73-93bd-4f68-952a-72c16c7e2cc6}&quot;
+            },
+            &quot;links&quot;: {
+                &quot;self&quot;: {
+                    &quot;href&quot;: &quot;https://api.bitbucket.org/2.0/repositories/simulage/daccosim/issues/8&quot;
+                },
+                &quot;html&quot;: {
+                    &quot;href&quot;: &quot;https://bitbucket.org/simulage/daccosim/issues/8/participation-in-fmu-cross-check&quot;
+                },
+                &quot;comments&quot;: {
+                    &quot;href&quot;: &quot;https://api.bitbucket.org/2.0/repositories/simulage/daccosim/issues/8/comments&quot;
+                },
+                &quot;attachments&quot;: {
+                    &quot;href&quot;: &quot;https://api.bitbucket.org/2.0/repositories/simulage/daccosim/issues/8/attachments&quot;
+                },
+                &quot;watch&quot;: {
+                    &quot;href&quot;: &quot;https://api.bitbucket.org/2.0/repositories/simulage/daccosim/issues/8/watch&quot;
+                },
+                &quot;vote&quot;: {
+                    &quot;href&quot;: &quot;https://api.bitbucket.org/2.0/repositories/simulage/daccosim/issues/8/vote&quot;
+                }
+            },
+            &quot;title&quot;: &quot;Participation in FMU Cross-Check&quot;,
+            &quot;content&quot;: {
+                &quot;type&quot;: &quot;rendered&quot;,
+                &quot;raw&quot;: &quot;It would be highly benefical if Daccosom would participate in the FMU Cross check https://github.com/modelica/fmi-cross-check. \r&quot;,
+                &quot;markup&quot;: &quot;markdown&quot;,
+                &quot;html&quot;: &quot;&lt;p&gt;It would be highly benefical if Daccosom would participate in the FMU Cross check &lt;a href=\&quot;https://github.com/modelica/fmi-cross-check.\&quot; rel=\&quot;nofollow\&quot; class=\&quot;ap-connect-link\&quot;&gt;https://github.com/modelica/fmi-cross-check.&lt;/a&gt;&lt;/p&gt;&quot;
+            },
+            &quot;reporter&quot;: null,
+            &quot;assignee&quot;: null,
+            &quot;created_on&quot;: &quot;2020-05-19T05:36:51.528562+00:00&quot;,
+            &quot;edited_on&quot;: null,
+            &quot;updated_on&quot;: &quot;2020-11-06T08:17:22.491117+00:00&quot;,
+            &quot;state&quot;: &quot;on hold&quot;,
+            &quot;kind&quot;: &quot;proposal&quot;,
+            &quot;milestone&quot;: null,
+            &quot;component&quot;: null,
+            &quot;priority&quot;: &quot;major&quot;,
+            &quot;version&quot;: null,
+            &quot;votes&quot;: 0,
+            &quot;watches&quot;: null
+        }
+    ],
+    &quot;pagelen&quot;: 20,
+    &quot;size&quot;: 2,
+    &quot;page&quot;: 1
+}     
+</code></pre>
+<p>Input: </p>
 <pre><code>!bitbucket list-issues --site &quot;localhost:8080&quot; --repo &quot;simulage/daccosim&quot; --type &quot;proposal&quot;
 </code></pre>
 <p>Output: </p>

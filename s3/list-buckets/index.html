@@ -5031,6 +5031,23 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x = ! s3 list-buckets --site &quot;localhost:8081&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;buckets&quot;: [
+    {
+      &quot;name&quot;: &quot;test1&quot;,
+      &quot;createdTime&quot;: &quot;2022-09-19T10:32:34Z&quot;
+    },
+    {
+      &quot;name&quot;: &quot;test2&quot;,
+      &quot;createdTime&quot;: &quot;2022-09-19T08:26:38Z&quot;
+    }
+  ]
+}
+</code></pre>
+<p>Input: </p>
 <pre><code>! s3 list-buckets --site &quot;localhost&quot;
 </code></pre>
 <p>Output: </p>

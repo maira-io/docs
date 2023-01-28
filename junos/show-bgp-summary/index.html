@@ -5031,6 +5031,24 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>!junos show-bgp-summary
+</code></pre>
+<p>Output: </p>
+<pre><code>Threading mode: BGP I/O
+Default eBGP mode: advertise - accept, receive - accept
+Groups: 2 Peers: 3 Down peers: 0
+Table          Tot Paths  Act Paths Suppressed    History Damp State    Pending
+inet.0
+                      0          0          0          0          0          0
+Peer                     AS      InPkt     OutPkt    OutQ   Flaps Last Up/Dwn State|#Active/Received/Accepted/Damped...
+10.100.14.2           64544        551        548       0       0     4:07:18 Establ
+  inet.0: 0/0/0/0
+10.100.150.1          64500        546        548       0       0     4:07:08 Establ
+  inet.0: 0/0/0/0
+10.100.150.2          64500        545        547       0       0     4:06:45 Establ
+  inet.0: 0/0/0/0
+</code></pre>
+<p>Input: </p>
 <pre><code>x = !junos show-bgp-summary
 </code></pre>
 <p>Output: </p>

@@ -5191,6 +5191,20 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x=! gcp create-log-metric --site &quot;localhost:8081&quot; &quot;testMetric3&quot; --description &quot;testDesc&quot; --filter &quot;protoPayload.status &gt;= 400 AND sample(insertId, 0.1)&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;metric&quot;: {
+    &quot;name&quot;: &quot;testMetric3&quot;,
+    &quot;description&quot;: &quot;testDesc&quot;,
+    &quot;filter&quot;: &quot;protoPayload.status &gt;= 400 AND sample(insertId, 0.1)&quot;,
+    &quot;createTime&quot;: &quot;2022-10-14T08:33:18.198693597Z&quot;,
+    &quot;updateTime&quot;: &quot;2022-10-14T08:33:18.198693597Z&quot;
+  }
+}
+</code></pre>
+<p>Input: </p>
 <pre><code>! gcp create-log-metric --site &quot;localhost:8081&quot; &quot;testMetric5&quot; --description &quot;testDesc&quot; --filter &quot;protoPayload.status &gt;= 400 AND sample(insertId, 0.1)&quot;
 </code></pre>
 <p>Output: </p>

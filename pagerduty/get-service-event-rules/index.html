@@ -5051,6 +5051,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>!pagerduty get-service-event-rules --site &quot;localhost:8081&quot; --id &quot;PKAT53N&quot; --rule_id &quot;778916bf-1606-472a-a29c-7b4c918c1240&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>ID                                      POSITION    DISABLED    SEVERITY-ACTION 
+778916bf-1606-472a-a29c-7b4c918c1240           0    false       -               
+</code></pre>
+<p>Input: </p>
 <pre><code>x=!pagerduty get-service-event-rules --site &quot;localhost:8081&quot; --id &quot;PKAT53N&quot; --rule_id &quot;778916bf-1606-472a-a29c-7b4c918c1240&quot;
 </code></pre>
 <p>Output: </p>

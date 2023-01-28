@@ -5054,6 +5054,63 @@
 <pre><code>x = ! appd get-business-transactions --site &quot;localhost:8081&quot; &quot;bookinfo&quot;
 </code></pre>
 <p>Output: </p>
+<pre><code>[
+  {
+    &quot;internalName&quot;: &quot;/productpage&quot;,
+    &quot;tierId&quot;: 939727,
+    &quot;entryPointType&quot;: &quot;PYTHON_WEB&quot;,
+    &quot;background&quot;: false,
+    &quot;tierName&quot;: &quot;productpage&quot;,
+    &quot;name&quot;: &quot;/productpage&quot;,
+    &quot;id&quot;: 94244,
+    &quot;entryPointTypeString&quot;: &quot;PYTHON_WEB&quot;
+  },
+  {
+    &quot;internalName&quot;: &quot;_APPDYNAMICS_DEFAULT_TX_&quot;,
+    &quot;tierId&quot;: 939711,
+    &quot;entryPointType&quot;: &quot;POJO&quot;,
+    &quot;background&quot;: false,
+    &quot;tierName&quot;: &quot;reviews&quot;,
+    &quot;name&quot;: &quot;_APPDYNAMICS_DEFAULT_TX_&quot;,
+    &quot;id&quot;: 94245,
+    &quot;entryPointTypeString&quot;: &quot;POJO&quot;
+  },
+  {
+    &quot;internalName&quot;: &quot;/login&quot;,
+    &quot;tierId&quot;: 939727,
+    &quot;entryPointType&quot;: &quot;PYTHON_WEB&quot;,
+    &quot;background&quot;: false,
+    &quot;tierName&quot;: &quot;productpage&quot;,
+    &quot;name&quot;: &quot;/login&quot;,
+    &quot;id&quot;: 94247,
+    &quot;entryPointTypeString&quot;: &quot;PYTHON_WEB&quot;
+  },
+  {
+    &quot;internalName&quot;: &quot;_APPDYNAMICS_DEFAULT_TX_&quot;,
+    &quot;tierId&quot;: 939727,
+    &quot;entryPointType&quot;: &quot;PYTHON_WEB&quot;,
+    &quot;background&quot;: false,
+    &quot;tierName&quot;: &quot;productpage&quot;,
+    &quot;name&quot;: &quot;_APPDYNAMICS_DEFAULT_TX_&quot;,
+    &quot;id&quot;: 94273,
+    &quot;entryPointTypeString&quot;: &quot;PYTHON_WEB&quot;
+  },
+  {
+    &quot;internalName&quot;: &quot;/logout&quot;,
+    &quot;tierId&quot;: 939727,
+    &quot;entryPointType&quot;: &quot;PYTHON_WEB&quot;,
+    &quot;background&quot;: false,
+    &quot;tierName&quot;: &quot;productpage&quot;,
+    &quot;name&quot;: &quot;/logout&quot;,
+    &quot;id&quot;: 94723,
+    &quot;entryPointTypeString&quot;: &quot;PYTHON_WEB&quot;
+  }
+]
+</code></pre>
+<p>Input: </p>
+<pre><code>x = ! appd get-business-transactions --site &quot;localhost:8081&quot; &quot;bookinfo&quot;
+</code></pre>
+<p>Output: </p>
 <pre><code>ID      NAME                        ENTRY-POINT-TYPE    INTERNAL-NAME               TIER-ID TIER        BACKGROUND 
 94244   /productpage                PYTHON_WEB          /productpage                 939727 productpage false       
 94245   _APPDYNAMICS_DEFAULT_TX_    POJO                _APPDYNAMICS_DEFAULT_TX_     939711 reviews     false       

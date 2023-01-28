@@ -5191,6 +5191,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>! bitbucket edit-issue --site &quot;localhost:8080&quot; --repo &quot;sbansal7/repo1&quot; --issue 1 --assignee &quot;sbansal7&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>ID  TYPE    PRIORITY    STATE   ASSIGNEE        MILESTONE   TITLE
+ 4  bug     major       new     Sachin Bansal   null        testTitle1
+</code></pre>
+<p>Input: </p>
 <pre><code>x=! bitbucket edit-issue --site &quot;localhost:8080&quot; --repo &quot;sbansal7/repo1&quot; --issue 1 --assignee &quot;sbansal7&quot;
 </code></pre>
 <p>Output: </p>

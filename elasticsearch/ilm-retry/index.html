@@ -5051,6 +5051,24 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>! elasticsearch ilm-retry --site &quot;localhost&quot; --cluster &quot;elastic-1&quot; --index &quot;class&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;error&quot;: {
+    &quot;root_cause&quot;: [
+      {
+        &quot;type&quot;: &quot;illegal_argument_exception&quot;,
+        &quot;reason&quot;: &quot;cannot retry an action for an index [class] that has not encountered an error when running a Lifecycle Policy&quot;
+      }
+    ],
+    &quot;type&quot;: &quot;illegal_argument_exception&quot;,
+    &quot;reason&quot;: &quot;cannot retry an action for an index [class] that has not encountered an error when running a Lifecycle Policy&quot;
+  },
+  &quot;status&quot;: 400
+}
+</code></pre>
+<p>Input: </p>
 <pre><code>! elasticsearch ilm-retry --site &quot;localhost&quot; --cluster &quot;elastic-1&quot; --index &quot;test&quot;
 </code></pre>
 <p>Output: </p>

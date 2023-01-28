@@ -5131,6 +5131,184 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x=!github search-issues --site &quot;localhost:8081&quot; --repo &quot;mozilla/protocol&quot; &quot;Deprecate in:title state:open&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+    &quot;total_count&quot;: 2,
+    &quot;incomplete_results&quot;: false,
+    &quot;items&quot;: [
+        {
+            &quot;url&quot;: &quot;https://api.github.com/repos/mozilla/protocol/issues/787&quot;,
+            &quot;repository_url&quot;: &quot;https://api.github.com/repos/mozilla/protocol&quot;,
+            &quot;labels_url&quot;: &quot;https://api.github.com/repos/mozilla/protocol/issues/787/labels{/name}&quot;,
+            &quot;comments_url&quot;: &quot;https://api.github.com/repos/mozilla/protocol/issues/787/comments&quot;,
+            &quot;events_url&quot;: &quot;https://api.github.com/repos/mozilla/protocol/issues/787/events&quot;,
+            &quot;html_url&quot;: &quot;https://github.com/mozilla/protocol/issues/787&quot;,
+            &quot;id&quot;: 1262593895,
+            &quot;node_id&quot;: &quot;I_kwDOB0tmJc5LQadn&quot;,
+            &quot;number&quot;: 787,
+            &quot;title&quot;: &quot;Deprecate (or update) the Callout component&quot;,
+            &quot;user&quot;: {
+                &quot;login&quot;: &quot;craigcook&quot;,
+                &quot;id&quot;: 205591,
+                &quot;node_id&quot;: &quot;MDQ6VXNlcjIwNTU5MQ==&quot;,
+                &quot;avatar_url&quot;: &quot;https://avatars.githubusercontent.com/u/205591?v=4&quot;,
+                &quot;gravatar_id&quot;: &quot;&quot;,
+                &quot;url&quot;: &quot;https://api.github.com/users/craigcook&quot;,
+                &quot;html_url&quot;: &quot;https://github.com/craigcook&quot;,
+                &quot;followers_url&quot;: &quot;https://api.github.com/users/craigcook/followers&quot;,
+                &quot;following_url&quot;: &quot;https://api.github.com/users/craigcook/following{/other_user}&quot;,
+                &quot;gists_url&quot;: &quot;https://api.github.com/users/craigcook/gists{/gist_id}&quot;,
+                &quot;starred_url&quot;: &quot;https://api.github.com/users/craigcook/starred{/owner}{/repo}&quot;,
+                &quot;subscriptions_url&quot;: &quot;https://api.github.com/users/craigcook/subscriptions&quot;,
+                &quot;organizations_url&quot;: &quot;https://api.github.com/users/craigcook/orgs&quot;,
+                &quot;repos_url&quot;: &quot;https://api.github.com/users/craigcook/repos&quot;,
+                &quot;events_url&quot;: &quot;https://api.github.com/users/craigcook/events{/privacy}&quot;,
+                &quot;received_events_url&quot;: &quot;https://api.github.com/users/craigcook/received_events&quot;,
+                &quot;type&quot;: &quot;User&quot;,
+                &quot;site_admin&quot;: false
+            },
+            &quot;labels&quot;: [],
+            &quot;state&quot;: &quot;open&quot;,
+            &quot;locked&quot;: false,
+            &quot;assignee&quot;: null,
+            &quot;assignees&quot;: [],
+            &quot;milestone&quot;: null,
+            &quot;comments&quot;: 0,
+            &quot;created_at&quot;: &quot;2022-06-07T01:00:43Z&quot;,
+            &quot;updated_at&quot;: &quot;2022-06-07T01:00:43Z&quot;,
+            &quot;closed_at&quot;: null,
+            &quot;author_association&quot;: &quot;MEMBER&quot;,
+            &quot;active_lock_reason&quot;: null,
+            &quot;body&quot;: &quot;We've deprecated the Hero component in favor of Split (for Hero with image) or Callout (for Hero without an image). However, Callout in its current state isn't actually an adequate replacement for the non-image, centered Hero without some modifications.\r
+\r
+Namely:\r
+- Callout has built-in logos. We should instead prefer the newer Logo/Wordmark components (however we first need to make Logos and Wordmarks centerable, see #718 which would be a blocker for this).\r
+- Hero has a max-width of 580px on its content; Callout contains an `mzp-l-content` container with a max-width of 800px, which breaks from the standard container widths. Callout should support the standard container widths.\r
+- The Callout title has a set size, a bit smaller than the Hero title, since it wasn't designed to be a page title. Instead of a set size for the title we could instead use utility classes for title sizes.\r
+\r
+We could make all these changes to the Callout component **OR** we could create a new component with the properties we want and deprecate Callout entirely. \r
+\r
+I'm leaning toward deprecation mainly because some of these would be breaking changes, especially removing the built-in logos. But if we make a new component and add a deprecation warning for Callout that would allow people more time to transition.\r
+\r
+A new, content-agnostic, centered section with some spacing, standardized content widths, and an optional background color could replace a centered Hero as well as anywhere else we currently use Callout.\r
+\r
+&quot;,
+            &quot;reactions&quot;: {
+                &quot;url&quot;: &quot;https://api.github.com/repos/mozilla/protocol/issues/787/reactions&quot;,
+                &quot;total_count&quot;: 0,
+                &quot;+1&quot;: 0,
+                &quot;-1&quot;: 0,
+                &quot;laugh&quot;: 0,
+                &quot;hooray&quot;: 0,
+                &quot;confused&quot;: 0,
+                &quot;heart&quot;: 0,
+                &quot;rocket&quot;: 0,
+                &quot;eyes&quot;: 0
+            },
+            &quot;timeline_url&quot;: &quot;https://api.github.com/repos/mozilla/protocol/issues/787/timeline&quot;,
+            &quot;performed_via_github_app&quot;: null,
+            &quot;state_reason&quot;: null,
+            &quot;score&quot;: 1.0
+        },
+        {
+            &quot;url&quot;: &quot;https://api.github.com/repos/mozilla/protocol/issues/694&quot;,
+            &quot;repository_url&quot;: &quot;https://api.github.com/repos/mozilla/protocol&quot;,
+            &quot;labels_url&quot;: &quot;https://api.github.com/repos/mozilla/protocol/issues/694/labels{/name}&quot;,
+            &quot;comments_url&quot;: &quot;https://api.github.com/repos/mozilla/protocol/issues/694/comments&quot;,
+            &quot;events_url&quot;: &quot;https://api.github.com/repos/mozilla/protocol/issues/694/events&quot;,
+            &quot;html_url&quot;: &quot;https://github.com/mozilla/protocol/issues/694&quot;,
+            &quot;id&quot;: 941863114,
+            &quot;node_id&quot;: &quot;MDU6SXNzdWU5NDE4NjMxMTQ=&quot;,
+            &quot;number&quot;: 694,
+            &quot;title&quot;: &quot;Netlify \&quot;Trusty\&quot; build image is deprecated&quot;,
+            &quot;user&quot;: {
+                &quot;login&quot;: &quot;alexgibson&quot;,
+                &quot;id&quot;: 400117,
+                &quot;node_id&quot;: &quot;MDQ6VXNlcjQwMDExNw==&quot;,
+                &quot;avatar_url&quot;: &quot;https://avatars.githubusercontent.com/u/400117?v=4&quot;,
+                &quot;gravatar_id&quot;: &quot;&quot;,
+                &quot;url&quot;: &quot;https://api.github.com/users/alexgibson&quot;,
+                &quot;html_url&quot;: &quot;https://github.com/alexgibson&quot;,
+                &quot;followers_url&quot;: &quot;https://api.github.com/users/alexgibson/followers&quot;,
+                &quot;following_url&quot;: &quot;https://api.github.com/users/alexgibson/following{/other_user}&quot;,
+                &quot;gists_url&quot;: &quot;https://api.github.com/users/alexgibson/gists{/gist_id}&quot;,
+                &quot;starred_url&quot;: &quot;https://api.github.com/users/alexgibson/starred{/owner}{/repo}&quot;,
+                &quot;subscriptions_url&quot;: &quot;https://api.github.com/users/alexgibson/subscriptions&quot;,
+                &quot;organizations_url&quot;: &quot;https://api.github.com/users/alexgibson/orgs&quot;,
+                &quot;repos_url&quot;: &quot;https://api.github.com/users/alexgibson/repos&quot;,
+                &quot;events_url&quot;: &quot;https://api.github.com/users/alexgibson/events{/privacy}&quot;,
+                &quot;received_events_url&quot;: &quot;https://api.github.com/users/alexgibson/received_events&quot;,
+                &quot;type&quot;: &quot;User&quot;,
+                &quot;site_admin&quot;: false
+            },
+            &quot;labels&quot;: [
+                {
+                    &quot;id&quot;: 844206983,
+                    &quot;node_id&quot;: &quot;MDU6TGFiZWw4NDQyMDY5ODM=&quot;,
+                    &quot;url&quot;: &quot;https://api.github.com/repos/mozilla/protocol/labels/Bug%20:beetle:&quot;,
+                    &quot;name&quot;: &quot;Bug :beetle:&quot;,
+                    &quot;color&quot;: &quot;d7e102&quot;,
+                    &quot;default&quot;: false,
+                    &quot;description&quot;: &quot;Something isn't working&quot;
+                },
+                {
+                    &quot;id&quot;: 873966289,
+                    &quot;node_id&quot;: &quot;MDU6TGFiZWw4NzM5NjYyODk=&quot;,
+                    &quot;url&quot;: &quot;https://api.github.com/repos/mozilla/protocol/labels/Infra%20:wrench:&quot;,
+                    &quot;name&quot;: &quot;Infra :wrench:&quot;,
+                    &quot;color&quot;: &quot;0e8a16&quot;,
+                    &quot;default&quot;: false,
+                    &quot;description&quot;: &quot;Improvements to the infrastructure that make the system go&quot;
+                }
+            ],
+            &quot;state&quot;: &quot;open&quot;,
+            &quot;locked&quot;: false,
+            &quot;assignee&quot;: null,
+            &quot;assignees&quot;: [],
+            &quot;milestone&quot;: null,
+            &quot;comments&quot;: 0,
+            &quot;created_at&quot;: &quot;2021-07-12T09:36:08Z&quot;,
+            &quot;updated_at&quot;: &quot;2021-07-12T09:36:24Z&quot;,
+            &quot;closed_at&quot;: null,
+            &quot;author_association&quot;: &quot;MEMBER&quot;,
+            &quot;active_lock_reason&quot;: null,
+            &quot;body&quot;: &quot;## Description\r
+\r
+Got this via email from Netlify:\r
+\r
+```\r
+Deprecation notice: Netlify builds using the Trusty build image will fail after September 19\r
+\r
+The Netlify build system maintains multiple build images, which set the environment in which your sites build. One or more of your sites is using the “Trusty” image, built on Ubuntu 14.04 (“Trusty Tahr”). The Trusty image moved into legacy support in 2019, after Ubuntu 14.04 reached end of life.\r
+\r
+On September 19, 2021, we will end all support for the Netlify Trusty image.\r
+```\r
+\r
+Migration guide here: https://answers.netlify.com/t/please-read-end-of-support-for-trusty-build-image-everything-you-need-to-know/39004\r
+&quot;,
+            &quot;reactions&quot;: {
+                &quot;url&quot;: &quot;https://api.github.com/repos/mozilla/protocol/issues/694/reactions&quot;,
+                &quot;total_count&quot;: 0,
+                &quot;+1&quot;: 0,
+                &quot;-1&quot;: 0,
+                &quot;laugh&quot;: 0,
+                &quot;hooray&quot;: 0,
+                &quot;confused&quot;: 0,
+                &quot;heart&quot;: 0,
+                &quot;rocket&quot;: 0,
+                &quot;eyes&quot;: 0
+            },
+            &quot;timeline_url&quot;: &quot;https://api.github.com/repos/mozilla/protocol/issues/694/timeline&quot;,
+            &quot;performed_via_github_app&quot;: null,
+            &quot;state_reason&quot;: null,
+            &quot;score&quot;: 1.0
+        }
+    ]
+}
+</code></pre>
+<p>Input: </p>
 <pre><code>!github search-issues --site &quot;localhost:8081&quot; --repo &quot;mozilla/protocol&quot; &quot;Deprecate in:title state:open&quot;
 </code></pre>
 <p>Output: </p>

@@ -5031,6 +5031,37 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x = ! appd get-applications --site &quot;localhost:8081&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>[
+  {
+    &quot;name&quot;: &quot;Cluster1&quot;,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;id&quot;: 887570,
+    &quot;accountGuid&quot;: &quot;75511c5e-368c-4db8-8003-512729222b52&quot;
+  },
+  {
+    &quot;name&quot;: &quot;bookinfo&quot;,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;id&quot;: 892053,
+    &quot;accountGuid&quot;: &quot;75511c5e-368c-4db8-8003-512729222b52&quot;
+  },
+  {
+    &quot;name&quot;: &quot;test-app&quot;,
+    &quot;description&quot;: &quot;My test application&quot;,
+    &quot;id&quot;: 864040,
+    &quot;accountGuid&quot;: &quot;75511c5e-368c-4db8-8003-512729222b52&quot;
+  },
+  {
+    &quot;name&quot;: &quot;test app2&quot;,
+    &quot;description&quot;: &quot;My second test application&quot;,
+    &quot;id&quot;: 864111,
+    &quot;accountGuid&quot;: &quot;75511c5e-368c-4db8-8003-512729222b52&quot;
+  }
+]
+</code></pre>
+<p>Input: </p>
 <pre><code>! appd get-applications --site &quot;localhost:8081&quot;
 </code></pre>
 <p>Output: </p>

@@ -5151,6 +5151,74 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x=! bitbucket create-issue --site &quot;localhost:8080&quot; --title &quot;testTitle1&quot; --repo &quot;sbansal7/repo1&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+    &quot;type&quot;: &quot;issue&quot;,
+    &quot;id&quot;: 5,
+    &quot;repository&quot;: {
+        &quot;type&quot;: &quot;repository&quot;,
+        &quot;full_name&quot;: &quot;sbansal7/repo1&quot;,
+        &quot;links&quot;: {
+            &quot;self&quot;: {
+                &quot;href&quot;: &quot;https://api.bitbucket.org/2.0/repositories/sbansal7/repo1&quot;
+            },
+            &quot;html&quot;: {
+                &quot;href&quot;: &quot;https://bitbucket.org/sbansal7/repo1&quot;
+            },
+            &quot;avatar&quot;: {
+                &quot;href&quot;: &quot;https://bytebucket.org/ravatar/%7Bc7b44412-1430-4789-a512-4c8cadf3f6f7%7D?ts=default&quot;
+            }
+        },
+        &quot;name&quot;: &quot;repo1&quot;,
+        &quot;uuid&quot;: &quot;{c7b44412-1430-4789-a512-4c8cadf3f6f7}&quot;
+    },
+    &quot;links&quot;: {
+        &quot;self&quot;: {
+            &quot;href&quot;: &quot;https://api.bitbucket.org/2.0/repositories/sbansal7/repo1/issues/5&quot;
+        }
+    },
+    &quot;title&quot;: &quot;testTitle1&quot;,
+    &quot;content&quot;: {
+        &quot;type&quot;: &quot;rendered&quot;,
+        &quot;raw&quot;: &quot;&quot;,
+        &quot;markup&quot;: &quot;markdown&quot;,
+        &quot;html&quot;: &quot;&quot;
+    },
+    &quot;reporter&quot;: {
+        &quot;display_name&quot;: &quot;Sachin Bansal&quot;,
+        &quot;links&quot;: {
+            &quot;self&quot;: {
+                &quot;href&quot;: &quot;https://api.bitbucket.org/2.0/users/%7Bfa271433-988c-4a42-932b-380426e46f8e%7D&quot;
+            },
+            &quot;avatar&quot;: {
+                &quot;href&quot;: &quot;https://secure.gravatar.com/avatar/bbcb732b26ae24604238af9c110f5f76?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSB-2.png&quot;
+            },
+            &quot;html&quot;: {
+                &quot;href&quot;: &quot;https://bitbucket.org/%7Bfa271433-988c-4a42-932b-380426e46f8e%7D/&quot;
+            }
+        },
+        &quot;type&quot;: &quot;user&quot;,
+        &quot;uuid&quot;: &quot;{fa271433-988c-4a42-932b-380426e46f8e}&quot;,
+        &quot;account_id&quot;: &quot;630d04a0316bbc56c42401e9&quot;,
+        &quot;nickname&quot;: &quot;Sachin Bansal&quot;
+    },
+    &quot;assignee&quot;: null,
+    &quot;created_on&quot;: &quot;2022-08-30T15:42:14.325947+00:00&quot;,
+    &quot;edited_on&quot;: null,
+    &quot;updated_on&quot;: &quot;2022-08-30T15:42:14.325947+00:00&quot;,
+    &quot;state&quot;: &quot;new&quot;,
+    &quot;kind&quot;: &quot;bug&quot;,
+    &quot;milestone&quot;: null,
+    &quot;component&quot;: null,
+    &quot;priority&quot;: &quot;major&quot;,
+    &quot;version&quot;: null,
+    &quot;votes&quot;: 0,
+    &quot;watches&quot;: null
+}
+</code></pre>
+<p>Input: </p>
 <pre><code>! bitbucket create-issue --site &quot;localhost:8081&quot; --title &quot;testTitle1&quot; --repo &quot;sbansal7/repo1&quot;
 </code></pre>
 <p>Output: </p>

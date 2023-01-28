@@ -5091,6 +5091,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>!pagerduty list-incidents --site &quot;localhost:8081&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>ID              TITLE       ASSIGNEE        STATUS       
+Q3O2DXG783FJFA  New test    Pavan Subhakar  acknowledged    
+Q3TLHH2JYZA8M6  new user    Avinash         triggered  
+</code></pre>
+<p>Input: </p>
 <pre><code>x= !pagerduty list-incidents --site &quot;localhost:8081&quot; --id &quot;Q3O2DXG783FJFA&quot;
 </code></pre>
 <p>Output: </p>

@@ -5091,6 +5091,65 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>! elasticsearch get-index --site &quot;localhost&quot; &quot;test&quot; &quot;test1&quot; --cluster &quot;elastic-1&quot; --raw 
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;test&quot;: {
+    &quot;aliases&quot;: {},
+    &quot;mappings&quot;: {},
+    &quot;settings&quot;: {
+      &quot;index&quot;: {
+        &quot;routing&quot;: {
+          &quot;allocation&quot;: {
+            &quot;include&quot;: {
+              &quot;_tier_preference&quot;: &quot;data_content&quot;
+            }
+          }
+        },
+        &quot;number_of_shards&quot;: &quot;1&quot;,
+        &quot;provided_name&quot;: &quot;test&quot;,
+        &quot;creation_date&quot;: &quot;1633061676252&quot;,
+        &quot;number_of_replicas&quot;: &quot;1&quot;,
+        &quot;uuid&quot;: &quot;vpk0XgasRcGGTfpvF7R-SQ&quot;,
+        &quot;version&quot;: {
+          &quot;created&quot;: &quot;7140299&quot;
+        }
+      }
+    }
+  },
+  &quot;test1&quot;: {
+    &quot;aliases&quot;: {},
+    &quot;mappings&quot;: {
+      &quot;properties&quot;: {
+        &quot;field1&quot;: {
+          &quot;type&quot;: &quot;text&quot;
+        }
+      }
+    },
+    &quot;settings&quot;: {
+      &quot;index&quot;: {
+        &quot;routing&quot;: {
+          &quot;allocation&quot;: {
+            &quot;include&quot;: {
+              &quot;_tier_preference&quot;: &quot;data_content&quot;
+            }
+          }
+        },
+        &quot;number_of_shards&quot;: &quot;3&quot;,
+        &quot;provided_name&quot;: &quot;test1&quot;,
+        &quot;creation_date&quot;: &quot;1632751814205&quot;,
+        &quot;number_of_replicas&quot;: &quot;3&quot;,
+        &quot;uuid&quot;: &quot;07QzkcVMRVORd5zxHYLQ0Q&quot;,
+        &quot;version&quot;: {
+          &quot;created&quot;: &quot;7140299&quot;
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<p>Input: </p>
 <pre><code>! elasticsearch get-index --site &quot;localhost&quot;
 </code></pre>
 <p>Output: </p>

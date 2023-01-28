@@ -5051,6 +5051,53 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>!junos show-bgp-neighbor &quot;10.100.14.2&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>Peer: 10.100.14.2+62371 AS 64544 Local: 10.100.14.1+179 AS 64500
+  Description: to vMX4
+  Group: EBGP-to-64544         Routing-Instance: master
+  Forwarding routing-instance: master
+  Type: External    State: Established    Flags: &amp;lt;Sync&amp;gt;
+  Last State: OpenConfirm   Last Event: RecvKeepAlive
+  Last Error: None
+  Options: &amp;lt;PeerAS Refresh&amp;gt;
+  Options: &amp;lt;GracefulShutdownRcv&amp;gt;
+  Holdtime: 90 Preference: 170
+  Graceful Shutdown Receiver local-preference: 0
+  Number of flaps: 0
+  Peer ID: 10.100.100.4    Local ID: 10.100.100.1      Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 0    Peer index: 0    SNMP index: 0
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  Local Interface: ge-0/0/2.0
+  NLRI for restart configured on peer: inet-unicast
+  NLRI advertised by peer: inet-unicast
+  NLRI for this session: inet-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Peer does not support Restarter functionality
+  Restart flag received from the peer: Notification
+  NLRI that restart is negotiated for: inet-unicast
+  NLRI of received end-of-rib markers: inet-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast
+  Peer does not support LLGR Restarter functionality
+  Peer supports 4 byte AS extension (peer-as 64544)
+  Peer does not support Addpath
+  Table inet.0 Bit: 20000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              0
+    Received prefixes:            0
+    Accepted prefixes:            0
+    Suppressed due to damping:    0
+    Advertised prefixes:          0
+  Last traffic (seconds): Received 16   Sent 2    Checked 15545
+  Input messages:  Total 577    Updates 1   Refreshes 0 Octets 11011
+  Output messages: Total 574    Updates 0   Refreshes 0 Octets 10910
+  Output Queue[1]: 0            (inet.0, inet-unicast)
+</code></pre>
+<p>Input: </p>
 <pre><code>x = !junos show-bgp-neighbor &quot;10.100.14.2&quot;
 </code></pre>
 <p>Output: </p>

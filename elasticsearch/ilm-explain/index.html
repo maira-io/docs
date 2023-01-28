@@ -5071,6 +5071,87 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>! elasticsearch ilm-explain --site &quot;localhost&quot; --cluster &quot;elastic-1&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;indices&quot;: {
+    &quot;my_target_index_17&quot;: {
+      &quot;index&quot;: &quot;my_target_index_17&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;my_source_index&quot;: {
+      &quot;index&quot;: &quot;my_source_index&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;my_target_index_18&quot;: {
+      &quot;index&quot;: &quot;my_target_index_18&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;test&quot;: {
+      &quot;index&quot;: &quot;test&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;my_target_index_9&quot;: {
+      &quot;index&quot;: &quot;my_target_index_9&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;split_index_1&quot;: {
+      &quot;index&quot;: &quot;split_index_1&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;my_target_index_91&quot;: {
+      &quot;index&quot;: &quot;my_target_index_91&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;test1&quot;: {
+      &quot;index&quot;: &quot;test1&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;my_target_index_90&quot;: {
+      &quot;index&quot;: &quot;my_target_index_90&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;my_target_index&quot;: {
+      &quot;index&quot;: &quot;my_target_index&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;my_target_index_6&quot;: {
+      &quot;index&quot;: &quot;my_target_index_6&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;my_target_index_7&quot;: {
+      &quot;index&quot;: &quot;my_target_index_7&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;my_target_index_4&quot;: {
+      &quot;index&quot;: &quot;my_target_index_4&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;my_target_index_2&quot;: {
+      &quot;index&quot;: &quot;my_target_index_2&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;my_target_index_3&quot;: {
+      &quot;index&quot;: &quot;my_target_index_3&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;class&quot;: {
+      &quot;index&quot;: &quot;class&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;my-index-000001&quot;: {
+      &quot;index&quot;: &quot;my-index-000001&quot;,
+      &quot;managed&quot;: false
+    },
+    &quot;my_target_index_1&quot;: {
+      &quot;index&quot;: &quot;my_target_index_1&quot;,
+      &quot;managed&quot;: false
+    }
+  }
+}
+</code></pre>
+<p>Input: </p>
 <pre><code>! elasticsearch ilm-explain --site &quot;localhost&quot; --cluster &quot;elastic-1&quot; --only_errors
 </code></pre>
 <p>Output: </p>

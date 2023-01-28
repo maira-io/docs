@@ -5441,6 +5441,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>!gitlab list-issues --site &quot;localhost:8080&quot; --project &quot;gitlab-com/sales-team/field-operations/sales-operations&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>NUMBER  LABELS                          STATE   ASSIGNEES       MILESTONE                           TITLE
+3031    SalesOPS                        opened  Astahn          SalesOp: 06/06/2022 - 06/19/2022    Win Rate and New Logo Reports for Win / Loss OKR
+3029    SalesOps::New_Request           opened  lcartagena1     SalesOp: 06/06/2022 - 06/19/2022    DualBoot - How to Handle Partner Registrations &amp; Churn for existing Named Customer
+3028    FieldOps                        opened  carolynharding  SalesOp: 06/06/2022 - 06/19/2022    Rachel Richburg, Senior Strategic Account Leader, New Hire Territory, ENT_LRG_AMER_EAST_SCEN_06
+3026    LeanData                        closed  Astahn          SalesOp: 06/06/2022 - 06/19/2022    Steve Xu Territory Change
+</code></pre>
+<p>Input: </p>
 <pre><code>x = ! gitlab list-issues --site &quot;localhost&quot; --labels &quot;new_label&quot;
 </code></pre>
 <p>Output: </p>

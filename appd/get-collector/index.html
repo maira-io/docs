@@ -5051,6 +5051,94 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x = ! appd get-collector --site &quot;localhost:8081&quot; 562
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;performanceState&quot;: null,
+  &quot;collectorStatus&quot;: &quot;ERROR&quot;,
+  &quot;eventSummary&quot;: null,
+  &quot;configId&quot;: 562,
+  &quot;nodeId&quot;: 932032,
+  &quot;config&quot;: {
+    &quot;id&quot;: 562,
+    &quot;version&quot;: 0,
+    &quot;name&quot;: &quot;test&quot;,
+    &quot;nameUnique&quot;: true,
+    &quot;builtIn&quot;: false,
+    &quot;createdBy&quot;: null,
+    &quot;createdOn&quot;: 1664451680000,
+    &quot;modifiedBy&quot;: null,
+    &quot;modifiedOn&quot;: 1664451680000,
+    &quot;type&quot;: &quot;MONGO&quot;,
+    &quot;hostname&quot;: &quot;&quot;,
+    &quot;useWindowsAuth&quot;: false,
+    &quot;username&quot;: &quot;master&quot;,
+    &quot;password&quot;: &quot;&quot;,
+    &quot;port&quot;: 0,
+    &quot;loggingEnabled&quot;: false,
+    &quot;enabled&quot;: true,
+    &quot;excludedSchemas&quot;: null,
+    &quot;jdbcConnectionProperties&quot;: [],
+    &quot;databaseName&quot;: &quot;&quot;,
+    &quot;failoverPartner&quot;: null,
+    &quot;connectAsSysdba&quot;: false,
+    &quot;useServiceName&quot;: false,
+    &quot;sid&quot;: &quot;&quot;,
+    &quot;customConnectionString&quot;: &quot;mongodb://localhost:27017&quot;,
+    &quot;enterpriseDB&quot;: false,
+    &quot;useSSL&quot;: false,
+    &quot;enableOSMonitor&quot;: false,
+    &quot;hostOS&quot;: null,
+    &quot;useLocalWMI&quot;: false,
+    &quot;hostDomain&quot;: null,
+    &quot;hostUsername&quot;: null,
+    &quot;hostPassword&quot;: null,
+    &quot;dbInstanceIdentifier&quot;: null,
+    &quot;region&quot;: null,
+    &quot;certificateAuth&quot;: false,
+    &quot;removeLiterals&quot;: true,
+    &quot;sshPort&quot;: 0,
+    &quot;agentName&quot;: &quot;Default Database Agent&quot;,
+    &quot;dbCyberArkEnabled&quot;: false,
+    &quot;dbCyberArkApplication&quot;: null,
+    &quot;dbCyberArkSafe&quot;: null,
+    &quot;dbCyberArkFolder&quot;: null,
+    &quot;dbCyberArkObject&quot;: null,
+    &quot;hwCyberArkEnabled&quot;: false,
+    &quot;hwCyberArkApplication&quot;: null,
+    &quot;hwCyberArkSafe&quot;: null,
+    &quot;hwCyberArkFolder&quot;: null,
+    &quot;hwCyberArkObject&quot;: null,
+    &quot;orapkiSslEnabled&quot;: false,
+    &quot;orasslClientAuthEnabled&quot;: false,
+    &quot;orasslTruststoreLoc&quot;: null,
+    &quot;orasslTruststoreType&quot;: null,
+    &quot;orasslTruststorePassword&quot;: null,
+    &quot;orasslKeystoreLoc&quot;: null,
+    &quot;orasslKeystoreType&quot;: null,
+    &quot;orasslKeystorePassword&quot;: null,
+    &quot;ldapEnabled&quot;: false,
+    &quot;customMetrics&quot;: null,
+    &quot;subConfigs&quot;: [],
+    &quot;jmxPort&quot;: 0,
+    &quot;backendIds&quot;: [],
+    &quot;extraProperties&quot;: []
+  },
+  &quot;licensesUsed&quot;: -1
+}
+</code></pre>
+<p>Input: </p>
+<pre><code>! appd get-collector --site &quot;localhost:8081&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>ID  VERSION NAME                TYPE    HOSTNAME    USERNAME    PORT    DATABASE NAME 
+562       0 test                MONGO               master         0                    
+564       0 s                   MONGO               null         0                  
+565       0 b                   MONGO               null         0                  
+571       0 sample collector    MONGO               null           0                    
+</code></pre>
+<p>Input: </p>
 <pre><code>! appd get-collector --site &quot;localhost:8081&quot; 562
 </code></pre>
 <p>Output: </p>

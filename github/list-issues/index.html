@@ -5252,6 +5252,72 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x=! github list-issues --site &quot;localhost:8081&quot; --cluster &quot;github-default&quot; --repo &quot;prabhsimran-beehyv/testRepo&quot; 
+</code></pre>
+<p>Output: </p>
+<pre><code>[
+  {
+    &quot;url&quot;: &quot;https://api.github.com/repos/prabhsimran-beehyv/testRepo/issues/1&quot;,
+    &quot;repository_url&quot;: &quot;https://api.github.com/repos/prabhsimran-beehyv/testRepo&quot;,
+    &quot;labels_url&quot;: &quot;https://api.github.com/repos/prabhsimran-beehyv/testRepo/issues/1/labels{/name}&quot;,
+    &quot;comments_url&quot;: &quot;https://api.github.com/repos/prabhsimran-beehyv/testRepo/issues/1/comments&quot;,
+    &quot;events_url&quot;: &quot;https://api.github.com/repos/prabhsimran-beehyv/testRepo/issues/1/events&quot;,
+    &quot;html_url&quot;: &quot;https://github.com/prabhsimran-beehyv/testRepo/issues/1&quot;,
+    &quot;id&quot;: 1170705310,
+    &quot;node_id&quot;: &quot;I_kwDOHAspuM5Fx4ue&quot;,
+    &quot;number&quot;: 1,
+    &quot;title&quot;: &quot;testTitle1&quot;,
+    &quot;user&quot;: {
+      &quot;login&quot;: &quot;prabhsimran-beehyv&quot;,
+      &quot;id&quot;: 100373722,
+      &quot;node_id&quot;: &quot;U_kgDOBfuU2g&quot;,
+      &quot;avatar_url&quot;: &quot;https://avatars.githubusercontent.com/u/100373722?v=4&quot;,
+      &quot;gravatar_id&quot;: &quot;&quot;,
+      &quot;url&quot;: &quot;https://api.github.com/users/prabhsimran-beehyv&quot;,
+      &quot;html_url&quot;: &quot;https://github.com/prabhsimran-beehyv&quot;,
+      &quot;followers_url&quot;: &quot;https://api.github.com/users/prabhsimran-beehyv/followers&quot;,
+      &quot;following_url&quot;: &quot;https://api.github.com/users/prabhsimran-beehyv/following{/other_user}&quot;,
+      &quot;gists_url&quot;: &quot;https://api.github.com/users/prabhsimran-beehyv/gists{/gist_id}&quot;,
+      &quot;starred_url&quot;: &quot;https://api.github.com/users/prabhsimran-beehyv/starred{/owner}{/repo}&quot;,
+      &quot;subscriptions_url&quot;: &quot;https://api.github.com/users/prabhsimran-beehyv/subscriptions&quot;,
+      &quot;organizations_url&quot;: &quot;https://api.github.com/users/prabhsimran-beehyv/orgs&quot;,
+      &quot;repos_url&quot;: &quot;https://api.github.com/users/prabhsimran-beehyv/repos&quot;,
+      &quot;events_url&quot;: &quot;https://api.github.com/users/prabhsimran-beehyv/events{/privacy}&quot;,
+      &quot;received_events_url&quot;: &quot;https://api.github.com/users/prabhsimran-beehyv/received_events&quot;,
+      &quot;type&quot;: &quot;User&quot;,
+      &quot;site_admin&quot;: false
+    },
+    &quot;labels&quot;: [],
+    &quot;state&quot;: &quot;open&quot;,
+    &quot;locked&quot;: false,
+    &quot;assignee&quot;: null,
+    &quot;assignees&quot;: [],
+    &quot;milestone&quot;: null,
+    &quot;comments&quot;: 0,
+    &quot;created_at&quot;: &quot;2022-03-16T08:39:31Z&quot;,
+    &quot;updated_at&quot;: &quot;2022-03-16T08:39:31Z&quot;,
+    &quot;closed_at&quot;: null,
+    &quot;author_association&quot;: &quot;OWNER&quot;,
+    &quot;active_lock_reason&quot;: null,
+    &quot;body&quot;: null,
+    &quot;reactions&quot;: {
+      &quot;url&quot;: &quot;https://api.github.com/repos/prabhsimran-beehyv/testRepo/issues/1/reactions&quot;,
+      &quot;total_count&quot;: 0,
+      &quot;+1&quot;: 0,
+      &quot;-1&quot;: 0,
+      &quot;laugh&quot;: 0,
+      &quot;hooray&quot;: 0,
+      &quot;confused&quot;: 0,
+      &quot;heart&quot;: 0,
+      &quot;rocket&quot;: 0,
+      &quot;eyes&quot;: 0
+    },
+    &quot;timeline_url&quot;: &quot;https://api.github.com/repos/prabhsimran-beehyv/testRepo/issues/1/timeline&quot;,
+    &quot;performed_via_github_app&quot;: null
+  }
+]
+</code></pre>
+<p>Input: </p>
 <pre><code>! github list-issues --site &quot;localhost:8081&quot; --cluster &quot;github-default&quot; --repo &quot;prabhsimran-beehyv/testRepo&quot;
 </code></pre>
 <p>Output: </p>

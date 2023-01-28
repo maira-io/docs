@@ -5051,6 +5051,25 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x = !pagerduty create-ruleset --name &quot;testRuleset&quot; --site &quot;localhost:8081&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>{
+  &quot;ruleset&quot;: {
+    &quot;created_at&quot;: &quot;2022-11-14T10:10:00Z&quot;,
+    &quot;creator&quot;: null,
+    &quot;id&quot;: &quot;c5395c19-e840-4c50-89f6-040ac651f24e&quot;,
+    &quot;name&quot;: &quot;testRuleset&quot;,
+    &quot;routing_keys&quot;: [&quot;R0274VPG9G77QAUEKEXQUEVMV1ACVK13&quot;],
+    &quot;self&quot;: &quot;https://api.pagerduty.com/rulesets/c5395c19-e840-4c50-89f6-040ac651f24e&quot;,
+    &quot;team&quot;: null,
+    &quot;type&quot;: &quot;global&quot;,
+    &quot;updated_at&quot;: &quot;2022-11-14T10:10:00Z&quot;,
+    &quot;updater&quot;: null
+  }
+}
+</code></pre>
+<p>Input: </p>
 <pre><code>!pagerduty create-ruleset --name &quot;testRuleset&quot; --site &quot;localhost:8081&quot;
 </code></pre>
 <p>Output: </p>

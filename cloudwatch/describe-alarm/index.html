@@ -5111,6 +5111,45 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
+<pre><code>x=! cloudwatch describe-alarm --site &quot;localhost:8081&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>[
+  {
+    &quot;name&quot;: &quot;awsec2-i-0bc9464a6e9ba87b5-GreaterThanOrEqualToThreshold-CPUUtilization&quot;,
+    &quot;description&quot;: &quot;Created from EC2 Console&quot;,
+    &quot;arn&quot;: &quot;arn:aws:cloudwatch:us-east-1:248495481387:alarm:awsec2-i-0bc9464a6e9ba87b5-GreaterThanOrEqualToThreshold-CPUUtilization&quot;,
+    &quot;state_value&quot;: &quot;ALARM&quot;,
+    &quot;threshold&quot;: 0.001,
+    &quot;state_reason&quot;: &quot;Threshold Crossed: 2 datapoints [0.099453551912591 (03/10/22 19:13:00), 0.10171439703875258 (03/10/22 19:08:00)] were greater than or equal to the threshold (0.001).&quot;
+  },
+  {
+    &quot;name&quot;: &quot;awsec2-i-0bc9464a6e9ba87b5-GreaterThanOrEqualToThreshold-CPUUtilization2&quot;,
+    &quot;description&quot;: &quot;Created from EC2 Console&quot;,
+    &quot;arn&quot;: &quot;arn:aws:cloudwatch:us-east-1:248495481387:alarm:awsec2-i-0bc9464a6e9ba87b5-GreaterThanOrEqualToThreshold-CPUUtilization2&quot;,
+    &quot;state_value&quot;: &quot;ALARM&quot;,
+    &quot;threshold&quot;: 0.0001,
+    &quot;state_reason&quot;: &quot;Threshold Crossed: 1 datapoint [0.099453551912572 (27/09/22 12:10:00)] was greater than or equal to the threshold (1.0E-4).&quot;
+  },
+  {
+    &quot;name&quot;: &quot;awsec2-i-0bc9464a6e9ba87b5-GreaterThanOrEqualToThreshold-CPUUtilization4&quot;,
+    &quot;description&quot;: &quot;Created from EC2 Console&quot;,
+    &quot;arn&quot;: &quot;arn:aws:cloudwatch:us-east-1:248495481387:alarm:awsec2-i-0bc9464a6e9ba87b5-GreaterThanOrEqualToThreshold-CPUUtilization4&quot;,
+    &quot;state_value&quot;: &quot;ALARM&quot;,
+    &quot;threshold&quot;: 0.001,
+    &quot;state_reason&quot;: &quot;Threshold Crossed: 1 datapoint [0.0672316384180944 (27/09/22 12:30:00)] was greater than or equal to the threshold (0.001).&quot;
+  },
+  {
+    &quot;name&quot;: &quot;awsec2-i-0bc9464a6e9ba87b5-GreaterThanOrEqualToThreshold-CPUUtilization5&quot;,
+    &quot;description&quot;: &quot;Created from EC2 Console&quot;,
+    &quot;arn&quot;: &quot;arn:aws:cloudwatch:us-east-1:248495481387:alarm:awsec2-i-0bc9464a6e9ba87b5-GreaterThanOrEqualToThreshold-CPUUtilization5&quot;,
+    &quot;state_value&quot;: &quot;ALARM&quot;,
+    &quot;threshold&quot;: 0.001,
+    &quot;state_reason&quot;: &quot;Threshold Crossed: 1 datapoint [0.066666666666663 (27/09/22 17:33:00)] was greater than or equal to the threshold (0.001).&quot;
+  }
+]
+</code></pre>
+<p>Input: </p>
 <pre><code>! cloudwatch describe-alarm --site &quot;localhost:8081&quot;
 </code></pre>
 <p>Output: </p>
