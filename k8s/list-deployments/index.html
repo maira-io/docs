@@ -5071,7 +5071,15 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
-<pre><code>! k8s list-deployments --site &quot;localhost&quot; --namespace &quot;default&quot;  &quot;app=kafka3,test&quot;
+<pre><code>! k8s list-deployments  &quot;app=kafka3,test&quot;
+</code></pre>
+<p>Output: </p>
+<pre><code>CLUSTER        NAMESPACE       NAME            REPLICAS
+in-cluster     default         hello-python           2
+in-cluster     default         r1-maira-agent         1
+</code></pre>
+<p>Input: </p>
+<pre><code>x = ! k8s list-deployments  &quot;app=kafka3,test&quot;
 </code></pre>
 <p>Output: </p>
 <pre><code>[

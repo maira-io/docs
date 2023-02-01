@@ -5071,7 +5071,16 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
-<pre><code>!k8s  list-services --site &quot;localhost&quot;
+<pre><code>!k8s  list-services
+</code></pre>
+<p>Output: </p>
+<pre><code>NAME                   TYPE
+hello-python-service      4
+kubernetes                2
+ssh                       3
+</code></pre>
+<p>Input: </p>
+<pre><code>!k8s  list-services
 </code></pre>
 <p>Output: </p>
 <pre><code>[

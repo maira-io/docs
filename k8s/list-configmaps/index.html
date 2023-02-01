@@ -5074,6 +5074,16 @@
 <pre><code>! k8s list-configmaps
 </code></pre>
 <p>Output: </p>
+<pre><code>NAME                   DATA
+kube-root-ca.crt       -
+r1-maira-agent-aws     -
+r1-maira-agent-config  -
+r1-maira-agent-ssh     -
+</code></pre>
+<p>Input: </p>
+<pre><code>x = ! k8s list-configmaps
+</code></pre>
+<p>Output: </p>
 <pre><code>[
     {
       &quot;cluster&quot;: &quot;in-cluster&quot;,

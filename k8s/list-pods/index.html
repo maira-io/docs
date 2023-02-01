@@ -5071,7 +5071,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
 <h2 id="examples">Examples</h2>
 <p>Input: </p>
-<pre><code>!k8s list-pods --site &quot;localhost&quot; --namespace &quot;default&quot; &quot;app=kafka1,!label1&quot;
+<pre><code>!k8s list-pods &quot;app=kafka1,!label1&quot;
 </code></pre>
 <p>Output: </p>
 <pre><code>NAME                            STATUS  RESTARTS        CONTAINERS      AGE
@@ -5080,7 +5080,7 @@ hello-python-75b7fb8899-lpgdv   Running                 hello-python    59d5h
 r1-maira-agent-69c87875b9-p6bnw Running                 maira-gateway   25h7m
 </code></pre>
 <p>Input: </p>
-<pre><code>x = !k8s list-pods --site &quot;localhost&quot; --namespace &quot;default&quot; &quot;app=kafka1,!label1&quot;
+<pre><code>x = !k8s list-pods &quot;app=kafka1,!label1&quot;
 </code></pre>
 <p>Output: </p>
 <pre><code>[
