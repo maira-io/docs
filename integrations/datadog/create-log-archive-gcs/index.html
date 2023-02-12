@@ -1,0 +1,7270 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://maira.io/integrations/datadog/create-log-archive-gcs/">
+      
+      
+        <link rel="prev" href="../create-log-archive-azure/">
+      
+      
+        <link rel="next" href="../create-log-archive-s3/">
+      
+      <link rel="icon" href="../../../img/maira-icon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
+    
+    
+      
+        <title>datadog create-log-archive-gcs - Maira Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Poppins";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#datadog-create-log-archive-gcs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Maira Docs" class="md-header__button md-logo" aria-label="Maira Docs" data-md-component="logo">
+      
+  <img src="../../../img/maira-icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Maira Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              datadog create-log-archive-gcs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Maira Docs" class="md-nav__button md-logo" aria-label="Maira Docs" data-md-component="logo">
+      
+  <img src="../../../img/maira-icon.png" alt="logo">
+
+    </a>
+    Maira Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Maira documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Language
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Language
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/basics/" class="md-nav__link">
+        Basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/command/" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/types/" class="md-nav__link">
+        Types
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/operator/" class="md-nav__link">
+        Operators
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/projection/" class="md-nav__link">
+        Projection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/filter/" class="md-nav__link">
+        Filter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../language/json-comprehension/" class="md-nav__link">
+        Json Comprehension
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Integrations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../confirm/" class="md-nav__link">
+        confirm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../curl/" class="md-nav__link">
+        curl
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../send-email/" class="md-nav__link">
+        send-email
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ssh/" class="md-nav__link">
+        ssh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          appd
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          appd
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/create-event/" class="md-nav__link">
+        appd create-event
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/delete-collector/" class="md-nav__link">
+        appd delete-collector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/get-actions/" class="md-nav__link">
+        appd get-actions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/get-applications/" class="md-nav__link">
+        appd get-applications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/get-backends/" class="md-nav__link">
+        appd get-backends
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/get-business-transactions/" class="md-nav__link">
+        appd get-business-transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/get-collector/" class="md-nav__link">
+        appd get-collector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/get-dbagent-events/" class="md-nav__link">
+        appd get-dbagent-events
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/get-events/" class="md-nav__link">
+        appd get-events
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/get-health-rule-violations/" class="md-nav__link">
+        appd get-health-rule-violations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/get-health-rules/" class="md-nav__link">
+        appd get-health-rules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/get-metrics-data/" class="md-nav__link">
+        appd get-metrics-data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/get-metrics/" class="md-nav__link">
+        appd get-metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/get-nodes/" class="md-nav__link">
+        appd get-nodes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/get-policies/" class="md-nav__link">
+        appd get-policies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/get-server/" class="md-nav__link">
+        appd get-server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appd/get-tiers/" class="md-nav__link">
+        appd get-tiers
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          bitbucket
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          bitbucket
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bitbucket/add-issue-comment/" class="md-nav__link">
+        bitbucket add-issue-comment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bitbucket/create-issue/" class="md-nav__link">
+        bitbucket create-issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bitbucket/edit-issue/" class="md-nav__link">
+        bitbucket edit-issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bitbucket/get-issue/" class="md-nav__link">
+        bitbucket get-issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bitbucket/list-issues/" class="md-nav__link">
+        bitbucket list-issues
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bitbucket/search-issues/" class="md-nav__link">
+        bitbucket search-issues
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+          cloudwatch
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          cloudwatch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloudwatch/describe-alarm/" class="md-nav__link">
+        cloudwatch describe-alarm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloudwatch/get-metric-data/" class="md-nav__link">
+        cloudwatch get-metric-data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloudwatch/get-metric-stats/" class="md-nav__link">
+        cloudwatch get-metric-stats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloudwatch/list-metrics/" class="md-nav__link">
+        cloudwatch list-metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloudwatch/set-alarm-state/" class="md-nav__link">
+        cloudwatch set-alarm-state
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+          create
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          create
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../create/ticket/" class="md-nav__link">
+        create ticket
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+          datadog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_9">
+          <span class="md-nav__icon md-icon"></span>
+          datadog
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../add-tags-host/" class="md-nav__link">
+        datadog add-tags-host
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aggregate-logs/" class="md-nav__link">
+        datadog aggregate-logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cancel-downtime/" class="md-nav__link">
+        datadog cancel-downtime
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-incident-attachment/" class="md-nav__link">
+        datadog create-incident-attachment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-incident-team/" class="md-nav__link">
+        datadog create-incident-team
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-incident/" class="md-nav__link">
+        datadog create-incident
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-log-archive-azure/" class="md-nav__link">
+        datadog create-log-archive-azure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          datadog create-log-archive-gcs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        datadog create-log-archive-gcs
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    Arguments
+  </a>
+  
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#site-string" class="md-nav__link">
+    site - (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include_tags-bool" class="md-nav__link">
+    include_tags - (bool)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name-string" class="md-nav__link">
+    name - (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-string" class="md-nav__link">
+    query - (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rehydration_size-int" class="md-nav__link">
+    rehydration_size - (int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rehydration_tags-string" class="md-nav__link">
+    rehydration_tags - (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bucket-string" class="md-nav__link">
+    bucket - (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-string" class="md-nav__link">
+    path - (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client_email-string" class="md-nav__link">
+    client_email - (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project_id-string" class="md-nav__link">
+    project_id - (string)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-log-archive-s3/" class="md-nav__link">
+        datadog create-log-archive-s3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-log-index/" class="md-nav__link">
+        datadog create-log-index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-monitor/" class="md-nav__link">
+        datadog create-monitor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-role/" class="md-nav__link">
+        datadog create-role
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-rum-application/" class="md-nav__link">
+        datadog create-rum-application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-user/" class="md-nav__link">
+        datadog create-user
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../delete-incident-attachment/" class="md-nav__link">
+        datadog delete-incident-attachment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../delete-incident-team/" class="md-nav__link">
+        datadog delete-incident-team
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../delete-incident/" class="md-nav__link">
+        datadog delete-incident
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../delete-log-archive/" class="md-nav__link">
+        datadog delete-log-archive
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../delete-monitor/" class="md-nav__link">
+        datadog delete-monitor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../delete-rum-application/" class="md-nav__link">
+        datadog delete-rum-application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../delete-tags-host/" class="md-nav__link">
+        datadog delete-tags-host
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disable-user/" class="md-nav__link">
+        datadog disable-user
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-active-metrics/" class="md-nav__link">
+        datadog get-active-metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-custom-metrices-hourly-usage/" class="md-nav__link">
+        datadog get-custom-metrices-hourly-usage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-custom-metrics/" class="md-nav__link">
+        datadog get-custom-metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-dashboard/" class="md-nav__link">
+        datadog get-dashboard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-downtime/" class="md-nav__link">
+        datadog get-downtime
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-hosts-count/" class="md-nav__link">
+        datadog get-hosts-count
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-hosts/" class="md-nav__link">
+        datadog get-hosts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-hourly-usage-attribution/" class="md-nav__link">
+        datadog get-hourly-usage-attribution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-hourly-usage-product-family/" class="md-nav__link">
+        datadog get-hourly-usage-product-family
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-incident-teams/" class="md-nav__link">
+        datadog get-incident-teams
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-logs-hourly-usage/" class="md-nav__link">
+        datadog get-logs-hourly-usage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-metric/" class="md-nav__link">
+        datadog get-metric
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-monitor-details/" class="md-nav__link">
+        datadog get-monitor-details
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-monthly-usage-attribution/" class="md-nav__link">
+        datadog get-monthly-usage-attribution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-rum-application/" class="md-nav__link">
+        datadog get-rum-application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grant-role-archive/" class="md-nav__link">
+        datadog grant-role-archive
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-active-tags-aggregations/" class="md-nav__link">
+        datadog list-active-tags-aggregations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-downtimes/" class="md-nav__link">
+        datadog list-downtimes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-events/" class="md-nav__link">
+        datadog list-events
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-incident-attachments/" class="md-nav__link">
+        datadog list-incident-attachments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-incidents/" class="md-nav__link">
+        datadog list-incidents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-log-archives/" class="md-nav__link">
+        datadog list-log-archives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-log-indexes/" class="md-nav__link">
+        datadog list-log-indexes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-logs/" class="md-nav__link">
+        datadog list-logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-metric-volumes/" class="md-nav__link">
+        datadog list-metric-volumes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-metrics/" class="md-nav__link">
+        datadog list-metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-monitors/" class="md-nav__link">
+        datadog list-monitors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-permissions/" class="md-nav__link">
+        datadog list-permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-processes/" class="md-nav__link">
+        datadog list-processes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-roles/" class="md-nav__link">
+        datadog list-roles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-rum-applications/" class="md-nav__link">
+        datadog list-rum-applications
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-tags-config-metric/" class="md-nav__link">
+        datadog list-tags-config-metric
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-tags/" class="md-nav__link">
+        datadog list-tags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-users/" class="md-nav__link">
+        datadog list-users
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mute-host/" class="md-nav__link">
+        datadog mute-host
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mute-monitor/" class="md-nav__link">
+        datadog mute-monitor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../post-event/" class="md-nav__link">
+        datadog post-event
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../query-timeseries-points/" class="md-nav__link">
+        datadog query-timeseries-points
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../revoke-role-archive/" class="md-nav__link">
+        datadog revoke-role-archive
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schedule-downtime/" class="md-nav__link">
+        datadog schedule-downtime
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search-logs/" class="md-nav__link">
+        datadog search-logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search-metrics/" class="md-nav__link">
+        datadog search-metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../service-check/" class="md-nav__link">
+        datadog service-check
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tag-configuration-cardinality-estimator/" class="md-nav__link">
+        datadog tag-configuration-cardinality-estimator
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unmute-host/" class="md-nav__link">
+        datadog unmute-host
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unmute-monitor/" class="md-nav__link">
+        datadog unmute-monitor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update-downtime/" class="md-nav__link">
+        datadog update-downtime
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update-host-tags/" class="md-nav__link">
+        datadog update-host-tags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update-incident-attachment/" class="md-nav__link">
+        datadog update-incident-attachment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update-incident-team/" class="md-nav__link">
+        datadog update-incident-team
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update-incident/" class="md-nav__link">
+        datadog update-incident
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update-log-archive-azure/" class="md-nav__link">
+        datadog update-log-archive-azure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update-log-archive-gcs/" class="md-nav__link">
+        datadog update-log-archive-gcs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update-log-archive-s3/" class="md-nav__link">
+        datadog update-log-archive-s3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update-log-index/" class="md-nav__link">
+        datadog update-log-index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update-metric/" class="md-nav__link">
+        datadog update-metric
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update-rum-application/" class="md-nav__link">
+        datadog update-rum-application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update-user/" class="md-nav__link">
+        datadog update-user
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+          dynamodb
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_10">
+          <span class="md-nav__icon md-icon"></span>
+          dynamodb
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dynamodb/describe-table/" class="md-nav__link">
+        dynamodb describe-table
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dynamodb/get-table-item/" class="md-nav__link">
+        dynamodb get-table-item
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dynamodb/list-table-items/" class="md-nav__link">
+        dynamodb list-table-items
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dynamodb/list-tables/" class="md-nav__link">
+        dynamodb list-tables
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+          ec2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_11">
+          <span class="md-nav__icon md-icon"></span>
+          ec2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ec2/delete-volume/" class="md-nav__link">
+        ec2 delete-volume
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ec2/get-instance/" class="md-nav__link">
+        ec2 get-instance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ec2/list-instances/" class="md-nav__link">
+        ec2 list-instances
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ec2/list-volumes/" class="md-nav__link">
+        ec2 list-volumes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ec2/reboot-instance/" class="md-nav__link">
+        ec2 reboot-instance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ec2/resize-autoscaling-group/" class="md-nav__link">
+        ec2 resize-autoscaling-group
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ec2/terminate-instance/" class="md-nav__link">
+        ec2 terminate-instance
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+          elasticsearch
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_12">
+          <span class="md-nav__icon md-icon"></span>
+          elasticsearch
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/cancel-tasks/" class="md-nav__link">
+        elasticsearch cancel-tasks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/clear-cache/" class="md-nav__link">
+        elasticsearch clear-cache
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/close-index/" class="md-nav__link">
+        elasticsearch close-index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/cluster-reroute/" class="md-nav__link">
+        elasticsearch cluster-reroute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/create-index/" class="md-nav__link">
+        elasticsearch create-index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/delete-by-query/" class="md-nav__link">
+        elasticsearch delete-by-query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/delete-document/" class="md-nav__link">
+        elasticsearch delete-document
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/delete-index/" class="md-nav__link">
+        elasticsearch delete-index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/get-cluster-allocation/" class="md-nav__link">
+        elasticsearch get-cluster-allocation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/get-cluster-health/" class="md-nav__link">
+        elasticsearch get-cluster-health
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/get-cluster-settings/" class="md-nav__link">
+        elasticsearch get-cluster-settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/get-cluster-state/" class="md-nav__link">
+        elasticsearch get-cluster-state
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/get-cluster-statistics/" class="md-nav__link">
+        elasticsearch get-cluster-statistics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/get-document/" class="md-nav__link">
+        elasticsearch get-document
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/get-ilm-status/" class="md-nav__link">
+        elasticsearch get-ilm-status
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/get-index-segments/" class="md-nav__link">
+        elasticsearch get-index-segments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/get-index-settings/" class="md-nav__link">
+        elasticsearch get-index-settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/get-index-stats/" class="md-nav__link">
+        elasticsearch get-index-stats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/get-index/" class="md-nav__link">
+        elasticsearch get-index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/get-node-stats/" class="md-nav__link">
+        elasticsearch get-node-stats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/get-shards/" class="md-nav__link">
+        elasticsearch get-shards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/get-tasks/" class="md-nav__link">
+        elasticsearch get-tasks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/ilm-explain/" class="md-nav__link">
+        elasticsearch ilm-explain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/ilm-retry/" class="md-nav__link">
+        elasticsearch ilm-retry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/list-cluster-allocation/" class="md-nav__link">
+        elasticsearch list-cluster-allocation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/nodes-info/" class="md-nav__link">
+        elasticsearch nodes-info
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/open-index/" class="md-nav__link">
+        elasticsearch open-index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/pending-tasks/" class="md-nav__link">
+        elasticsearch pending-tasks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/raw/" class="md-nav__link">
+        elasticsearch raw
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/recoveries/" class="md-nav__link">
+        elasticsearch recoveries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/rollover/" class="md-nav__link">
+        elasticsearch rollover
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/search/" class="md-nav__link">
+        elasticsearch search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/shrink-index/" class="md-nav__link">
+        elasticsearch shrink-index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/split-index/" class="md-nav__link">
+        elasticsearch split-index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/start-ilm/" class="md-nav__link">
+        elasticsearch start-ilm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/stop-ilm/" class="md-nav__link">
+        elasticsearch stop-ilm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/update-by-query/" class="md-nav__link">
+        elasticsearch update-by-query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/update-cluster-settings/" class="md-nav__link">
+        elasticsearch update-cluster-settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/update-document/" class="md-nav__link">
+        elasticsearch update-document
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elasticsearch/update-index-settings/" class="md-nav__link">
+        elasticsearch update-index-settings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_13" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_13" id="__nav_3_13_label" tabindex="0">
+          find
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_13">
+          <span class="md-nav__icon md-icon"></span>
+          find
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../find/stacktrace/" class="md-nav__link">
+        find stacktrace
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+          gcp
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_14">
+          <span class="md-nav__icon md-icon"></span>
+          gcp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/create-bucket/" class="md-nav__link">
+        gcp create-bucket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/create-log-metric/" class="md-nav__link">
+        gcp create-log-metric
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/create-object/" class="md-nav__link">
+        gcp create-object
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/delete-bucket/" class="md-nav__link">
+        gcp delete-bucket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/delete-instance/" class="md-nav__link">
+        gcp delete-instance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/delete-log-metric/" class="md-nav__link">
+        gcp delete-log-metric
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/get-buckets/" class="md-nav__link">
+        gcp get-buckets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/get-instances/" class="md-nav__link">
+        gcp get-instances
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/get-log-metric/" class="md-nav__link">
+        gcp get-log-metric
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/get-log-names/" class="md-nav__link">
+        gcp get-log-names
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/get-log-resources/" class="md-nav__link">
+        gcp get-log-resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/get-logs/" class="md-nav__link">
+        gcp get-logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/get-object/" class="md-nav__link">
+        gcp get-object
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/list-objects/" class="md-nav__link">
+        gcp list-objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/start-instance/" class="md-nav__link">
+        gcp start-instance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/stop-instance/" class="md-nav__link">
+        gcp stop-instance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/update-instance/" class="md-nav__link">
+        gcp update-instance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/update-log-metric/" class="md-nav__link">
+        gcp update-log-metric
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
+          github
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_15">
+          <span class="md-nav__icon md-icon"></span>
+          github
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github/add-issue-comment/" class="md-nav__link">
+        github add-issue-comment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github/create-issue/" class="md-nav__link">
+        github create-issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github/edit-issue/" class="md-nav__link">
+        github edit-issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github/get-issue/" class="md-nav__link">
+        github get-issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github/list-issues/" class="md-nav__link">
+        github list-issues
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github/search-issues/" class="md-nav__link">
+        github search-issues
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
+          gitlab
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_16">
+          <span class="md-nav__icon md-icon"></span>
+          gitlab
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gitlab/create-discussion/" class="md-nav__link">
+        gitlab create-discussion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gitlab/create-issue/" class="md-nav__link">
+        gitlab create-issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gitlab/edit-issue/" class="md-nav__link">
+        gitlab edit-issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gitlab/list-issues/" class="md-nav__link">
+        gitlab list-issues
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_17" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_17" id="__nav_3_17_label" tabindex="0">
+          icinga
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_17_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_17">
+          <span class="md-nav__icon md-icon"></span>
+          icinga
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../icinga/create-check-command/" class="md-nav__link">
+        icinga create-check-command
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../icinga/create-host/" class="md-nav__link">
+        icinga create-host
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../icinga/create-service/" class="md-nav__link">
+        icinga create-service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../icinga/delete-object/" class="md-nav__link">
+        icinga delete-object
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../icinga/modify-check-command/" class="md-nav__link">
+        icinga modify-check-command
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../icinga/modify-host/" class="md-nav__link">
+        icinga modify-host
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../icinga/modify-service/" class="md-nav__link">
+        icinga modify-service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../icinga/query-configuration-objects/" class="md-nav__link">
+        icinga query-configuration-objects
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+          jira
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_18">
+          <span class="md-nav__icon md-icon"></span>
+          jira
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/add-issue-comment/" class="md-nav__link">
+        jira add-issue-comment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/add-issue-labels/" class="md-nav__link">
+        jira add-issue-labels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/add-vote/" class="md-nav__link">
+        jira add-vote
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/add-watcher/" class="md-nav__link">
+        jira add-watcher
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/archive-project/" class="md-nav__link">
+        jira archive-project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/assign-issue/" class="md-nav__link">
+        jira assign-issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/clone-issue/" class="md-nav__link">
+        jira clone-issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/copy-attachments/" class="md-nav__link">
+        jira copy-attachments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/create-custom-field/" class="md-nav__link">
+        jira create-custom-field
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/create-issue/" class="md-nav__link">
+        jira create-issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/create-project-version/" class="md-nav__link">
+        jira create-project-version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/create-project/" class="md-nav__link">
+        jira create-project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/create-user/" class="md-nav__link">
+        jira create-user
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/create-workflow/" class="md-nav__link">
+        jira create-workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/delete-attachment/" class="md-nav__link">
+        jira delete-attachment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/delete-issue-comment/" class="md-nav__link">
+        jira delete-issue-comment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/delete-issue/" class="md-nav__link">
+        jira delete-issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/delete-project/" class="md-nav__link">
+        jira delete-project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/delete-user/" class="md-nav__link">
+        jira delete-user
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/delete-vote/" class="md-nav__link">
+        jira delete-vote
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/delete-watcher/" class="md-nav__link">
+        jira delete-watcher
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/delete-workflow/" class="md-nav__link">
+        jira delete-workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-all-workflows-transition-rule-configuration/" class="md-nav__link">
+        jira get-all-workflows-transition-rule-configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-all-workflows/" class="md-nav__link">
+        jira get-all-workflows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-attachment/" class="md-nav__link">
+        jira get-attachment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-fields/" class="md-nav__link">
+        jira get-fields
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-issue-changelogs/" class="md-nav__link">
+        jira get-issue-changelogs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-issue-comment/" class="md-nav__link">
+        jira get-issue-comment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-issue-labels/" class="md-nav__link">
+        jira get-issue-labels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-issue/" class="md-nav__link">
+        jira get-issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-permissions/" class="md-nav__link">
+        jira get-permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-project-version-issues-count/" class="md-nav__link">
+        jira get-project-version-issues-count
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-project-version-unresolved-issue-count/" class="md-nav__link">
+        jira get-project-version-unresolved-issue-count
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-project-versions/" class="md-nav__link">
+        jira get-project-versions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-project/" class="md-nav__link">
+        jira get-project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-users/" class="md-nav__link">
+        jira get-users
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-vote/" class="md-nav__link">
+        jira get-vote
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/get-watcher/" class="md-nav__link">
+        jira get-watcher
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/list-issue-types/" class="md-nav__link">
+        jira list-issue-types
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/list-issues/" class="md-nav__link">
+        jira list-issues
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/list-projects/" class="md-nav__link">
+        jira list-projects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/list-recent-projects/" class="md-nav__link">
+        jira list-recent-projects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/merge-project-versions/" class="md-nav__link">
+        jira merge-project-versions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/remove-issue-labels/" class="md-nav__link">
+        jira remove-issue-labels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/restore-deleted-project/" class="md-nav__link">
+        jira restore-deleted-project
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/update-custom-field/" class="md-nav__link">
+        jira update-custom-field
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/update-issue-comment/" class="md-nav__link">
+        jira update-issue-comment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/update-issue/" class="md-nav__link">
+        jira update-issue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/update-project-version/" class="md-nav__link">
+        jira update-project-version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jira/update-project/" class="md-nav__link">
+        jira update-project
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_19" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_19" id="__nav_3_19_label" tabindex="0">
+          junos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_19_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_19">
+          <span class="md-nav__icon md-icon"></span>
+          junos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../junos/ping/" class="md-nav__link">
+        junos ping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../junos/show-bgp-neighbor/" class="md-nav__link">
+        junos show-bgp-neighbor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../junos/show-bgp-summary/" class="md-nav__link">
+        junos show-bgp-summary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../junos/show-route/" class="md-nav__link">
+        junos show-route
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
+          k8s
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_20">
+          <span class="md-nav__icon md-icon"></span>
+          k8s
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/create-job/" class="md-nav__link">
+        k8s create-job
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/delete-configmap/" class="md-nav__link">
+        k8s delete-configmap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/delete-cronjob/" class="md-nav__link">
+        k8s delete-cronjob
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/delete-deployment/" class="md-nav__link">
+        k8s delete-deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/delete-hpa/" class="md-nav__link">
+        k8s delete-hpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/delete-job/" class="md-nav__link">
+        k8s delete-job
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/delete-pod/" class="md-nav__link">
+        k8s delete-pod
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/delete-service/" class="md-nav__link">
+        k8s delete-service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/delete-statefulset/" class="md-nav__link">
+        k8s delete-statefulset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/get-configmap/" class="md-nav__link">
+        k8s get-configmap
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/get-cronjob/" class="md-nav__link">
+        k8s get-cronjob
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/get-deployment/" class="md-nav__link">
+        k8s get-deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/get-job/" class="md-nav__link">
+        k8s get-job
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/get-namespace/" class="md-nav__link">
+        k8s get-namespace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/get-pod-logs/" class="md-nav__link">
+        k8s get-pod-logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/get-pod/" class="md-nav__link">
+        k8s get-pod
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/get-service/" class="md-nav__link">
+        k8s get-service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/get-statefulset/" class="md-nav__link">
+        k8s get-statefulset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/list-configmaps/" class="md-nav__link">
+        k8s list-configmaps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/list-cronjobs/" class="md-nav__link">
+        k8s list-cronjobs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/list-deployments/" class="md-nav__link">
+        k8s list-deployments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/list-events/" class="md-nav__link">
+        k8s list-events
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/list-jobs/" class="md-nav__link">
+        k8s list-jobs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/list-namespaces/" class="md-nav__link">
+        k8s list-namespaces
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/list-pods/" class="md-nav__link">
+        k8s list-pods
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/list-services/" class="md-nav__link">
+        k8s list-services
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/list-statefulsets/" class="md-nav__link">
+        k8s list-statefulsets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/resize-hpa/" class="md-nav__link">
+        k8s resize-hpa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/update-deployment/" class="md-nav__link">
+        k8s update-deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/update-statefulset/" class="md-nav__link">
+        k8s update-statefulset
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_21" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_21" id="__nav_3_21_label" tabindex="0">
+          kafka
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_21_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_21">
+          <span class="md-nav__icon md-icon"></span>
+          kafka
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/add-consumer/" class="md-nav__link">
+        kafka add-consumer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/alter-partition-assignments/" class="md-nav__link">
+        kafka alter-partition-assignments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/alter-resource-config/" class="md-nav__link">
+        kafka alter-resource-config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/create-consumer/" class="md-nav__link">
+        kafka create-consumer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/create-partitions/" class="md-nav__link">
+        kafka create-partitions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/create-topic/" class="md-nav__link">
+        kafka create-topic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/delete-topic/" class="md-nav__link">
+        kafka delete-topic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/describe-topics/" class="md-nav__link">
+        kafka describe-topics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/get-broker-config/" class="md-nav__link">
+        kafka get-broker-config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/get-broker-metrics/" class="md-nav__link">
+        kafka get-broker-metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/get-brokers/" class="md-nav__link">
+        kafka get-brokers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/get-consumer-metrics/" class="md-nav__link">
+        kafka get-consumer-metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/get-leader/" class="md-nav__link">
+        kafka get-leader
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/get-offset/" class="md-nav__link">
+        kafka get-offset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/get-producer-metrics/" class="md-nav__link">
+        kafka get-producer-metrics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/get-topic-config/" class="md-nav__link">
+        kafka get-topic-config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/get-topics/" class="md-nav__link">
+        kafka get-topics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/restart-consumer/" class="md-nav__link">
+        kafka restart-consumer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/send-messages/" class="md-nav__link">
+        kafka send-messages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kafka/send-receive-messages/" class="md-nav__link">
+        kafka send-receive-messages
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_22" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_22" id="__nav_3_22_label" tabindex="0">
+          kinesis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_22_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_22">
+          <span class="md-nav__icon md-icon"></span>
+          kinesis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kinesis/get-stream/" class="md-nav__link">
+        kinesis get-stream
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kinesis/update-shard-count/" class="md-nav__link">
+        kinesis update-shard-count
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_23" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_23" id="__nav_3_23_label" tabindex="0">
+          maira
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_23_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_23">
+          <span class="md-nav__icon md-icon"></span>
+          maira
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maira/list-resources/" class="md-nav__link">
+        maira list-resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maira/list-sites/" class="md-nav__link">
+        maira list-sites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maira/update-resources/" class="md-nav__link">
+        maira update-resources
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_24" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_24" id="__nav_3_24_label" tabindex="0">
+          mongodb
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_24_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_24">
+          <span class="md-nav__icon md-icon"></span>
+          mongodb
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mongodb/create-collection/" class="md-nav__link">
+        mongodb create-collection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mongodb/create-document/" class="md-nav__link">
+        mongodb create-document
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mongodb/delete-document/" class="md-nav__link">
+        mongodb delete-document
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mongodb/drop-collection/" class="md-nav__link">
+        mongodb drop-collection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mongodb/drop-database/" class="md-nav__link">
+        mongodb drop-database
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mongodb/get-collection/" class="md-nav__link">
+        mongodb get-collection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mongodb/get-document/" class="md-nav__link">
+        mongodb get-document
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mongodb/list-collections/" class="md-nav__link">
+        mongodb list-collections
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mongodb/list-databases/" class="md-nav__link">
+        mongodb list-databases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mongodb/update-document/" class="md-nav__link">
+        mongodb update-document
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_25" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_25" id="__nav_3_25_label" tabindex="0">
+          pagerduty
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_25_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_25">
+          <span class="md-nav__icon md-icon"></span>
+          pagerduty
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/add-team-user/" class="md-nav__link">
+        pagerduty add-team-user
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/create-event-rule/" class="md-nav__link">
+        pagerduty create-event-rule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/create-incidents/" class="md-nav__link">
+        pagerduty create-incidents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/create-ruleset/" class="md-nav__link">
+        pagerduty create-ruleset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/create-service/" class="md-nav__link">
+        pagerduty create-service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/create-team/" class="md-nav__link">
+        pagerduty create-team
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/create-user/" class="md-nav__link">
+        pagerduty create-user
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/delete-event-rule/" class="md-nav__link">
+        pagerduty delete-event-rule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/delete-ruleset/" class="md-nav__link">
+        pagerduty delete-ruleset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/delete-service-event-rules/" class="md-nav__link">
+        pagerduty delete-service-event-rules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/delete-service/" class="md-nav__link">
+        pagerduty delete-service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/delete-team-user/" class="md-nav__link">
+        pagerduty delete-team-user
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/delete-team/" class="md-nav__link">
+        pagerduty delete-team
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/delete-user/" class="md-nav__link">
+        pagerduty delete-user
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/get-escalation-policies/" class="md-nav__link">
+        pagerduty get-escalation-policies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/get-event-rule/" class="md-nav__link">
+        pagerduty get-event-rule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/get-incident-alerts/" class="md-nav__link">
+        pagerduty get-incident-alerts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/get-incident-logs/" class="md-nav__link">
+        pagerduty get-incident-logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/get-incident/" class="md-nav__link">
+        pagerduty get-incident
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/get-ruleset/" class="md-nav__link">
+        pagerduty get-ruleset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/get-service-event-rules/" class="md-nav__link">
+        pagerduty get-service-event-rules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/get-service/" class="md-nav__link">
+        pagerduty get-service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/get-team/" class="md-nav__link">
+        pagerduty get-team
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/get-user/" class="md-nav__link">
+        pagerduty get-user
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/list-event-rules/" class="md-nav__link">
+        pagerduty list-event-rules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/list-incident-alert/" class="md-nav__link">
+        pagerduty list-incident-alert
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/list-incidents/" class="md-nav__link">
+        pagerduty list-incidents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/list-on-calls/" class="md-nav__link">
+        pagerduty list-on-calls
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/list-priorities/" class="md-nav__link">
+        pagerduty list-priorities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/list-ruleset/" class="md-nav__link">
+        pagerduty list-ruleset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/list-schedules/" class="md-nav__link">
+        pagerduty list-schedules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/list-service-event-rules/" class="md-nav__link">
+        pagerduty list-service-event-rules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/list-services/" class="md-nav__link">
+        pagerduty list-services
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/list-team-users/" class="md-nav__link">
+        pagerduty list-team-users
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/list-teams/" class="md-nav__link">
+        pagerduty list-teams
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/list-users/" class="md-nav__link">
+        pagerduty list-users
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/related-incidents/" class="md-nav__link">
+        pagerduty related-incidents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/update-event-rule/" class="md-nav__link">
+        pagerduty update-event-rule
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/update-incident-alert/" class="md-nav__link">
+        pagerduty update-incident-alert
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/update-incidents/" class="md-nav__link">
+        pagerduty update-incidents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/update-ruleset/" class="md-nav__link">
+        pagerduty update-ruleset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/update-services/" class="md-nav__link">
+        pagerduty update-services
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pagerduty/update-user/" class="md-nav__link">
+        pagerduty update-user
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_26" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_26" id="__nav_3_26_label" tabindex="0">
+          prometheus
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_26_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_26">
+          <span class="md-nav__icon md-icon"></span>
+          prometheus
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/clean-tombstones/" class="md-nav__link">
+        prometheus clean-tombstones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/delete-series/" class="md-nav__link">
+        prometheus delete-series
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/get-alertmanagers/" class="md-nav__link">
+        prometheus get-alertmanagers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/get-alerts/" class="md-nav__link">
+        prometheus get-alerts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/get-build-info/" class="md-nav__link">
+        prometheus get-build-info
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/get-config/" class="md-nav__link">
+        prometheus get-config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/get-flags/" class="md-nav__link">
+        prometheus get-flags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/get-label-values/" class="md-nav__link">
+        prometheus get-label-values
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/get-labels/" class="md-nav__link">
+        prometheus get-labels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/get-metric-metadata/" class="md-nav__link">
+        prometheus get-metric-metadata
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/get-rules/" class="md-nav__link">
+        prometheus get-rules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/get-runtime-info/" class="md-nav__link">
+        prometheus get-runtime-info
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/get-series/" class="md-nav__link">
+        prometheus get-series
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/get-target-metadata/" class="md-nav__link">
+        prometheus get-target-metadata
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/get-targets/" class="md-nav__link">
+        prometheus get-targets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/get-tsdb-stats/" class="md-nav__link">
+        prometheus get-tsdb-stats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/get-wal-replay-stats/" class="md-nav__link">
+        prometheus get-wal-replay-stats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/query-exemplars/" class="md-nav__link">
+        prometheus query-exemplars
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/query/" class="md-nav__link">
+        prometheus query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/range-query/" class="md-nav__link">
+        prometheus range-query
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prometheus/snapshot/" class="md-nav__link">
+        prometheus snapshot
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_27" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_27" id="__nav_3_27_label" tabindex="0">
+          rds
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_27_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_27">
+          <span class="md-nav__icon md-icon"></span>
+          rds
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rds/run-sql/" class="md-nav__link">
+        rds run-sql
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_28" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_28" id="__nav_3_28_label" tabindex="0">
+          s3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_28_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_28">
+          <span class="md-nav__icon md-icon"></span>
+          s3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../s3/add-object/" class="md-nav__link">
+        s3 add-object
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../s3/create-bucket/" class="md-nav__link">
+        s3 create-bucket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../s3/delete-object/" class="md-nav__link">
+        s3 delete-object
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../s3/get-object/" class="md-nav__link">
+        s3 get-object
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../s3/list-buckets/" class="md-nav__link">
+        s3 list-buckets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../s3/list-objects/" class="md-nav__link">
+        s3 list-objects
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_29" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_29" id="__nav_3_29_label" tabindex="0">
+          slack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_29_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_29">
+          <span class="md-nav__icon md-icon"></span>
+          slack
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slack/add-users/" class="md-nav__link">
+        slack add-users
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slack/ask/" class="md-nav__link">
+        slack ask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slack/create-channel/" class="md-nav__link">
+        slack create-channel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slack/list-channels/" class="md-nav__link">
+        slack list-channels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slack/list-users/" class="md-nav__link">
+        slack list-users
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slack/send-message/" class="md-nav__link">
+        slack send-message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slack/survey/" class="md-nav__link">
+        slack survey
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    Arguments
+  </a>
+  
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#site-string" class="md-nav__link">
+    site - (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include_tags-bool" class="md-nav__link">
+    include_tags - (bool)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name-string" class="md-nav__link">
+    name - (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-string" class="md-nav__link">
+    query - (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rehydration_size-int" class="md-nav__link">
+    rehydration_size - (int)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rehydration_tags-string" class="md-nav__link">
+    rehydration_tags - (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bucket-string" class="md-nav__link">
+    bucket - (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path-string" class="md-nav__link">
+    path - (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client_email-string" class="md-nav__link">
+    client_email - (string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project_id-string" class="md-nav__link">
+    project_id - (string)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="datadog-create-log-archive-gcs">datadog create-log-archive-gcs</h1>
+<p>Create an archive in your organization</p>
+<h2 id="description">Description</h2>
+<p>Create an archive in your organization</p>
+<h2 id="synopsis">Synopsis</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>datadog create-log-archive-gcs
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    [--site &lt;site&gt;]
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    [--include_tags]
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    --name &lt;name&gt;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    --query &lt;query&gt;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    [--rehydration_size &lt;rehydration_size&gt;]
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    [--rehydration_tags &lt;rehydration_tags&gt;]
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    --bucket &lt;bucket&gt;
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    [--path &lt;path&gt;]
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    --client_email &lt;client_email&gt;
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    --project_id &lt;project_id&gt;
+</code></pre></div>
+<h2 id="arguments">Arguments</h2>
+<h4 id="site-string"><code>site</code> - (string)</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+<h4 id="include_tags-bool"><code>include_tags</code> - (bool)</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; set "true" to save tags. Else, the tags will be deleted when logs sent to archive.  <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--include_tags</code> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Default: <code>false</code>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+<h4 id="name-string"><code>name</code> - (string)</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; The archive name  <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--name  "name-1"</code> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+<h4 id="query-string"><code>query</code> - (string)</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; The archive query/filter. Logs matching this query are included in the archive  <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--query  "query-1"</code> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+<h4 id="rehydration_size-int"><code>rehydration_size</code> - (int)</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Maximum scan size for rehydration in gb from this archive  <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--rehydration_size  1</code> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+<h4 id="rehydration_tags-string"><code>rehydration_tags</code> - (string)</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; An array of tags to add to rehydrated logs from an archive  <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--rehydration_tags  "rehydration_tags-1"</code> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+<h4 id="bucket-string"><code>bucket</code> - (string)</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; The Bucket where the archive will be stored  <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--bucket  "bucket-1"</code> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+<h4 id="path-string"><code>path</code> - (string)</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; The archive path  <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--path  "path-1"</code> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+<h4 id="client_email-string"><code>client_email</code> - (string)</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; client email  <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--client_email  "client_email-1"</code> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+<h4 id="project_id-string"><code>project_id</code> - (string)</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; project ID  <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--project_id  "project_id-1"</code> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+<h2 id="examples">Examples</h2>
+<p>datadog create-log-archive-gcs --name  "name-1" --query  "query-1" --rehydration_size  1 --rehydration_tags  "rehydration_tags-1" --bucket  "bucket-1" --path  "path-1" --client_email  "client_email-1" --project_id  "project_id-1"</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+    <nav
+      class="md-footer__inner md-grid"
+      aria-label=""
+    >
+
+      <!-- Link to previous page -->
+      
+        
+        <a
+          href="../create-log-archive-azure/"
+          class="md-footer__link md-footer__link--prev"
+          aria-label="Previous: datadog create-log-archive-azure"
+          rel="prev"
+        >
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              datadog create-log-archive-azure
+            </div>
+          </div>
+        </a>
+      
+
+      <!-- Link to next page -->
+      
+        
+        <a
+          href="../create-log-archive-s3/"
+          class="md-footer__link md-footer__link--next"
+          aria-label="Next: datadog create-log-archive-s3"
+          rel="next"
+        >
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              datadog create-log-archive-s3
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        
+        <a
+          href="https://maira.io/docs/"
+          target="_blank" rel="noopener"
+        >
+          Maira Docs
+        </a>
+        
+      </div>
+
+      <!-- Social links -->
+      <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/maira-io" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "header.autohide"], "search": "../../../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.4b2c34cd.min.js"></script>
+      
+    
+  </body>
+</html>
