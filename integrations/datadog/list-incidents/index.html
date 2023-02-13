@@ -6986,22 +6986,24 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="incident-string"><code>incident</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The UUID of the incident  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--incident  "incident-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="size-int"><code>size</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Size for a given page. The maximum allowed value is 5000  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--size  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  max: 5000</p>
 <h4 id="offset-int"><code>offset</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Specific offset to use as the beginning of the returned page  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--offset  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>datadog list-incidents --incident  "incident-1" --size  1 --offset  1</p>
 

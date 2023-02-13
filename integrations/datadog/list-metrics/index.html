@@ -7046,42 +7046,44 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="configured-bool"><code>configured</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Filter custom metrics that have configured tags  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--configured</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="tags_configured-string"><code>tags_configured</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Filter tag configurations by configured tags  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--tags_configured  "tags_configured-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="metric_type-string"><code>metric_type</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Filter metrics by metric type  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--metric_type  "metric_type-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>gauge, count, rate, distribution</code></p>
 <h4 id="include_percentiles-bool"><code>include_percentiles</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Filter distributions with additional percentile aggregations enabled or disabled  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--include_percentiles</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="queried-bool"><code>queried</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Filter custom metrics that have or have not been queried in the seconds else 2 hours will be applied  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--queried</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="tags-string"><code>tags</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Filter metrics that have been submitted with the given tags. Supports boolean and wildcard expressions. Can only be combined with the queried filter  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--tags  "tags-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="seconds-duration"><code>seconds</code> - (duration)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The number of seconds from now to apply to a tag or queried query  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--seconds  "5 seconds"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!datadog list-metrics

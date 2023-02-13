@@ -7001,27 +7001,31 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="start_index-int"><code>start_index</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The index of the first item to return.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--start_index  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>0</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="max-int"><code>max</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The maximum number of items to return per page.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--max  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>10</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  max: 50</p>
 <h4 id="types-string"><code>types</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The types of the transition rules to return.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--types  "types-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required, multiple allowed</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>postfunction, condition, validator</code></p>
 <h4 id="workflow-string"><code>workflow</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The name of a workflows to return.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--workflow  "workflow-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>jira get-all-workflows-transition-rule-configuration --types  "types-1" --workflow  "workflow-1"</p>
 

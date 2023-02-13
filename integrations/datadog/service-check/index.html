@@ -7031,37 +7031,39 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="check-string"><code>check</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The check  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--check  "check-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="host-string"><code>host</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The host name correlated with the check  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--host  "host-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="message-string"><code>message</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Message containing check status  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--message  "message-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="status-string"><code>status</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The status of a service check  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--status  "status-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>ok, warning, critical, unknown</code></p>
 <h4 id="tags-string"><code>tags</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Tags related to a check  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--tags  "tags-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required, multiple allowed</em> <br /> </p>
 <h4 id="timestamp-time"><code>timestamp</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Time of check  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--timestamp  "2019-10-12T07:20:50.52Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>now</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>datadog service-check --check  "check-1" --host  "host-1" --message  "message-1" --status  "status-1" --tags  "tags-1"</p>
 

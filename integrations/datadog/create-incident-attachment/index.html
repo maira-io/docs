@@ -7001,27 +7001,29 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="incident-string"><code>incident</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The UUID of the incident  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>"incident-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="url-string"><code>url</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The URL of this attachment  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--url  "url-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="title-string"><code>title</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The title of this  attachment  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--title  "title-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="type-string"><code>type</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The type of attachment  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--type  "type-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>postmortem, link</code></p>
 <h2 id="examples">Examples</h2>
 <p>datadog create-incident-attachment "incident-1" --url  "url-1" --title  "title-1" --type  "type-1"</p>
 

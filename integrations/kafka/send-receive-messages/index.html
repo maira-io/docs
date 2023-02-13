@@ -7061,47 +7061,47 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="cluster-string"><code>cluster</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Name of kafka cluster  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--cluster  "cluster-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>default</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="topic-string"><code>topic</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Name of kafka topic  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--topic  "topic-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="asynchronous-bool"><code>asynchronous</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Send messages asynchronously  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--asynchronous</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="messages-string"><code>messages</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Message to be sent  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--messages  "messages-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="all_partitions-bool"><code>all_partitions</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; boolean value to decide whether consumer should consume from all partitions  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--all_partitions</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="partitions-int"><code>partitions</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; partition number from which consumer should consume. Multiple partitions can be consumed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--partitions  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="offset_option-string"><code>offset_option</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Value can be either "OLDEST" or "NEWEST"  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--offset_option  "OLDEST"</code> ,  <code>--offset_option  "NEWEST"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="offset_value-int"><code>offset_value</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; offset from which messages are read in the provided partitions. Provide either offset_option or offset_value  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--offset_value  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>! kafka send-receive-messages --site &quot;localhost&quot; --asynchronous --topic &quot;test-topic-1&quot; `{&quot;key&quot;:&quot;1&quot;,&quot;value&quot;:&quot;hi&quot;}, {&quot;key&quot;:&quot;2&quot;,&quot;value&quot;:&quot;hello&quot;}` --partitions 1 --offset_option &quot;OLDEST&quot;

@@ -7030,37 +7030,37 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="cluster-string"><code>cluster</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Name of kafka cluster  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--cluster  "cluster-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>default</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="consuming_topic-string"><code>consuming_topic</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Topic to be consumed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>"consuming_topic-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="all_partitions-bool"><code>all_partitions</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; boolean value to decide whether consumer should consume from all partitions  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--all_partitions</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="partitions-int"><code>partitions</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; partition number from which consumer should consume. Multiple partitions can be consumed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--partitions  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="offset_option-string"><code>offset_option</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Value can be either "OLDEST" or "NEWEST"  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--offset_option  "OLDEST"</code> ,  <code>--offset_option  "NEWEST"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="offset_value-int"><code>offset_value</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; offset from which messages are read in the provided partitions. Provide either offset_option or offset_value  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--offset_value  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>! kafka create-consumer --site &quot;localhost&quot; &quot;test-topic-1&quot; --partitions 1 --offset_option &quot;NEWEST&quot;

@@ -7046,42 +7046,42 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="cluster-string"><code>cluster</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Name of elastic search cluster  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--cluster  "elastic-default"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>elastic-default</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="filter_path-string"><code>filter_path</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Path in the response. Filters and returns only parts of response matching this path  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--filter_path  "index.mappings.properties.*"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="raw-bool"><code>raw</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If false, returns compact and aligned text output  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--raw</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="task-string"><code>task</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Task Id  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--task  "oTUltX4IQMOUUVeiohTt8A:124"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="actions-string"><code>actions</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Used to limit the list of actions returned  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--actions  "cluster:*, *search"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="detailed-bool"><code>detailed</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If set, response returns detailed information of the task  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--detailed</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="node-string"><code>node</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Node IDs or names used to limit returned information.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--node  "node-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>elasticsearch get-tasks --filter_path  "index.mappings.properties.<em>" --raw   --task  "oTUltX4IQMOUUVeiohTt8A:124" --actions  "cluster:</em>, *search" --detailed   --node  "node-1"</p>
 

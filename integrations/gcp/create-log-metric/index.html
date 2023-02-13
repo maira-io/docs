@@ -7076,52 +7076,54 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Metric name to create metric  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>"CassandraMetric"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="description-string"><code>description</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Description for the metric  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--description  "Metric details for Cassandra"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="filter-string"><code>filter</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A filter that chooses which log entries to create metric for  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--filter  "resource.type=gae_app AND severity&gt;=ERROR"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="disabled-bool"><code>disabled</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If set to True, then this metric is disabled and it does not generate any points  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--disabled</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="log_name-string"><code>log_name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; log names to filter out the logs  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--log_name  "projects/macro-context-293714/logs/GCEGuestAgent"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="severity-string"><code>severity</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Severity of the logs  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--severity  "INFO"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>DEFAULT, DEBUG, INFO, NOTICE, WARNING, ERROR, CRITICAL, ALERT, EMERGENCY</code></p>
 <h4 id="filter-string_1"><code>filter</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A filter that chooses which log entries to return  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--filter  "resource.type=gae_app AND severity&gt;=ERROR"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="start_time-time"><code>start_time</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The time stamp indicating the earliest data to be returned  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--start_time  "60m ago"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="end_time-time"><code>end_time</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The time stamp indicating the latest data to be returned  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--end_time  "now"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>now</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>x=! gcp create-log-metric --site &quot;localhost:8081&quot; &quot;testMetric3&quot; --description &quot;testDesc&quot; --filter &quot;protoPayload.status &gt;= 400 AND sample(insertId, 0.1)&quot;

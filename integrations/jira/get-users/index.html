@@ -7001,27 +7001,31 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="user-string"><code>user</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The account ID of the user  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>"user-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  max length: 128</p>
 <h4 id="expand-string"><code>expand</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Use expand to include additional information about users in the response.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--expand  "expand-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>groups, applicationRoles</code></p>
 <h4 id="start_index-int"><code>start_index</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The index of the first item to return.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--start_index  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>0</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="max-int"><code>max</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The maximum number of items to return per page.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--max  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>50</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!jira get-users 

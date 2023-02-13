@@ -7076,52 +7076,54 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="monitor-int"><code>monitor</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The ID of the monitor  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--monitor  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="group_states-string"><code>group_states</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; When specified, shows additional information about the group states  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--group_states  "group_states-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>all, alert, warn, no data</code></p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A string to filter monitors by name  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--name  "name-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="tags-string"><code>tags</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A comma separated list indicating what tags, if any, should be used to filter the list of monitors by scope. For example, host:host0  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--tags  "tags-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="monitor_tags-string"><code>monitor_tags</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A comma separated list indicating what service and/or custom tags, if any, should be used to filter the list of monitors  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--monitor_tags  "monitor_tags-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="downtimes-bool"><code>downtimes</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If this argument is set to true, then the returned data includes all current active downtimes for each monitor  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--downtimes</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>false</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="offset-int"><code>offset</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Use this parameter for paginating through large sets of monitors  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--offset  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>0</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="page-int"><code>page</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The page to start paginating from  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--page  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="page_size-int"><code>page_size</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The number of monitors to return per page  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--page_size  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>50</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!datadog get-monitor-details

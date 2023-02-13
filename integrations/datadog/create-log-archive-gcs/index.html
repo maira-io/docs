@@ -7076,52 +7076,52 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="include_tags-bool"><code>include_tags</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; set "true" to save tags. Else, the tags will be deleted when logs sent to archive.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--include_tags</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>false</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The archive name  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--name  "name-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="query-string"><code>query</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The archive query/filter. Logs matching this query are included in the archive  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--query  "query-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="rehydration_size-int"><code>rehydration_size</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Maximum scan size for rehydration in gb from this archive  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--rehydration_size  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="rehydration_tags-string"><code>rehydration_tags</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; An array of tags to add to rehydrated logs from an archive  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--rehydration_tags  "rehydration_tags-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="bucket-string"><code>bucket</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The Bucket where the archive will be stored  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--bucket  "bucket-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="path-string"><code>path</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The archive path  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--path  "path-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="client_email-string"><code>client_email</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; client email  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--client_email  "client_email-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="project_id-string"><code>project_id</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; project ID  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--project_id  "project_id-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>datadog create-log-archive-gcs --name  "name-1" --query  "query-1" --rehydration_size  1 --rehydration_tags  "rehydration_tags-1" --bucket  "bucket-1" --path  "path-1" --client_email  "client_email-1" --project_id  "project_id-1"</p>
 

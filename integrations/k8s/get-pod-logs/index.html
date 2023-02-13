@@ -7061,47 +7061,47 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="cluster-string"><code>cluster</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Cluster where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--cluster  "in-cluster"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>in-cluster</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="namespace-string"><code>namespace</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Kubernetes namespace  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--namespace  "namespace-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>default</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Name of the pod  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>"name-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="since-duration"><code>since</code> - (duration)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Duration for which logs are required. Only one of since or since_time can be specified  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--since  "5 seconds"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="since_time-string"><code>since_time</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Timestamp from which logs required. Should follow RFC3339 standard  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--since_time  "2019-10-12T07:20:50.52Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="tail_lines-int"><code>tail_lines</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; the number of lines from the end of the logs to show  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--tail_lines  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="limit_bytes-int"><code>limit_bytes</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; the number of bytes to read from the server before terminating the log output  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--limit_bytes  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="label_selector-string"><code>label_selector</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; label selector to select pods to get logs for. Only used if name is not provided  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--label_selector  "app=myapp"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>! k8s get-pod-logs &quot;hello-1629338580-jw8sf&quot;

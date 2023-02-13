@@ -7031,37 +7031,37 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="region-string"><code>region</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; AWS region for the service  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--region  "region-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="partition_key-string"><code>partition_key</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The partition key of the item  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--partition_key  "partition_key-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="sort_key-string"><code>sort_key</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The sort key of the item  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--sort_key  "sort_key-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="partition_key_value-string"><code>partition_key_value</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The partition key value of the item  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--partition_key_value  "partition_key_value-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="sort_key_value-string"><code>sort_key_value</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The sort key value of the item  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--sort_key_value  "sort_key_value-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The name of the table  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>"name-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>x=! dynamodb get-table-item --site &quot;localhost:8081&quot; --table &quot;testtable1&quot; --partition_key &quot;testpk1&quot; --sort_key &quot;testsk1&quot; --partition_key_value &quot;testpkval1&quot; --sort_key_value &quot;testskval1&quot;

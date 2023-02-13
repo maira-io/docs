@@ -7091,57 +7091,61 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="query-string"><code>query</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Search query following logs syntax  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--query  "query-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="index-string"><code>index</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; For customers with multiple indexes, the indexes to search Defaults to '*' which means all indexes  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--index  "index-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="from-time"><code>from</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Minimum timestamp for requested logs  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--from  "2019-10-12T07:20:50.52Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>15 miniutes ago</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="to-time"><code>to</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Maximum timestamp for requested logs  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--to  "2019-10-12T07:20:50.52Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="storage_tier-string"><code>storage_tier</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Specifies the storage type to be used  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--storage_tier  "storage_tier-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>indexes, online-archives</code></p>
 <h4 id="sort-string"><code>sort</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Order of logs in results  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--sort  "sort-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>timestamp, -timestamp</code></p>
 <h4 id="offset-duration"><code>offset</code> - (duration)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The time offset (in seconds) to apply to the query  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--offset  "5 seconds"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="timezone-string"><code>timezone</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The timezone can be specified as GMT, UTC, an offset from UTC (UTC+1), or as a Timezone Database identifier (America/New_York)  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--timezone  "timezone-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="cursor-string"><code>cursor</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; List following results with a cursor provided in the previous query  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--cursor  "cursor-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="limit-int"><code>limit</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Maximum number of logs in the response  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--limit  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!datadog search-logs --query &quot;browser&quot;

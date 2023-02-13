@@ -7076,52 +7076,54 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="from-string"><code>from</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Email address of a valid user associated with the account making the request.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--from  "from-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="title-string"><code>title</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A succinct description of the nature, symptoms, cause, or effect of the incident.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--title  "title-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="service-string"><code>service</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; service id to associate with this incident  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--service  "service-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="priority-string"><code>priority</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; priority id to associate with this incident  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--priority  "priority-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="urgency-string"><code>urgency</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; urgency of the incidents to be returned. Allowed values [high, low]  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--urgency  "urgency-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>high, low</code></p>
 <h4 id="assignee-string"><code>assignee</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; user id of the users who are to be assigned the incident  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--assignee  "assignee-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="escalation_policy-string"><code>escalation_policy</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; escalation policy ID for this incident  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--escalation_policy  "escalation_policy-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="conference_number-string"><code>conference_number</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; conference phone number to be used for this incident  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--conference_number  "conference_number-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="conference_url-string"><code>conference_url</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; conference url to be used for this incident  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--conference_url  "conference_url-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>pagerduty create-incidents --from  "from-1" --title  "title-1" --service  "service-1" --priority  "priority-1" --urgency  "urgency-1" --assignee  "assignee-1" --escalation_policy  "escalation_policy-1" --conference_number  "conference_number-1" --conference_url  "conference_url-1"</p>
 

@@ -7016,32 +7016,32 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="cluster-string"><code>cluster</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Name of prometheus cluster  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--cluster  "prometheus-default"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>prometheus-default</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="query-string"><code>query</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Query  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>"up"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="start_time-string"><code>start_time</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Start timestamp (inclusive, Should be provided in rfc3339 format)  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--start_time  "2015-07-01T20:10:51.781Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="end_time-string"><code>end_time</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; End timestamp (inclusive, Should be provided in rfc3339 format)  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--end_time  "2015-07-01T20:10:51.781Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="step-float"><code>step</code> - (float)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Query resolution step width in seconds  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--step  15.5</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>! prometheus range-query --site &quot;localhost&quot; --start_time &quot;2021-10-19T20:10:51.781Z&quot; --end_time &quot;2021-10-20T20:10:51.781Z&quot; &quot;up&quot; --step 30000

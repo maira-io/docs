@@ -7031,37 +7031,41 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="from-string"><code>from</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Email address of a valid user associated with the account making the request.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--from  "from-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The name of the user.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--name  "FirstName LastName"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="email-string"><code>email</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The user's email address.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--email  "test@maira.io"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="role-string"><code>role</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The user role.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--role  "user"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>admin, limited_user, observer, owner, read_only_user, restricted_access, read_only_limited_user, user</code></p>
 <h4 id="title-string"><code>title</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The job title for the user.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--title  "Director of Marketing"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  max length: 100</p>
 <h4 id="license_id-string"><code>license_id</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; License id assigned to the User  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--license_id  "license_id-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>pagerduty create-user --from  "from-1" --name  "FirstName LastName" --email  "test@maira.io" --role  "user" --title  "Director of Marketing" --license_id  "license_id-1"</p>
 

@@ -7001,27 +7001,29 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="issue-string"><code>issue</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The ID of the issue.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--issue  "issue-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="fields_id-string"><code>fields_id</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Fields referenced by ID to return for the issue.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--fields_id  "fields_id-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="fields_keys-string"><code>fields_keys</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Fields referenced by keys to return for the issue.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--fields_keys  "fields_keys-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="expand-string"><code>expand</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; include additional information about the issues in the response.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--expand  "expand-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>renderedFields, names, schema, transitions, editmeta, changelog, versionedRepresentations</code></p>
 <h2 id="examples">Examples</h2>
 <p>jira get-issue --issue  "issue-1" --fields_id  "fields_id-1" --fields_keys  "fields_keys-1" --expand  "expand-1"</p>
 

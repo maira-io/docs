@@ -7091,59 +7091,63 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="region-string"><code>region</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; AWS region for the service  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--region  "region-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The name of the metric, with or without spaces  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>"name-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="start_time-time"><code>start_time</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The time stamp indicating the earliest data to be returned  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--start_time  "60m ago"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>60m ago</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="end_time-time"><code>end_time</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The time stamp indicating the latest data to be returned  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--end_time  "now"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>now</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="namespace-string"><code>namespace</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The namespace of the metric, with or without spaces  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--namespace  "namespace-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="unit-string"><code>unit</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The unit for a given metric  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--unit  "Seconds"</code> ,  <code>--unit  "Bytes"</code> ,  <code>--unit  "Percent"</code> ,  <code>--unit  "Count"</code> ,  <code>--unit  "Bytes/Second"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>Seconds, Microseconds, Milliseconds, Bytes, Kilobytes, Megabytes, Gigabytes, Terabytes, Bits, Kilobits, Megabits, Gigabits, Terabits, Percent, Count, Bytes/Second, Kilobytes/Second, Megabytes/Second, Gigabytes/Second, Terabytes/Second, Bits/Second, Kilobits/Second, Megabits/Second, Gigabits/Second, Terabits/Second, Count/Second, None</code></p>
 <h4 id="stat-string"><code>stat</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The unit for a given metric  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--stat  "SampleCount"</code> ,  <code>--stat  "Average"</code> ,  <code>--stat  "Sum"</code> ,  <code>--stat  "Maximum"</code> ,  <code>--stat  "Minimum"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>SampleCount, Average, Sum, Maximum, Minimum</code></p>
 <h4 id="extended_stat-string"><code>extended_stat</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The percentile stats for a given metric  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--extended_stat  "p0.1"</code> ,  <code>--extended_stat  "p99"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="period-int"><code>period</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The granularity, in seconds, of the returned data points  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--period  * Start time between 3 hours and 15 days ago - Use a multiple of 60 seconds (1 minute).
 * Start time between 15 and 63 days ago - Use a multiple of 300 seconds (5 minutes).
 * Start time greater than 63 days ago - Use a multiple of 3600 seconds (1 hour).</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="dimensions-string"><code>dimensions</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The dimensions to filter against  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--dimensions  "{"Class":"None"}"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>cloudwatch get-metric-stats --region  "region-1" "name-1" --namespace  "namespace-1" --unit  "Seconds" --stat  "SampleCount" --extended_stat  "p0.1" --period  * Start time between 3 hours and 15 days ago - Use a multiple of 60 seconds (1 minute).
 * Start time between 15 and 63 days ago - Use a multiple of 300 seconds (5 minutes).

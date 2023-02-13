@@ -7196,92 +7196,98 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="downtime-int"><code>downtime</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; ID of the Downtime  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="disabled-bool"><code>disabled</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If a downtime has been disabled  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--disabled</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>false</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="end-time"><code>end</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; time to end the downtime. If not provided, the downtime is in effect indefinitely until you cancel it  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--end  "2019-10-12T07:20:50.52Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="message-string"><code>message</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A message to include with notifications for this downtime  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--message  "message-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="id-int"><code>id</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A single monitor to which the downtime applies. If not provided, the downtime applies to all monitors  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--id  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="tags-string"><code>tags</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Monitor tags. The resulting downtime applies to monitors that match ALL provided monitor tags. For example, service:postgres AND team:frontend  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--tags  "tags-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="mute_first_recovery_notification-bool"><code>mute_first_recovery_notification</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If the first recovery notification during a downtime should be muted  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--mute_first_recovery_notification</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="parent-int"><code>parent</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; ID of the parent Downtime  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--parent  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="period-int"><code>period</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; How often to repeat(days) as an integer  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--period  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="rrule-string"><code>rrule</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The RRULE standard for defining recurring events (requires to set "type" to rrule) Most common rrule options from the iCalendar Spec are supported  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--rrule  "rrule-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="type-string"><code>type</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The type of recurrence  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--type  "type-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>days, weeks, months, years, rrule</code></p>
 <h4 id="until-int"><code>until</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The date at which the recurrence should end as a POSIX timestamp. occurences and until are mutually exclusive  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--until  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="occurrences-int"><code>occurrences</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; How many times the downtime is rescheduled. occurences and until are mutually exclusive  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--occurrences  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="days-string"><code>days</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A list of week days to repeat on  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--days  "days-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>Mon, Tue, Wed, Thu, Fri, Sat, Sun</code></p>
 <h4 id="scope-string"><code>scope</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The scope(s) to which the downtime applies  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--scope  "scope-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>env:dev, env:prod</code></p>
 <h4 id="start-time"><code>start</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; time to start the downtime. If not provided, the downtime starts the moment it is created  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--start  "2019-10-12T07:20:50.52Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="timezone-string"><code>timezone</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The timezone in which to display the downtime's start and end times in Datadog applications  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--timezone  "timezone-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>datadog update-downtime 1 --end  "2019-10-12T07:20:50.52Z" --message  "message-1" --id  1 --tags  "tags-1" --mute_first_recovery_notification   --parent  1 --period  1 --rrule  "rrule-1" --type  "type-1" --until  1 --occurrences  1 --days  "days-1" --scope  "scope-1" --start  "2019-10-12T07:20:50.52Z" --timezone  "timezone-1"</p>
 

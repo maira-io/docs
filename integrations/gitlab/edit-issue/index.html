@@ -7166,83 +7166,85 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="title-string"><code>title</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Title of an issue  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--title  "issue1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="assignee-string"><code>assignee</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The username of the user to assign the issue to.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--assignee  "1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="confidential-bool"><code>confidential</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Set an issue to be confidential. Default is false.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--confidential</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="created_at-time"><code>created_at</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; When the issue was created. Requires administrator or project/group owner rights.
   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--created_at  "1 day ago"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="description-string"><code>description</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The description of an issue. Limited to 1,048,576 characters.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--description  "issue1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="due_date-string"><code>due_date</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The due date. Date time string in the format YYYY-MM-DD  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--due_date  "2016-03-11"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="epic_id-int"><code>epic_id</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; ID of the epic to add the issue to. Valid values are greater than or equal to 0.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--epic_id  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="project-string"><code>project</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The path of the project  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--project  "saiprakash_maira/testing"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="issue-int"><code>issue</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The internal ID of a project’s issue  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--issue  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="issue_type-string"><code>issue_type</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The type of issue. One of issue, incident, or test_case. Default is issue.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--issue_type  "issue"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="labels-string"><code>labels</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Label names for an issue  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--labels  "label"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="remove_labels-string"><code>remove_labels</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Label names to remove from an issue.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--remove_labels  "label"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="state_event-string"><code>state_event</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The state event of an issue. Set close to close the issue and reopen to reopen it  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--state_event  "reopen"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>close, reopen</code></p>
 <h4 id="weight-int"><code>weight</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The weight of the issue. Valid values are greater than or equal to 0.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--weight  10</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="updated_at-time"><code>updated_at</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; When the issue was updated.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--updated_at  "1 day ago"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>! gitlab edit-issue --site &quot;localhost&quot; --project &quot;saiprakash_maira/testing&quot; --issue 4 --description &quot;hello new edit&quot;

@@ -7091,57 +7091,57 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="cluster-string"><code>cluster</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Name of elastic search cluster  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--cluster  "elastic-default"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>elastic-default</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="dry_run-bool"><code>dry_run</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If set, then the request simulates the operation and returns the resulting state, but will not actually perform the requested changes.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--dry_run</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="explain-bool"><code>explain</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If set, then the response contains an explanation of why the commands can or cannot be executed.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--explain</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="retry_failed-bool"><code>retry_failed</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If set, then retries allocation of shards that are blocked due to too many subsequent allocation failures  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--retry_failed</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="command-string"><code>command</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Command to perform. Can be either move/ cancel/ allocate_replica  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--command  "move"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="index-string"><code>index</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Index on which command is performed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--index  "students"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="shard-int"><code>shard</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Shard on which command is performed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--shard  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="node-string"><code>node</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Node from which shard should move or node from which shared allocation should be cancelled or node to which unassigned replica should be allocated  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--node  "node2"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="to_node-string"><code>to_node</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; In case of move command, node to which shard is moved  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--to_node  "node2"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="allow_primary-bool"><code>allow_primary</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; By default only replica shard allocations can be cancelled. If it is necessary to cancel the allocation of a primary shard then the allow_primary flag must be set  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--allow_primary</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>! elasticsearch cluster-reroute --site &quot;localhost&quot; --cluster &quot;elastic-1&quot; --shard 1 --index &quot;test1&quot; --command &quot;cancel&quot; --node &quot;beehyv-H81M-S&quot;

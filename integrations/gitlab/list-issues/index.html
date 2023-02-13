@@ -7256,122 +7256,134 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="project-string"><code>project</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The path of the project  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--project  "saiprakash_maira/testing"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="assignee-string"><code>assignee</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return issues assigned to the given username. Similar to assignee_id and mutually exclusive with assignee_id. In GitLab CE, the assignee_username array should only contain a single value. Otherwise, an invalid parameter error is returned.
   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--assignee  "myname"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="author-string"><code>author</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return issues created by the given username. Similar to author_id and mutually exclusive with author_id.
   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--author  "author_name"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="confidential-bool"><code>confidential</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Filter confidential or public issues.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--confidential</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="created_after-time"><code>created_after</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return issues created on or after the given time  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--created_after  "1 day ago"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="created_before-time"><code>created_before</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return issues created on or before the given time  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--created_before  "now"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="due_date-string"><code>due_date</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return issues that have no due date, are overdue, or whose due date is this week, this month, or between two weeks ago and next month. Accepts 0 (no due date), overdue, week, month, next_month_and_previous_two_weeks.
   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--due_date  "overdue"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>0, overdue, week, month, next_month_and_previous_two_weeks</code></p>
 <h4 id="issues-int"><code>issues</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return only the issues having the given iid  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--issues  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="issue_type-string"><code>issue_type</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Filter to a given type of issue. One of issue, incident, or test_case.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--issue_type  "test_case"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>issue, incident, test_case</code></p>
 <h4 id="iteration_title-string"><code>iteration_title</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return issues assigned to the iteration with the given title. Similar to iteration_id and mutually exclusive with iteration_id.
   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--iteration_title  "title"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="labels-string"><code>labels</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Label names, issues must have all labels to be returned. None lists all issues with no labels. Any lists all issues with at least one label. Predefined names are case-insensitive.
   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--labels  "label"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="non_archived-bool"><code>non_archived</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return issues only from non-archived projects. If false, the response returns issues from both archived and non-archived projects. Default is true.
   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--non_archived</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="order_by-string"><code>order_by</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return issues ordered by created_at, due_date, label_priority, milestone_due, popularity, priority, relative_position, title, updated_at, or weight fields. Default is created_at.
   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--order_by  "created_at"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>created_at, due_date, label_priority, milestone_due, popularity, priority, relative_position, title, updated_at, weight</code></p>
 <h4 id="scope-string"><code>scope</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return issues for the given scope - created_by_me, assigned_to_me or all. Defaults to created_by_me
   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--scope  "created_by_me"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>created_by_me, assigned_to_me, all</code></p>
 <h4 id="search-string"><code>search</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Search issues against their title and description  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--search  "title"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="sort-string"><code>sort</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return issues sorted in asc or desc order. Default is desc  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--sort  "asc"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>asc, desc</code></p>
 <h4 id="state-string"><code>state</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return all issues or just those that are opened or closed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--state  "opened"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>opened, closed</code></p>
 <h4 id="updated_after-time"><code>updated_after</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return issues updated on or after the given time.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--updated_after  "1 day ago"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="updated_before-time"><code>updated_before</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return issues updated on or before the given time.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--updated_before  "1 day ago"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="weight-int"><code>weight</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return issues with the specified weight. None returns issues with no weight assigned. Any returns issues with a weight assigned.
   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--weight  10</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="with_labels_details-bool"><code>with_labels_details</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If true, the response returns more details for each label in labels field: :name, :color, :description, :description_html, :text_color. Default is false.
   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--with_labels_details</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!gitlab list-issues --site &quot;localhost:8080&quot; --project &quot;gitlab-com/sales-team/field-operations/sales-operations&quot;

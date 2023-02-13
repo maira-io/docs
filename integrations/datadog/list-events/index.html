@@ -7076,52 +7076,54 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="event-string"><code>event</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Id for specific event search  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--event  "event-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="start-time"><code>start</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; search events after this time  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--start  "2019-10-12T07:20:50.52Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>1 hour ago</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="end-time"><code>end</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; search events before this time  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--end  "2019-10-12T07:20:50.52Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="priority-string"><code>priority</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Priority of your events, either low or normal  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--priority  "priority-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>normal, low</code></p>
 <h4 id="sources-string"><code>sources</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Sources.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--sources  "sources-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="tags-string"><code>tags</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Tags, if any, should be used to filter the list of events  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--tags  "tags-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="unaggregated-bool"><code>unaggregated</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Set unaggregated to true to return all events within the specified [start,end] timeframe  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--unaggregated</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>false</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="exclude_aggregate-bool"><code>exclude_aggregate</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If the exclude_aggregate parameter is set to true, then the unaggregated parameter is ignored and will be true by default  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--exclude_aggregate</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>false</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="page-int"><code>page</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Set page to the number of the page to return with 0 being the first page 1000 results are returned per request  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--page  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> !datadog list-events --event &quot;6863321649093935973&quot;

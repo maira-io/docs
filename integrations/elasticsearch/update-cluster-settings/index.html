@@ -6986,22 +6986,22 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="cluster-string"><code>cluster</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Name of elastic search cluster  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--cluster  "elastic-default"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>elastic-default</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="transient-string"><code>transient</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Transient settings to be updated  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--transient  "{"indices.recovery.max_bytes_per_sec" : "20mb"}"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="persistent-string"><code>persistent</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Persistent settings to be updated  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--persistent  "{"indices.recovery.max_bytes_per_sec" : "20mb"}"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>! elasticsearch update-cluster-settings --site &quot;localhost&quot; --cluster &quot;elastic-1&quot; --persistent `{&quot;indices.recovery.max_bytes_per_sec&quot; : &quot;20mb&quot;}`

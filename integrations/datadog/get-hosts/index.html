@@ -7061,47 +7061,49 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="filter-string"><code>filter</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; String to filter search results  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--filter  "filter-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="sort_field-string"><code>sort_field</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Sort hosts by this field  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--sort_field  "sort_field-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="sort_dir-string"><code>sort_dir</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Direction of sort  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--sort_dir  "sort_dir-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>asc, desc</code></p>
 <h4 id="start-int"><code>start</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Host result to start search from  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--start  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="count-int"><code>count</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Number of hosts to return. Max 1000  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--count  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="from-time"><code>from</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; time from which you want to search your hosts  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--from  "2019-10-12T07:20:50.52Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>1 hour ago</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="include_muted_hosts_data-bool"><code>include_muted_hosts_data</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Include information on the muted status of hosts and when the mute expires  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--include_muted_hosts_data</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="include_hosts_metadata-bool"><code>include_hosts_metadata</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Include additional metadata about the hosts (agent_version, machine, platform, processor, etc.)  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--include_hosts_metadata</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>false</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>datadog get-hosts --filter  "filter-1" --sort_field  "sort_field-1" --sort_dir  "sort_dir-1" --start  1 --count  1 --include_muted_hosts_data  </p>
 

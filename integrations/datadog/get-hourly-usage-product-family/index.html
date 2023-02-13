@@ -7031,37 +7031,39 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="start-string"><code>start</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; For usage beginning at this hour  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--start  "start-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="end-string"><code>end</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; For usage ending before this hour  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--end  "end-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="products-string"><code>products</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Comma separated list of product families to retrieve  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--products  "products-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>all, analyzed_logs, application_security, audit_logs, serverless, ci_app, cspm, custom_events, cws, dbm, fargate, infra_hosts, incident_management, indexed_logs, indexed_spans, ingested_spans, iot, lambda_traced_invocations, logs, network_flows, network_hosts, observability_pipelines, online_archive, profiling, rum, rum_browser_sessions, rum_mobile_sessions, sds, snmp, synthetics_api, synthetics_browser, synthetics_parallel_testing, timeseries</code></p>
 <h4 id="exclude_descendants-bool"><code>exclude_descendants</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Include child org usage in the response  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--exclude_descendants</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>false</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="limit-int"><code>limit</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Maximum number of results to return (between 1 and 500)  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--limit  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>50</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="next-string"><code>next</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; List following results with a next_record_id provided in the previous query  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--next  "next-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>datadog get-hourly-usage-product-family --start  "start-1" --end  "end-1" --products  "products-1" --next  "next-1"</p>
 

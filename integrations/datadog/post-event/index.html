@@ -7106,64 +7106,70 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="aggregation_key-string"><code>aggregation_key</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; An arbitrary string to use for aggregation  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--aggregation_key  "aggregation_key-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  max length: 100</p>
 <h4 id="alert_type-string"><code>alert_type</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If an alert event is enabled, set its type  <br />
-&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--alert_type  "alert_type-1"</code> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--alert_type  "error"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>error, warning, info, success, user_update, recommendation, snapshot</code></p>
 <h4 id="date_happened-int"><code>date_happened</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; POSIX timestamp of the event. Limited to events no older than 18 hours  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--date_happened  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="device-string"><code>device</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A device name.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--device  "device-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="host-string"><code>host</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Host name to associate with the event. Any tags associated with the host are also applied to this event  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--host  "host-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="priority-string"><code>priority</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The priority of the event  <br />
-&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--priority  "priority-1"</code> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--priority  "normal"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>normal, low</code></p>
 <h4 id="related_event-int"><code>related_event</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; ID of the parent event  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--related_event  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="source_type-string"><code>source_type</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The type of event being posted  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--source_type  "source_type-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="tags-string"><code>tags</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Tags to apply to the event  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--tags  "tags-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="text-string"><code>text</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The body of the event. Limited to 4000 characters. The text supports markdown. To use markdown in the event text, start the text block with %%% \n and end the text block with \n %%%  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--text  "text-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="title-string"><code>title</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The event title  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--title  "title-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h2 id="examples">Examples</h2>
-<p>datadog post-event --aggregation_key  "aggregation_key-1" --alert_type  "alert_type-1" --date_happened  1 --device  "device-1" --host  "host-1" --priority  "priority-1" --related_event  1 --source_type  "source_type-1" --tags  "tags-1" --text  "text-1" --title  "title-1"</p>
+<p>datadog post-event --aggregation_key  "aggregation_key-1" --alert_type  "error" --date_happened  1 --device  "device-1" --host  "host-1" --priority  "normal" --related_event  1 --source_type  "source_type-1" --tags  "tags-1" --text  "text-1" --title  "title-1"</p>
 
 
 

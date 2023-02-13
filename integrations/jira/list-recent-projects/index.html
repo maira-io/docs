@@ -6956,12 +6956,14 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="expand-string"><code>expand</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Include additional information in the response.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>"expand-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>description, projectKeys, lead, issueTypes, url, permissions, insight, *</code></p>
 <h2 id="examples">Examples</h2>
 <p>jira list-recent-projects "expand-1"</p>
 

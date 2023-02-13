@@ -7046,42 +7046,42 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="cluster-string"><code>cluster</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Name of Icinga cluster  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--cluster  "icinga-default"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>icinga-default</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="type-string"><code>type</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Type of configuration object. Used to limit the objects returned in the response to a certain type of object  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--type  "hosts/ services"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Object name to query for a single object  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--name  "example.localdomain"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="attrs-string"><code>attrs</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Attribute list of object to limit output  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--attrs  "name/ address"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="joins-string"><code>joins</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Join related object types and their attributes specified as list  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--joins  "host"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="meta-string"><code>meta</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Enable meta information  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--meta  "meta=used_by (references from other objects), meta=location (location information) specified as list"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="filters-string"><code>filters</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Used to return objects that only match the provided criteria  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--filters  "service.acknowledgement_expiry==0, service.downtime_depth == 0.0"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>! icinga query-configuration-objects --site &quot;localhost&quot; --type &quot;hosts&quot;

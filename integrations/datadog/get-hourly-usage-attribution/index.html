@@ -7031,37 +7031,39 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="start-time"><code>start</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; For usage beginning at this hour  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--start  "2019-10-12T07:20:50.52Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>3 days ago</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="end-time"><code>end</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; For usage ending before this hour  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--end  "2019-10-12T07:20:50.52Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="usage-string"><code>usage</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Usage type to retrieve  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--usage  "usage-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>api, apm_fargate, apm_host, appsec_fargate, appsec, browser, container, cspm_containers, cspm_hosts, custom_timeseries, cws_containers, cws_hosts, dbm_hosts, dbm_queries, estimated_indexed_logs, estimated_ingested_logs, estimated_indexed_spans, estimated_ingested_spans, fargate, functions, indexed_logs, infra_host, invocations, npm_host, profiled_container, profiled_host, snmp, estimated_rum_sessions, cont</code></p>
 <h4 id="next-string"><code>next</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; List following results with a next_record_id provided in the previous query  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--next  "next-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="tag_breakdown-string"><code>tag_breakdown</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If no value is provided the usage will not be broken down by tags  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--tag_breakdown  "tag_breakdown-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="exclude_descendants-bool"><code>exclude_descendants</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Include child org usage in the response  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--exclude_descendants</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>false</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>datadog get-hourly-usage-attribution --end  "2019-10-12T07:20:50.52Z" --usage  "usage-1" --next  "next-1" --tag_breakdown  "tag_breakdown-1"</p>
 

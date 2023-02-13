@@ -7031,37 +7031,39 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The name of the service.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--name  "Test Service"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="escalation_policy-string"><code>escalation_policy</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; id for escalation policy  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--escalation_policy  "escalation_policy-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="description-string"><code>description</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The user-provided description of the service.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--description  "Test description"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="auto_resolve_timeout-int"><code>auto_resolve_timeout</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Time in seconds that an incident is automatically resolved.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--auto_resolve_timeout  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>14400</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="acknowledgement_timeout-int"><code>acknowledgement_timeout</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Time in seconds that an incident changes to the Triggered State after being Acknowledged.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--acknowledgement_timeout  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>1800</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="status-string"><code>status</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The current state of the Service.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--status  "status-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>active</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>active, warning, critical, maintenance, disabled</code></p>
 <h2 id="examples">Examples</h2>
 <p>pagerduty create-service --name  "Test Service" --escalation_policy  "escalation_policy-1" --description  "Test description"</p>
 

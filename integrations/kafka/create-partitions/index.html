@@ -7016,32 +7016,32 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="cluster-string"><code>cluster</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Name of kafka cluster  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--cluster  "cluster-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>default</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="topic-string"><code>topic</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Name of kafka topic  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>"topic-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="total_partition_count-int"><code>total_partition_count</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; this count will be the sum of existing partitions and partitions to be created  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--total_partition_count  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="assignment-string"><code>assignment</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Stringified value of replica assignment array. Number of replica assignments should be equal to number of new partitions  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--assignment  "assignment-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="validate_only-bool"><code>validate_only</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Only validate whether partition can be created with provided values  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--validate_only</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>! kafka create-partitions --site &quot;localhost&quot; &quot;test-topic-1&quot; --total_partition_count 5 --assignment ‘[[1,2],[2,3]]’

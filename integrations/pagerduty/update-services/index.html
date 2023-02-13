@@ -7076,52 +7076,56 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="id-string"><code>id</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; ID of the service.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--id  "id-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The name of the service.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--name  "name-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="description-string"><code>description</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; description of webhook subscription  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--description  "description-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="auto_resolve_timeout-int"><code>auto_resolve_timeout</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Time in seconds, incident is automatically resolved if left open for that long.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--auto_resolve_timeout  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>14400</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="acknowledgement_timeout-int"><code>acknowledgement_timeout</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Time in seconds that an incident changes to the Triggered State after being Acknowledged.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--acknowledgement_timeout  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>1800</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="alert_creation-string"><code>alert_creation</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Whether a service creates only incidents, or both alerts and incidents.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--alert_creation  "alert_creation-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>create_incidents, create_alerts_and_incidents</code></p>
 <h4 id="status-string"><code>status</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The current state of the Service.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--status  "status-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>active</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>active, warning, critical, maintenance, disabled</code></p>
 <h4 id="escalation_policy-string"><code>escalation_policy</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The Escalation Policy id  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--escalation_policy  "escalation_policy-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="active-bool"><code>active</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If true, a webhook will be sent.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--active</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>true</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>pagerduty update-services --id  "id-1" --name  "name-1" --description  "description-1" --alert_creation  "alert_creation-1" --escalation_policy  "escalation_policy-1"</p>
 

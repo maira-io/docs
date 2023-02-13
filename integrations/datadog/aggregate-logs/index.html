@@ -7091,57 +7091,63 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="aggregation-string"><code>aggregation</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; An aggregation function  <br />
-&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--aggregation  "aggregation-1"</code> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--aggregation  "count"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>count, cardinality, pc75, pc90, pc95, pc98, pc99, sum, min, max, avg, median</code></p>
 <h4 id="interval-string"><code>interval</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The time buckets' size (only used for type=timeseries) Defaults to a resolution of 150 points  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--interval  "interval-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="metric-string"><code>metric</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The metric to use  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--metric  "metric-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="type-string"><code>type</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The type of compute  <br />
-&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--type  "type-1"</code> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--type  "total"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>timeseries, total</code></p>
 <h4 id="query-string"><code>query</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Search  query  following logs syntax.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--query  "query-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="index-string"><code>index</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; For customers with multiple indexes, the indexes to search Defaults to '*' which means all indexes  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--index  "index-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="from-time"><code>from</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Minimum timestamp for requested logs  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--from  "2019-10-12T07:20:50.52Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>15 minutes ago</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="to-time"><code>to</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Maximum timestamp for requested logs  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--to  "2019-10-12T07:20:50.52Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="storage_tier-string"><code>storage_tier</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Specifies the storage type to be used  <br />
-&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--storage_tier  "storage_tier-1"</code> <br />
+&nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--storage_tier  "indexes"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>indexes, online-archives</code></p>
 <h4 id="cursor-string"><code>cursor</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; List following results with a cursor provided in the previous query  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--cursor  "cursor-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!datadog aggregate-logs --aggregation &quot;avg&quot; --index &quot;main&quot; --query &quot;*&quot;

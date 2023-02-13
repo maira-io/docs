@@ -6986,22 +6986,24 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; name of custom field  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--name  "name-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="description-string"><code>description</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; description of custom field  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--description  "description-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="type-string"><code>type</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The type of the custom field.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--type  "type-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>cascadingselect, datepicker, datetime, float, grouppicker, importid, labels, multicheckboxes, multigrouppicker, multiversion, project, radiobuttons, readonlyfield, select, textarea, textfield, url, userpicker, version</code></p>
 <h2 id="examples">Examples</h2>
 <p>jira create-custom-field --name  "name-1" --description  "description-1" --type  "type-1"</p>
 

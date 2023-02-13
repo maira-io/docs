@@ -7046,42 +7046,44 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="description-string"><code>description</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The description of the version.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--description  "description-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The unique name of the version. Required when creating a version.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--name  "name-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  max length: 255</p>
 <h4 id="archived-bool"><code>archived</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Indicates that the version is archived.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--archived</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="released-bool"><code>released</code> - (bool)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Indicates that the version is released. If the version is released a request to release again is ignored. Not applicable when creating a version. Optional when updating a version.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--released</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="expand-string"><code>expand</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; This parameter accepts operations, which returns actions that can be performed on the version.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--expand  "expand-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="project-string"><code>project</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The project ID (case sensitive)  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>"project-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="move_unfixed_issues_to-string"><code>move_unfixed_issues_to</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The URL of the self link to the version to which all unfixed issues are moved when a version is released. Not applicable when creating a version. Optional when updating a version.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--move_unfixed_issues_to  "move_unfixed_issues_to-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>jira create-project-version --description  "description-1" --name  "name-1" --archived   --released   --expand  "expand-1" "project-1" --move_unfixed_issues_to  "move_unfixed_issues_to-1"</p>
 

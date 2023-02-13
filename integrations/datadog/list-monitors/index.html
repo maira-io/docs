@@ -7016,32 +7016,36 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="query-string"><code>query</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; After entering a search query in your Manage Monitor page use the query parameter value in the URL of the page as value for this parameter  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--query  "query-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="page-int"><code>page</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Page to start paginating from  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--page  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="size-int"><code>size</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Number of monitors to return per page  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--size  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="sort_key-string"><code>sort_key</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; String for sort field  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--sort_key  "sort_key-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>name, status, tags</code></p>
 <h4 id="sort-string"><code>sort</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Sort directions  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--sort  "sort-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>asc, desc</code></p>
 <h2 id="examples">Examples</h2>
 <p>datadog list-monitors --query  "query-1" --page  1 --size  1 --sort_key  "sort_key-1" --sort  "sort-1"</p>
 

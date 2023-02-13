@@ -7031,37 +7031,37 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="cluster-string"><code>cluster</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Name of Icinga cluster  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--cluster  "icinga-default"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>icinga-default</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Name of the host object  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--name  "example.localdomain"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="address-string"><code>address</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The host’s IPv4 address. Available as command runtime macro $address$ if set.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--address  "192.168.1.1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="groups-string"><code>groups</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A list of host groups this host belongs to  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--groups  "group1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="vars-string"><code>vars</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A dictionary containing custom variables that are specific to this host.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--vars  "{"os":"linux"}"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="check_command-string"><code>check_command</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The name of the check command.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--check_command  "hostalive"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>! icinga modify-host --site &quot;localhost&quot; --name &quot;host1&quot; --check_command &quot;hostalive&quot;  --vars `{&quot;os&quot;:&quot;unix&quot;}`

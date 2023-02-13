@@ -7046,42 +7046,44 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="cluster-string"><code>cluster</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Name of elastic search cluster  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--cluster  "appdynamics-default"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>appdynamics-default</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="application-string"><code>application</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; application name or ID  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>"app-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="summary-string"><code>summary</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Provides the summary for the event.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--summary  "sample summary"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>This is summary of a sample event when the input is not provided</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="type-string"><code>type</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Enter the event type  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--type  "APPLICATION_ERROR"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>CUSTOM</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="severity-string"><code>severity</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Provides the severity level. Allowec values - INFO, WARN, ERROR  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--severity  "INFO"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>INFO</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>INFO, WARN, ERROR</code></p>
 <h4 id="propertynames-string"><code>propertynames</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Input property names  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--propertynames  "key1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="propertyvalues-string"><code>propertyvalues</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Input property values  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--propertyvalues  "value1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>appd create-event "app-1" --propertynames  "key1" --propertyvalues  "value1"</p>
 

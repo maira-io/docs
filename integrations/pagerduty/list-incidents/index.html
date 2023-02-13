@@ -7001,27 +7001,29 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>input.site</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="limit-int"><code>limit</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The number of results per page.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--limit  10</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>25</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="offset-int"><code>offset</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Offset to start pagination search results.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--offset  10</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="incident_key-string"><code>incident_key</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Return only the incidents associated with the passed team(s)  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--incident_key  "incident_key-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="include-string"><code>include</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Array of additional details to include  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--include  "include-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>users, services, first_trigger_log_entries, escalation_policies, teams, assignees, acknowledgers, priorities, conference_bridge</code></p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!pagerduty list-incidents --site &quot;localhost:8081&quot;

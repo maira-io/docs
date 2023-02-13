@@ -7001,27 +7001,29 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;   <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="field_id-string"><code>field_id</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The ID of the custom field.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--field_id  "field_id-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The name of the custom field.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--name  "name-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="description-string"><code>description</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The description of the custom field.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--description  "description-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="searcher_key-string"><code>searcher_key</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The searcher that defines the way the field is searched in Jira.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--searcher_key  "searcher_key-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>cascadingselectsearcher, daterange, datetimerange, exactnumber, exacttextsearcher, grouppickersearcher, labelsearcher, multiselectsearcher, numberrange, projectsearcher, textsearcher, userpickergroupsearcher, versionsearcher</code></p>
 <h2 id="examples">Examples</h2>
 <p>jira update-custom-field --field_id  "field_id-1" --name  "name-1" --description  "description-1" --searcher_key  "searcher_key-1"</p>
 

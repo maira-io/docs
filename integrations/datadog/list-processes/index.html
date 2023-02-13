@@ -7031,37 +7031,37 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="search-string"><code>search</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; String to search processes by  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--search  "search-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="tags-string"><code>tags</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Tags to filter processes by  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--tags  "tags-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
 <h4 id="from-time"><code>from</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Unix timestamp of the start of the query window. default 15 minutes before the to timestamp  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--from  "2019-10-12T07:20:50.52Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>15 minutes ago</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="to-time"><code>to</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Unix timestamp of the end of the query window. Defaults 15 minutes after the from timestamp  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--to  "2019-10-12T07:20:50.52Z"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="limit-int"><code>limit</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Maximum number of results returned  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--limit  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="cursor-string"><code>cursor</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; tring to query the next page of results. This key is provided with each valid response from the API in meta.page.after  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--cursor  "cursor-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>datadog list-processes --search  "search-1" --tags  "tags-1" --to  "2019-10-12T07:20:50.52Z" --limit  1 --cursor  "cursor-1"</p>
 

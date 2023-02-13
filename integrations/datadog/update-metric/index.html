@@ -7031,37 +7031,37 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Site where this command will be executed  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--site  "site-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>localhost:8081</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="metric_name-string"><code>metric_name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Name of the metric  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>"metric_name-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <h4 id="description-string"><code>description</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Metric description  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--description  "description-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="short_name-string"><code>short_name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A more human-readable and abbreviated version of the metric name  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--short_name  "short_name-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="statsd_interval-duration"><code>statsd_interval</code> - (duration)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; StatsD flush interval of the metric in seconds if applicable  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--statsd_interval  "5 seconds"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="type-string"><code>type</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Metric type such as gauge or rate  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--type  "type-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h4 id="unit-string"><code>unit</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Primary unit of the metric such as byte or operation  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--unit  "unit-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em>  </p>
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>x=!datadog update-metric --metric_name &quot;datadog.agent.python.version&quot; --description &quot;hello Datadog&quot;  --short_name &quot;nameHere&quot; --type &quot;gauge&quot; --unit &quot;byte&quot; --statsd_interval 600
