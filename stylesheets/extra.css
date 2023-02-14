@@ -8,7 +8,7 @@
 
 .md-nav__title {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 600;
   color: #00013a;
 }
 .md-nav--secondary {
@@ -17,7 +17,7 @@
 }
 .md-nav__link--active {
   color: #D82120;
-  font-weight: bold;
+  font-weight: 600;
 }
 .md-nav__item .md-nav__link--active {
   color: #D82120;
@@ -49,6 +49,12 @@ margin-left: -2 rem;
 padding-left: -2 rem;
 
 }
+
+.md-nav--primary .md-nav__title, .md-nav--primary .md-nav__item, .md-nav__item {
+font-size: 15px;
+margin-top: 1.2em;
+}
+
 .md-typeset h3 {
     color: #D82120;
     font-size: 18px;
