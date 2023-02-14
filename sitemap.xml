@@ -2076,6 +2076,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.maira.io/integrations/user/disable/</loc>
+         <lastmod>2023-02-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.maira.io/integrations/user/reset-password/</loc>
+         <lastmod>2023-02-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.maira.io/language/basics/</loc>
          <lastmod>2023-02-14</lastmod>
          <changefreq>daily</changefreq>
