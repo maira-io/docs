@@ -1670,15 +1670,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#access-control" class="md-nav__link">
-    Access Control
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#access-control" class="md-nav__link">
+    Access Control
   </a>
   
 </li>
@@ -7358,15 +7358,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#access-control" class="md-nav__link">
-    Access Control
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#access-control" class="md-nav__link">
+    Access Control
   </a>
   
 </li>
@@ -7415,6 +7415,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  min: 7200&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  max: 2630000</p>
+<h2 id="examples">Examples</h2>
+<p>Input: 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!datadog list-active-tags-aggregations --metric_name &quot;datadog.dogstatsd.client.aggregated_context&quot;
+</code></pre></div>
+Output: 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ID                                          TYPE                            TAGS    AGGREGATIONS 
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>datadog.dogstatsd.client.aggregated_context actively_queried_configurations                           
+</code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>
 <table>
@@ -7451,14 +7459,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="examples">Examples</h2>
-<p>Input: 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!datadog list-active-tags-aggregations --metric_name &quot;datadog.dogstatsd.client.aggregated_context&quot;
-</code></pre></div>
-Output: 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ID                                          TYPE                            TAGS    AGGREGATIONS 
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>datadog.dogstatsd.client.aggregated_context actively_queried_configurations                           
-</code></pre></div></p>
+<p>Please see <a href="/access-control/access-control">Access Control</a> for details.</p>
 
 
 

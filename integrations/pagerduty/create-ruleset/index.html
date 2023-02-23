@@ -5756,15 +5756,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#access-control" class="md-nav__link">
-    Access Control
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#access-control" class="md-nav__link">
+    Access Control
   </a>
   
 </li>
@@ -7358,15 +7358,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#access-control" class="md-nav__link">
-    Access Control
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#access-control" class="md-nav__link">
+    Access Control
   </a>
   
 </li>
@@ -7413,6 +7413,33 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--id  "PQ9K7I8"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
+<h2 id="examples">Examples</h2>
+<p>Input: 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>x = !pagerduty create-ruleset --name &quot;testRuleset&quot; --site &quot;localhost:8081&quot;
+</code></pre></div>
+Output: 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  &quot;ruleset&quot;: {
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    &quot;created_at&quot;: &quot;2022-11-14T10:10:00Z&quot;,
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    &quot;creator&quot;: null,
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    &quot;id&quot;: &quot;c5395c19-e840-4c50-89f6-040ac651f24e&quot;,
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    &quot;name&quot;: &quot;testRuleset&quot;,
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    &quot;routing_keys&quot;: [&quot;R0274VPG9G77QAUEKEXQUEVMV1ACVK13&quot;],
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    &quot;self&quot;: &quot;https://api.pagerduty.com/rulesets/c5395c19-e840-4c50-89f6-040ac651f24e&quot;,
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    &quot;team&quot;: null,
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    &quot;type&quot;: &quot;global&quot;,
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    &quot;updated_at&quot;: &quot;2022-11-14T10:10:00Z&quot;,
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    &quot;updater&quot;: null
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>  }
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>}
+</code></pre></div>
+Input: 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>!pagerduty create-ruleset --name &quot;testRuleset&quot; --site &quot;localhost:8081&quot;
+</code></pre></div>
+Output: 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ID                                      NAME            TEAM    CREATOR UPDATER 
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ae514d98-36f2-48c3-be3e-ce553390487b    testRuleset1    PPGILFO PAGNO81 PAGNO81      
+</code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>
 <table>
@@ -7449,33 +7476,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="examples">Examples</h2>
-<p>Input: 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>x = !pagerduty create-ruleset --name &quot;testRuleset&quot; --site &quot;localhost:8081&quot;
-</code></pre></div>
-Output: 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  &quot;ruleset&quot;: {
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    &quot;created_at&quot;: &quot;2022-11-14T10:10:00Z&quot;,
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    &quot;creator&quot;: null,
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    &quot;id&quot;: &quot;c5395c19-e840-4c50-89f6-040ac651f24e&quot;,
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    &quot;name&quot;: &quot;testRuleset&quot;,
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    &quot;routing_keys&quot;: [&quot;R0274VPG9G77QAUEKEXQUEVMV1ACVK13&quot;],
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    &quot;self&quot;: &quot;https://api.pagerduty.com/rulesets/c5395c19-e840-4c50-89f6-040ac651f24e&quot;,
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    &quot;team&quot;: null,
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    &quot;type&quot;: &quot;global&quot;,
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    &quot;updated_at&quot;: &quot;2022-11-14T10:10:00Z&quot;,
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    &quot;updater&quot;: null
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>  }
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>}
-</code></pre></div>
-Input: 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>!pagerduty create-ruleset --name &quot;testRuleset&quot; --site &quot;localhost:8081&quot;
-</code></pre></div>
-Output: 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ID                                      NAME            TEAM    CREATOR UPDATER 
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ae514d98-36f2-48c3-be3e-ce553390487b    testRuleset1    PPGILFO PAGNO81 PAGNO81      
-</code></pre></div></p>
+<p>Please see <a href="/access-control/access-control">Access Control</a> for details.</p>
 
 
 

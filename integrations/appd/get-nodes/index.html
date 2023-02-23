@@ -792,15 +792,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#access-control" class="md-nav__link">
-    Access Control
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#access-control" class="md-nav__link">
+    Access Control
   </a>
   
 </li>
@@ -7386,15 +7386,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#access-control" class="md-nav__link">
-    Access Control
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#access-control" class="md-nav__link">
+    Access Control
   </a>
   
 </li>
@@ -7453,42 +7453,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--tier  "tier-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
-<h2 id="access-control">Access Control</h2>
-<p>To use this command, you need access to the following:</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Action</td>
-<td>"read"</td>
-</tr>
-<tr>
-<td>Service Type</td>
-<td>"appd"</td>
-</tr>
-<tr>
-<td>Service Instance</td>
-<td>cluster</td>
-</tr>
-<tr>
-<td>Namespace</td>
-<td></td>
-</tr>
-<tr>
-<td>Object Type</td>
-<td>"application"</td>
-</tr>
-<tr>
-<td>Object ID</td>
-<td>application</td>
-</tr>
-</tbody>
-</table>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>x = ! appd get-nodes --site &quot;localhost:8081&quot; &quot;bookinfo&quot;
@@ -7548,6 +7512,43 @@ Output:
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>919391  ratings-v1-0    Other   ratings ac0015dd9de4    Linux                           21.4.0.0 compatible with 4.4.1.0    NODEJS_APP_AGENT    
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>919393  ratings-v1-0    Other   ratings 3105e31e1b26    Linux                           21.4.0.0 compatible with 4.4.1.0    NODEJS_APP_AGENT
 </code></pre></div></p>
+<h2 id="access-control">Access Control</h2>
+<p>To use this command, you need access to the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>"read"</td>
+</tr>
+<tr>
+<td>Service Type</td>
+<td>"appd"</td>
+</tr>
+<tr>
+<td>Service Instance</td>
+<td>cluster</td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td></td>
+</tr>
+<tr>
+<td>Object Type</td>
+<td>"application"</td>
+</tr>
+<tr>
+<td>Object ID</td>
+<td>application</td>
+</tr>
+</tbody>
+</table>
+<p>Please see <a href="/access-control/access-control">Access Control</a> for details.</p>
 
 
 

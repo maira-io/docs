@@ -875,15 +875,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#access-control" class="md-nav__link">
-    Access Control
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#access-control" class="md-nav__link">
+    Access Control
   </a>
   
 </li>
@@ -7372,15 +7372,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#access-control" class="md-nav__link">
-    Access Control
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#access-control" class="md-nav__link">
+    Access Control
   </a>
   
 </li>
@@ -7433,42 +7433,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--comment  "Write a user facing document on how to create new integration and commands"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
-<h2 id="access-control">Access Control</h2>
-<p>To use this command, you need access to the following:</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Action</td>
-<td>"update"</td>
-</tr>
-<tr>
-<td>Service Type</td>
-<td>"bitbucket"</td>
-</tr>
-<tr>
-<td>Service Instance</td>
-<td></td>
-</tr>
-<tr>
-<td>Namespace</td>
-<td>repo</td>
-</tr>
-<tr>
-<td>Object Type</td>
-<td>"issue"</td>
-</tr>
-<tr>
-<td>Object ID</td>
-<td>issue</td>
-</tr>
-</tbody>
-</table>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>x=!bitbucket add-issue-comment --site &quot;localhost:8080&quot; --repo &quot;sbansal7/repo1&quot; --issue 1 --comment &quot;new comment&quot;
@@ -7540,6 +7504,43 @@ Output:
 <a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a>    }
 <a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>}
 </code></pre></div></p>
+<h2 id="access-control">Access Control</h2>
+<p>To use this command, you need access to the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>"update"</td>
+</tr>
+<tr>
+<td>Service Type</td>
+<td>"bitbucket"</td>
+</tr>
+<tr>
+<td>Service Instance</td>
+<td></td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td>repo</td>
+</tr>
+<tr>
+<td>Object Type</td>
+<td>"issue"</td>
+</tr>
+<tr>
+<td>Object ID</td>
+<td>issue</td>
+</tr>
+</tbody>
+</table>
+<p>Please see <a href="/access-control/access-control">Access Control</a> for details.</p>
 
 
 

@@ -1313,15 +1313,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#access-control" class="md-nav__link">
-    Access Control
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#access-control" class="md-nav__link">
+    Access Control
   </a>
   
 </li>
@@ -7428,15 +7428,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#access-control" class="md-nav__link">
-    Access Control
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#access-control" class="md-nav__link">
+    Access Control
   </a>
   
 </li>
@@ -7515,6 +7515,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>composite, event alert, log alert, metric alert, process alert, query alert, rum alert, service check, synthetics alert, trace-analytics alert, slo alert, event-v2 alert, audit alert, ci-pipelines alert, ci-tests alert, error-tracking alert</code></p>
+<h2 id="examples">Examples</h2>
+<p>Input: 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!datadog create-monitor --query &quot;avg(last_5m):sum:system.net.bytes_rcvd{host:host0} &gt; 100&quot; --type &quot;query alert&quot; --message &quot;create moniotr&quot; --name &quot;testNames2&quot; --tags &quot;testta&quot; --priority 3
+</code></pre></div>
+Output: 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ID      ORG-ID      NAME        MESSAGE         TYPE        
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>78570   1300017267  testNames2  create moniotr  query alert 
+</code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>
 <table>
@@ -7551,14 +7559,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="examples">Examples</h2>
-<p>Input: 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>!datadog create-monitor --query &quot;avg(last_5m):sum:system.net.bytes_rcvd{host:host0} &gt; 100&quot; --type &quot;query alert&quot; --message &quot;create moniotr&quot; --name &quot;testNames2&quot; --tags &quot;testta&quot; --priority 3
-</code></pre></div>
-Output: 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ID      ORG-ID      NAME        MESSAGE         TYPE        
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>78570   1300017267  testNames2  create moniotr  query alert 
-</code></pre></div></p>
+<p>Please see <a href="/access-control/access-control">Access Control</a> for details.</p>
 
 
 
