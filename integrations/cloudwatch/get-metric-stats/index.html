@@ -1070,6 +1070,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -3403,6 +3410,20 @@
     <li class="md-nav__item">
       <a href="../../gcp/list-objects/" class="md-nav__link">
         gcp list-objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/run-sql/" class="md-nav__link">
+        gcp run-sql
       </a>
     </li>
   
@@ -7449,6 +7470,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -7524,15 +7552,15 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The unit for a given metric  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--unit  "Seconds"</code> ,  <code>--unit  "Bytes"</code> ,  <code>--unit  "Percent"</code> ,  <code>--unit  "Count"</code> ,  <code>--unit  "Bytes/Second"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>Seconds, Microseconds, Milliseconds, Bytes, Kilobytes, Megabytes, Gigabytes, Terabytes, Bits, Kilobits, Megabits, Gigabits, Terabits, Percent, Count, Bytes/Second, Kilobytes/Second, Megabytes/Second, Gigabytes/Second, Terabytes/Second, Bits/Second, Kilobits/Second, Megabits/Second, Gigabits/Second, Terabits/Second, Count/Second, None</code></p>
 <h4 id="stat-string"><code>stat</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The unit for a given metric  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--stat  "SampleCount"</code> ,  <code>--stat  "Average"</code> ,  <code>--stat  "Sum"</code> ,  <code>--stat  "Maximum"</code> ,  <code>--stat  "Minimum"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>SampleCount, Average, Sum, Maximum, Minimum</code></p>
 <h4 id="extended_stat-string"><code>extended_stat</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The percentile stats for a given metric  <br />
@@ -7551,6 +7579,42 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--dimensions  "{"Class":"None"}"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<h2 id="access-control">Access Control</h2>
+<p>To use this command, you need access to the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>"read"</td>
+</tr>
+<tr>
+<td>Service Type</td>
+<td>"cloudwatch"</td>
+</tr>
+<tr>
+<td>Service Instance</td>
+<td></td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td></td>
+</tr>
+<tr>
+<td>Object Type</td>
+<td>"alarm"</td>
+</tr>
+<tr>
+<td>Object ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="examples">Examples</h2>
 <p>cloudwatch get-metric-stats --region  "region-1" "name-1" --namespace  "namespace-1" --unit  "Seconds" --stat  "SampleCount" --extended_stat  "p0.1" --period  * Start time between 3 hours and 15 days ago - Use a multiple of 60 seconds (1 minute).
 * Start time between 15 and 63 days ago - Use a multiple of 300 seconds (5 minutes).

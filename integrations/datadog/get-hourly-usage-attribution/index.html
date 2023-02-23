@@ -1572,6 +1572,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -3375,6 +3382,20 @@
     <li class="md-nav__item">
       <a href="../../gcp/list-objects/" class="md-nav__link">
         gcp list-objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/run-sql/" class="md-nav__link">
+        gcp run-sql
       </a>
     </li>
   
@@ -7393,6 +7414,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -7449,8 +7477,8 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Usage type to retrieve  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--usage  "usage-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>api, apm_fargate, apm_host, appsec_fargate, appsec, browser, container, cspm_containers, cspm_hosts, custom_timeseries, cws_containers, cws_hosts, dbm_hosts, dbm_queries, estimated_indexed_logs, estimated_ingested_logs, estimated_indexed_spans, estimated_ingested_spans, fargate, functions, indexed_logs, infra_host, invocations, npm_host, profiled_container, profiled_host, snmp, estimated_rum_sessions, cont</code></p>
 <h4 id="next-string"><code>next</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; List following results with a next_record_id provided in the previous query  <br />
@@ -7467,6 +7495,42 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--exclude_descendants</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>false</code>
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<h2 id="access-control">Access Control</h2>
+<p>To use this command, you need access to the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>"read"</td>
+</tr>
+<tr>
+<td>Service Type</td>
+<td>"datadog"</td>
+</tr>
+<tr>
+<td>Service Instance</td>
+<td></td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td></td>
+</tr>
+<tr>
+<td>Object Type</td>
+<td>"usage"</td>
+</tr>
+<tr>
+<td>Object ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="examples">Examples</h2>
 <p>datadog get-hourly-usage-attribution --end  "2019-10-12T07:20:50.52Z" --usage  "usage-1" --next  "next-1" --tag_breakdown  "tag_breakdown-1"</p>
 

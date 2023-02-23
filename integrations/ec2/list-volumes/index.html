@@ -2445,6 +2445,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -3368,6 +3375,20 @@
     <li class="md-nav__item">
       <a href="../../gcp/list-objects/" class="md-nav__link">
         gcp list-objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/run-sql/" class="md-nav__link">
+        gcp run-sql
       </a>
     </li>
   
@@ -7379,6 +7400,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -7439,16 +7467,52 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Volume type of the instance  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--volume_type  "gp2"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>standard, io1, io2, gp2, sc1, st1, gp3</code></p>
 <h4 id="status-string"><code>status</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Status of the instance  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--status  "in-use"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>creating, available, in-use, deleting, deleted, error</code></p>
+<h2 id="access-control">Access Control</h2>
+<p>To use this command, you need access to the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>"read"</td>
+</tr>
+<tr>
+<td>Service Type</td>
+<td>"ec2"</td>
+</tr>
+<tr>
+<td>Service Instance</td>
+<td></td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td></td>
+</tr>
+<tr>
+<td>Object Type</td>
+<td>"instance"</td>
+</tr>
+<tr>
+<td>Object ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="examples">Examples</h2>
 <p>ec2 list-volumes --region  "region-1" --tags  "creator_id=[user1,user2]" --availability_zone  "us-west-1c" --volume_type  "gp2" --status  "in-use"</p>
 

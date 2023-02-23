@@ -1670,6 +1670,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -3389,6 +3396,20 @@
     <li class="md-nav__item">
       <a href="../../gcp/list-objects/" class="md-nav__link">
         gcp list-objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/run-sql/" class="md-nav__link">
+        gcp run-sql
       </a>
     </li>
   
@@ -7421,6 +7442,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -7479,22 +7507,22 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; usage types to return, or * for all usage types  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--fields  "fields-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required, multiple allowed</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required, multiple allowed</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>api_usage, api_percentage, apm_fargate_usage, apm_fargate_percentage, appsec_fargate_usage, appsec_fargate_percentage, apm_host_usage, apm_host_percentage, appsec_usage, appsec_percentage, browser_usage, browser_percentage, container_usage, container_percentage, cspm_containers_percentage, cspm_containers_usage, cspm_hosts_percentage, cspm_hosts_usage, custom_timeseries_usage, custom_timeseries_percentage, cws_containers_percentage, cws_containers_usage, cws_hosts_percentage, cws_hosts_usage, dbm_hosts_percentage, dbm_hosts_usage, dbm_queries_percentage, dbm_queries_usage, estimated_indexed_logs_usage, estimated_indexed_logs_percentage, estimated_ingested_logs_usage, estimated_ingested_logs_percentage, estimated_indexed_spans_usage, estimated_indexed_spans_percentage, estimated_ingested_spans_usage, estimated_ingested_spans_percentage, fargate_usage, fargate_percentage, functions_usage, functions_percentage, indexed_logs_usage, indexed_logs_percentage, infra_host_usage, infra_host_percentage, invocations_usage, invocations_percentage, npm_host_usage, npm_host_percentage, profiled_container_usage, profiled_container_percentage, profiled_host_usage, profiled_host_percentage, snmp_usage, snmp_percentage, estimated_rum_sessions_usage, estimated_rum_sessions_percentage, cont_usage, cont_percentage, *</code></p>
 <h4 id="sort_direction-string"><code>sort_direction</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The direction to sort by  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--sort_direction  "sort_direction-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>desc, asc</code></p>
 <h4 id="sort_name-string"><code>sort_name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The field to sort by  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--sort_name  "sort_name-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>api_usage, api_percentage, apm_fargate_usage, apm_fargate_percentage, appsec_fargate_usage, appsec_fargate_percentage, apm_host_usage, apm_host_percentage, appsec_usage, appsec_percentage, browser_usage, browser_percentage, container_usage, container_percentage, cspm_containers_percentage, cspm_containers_usage, cspm_hosts_percentage, cspm_hosts_usage, custom_timeseries_usage, custom_timeseries_percentage, cws_containers_percentage, cws_containers_usage, cws_hosts_percentage, cws_hosts_usage, dbm_hosts_percentage, dbm_hosts_usage, dbm_queries_percentage, dbm_queries_usage, estimated_indexed_logs_usage, estimated_indexed_logs_percentage, estimated_ingested_logs_usage, estimated_ingested_logs_percentage, estimated_indexed_spans_usage, estimated_indexed_spans_percentage, estimated_ingested_spans_usage, estimated_ingested_spans_percentage, fargate_usage, fargate_percentage, functions_usage, functions_percentage, indexed_logs_usage, indexed_logs_percentage, infra_host_usage, infra_host_percentage, invocations_usage, invocations_percentage, npm_host_usage, npm_host_percentage, profiled_container_usage, profiled_container_percentage, profiled_host_usage, profiled_host_percentage, snmp_usage, snmp_percentage, estimated_rum_sessions_usage, estimated_rum_sessions_percentage, cont_usage, cont_percentage, *</code></p>
 <h4 id="tag_breakdown-string"><code>tag_breakdown</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If no value is provided the usage will not be broken down by tags  <br />
@@ -7511,6 +7539,42 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--exclude_descendants</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>false</code>
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<h2 id="access-control">Access Control</h2>
+<p>To use this command, you need access to the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>"read"</td>
+</tr>
+<tr>
+<td>Service Type</td>
+<td>"datadog"</td>
+</tr>
+<tr>
+<td>Service Instance</td>
+<td></td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td></td>
+</tr>
+<tr>
+<td>Object Type</td>
+<td>"usage"</td>
+</tr>
+<tr>
+<td>Object ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="examples">Examples</h2>
 <p>datadog get-monthly-usage-attribution --end  "end-1" --fields  "fields-1" --sort_direction  "sort_direction-1" --sort_name  "sort_name-1" --tag_breakdown  "tag_breakdown-1" --next  "next-1"</p>
 

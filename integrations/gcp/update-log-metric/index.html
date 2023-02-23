@@ -3270,6 +3270,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../run-sql/" class="md-nav__link">
+        gcp run-sql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../start-instance/" class="md-nav__link">
         gcp start-instance
       </a>
@@ -3439,6 +3453,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
   
 </li>
       
@@ -7435,6 +7456,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -7509,8 +7537,8 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Severity of the logs  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--severity  "INFO"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>DEFAULT, DEBUG, INFO, NOTICE, WARNING, ERROR, CRITICAL, ALERT, EMERGENCY</code></p>
 <h4 id="filter-string_1"><code>filter</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A filter that chooses which log entries to return  <br />
@@ -7527,6 +7555,42 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--end_time  "now"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>now</code>
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<h2 id="access-control">Access Control</h2>
+<p>To use this command, you need access to the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>"update"</td>
+</tr>
+<tr>
+<td>Service Type</td>
+<td>"gcp"</td>
+</tr>
+<tr>
+<td>Service Instance</td>
+<td></td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td></td>
+</tr>
+<tr>
+<td>Object Type</td>
+<td>"metric"</td>
+</tr>
+<tr>
+<td>Object ID</td>
+<td>name</td>
+</tr>
+</tbody>
+</table>
 <h2 id="examples">Examples</h2>
 <p>Input: 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>x=! gcp update-log-metric --site &quot;localhost:8081&quot; &quot;testMetric3&quot; --description &quot;testDesc2&quot; --filter &quot;severity=\&quot;INFO\&quot;&quot;

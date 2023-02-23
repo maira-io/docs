@@ -2090,6 +2090,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -3445,6 +3452,20 @@
     <li class="md-nav__item">
       <a href="../../gcp/list-objects/" class="md-nav__link">
         gcp list-objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/run-sql/" class="md-nav__link">
+        gcp run-sql
       </a>
     </li>
   
@@ -7533,6 +7554,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -7634,8 +7662,8 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The type of recurrence  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--type  "type-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>days, weeks, months, years, rrule</code></p>
 <h4 id="until-time"><code>until</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The date at which the recurrence should end as a POSIX timestamp. occurences and until are mutually exclusive  <br />
@@ -7651,15 +7679,15 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A list of week days to repeat on  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--days  "days-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>Mon, Tue, Wed, Thu, Fri, Sat, Sun</code></p>
 <h4 id="scope-string"><code>scope</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The scope(s) to which the downtime applies  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--scope  "scope-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional, multiple allowed</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>dev, prod</code></p>
 <h4 id="start-time"><code>start</code> - (time)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; time to start the downtime. If not provided, the downtime starts the moment it is created  <br />
@@ -7671,6 +7699,42 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--timezone  "timezone-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<h2 id="access-control">Access Control</h2>
+<p>To use this command, you need access to the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>"create"</td>
+</tr>
+<tr>
+<td>Service Type</td>
+<td>"datadog"</td>
+</tr>
+<tr>
+<td>Service Instance</td>
+<td></td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td></td>
+</tr>
+<tr>
+<td>Object Type</td>
+<td>"downtime"</td>
+</tr>
+<tr>
+<td>Object ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="examples">Examples</h2>
 <p>datadog schedule-downtime --disabled   --end  "2019-10-12T07:20:50.52Z" --message  "message-1" --id  1 --tags  "tags-1" --mute_first_recovery_notification   --parent  1 --period  1 --rrule  "rrule-1" --type  "type-1" --until  "2019-10-12T07:20:50.52Z" --occurrences  1 --days  "days-1" --scope  "scope-1" --start  "2019-10-12T07:20:50.52Z" --timezone  "timezone-1"</p>
 

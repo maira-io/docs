@@ -2013,6 +2013,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -3410,6 +3417,20 @@
     <li class="md-nav__item">
       <a href="../../gcp/list-objects/" class="md-nav__link">
         gcp list-objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gcp/run-sql/" class="md-nav__link">
+        gcp run-sql
       </a>
     </li>
   
@@ -7463,6 +7484,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -7514,15 +7542,15 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; An arbitrary string to use for aggregation  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--aggregation_key  "aggregation_key-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  max length: 100</p>
 <h4 id="alert_type-string"><code>alert_type</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; If an alert event is enabled, set its type  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--alert_type  "error"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>error, warning, info, success, user_update, recommendation, snapshot</code></p>
 <h4 id="date_happened-int"><code>date_happened</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; POSIX timestamp of the event. Limited to events no older than 18 hours  <br />
@@ -7543,8 +7571,8 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The priority of the event  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--priority  "normal"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>normal, low</code></p>
 <h4 id="related_event-int"><code>related_event</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; ID of the parent event  <br />
@@ -7571,6 +7599,42 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--title  "title-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
+<h2 id="access-control">Access Control</h2>
+<p>To use this command, you need access to the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>"create"</td>
+</tr>
+<tr>
+<td>Service Type</td>
+<td>"datadog"</td>
+</tr>
+<tr>
+<td>Service Instance</td>
+<td></td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td></td>
+</tr>
+<tr>
+<td>Object Type</td>
+<td>"event"</td>
+</tr>
+<tr>
+<td>Object ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="examples">Examples</h2>
 <p>datadog post-event --aggregation_key  "aggregation_key-1" --alert_type  "error" --date_happened  1 --device  "device-1" --host  "host-1" --priority  "normal" --related_event  1 --source_type  "source_type-1" --tags  "tags-1" --text  "text-1" --title  "title-1"</p>
 

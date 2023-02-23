@@ -3268,6 +3268,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../gcp/run-sql/" class="md-nav__link">
+        gcp run-sql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../gcp/start-instance/" class="md-nav__link">
         gcp start-instance
       </a>
@@ -6316,6 +6330,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -7477,6 +7498,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -7544,8 +7572,8 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The new status of the incident.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--status  "status-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>resolved, acknowledged</code></p>
 <h4 id="priority-string"><code>priority</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; priority id to associate with this incident  <br />
@@ -7561,8 +7589,8 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; urgency of the incidents to be returned  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--urgency  "urgency-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>high, low</code></p>
 <h4 id="assignee-string"><code>assignee</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; user id of the users who are to be assigne the incident  <br />
@@ -7589,6 +7617,42 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--conference_url  "conference_url-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<h2 id="access-control">Access Control</h2>
+<p>To use this command, you need access to the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>"update"</td>
+</tr>
+<tr>
+<td>Service Type</td>
+<td>"pagerduty"</td>
+</tr>
+<tr>
+<td>Service Instance</td>
+<td></td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td></td>
+</tr>
+<tr>
+<td>Object Type</td>
+<td>"incident"</td>
+</tr>
+<tr>
+<td>Object ID</td>
+<td>id</td>
+</tr>
+</tbody>
+</table>
 <h2 id="examples">Examples</h2>
 <p>pagerduty update-incidents --id  "id-1" --from  "from-1" --type  "type-1" --status  "status-1" --priority  "priority-1" --resolution  "resolution-1" --urgency  "urgency-1" --assignee  "assignee-1" --escalation_level  1 --escalation_policy  "escalation_policy-1" --conference_number  "conference_number-1" --conference_url  "conference_url-1"</p>
 

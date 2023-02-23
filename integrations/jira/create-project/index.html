@@ -3268,6 +3268,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../gcp/run-sql/" class="md-nav__link">
+        gcp run-sql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../gcp/start-instance/" class="md-nav__link">
         gcp start-instance
       </a>
@@ -4023,6 +4037,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
   
 </li>
       
@@ -7491,6 +7512,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -7544,8 +7572,8 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Project keys. The maximum length is 10 characters.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--key  "key-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  max length: 10</p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The name of the project.  <br />
@@ -7561,8 +7589,8 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The account ID of the project lead.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--lead  "lead-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  max length: 128</p>
 <h4 id="url-string"><code>url</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A link to information about this project, such as project documentation  <br />
@@ -7573,8 +7601,8 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The default assignee when creating issues for this project.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--default_assignee  "default_assignee-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>PROJECT_LEAD, UNASSIGNED</code></p>
 <h4 id="avatar-int"><code>avatar</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; An integer value for the project's avatar.  <br />
@@ -7605,16 +7633,52 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Project type defines the application-specific feature set.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--project_type  "project_type-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>software, service_desk, business</code></p>
 <h4 id="project_template-string"><code>project_template</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A predefined configuration for a project.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--project_template  "project_template-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>com.pyxis.greenhopper.jira:gh-simplified-agility-kanban, com.pyxis.greenhopper.jira:gh-simplified-agility-scrum, com.pyxis.greenhopper.jira:gh-simplified-basic, com.pyxis.greenhopper.jira:gh-simplified-kanban-classic, com.pyxis.greenhopper.jira:gh-simplified-scrum-classic, com.atlassian.servicedesk:simplified-it-service-management, com.atlassian.servicedesk:simplified-general-service-desk, com.atlassian.servicedesk:simplified-general-service-desk-it, com.atlassian.servicedesk:simplified-general-service-desk-business, com.atlassian.servicedesk:simplified-internal-service-desk, com.atlassian.servicedesk:simplified-external-service-desk, com.atlassian.servicedesk:simplified-hr-service-desk, com.atlassian.servicedesk:simplified-facilities-service-desk, com.atlassian.servicedesk:simplified-legal-service-desk, com.atlassian.servicedesk:simplified-marketing-service-desk, com.atlassian.servicedesk:simplified-finance-service-desk, com.atlassian.servicedesk:simplified-analytics-service-desk, com.atlassian.servicedesk:simplified-halp-service-desk, com.atlassian.jira-core-project-templates:jira-core-simplified-content-management, com.atlassian.jira-core-project-templates:jira-core-simplified-document-approval, com.atlassian.jira-core-project-templates:jira-core-simplified-lead-tracking, com.atlassian.jira-core-project-templates:jira-core-simplified-process-control, com.atlassian.jira-core-project-templates:jira-core-simplified-procurement, com.atlassian.jira-core-project-templates:jira-core-simplified-project-management, com.atlassian.jira-core-project-templates:jira-core-simplified-recruitment, com.atlassian.jira-core-project-templates:jira-core-simplified-task-</code></p>
+<h2 id="access-control">Access Control</h2>
+<p>To use this command, you need access to the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>"create"</td>
+</tr>
+<tr>
+<td>Service Type</td>
+<td>"jira"</td>
+</tr>
+<tr>
+<td>Service Instance</td>
+<td></td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td></td>
+</tr>
+<tr>
+<td>Object Type</td>
+<td>"project"</td>
+</tr>
+<tr>
+<td>Object ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="examples">Examples</h2>
 <p>jira create-project --key  "key-1" --name  "name-1" --description  "description-1" --lead  "lead-1" --url  "url-1" --default_assignee  "default_assignee-1" --avatar  1 --issue_security_scheme  1 --permission_scheme  "permission_scheme-1" --notification_scheme  1 --category  1 --project_type  "project_type-1" --project_template  "project_template-1"</p>
 

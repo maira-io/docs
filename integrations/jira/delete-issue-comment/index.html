@@ -3268,6 +3268,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../gcp/run-sql/" class="md-nav__link">
+        gcp run-sql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../gcp/start-instance/" class="md-nav__link">
         gcp start-instance
       </a>
@@ -4002,6 +4016,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
   
 </li>
       
@@ -7337,6 +7358,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -7385,6 +7413,42 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--comment  "comment-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
+<h2 id="access-control">Access Control</h2>
+<p>To use this command, you need access to the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>"delete"</td>
+</tr>
+<tr>
+<td>Service Type</td>
+<td>"jira"</td>
+</tr>
+<tr>
+<td>Service Instance</td>
+<td></td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td></td>
+</tr>
+<tr>
+<td>Object Type</td>
+<td>"issue"</td>
+</tr>
+<tr>
+<td>Object ID</td>
+<td>issue</td>
+</tr>
+</tbody>
+</table>
 <h2 id="examples">Examples</h2>
 <p>jira delete-issue-comment "issue-1" --comment  "comment-1"</p>
 

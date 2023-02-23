@@ -3268,6 +3268,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../gcp/run-sql/" class="md-nav__link">
+        gcp run-sql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../gcp/start-instance/" class="md-nav__link">
         gcp start-instance
       </a>
@@ -4436,6 +4450,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
   
 </li>
       
@@ -7365,6 +7386,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -7424,9 +7452,45 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The searcher that defines the way the field is searched in Jira.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--searcher_key  "searcher_key-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>cascadingselectsearcher, daterange, datetimerange, exactnumber, exacttextsearcher, grouppickersearcher, labelsearcher, multiselectsearcher, numberrange, projectsearcher, textsearcher, userpickergroupsearcher, versionsearcher</code></p>
+<h2 id="access-control">Access Control</h2>
+<p>To use this command, you need access to the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>"update"</td>
+</tr>
+<tr>
+<td>Service Type</td>
+<td>"jira"</td>
+</tr>
+<tr>
+<td>Service Instance</td>
+<td></td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td></td>
+</tr>
+<tr>
+<td>Object Type</td>
+<td>"field"</td>
+</tr>
+<tr>
+<td>Object ID</td>
+<td>field_id</td>
+</tr>
+</tbody>
+</table>
 <h2 id="examples">Examples</h2>
 <p>jira update-custom-field --field_id  "field_id-1" --name  "name-1" --description  "description-1" --searcher_key  "searcher_key-1"</p>
 

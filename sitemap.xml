@@ -906,6 +906,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.maira.io/integrations/gcp/run-sql/</loc>
+         <lastmod>2023-02-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.maira.io/integrations/gcp/start-instance/</loc>
          <lastmod>2023-02-23</lastmod>
          <changefreq>daily</changefreq>

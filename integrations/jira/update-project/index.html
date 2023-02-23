@@ -3268,6 +3268,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../gcp/run-sql/" class="md-nav__link">
+        gcp run-sql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../gcp/start-instance/" class="md-nav__link">
         gcp start-instance
       </a>
@@ -4555,6 +4569,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
   
 </li>
       
@@ -7491,6 +7512,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    Access Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples" class="md-nav__link">
     Examples
   </a>
@@ -7549,15 +7577,15 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; to include additional information in the response.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--expand  "expand-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>description, issueTypes, lead, projectKeys</code></p>
 <h4 id="key-string"><code>key</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; Project keys. The maximum length is 10 characters.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--key  "key-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>required</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  max length: 10</p>
 <h4 id="name-string"><code>name</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The name of the project.  <br />
@@ -7573,8 +7601,8 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The account ID of the project lead.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--lead  "lead-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  max length: 128</p>
 <h4 id="url-string"><code>url</code> - (string)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; A link to information about this project, such as project documentation  <br />
@@ -7585,8 +7613,8 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp; The default assignee when creating issues for this project.  <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--default_assignee  "default_assignee-1"</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
-&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> 
-&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
+&nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Validation: <br /> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  allowed values: <code>PROJECT_LEAD, UNASSIGNED</code></p>
 <h4 id="avatar-int"><code>avatar</code> - (int)</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp; An integer value for the project's avatar.  <br />
@@ -7613,6 +7641,42 @@
 &nbsp;&nbsp;&nbsp;&nbsp; Example:  <code>--category  1</code> <br />
 &nbsp;&nbsp;&nbsp;&nbsp; Default: <code>_None_</code>
 &nbsp;&nbsp;&nbsp;&nbsp; Attributes: <em>optional</em> <br /> </p>
+<h2 id="access-control">Access Control</h2>
+<p>To use this command, you need access to the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>"update"</td>
+</tr>
+<tr>
+<td>Service Type</td>
+<td>"jira"</td>
+</tr>
+<tr>
+<td>Service Instance</td>
+<td></td>
+</tr>
+<tr>
+<td>Namespace</td>
+<td></td>
+</tr>
+<tr>
+<td>Object Type</td>
+<td>"project"</td>
+</tr>
+<tr>
+<td>Object ID</td>
+<td>project</td>
+</tr>
+</tbody>
+</table>
 <h2 id="examples">Examples</h2>
 <p>jira update-project "project-1" --expand  "expand-1" --key  "key-1" --name  "name-1" --description  "description-1" --lead  "lead-1" --url  "url-1" --default_assignee  "default_assignee-1" --avatar  1 --issue_security_scheme  1 --permission_scheme  "permission_scheme-1" --notification_scheme  1 --category  1</p>
 
