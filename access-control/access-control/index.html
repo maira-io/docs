@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#access-control-challenge" class="md-skip">
+        <a href="#access-control" class="md-skip">
           Skip to content
         </a>
       
@@ -242,9 +242,68 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Access Control
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Access Control
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#challenge" class="md-nav__link">
+    Challenge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maira-solution" class="md-nav__link">
+    Maira Solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upcoming-features" class="md-nav__link">
+    Upcoming Features
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -7201,6 +7260,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#challenge" class="md-nav__link">
+    Challenge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maira-solution" class="md-nav__link">
+    Maira Solution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upcoming-features" class="md-nav__link">
+    Upcoming Features
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -7215,7 +7317,9 @@
 
 
 
-<h1 id="access-control-challenge">Access Control Challenge</h1>
+<h1 id="access-control">Access Control</h1>
+<p>Maira allows you to interact with all your cloud services. This presents Maira with an opportunity and responsibility to provide a unified access control over all these services. Maira's implementation comes with many other advantages as well.</p>
+<h2 id="challenge">Challenge</h2>
 <p>Usually, every cloud application has some sort of access control. This scattered implementation presents challenges to the Ops team. These problems include, but are not limited to:</p>
 <ul>
 <li>Scattered access control that needs to be configured separately for each application. E.g. if you are running GKE on GCP, Kubernetes has its own access control and Google Cloud has its own that need to be managed independently</li>
@@ -7223,21 +7327,25 @@
 <li>Some of these implementations are too complex to configure</li>
 <li>Most of them do not allow you to grant access for a specified amount of time or based on location</li>
 </ul>
-<h1 id="maira-solution">Maira Solution</h1>
+<h2 id="maira-solution">Maira Solution</h2>
 <p>Please see the picture below to understand Maira object model for users and resources.</p>
 <p><img alt="drawing" src="../RBAC.png" title="Maira Object Model" /></p>
 <p>In Maira model, each user belongs to one or more groups and has a role (<code>admin</code>/<code>member</code>) in that group. E.g., user alice could have <code>admin</code> role in group <code>engineering</code> and <code>member</code> role in group <code>test</code>. You can grant access to either an individual user, or all users with a specific role in a group or all users in a group. Resources are identified by an object type along with an object name or id. Some objects can belong to a namespace. And they belong to a service, which itself can be identified by a service type and service name. E.g. A k8s pod has a pod name. It has type <code>pod</code> and it belongs to a namespace. It is part of service <code>k8s</code> and if you have more than one k8s clusters, then you identify the cluster using the cluster name. While granting access, you can specify what all actions (<code>create</code>/<code>read</code>/<code>update</code>/<code>delete</code>) are allowed.</p>
 <p>Think of granting access as equivalent to drawing an edge between the subject and object in the above picture. E.g. an edge between the group <code>engineering</code> and the service type <code>kafka</code> with a label <code>R</code> implies that all users belonging to <code>engineering</code> group have <code>read</code> access to all <code>kafka</code> resources. Similarly, an edge between user <code>alice</code> and <code>topic t1</code> with label <code>CRUD</code> implies that the user <code>alice</code> has <code>CRUD</code> access to that specific topic only.</p>
-<h1 id="configuration">Configuration</h1>
+<h2 id="configuration">Configuration</h2>
 <p>Maira dashboard allows you to assign users to one or more groups with one of the supported roles. After that, you can define <code>Access Policy Rules</code> that define who can access what.  Please refer to the screenshot below for details on how to configure access policy rules.</p>
 <p><img alt="Access Policy Rule" src="../ap_rule.png" title="Configuring Access Policy Rule" /></p>
 <p>You can select a specific user, or a group with an optional role. On the resource side, you can select a service type, instance, namespace, object type and object id. Leaving any field empty implies <code>all</code>. E.g. If no object id is specified, then all objects of that type will be allowed.</p>
 <p>Each rule also includes a field called <code>decision</code>. This can take <code>allow</code>/<code>deny</code> values and it indicates whether the command being accessed is to be allowed or not.</p>
-<h1 id="implementation">Implementation</h1>
+<h2 id="implementation">Implementation</h2>
 <p>When a user issues a command, Maira will identify all rules that connect that user to the resource being used in the command and the action being performed. To find the list of applicable rules, Maira will walk the hierarchy of user/resource and collect all rules. Only if all these rules have the <code>decision</code> set to <code>allow</code>, the command will be permitted. If any rule has the <code>decision</code> set to <code>deny</code> or no matching rule is found, then the command will be denied. </p>
 <p>Each maira command has a defined action, service type and object type. Service instance, namespace (if applicable) and object id can be specified using one of the arguments for the command. Please refer to documentation to specific command if you want to see these values for a given command. As an example, for <code>k8s get-pod</code> command, service type is <code>k8s</code>, object type is <code>pod</code> and actions is <code>read</code>. Service instance is specified with the <code>cluster</code> argument, Object type is specified using <code>name</code> argument and namespace is specified using <code>namespace</code> argument. E.g. if a user issues <code>k8s get-pod --namespace "ns-1" "pod-1"</code>, she must have <code>read</code> access to pod <code>pod-1</code> in namespace <code>ns-1</code> in default <code>k8s</code> cluster.</p>
-<h1 id="roadmap">Roadmap</h1>
-<p>In future release, Maira will implement two more <em>dimensions</em> of the access policy rule. The first is location based rules, where each service and each user/group can have a location associated with it. And then a rule can specify a connection between a user's location and resource's location. A second <em>dimension</em> will allow to specify a time based rule so that access can be granted for a specific period of time.</p>
+<h2 id="upcoming-features">Upcoming Features</h2>
+<p>In upcoming releases, Maira will implement two more <em>dimensions</em> of the access policy rule.i</p>
+<ul>
+<li>Location based rules: Each service and each user/group can have a location associated with it. Then a rule can specify a connection between a user's location and resource's location.</li>
+<li>Time based rules: These rules will allow you to specify a time at which access is to be granted. This could be a one time grant or a periodic grant.</li>
+</ul>
 
 
 
