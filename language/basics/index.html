@@ -162,32 +162,32 @@
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#types">
-    Types:
+    Types
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#variable">
-    Variable:
+    Variable
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#expression">
-    Expression:
+    Expression
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#condition">
-    Condition:
+    Condition
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#loop">
-    Loop:
+    Loop
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#function">
-    Function:
+    Function
   </a>
 </li>
 </ul>
@@ -2938,32 +2938,32 @@
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#types">
-    Types:
+    Types
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#variable">
-    Variable:
+    Variable
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#expression">
-    Expression:
+    Expression
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#condition">
-    Condition:
+    Condition
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#loop">
-    Loop:
+    Loop
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#function">
-    Function:
+    Function
   </a>
 </li>
 </ul>
@@ -2991,9 +2991,9 @@
 <p>Mpl interpreter in batch mode is invoked with mpl file in shell.</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="o">&gt;</span> <span class="n">mpl</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>
 </code></pre></div>
-<h3 id="types">Types:</h3>
+<h3 id="types">Types</h3>
 <p>Mpl suppoprts types such as <em>Number</em>, <em>String</em>, <em>Boolean</em>, <em>Json</em>, <em>Time</em>, and <em>Duration</em>. Note that, unlike other languages, Mpl has Json, Time, and Duration as first-class built-in types. Refer to the 'types' section for details on each type.</p>
-<h3 id="variable">Variable:</h3>
+<h3 id="variable">Variable</h3>
 <ol>
 <li>
 <p><strong>Simple variable</strong>:
@@ -3013,7 +3013,7 @@ Mpl support intuitive indexed variable to access values in JSON documents. Users
 output is: <code>1</code>.</p>
 </li>
 </ol>
-<h3 id="expression">Expression:</h3>
+<h3 id="expression">Expression</h3>
 <p>In addition to simple assignment of 'rhs' variable to 'lhs', 'rhs' can be an expression. Expression can be composed of basic opertors like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> and builtin operators like 'len' and methods. For full documentation of methods supported for each type, refer to 'types' section.
 <strong>Examples</strong>:</p>
 <p>Example 1: <em>Simple arithmetic</em></p>
@@ -3027,7 +3027,7 @@ output is: <code>1</code>.</p>
 <a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">+</span> <span class="s2">"dot"</span>
 </code></pre></div>
 <p>output is: <code>"bluedot"</code></p>
-<h3 id="condition">Condition:</h3>
+<h3 id="condition">Condition</h3>
 <p>Mpl supports Python like <code>if-else</code> branching syntax. The comparison expression can be on any Mpl supported data types. The supported compare operators are <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code> and <code>in</code>.  In addition <code>if not</code> statement supported. e.g.,</p>
 <p><div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">x</span> <span class="o">=</span> <span class="s2">"cat"</span>
 <a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">"cat"</span><span class="p">:</span>
@@ -3051,7 +3051,7 @@ The conditional expression can be chained by <code>&amp;&amp;</code> and <code>|
 <a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>  <span class="n">res</span> <span class="o">=</span> <span class="n">true</span>
 </code></pre></div>
 <p>Here vlaue of <code>res</code> will be <code>true</code>.</p>
-<h3 id="loop">Loop:</h3>
+<h3 id="loop">Loop</h3>
 <p>Mpl supports <code>for</code> loop syntax with simple loops over integer or iterables (like Json doc). Note that Python's indentation rule for the loop block applies. For example in following simple loop:</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
 <a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
@@ -3083,7 +3083,7 @@ In case of Json object, index variable, <code>i</code>, is assigned to <code>key
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="s2">"a"</span>
 <a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="s2">"b"</span>
 </code></pre></div>
-<h3 id="function">Function:</h3>
+<h3 id="function">Function</h3>
 <p>Mpl supports Python like function definition. Functions have <em>read only</em> access to all variables from calling scope. At this time, unlike Python, Mpl functions can return only one variable.  e.g.,</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">():</span>
 <a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>

@@ -172,32 +172,32 @@
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#string">
-    String:
+    String
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#number">
-    Number:
+    Number
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#boolean">
-    Boolean:
+    Boolean
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#time">
-    Time:
+    Time
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#duration">
-    Duration:
+    Duration
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#json">
-    Json:
+    Json
   </a>
 </li>
 </ul>
@@ -2938,32 +2938,32 @@
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#string">
-    String:
+    String
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#number">
-    Number:
+    Number
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#boolean">
-    Boolean:
+    Boolean
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#time">
-    Time:
+    Time
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#duration">
-    Duration:
+    Duration
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#json">
-    Json:
+    Json
   </a>
 </li>
 </ul>
@@ -2975,7 +2975,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="types">Types</h1>
 <p>Mpl supports commonly used types in the targetted application as language builtins. These natively supported types help reduce Mpl code's complexity and keep the code bloat in check. Each built-in types support convenience methods to accomplish various transformation tasks. e.g., <code>x.lower()</code> returns the lowercase value of the string, <code>x</code>. </p>
-<h3 id="string">String:</h3>
+<h3 id="string">String</h3>
 <p>A string is single or double quoted variable. e.g., <code>'blue'</code>, <code>"green"</code>, with escape sequence rules in common languages.</p>
 <p><em>Methods</em>:</p>
 <ol>
@@ -3156,7 +3156,7 @@
 </code></pre></div>
 </li>
 </ol>
-<h3 id="number">Number:</h3>
+<h3 id="number">Number</h3>
 <p>A number type can be integer or float.</p>
 <p><em>Methods</em>:</p>
 <ol>
@@ -3175,7 +3175,7 @@
 </code></pre></div>
 </li>
 </ol>
-<h3 id="boolean">Boolean:</h3>
+<h3 id="boolean">Boolean</h3>
 <p>Boolean type represents 'true' or 'false'.</p>
 <p><em>Methods</em>:</p>
 <ol>
@@ -3187,7 +3187,7 @@
 </code></pre></div>
 </li>
 </ol>
-<h3 id="time">Time:</h3>
+<h3 id="time">Time</h3>
 <p>Time is a builtin type in Mpl. Mpl parser recongnizes user friendly time statement. <code>time</code> is Mpl builtin which translates the subsequent phrase into time. e.g.,</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-28-1" id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">time</span> <span class="mi">10</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">2010</span> <span class="mi">06</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">00</span> <span class="n">pm</span> <span class="n">PDT</span>
 <a href="#__codelineno-28-2" id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="n">y</span> <span class="o">=</span> <span class="n">time</span> <span class="mi">10</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">2010</span>
@@ -3199,7 +3199,7 @@
 <a href="#__codelineno-29-2" id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="mi">10</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">2010</span> <span class="mi">12</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span> <span class="n">am</span> <span class="n">UTC</span>
 </code></pre></div>
 <p>Apart from above 'Mpl time format' Mpl also suports commonly used standard formats. These formats can be input as string.  Mpl detects the time format automatically by walking through supported format strings and creating a <code>time</code> object internally. e.g.,</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-30-1" id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">time</span> <span class="p">(</span><span class="s2">"2021-02-12T00:48:06.825Z"</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-30-1" id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">time</span> <span class="p">(</span><span class="s2">"2021-02-12T00:48:06.825Z"</span><span class="p">)</span>
 <a href="#__codelineno-30-2" id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="n">x</span>
 </code></pre></div>
 <p>output is:</p>
@@ -3209,191 +3209,270 @@
 <ol>
 <li>
 <p>second: second returns number of seconds.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-32-1" id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">time</span> <span class="p">(</span><span class="s2">"2021-02-12T00:48:06.825Z"</span><span class="p">)</span>
+<a href="#__codelineno-32-2" id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">second</span><span class="p">()</span>
+<a href="#__codelineno-32-3" id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="mi">6</span>
+</code></pre></div>
 </li>
 <li>
 <p>minute: minute returns number of minutes.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-33-1" id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">time</span> <span class="p">(</span><span class="s2">"2021-02-12T00:48:06.825Z"</span><span class="p">)</span>
+<a href="#__codelineno-33-2" id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">minute</span><span class="p">()</span>
+<a href="#__codelineno-33-3" id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="mi">48</span>
+</code></pre></div>
 </li>
 <li>
 <p>hour: hour returns number of hours.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-34-1" id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">time</span> <span class="p">(</span><span class="s2">"2021-02-12T00:48:06.825Z"</span><span class="p">)</span>
+<a href="#__codelineno-34-2" id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">hour</span><span class="p">()</span>
+<a href="#__codelineno-34-3" id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="mi">0</span>
+</code></pre></div>
 </li>
 <li>
 <p>day: day returns number of days.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-35-1" id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">time</span> <span class="p">(</span><span class="s2">"2021-02-12T00:48:06.825Z"</span><span class="p">)</span>
+<a href="#__codelineno-35-2" id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">day</span><span class="p">()</span>
+<a href="#__codelineno-35-3" id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="mi">12</span>
+</code></pre></div>
 </li>
 <li>
 <p>month: month returns number of months.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-36-1" id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">time</span> <span class="p">(</span><span class="s2">"2021-02-12T00:48:06.825Z"</span><span class="p">)</span>
+<a href="#__codelineno-36-2" id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">month</span><span class="p">()</span>
+<a href="#__codelineno-36-3" id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="mi">2</span>
+</code></pre></div>
 </li>
 <li>
 <p>year: year returns number of years.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-37-1" id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">time</span> <span class="p">(</span><span class="s2">"2021-02-12T00:48:06.825Z"</span><span class="p">)</span>
+<a href="#__codelineno-37-2" id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">year</span><span class="p">()</span>
+<a href="#__codelineno-37-3" id="__codelineno-37-3" name="__codelineno-37-3"></a><span class="mi">2021</span>
+</code></pre></div>
 </li>
 <li>
 <p>utc: utc returns time with the location set to UTC.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-38-1" id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">time</span> <span class="p">(</span><span class="s2">"2021-02-12T00:48:06.825Z"</span><span class="p">)</span>
+<a href="#__codelineno-38-2" id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">utc</span><span class="p">()</span>
+<a href="#__codelineno-38-3" id="__codelineno-38-3" name="__codelineno-38-3"></a><span class="mi">02</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">2021</span> <span class="mi">12</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">06</span> <span class="n">am</span> <span class="n">UTC</span>
+</code></pre></div>
 </li>
 <li>
 <p>string([format]): string converts time in desired format. The desired format can be specified optionally . Valid format strings are: "RFC3339", "UnixDate", "RFC1123", "RFC822Z", "RubyDate", "ANSIC", "RFC850", "Kitchen", and "epoch". If format is not specified, it defaults to Mpl format.(e.g., 10-11-2010 06:11:00 pm PDT).</p>
-<p>Example:</p>
-<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-32-1" id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">time</span> <span class="mi">10</span><span class="o">-</span><span class="mi">21</span><span class="o">-</span><span class="mi">2010</span> <span class="mi">06</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">00</span> <span class="n">pm</span> <span class="n">PDT</span>
-<a href="#__codelineno-32-2" id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">string</span><span class="p">(</span><span class="s2">"RFC3339"</span><span class="p">)</span>
-<a href="#__codelineno-32-3" id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="n">y</span>
-</code></pre></div>
-output is:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-33-1" id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="s2">"2010-10-21T18:11:00-07:00"</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-39-1" id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">time</span> <span class="mi">10</span><span class="o">-</span><span class="mi">21</span><span class="o">-</span><span class="mi">2010</span> <span class="mi">06</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">00</span> <span class="n">pm</span> <span class="n">PDT</span>
+<a href="#__codelineno-39-2" id="__codelineno-39-2" name="__codelineno-39-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">string</span><span class="p">(</span><span class="s2">"RFC3339"</span><span class="p">)</span>
+<a href="#__codelineno-39-3" id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span>
+<a href="#__codelineno-39-4" id="__codelineno-39-4" name="__codelineno-39-4"></a><span class="s2">"2010-10-21T18:11:00-07:00"</span>
 </code></pre></div>
 </li>
 <li>
 <p>print: print is same as string method, just that it prints the value instead of returning formatted string.</p>
 </li>
 </ol>
-<h3 id="duration">Duration:</h3>
+<h3 id="duration">Duration</h3>
 <p>Duration builtin type represents span of time. Difference between 2 time object is of type duration. <code>duration</code> is Mpl builtin which translates the subsequent phrase into duration.  e.g., <code>duration 1 hour</code>. Putting 1 hour in bracket or quotes is optional.
 Time object can be added or subtracted with duration. e.g.,</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-34-1" id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">duration</span> <span class="mi">1</span> <span class="n">day</span>
-<a href="#__codelineno-34-2" id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="nb">print</span> <span class="n">x</span>
-<a href="#__codelineno-34-3" id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="n">y</span> <span class="o">=</span> <span class="n">time</span> <span class="mi">10</span><span class="o">-</span><span class="mi">19</span><span class="o">-</span><span class="mi">2011</span> <span class="mi">06</span><span class="p">:</span><span class="mi">11</span> <span class="n">pm</span> <span class="n">PDT</span> <span class="o">-</span> <span class="n">x</span>
-<a href="#__codelineno-34-4" id="__codelineno-34-4" name="__codelineno-34-4"></a><span class="nb">print</span> <span class="n">y</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-40-1" id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">duration</span> <span class="mi">1</span> <span class="n">day</span>
+<a href="#__codelineno-40-2" id="__codelineno-40-2" name="__codelineno-40-2"></a><span class="nb">print</span> <span class="n">x</span>
+<a href="#__codelineno-40-3" id="__codelineno-40-3" name="__codelineno-40-3"></a><span class="n">y</span> <span class="o">=</span> <span class="n">time</span> <span class="mi">10</span><span class="o">-</span><span class="mi">19</span><span class="o">-</span><span class="mi">2011</span> <span class="mi">06</span><span class="p">:</span><span class="mi">11</span> <span class="n">pm</span> <span class="n">PDT</span> <span class="o">-</span> <span class="n">x</span>
+<a href="#__codelineno-40-4" id="__codelineno-40-4" name="__codelineno-40-4"></a><span class="nb">print</span> <span class="n">y</span>
 </code></pre></div>
 <p>output is:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-35-1" id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="mi">24</span><span class="n">h</span><span class="p">:</span><span class="mi">0</span><span class="n">m</span><span class="p">:</span><span class="mi">0</span><span class="n">s</span>
-<a href="#__codelineno-35-2" id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="mi">10</span><span class="o">-</span><span class="mi">18</span><span class="o">-</span><span class="mi">2011</span> <span class="mi">06</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">00</span> <span class="n">pm</span> <span class="n">PDT</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-41-1" id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="mi">24</span><span class="n">h</span><span class="p">:</span><span class="mi">0</span><span class="n">m</span><span class="p">:</span><span class="mi">0</span><span class="n">s</span>
+<a href="#__codelineno-41-2" id="__codelineno-41-2" name="__codelineno-41-2"></a><span class="mi">10</span><span class="o">-</span><span class="mi">18</span><span class="o">-</span><span class="mi">2011</span> <span class="mi">06</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">00</span> <span class="n">pm</span> <span class="n">PDT</span>
 </code></pre></div>
 <p>Keywords to specify duration are, 'year', 'month', 'day', 'hour', 'minute', 'second'. Any comnbination of these are valid just that the sequence must be in the order. e.g., 'minute' cannot come before 'hour'. 'Hour', 'minute' and 'second' can also be sepecified as 'h', 'm' and 's' respectively.</p>
 <p><em>Methods</em>:</p>
 <ol>
 <li>
-<p>seconds: seconds returns duration in number of seconds.</p>
+<p>seconds: seconds returns duration in number of seconds</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-42-1" id="__codelineno-42-1" name="__codelineno-42-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">duration</span> <span class="mi">1</span> <span class="n">day</span> 
+<a href="#__codelineno-42-2" id="__codelineno-42-2" name="__codelineno-42-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">seconds</span><span class="p">()</span>
+<a href="#__codelineno-42-3" id="__codelineno-42-3" name="__codelineno-42-3"></a><span class="mi">86400</span>
+</code></pre></div>
 </li>
 <li>
-<p>minutes: minutes returns duration in number of minutes.</p>
+<p>minutes: minutes returns duration in number of minutes</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-43-1" id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">duration</span> <span class="mi">1</span> <span class="n">day</span> 
+<a href="#__codelineno-43-2" id="__codelineno-43-2" name="__codelineno-43-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">minutes</span><span class="p">()</span>
+<a href="#__codelineno-43-3" id="__codelineno-43-3" name="__codelineno-43-3"></a><span class="mi">1440</span>
+</code></pre></div>
 </li>
 <li>
-<p>hours: hours returns duration in number of hours.</p>
+<p>hours: hours returns duration in number of hours</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-44-1" id="__codelineno-44-1" name="__codelineno-44-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">duration</span> <span class="mi">1</span> <span class="n">day</span> 
+<a href="#__codelineno-44-2" id="__codelineno-44-2" name="__codelineno-44-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">hours</span><span class="p">()</span>
+<a href="#__codelineno-44-3" id="__codelineno-44-3" name="__codelineno-44-3"></a><span class="mi">24</span>
+</code></pre></div>
 </li>
 <li>
 <p>string: string returns duration in human readable format</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-36-1" id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">duration</span> <span class="mi">1</span> <span class="n">day</span> <span class="mi">5</span> <span class="n">m</span>
-<a href="#__codelineno-36-2" id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">string</span><span class="p">()</span>
-<a href="#__codelineno-36-3" id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="s2">"24h:5m:0s"</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-45-1" id="__codelineno-45-1" name="__codelineno-45-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">duration</span> <span class="mi">1</span> <span class="n">day</span> <span class="mi">5</span> <span class="n">m</span>
+<a href="#__codelineno-45-2" id="__codelineno-45-2" name="__codelineno-45-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">string</span><span class="p">()</span>
+<a href="#__codelineno-45-3" id="__codelineno-45-3" name="__codelineno-45-3"></a><span class="s2">"24h:5m:0s"</span>
 </code></pre></div>
 </li>
 </ol>
-<h3 id="json">Json:</h3>
+<h3 id="json">Json</h3>
 <p>Json type is the main buitlin type supported by Mpl. Most of the workflow logic revolves around commands and its result in the form of Json a document. Mpl comes with rich set of feature to query and process these Json document. A Json type can be created by a keyword <code>json</code> followed by a valid Json syntax. In the most basic form a value in Json document can be accessed or set like a Python array and map. </p>
 <p>Indexed variable: For accessing key value pair, dotted notation is easy and is preferred. e.g., </p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-37-1" id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"color"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"red"</span><span class="p">,</span> <span class="s2">"blue"</span><span class="p">]}</span>
-<a href="#__codelineno-37-2" id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="n">x</span><span class="o">.</span><span class="n">color</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-46-1" id="__codelineno-46-1" name="__codelineno-46-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"color"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"red"</span><span class="p">,</span> <span class="s2">"blue"</span><span class="p">]}</span>
+<a href="#__codelineno-46-2" id="__codelineno-46-2" name="__codelineno-46-2"></a><span class="n">x</span><span class="o">.</span><span class="n">color</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </code></pre></div>
 <p>output is:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-38-1" id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="s2">"blue"</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-47-1" id="__codelineno-47-1" name="__codelineno-47-1"></a><span class="s2">"blue"</span>
 </code></pre></div>
 <p>Alternatively the same value can be accessed as <code>x["color"][1]</code>. Dotted notation is more convenient in most of the cases unless we want to access map via a Mpl vairable. e.g.,</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-39-1" id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="n">c</span> <span class="o">=</span> <span class="s2">"color"</span>
-<a href="#__codelineno-39-2" id="__codelineno-39-2" name="__codelineno-39-2"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"color"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"red"</span><span class="p">,</span> <span class="s2">"blue"</span><span class="p">]}</span>
-<a href="#__codelineno-39-3" id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="n">x</span><span class="p">[</span><span class="n">c</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-48-1" id="__codelineno-48-1" name="__codelineno-48-1"></a><span class="n">c</span> <span class="o">=</span> <span class="s2">"color"</span>
+<a href="#__codelineno-48-2" id="__codelineno-48-2" name="__codelineno-48-2"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"color"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"red"</span><span class="p">,</span> <span class="s2">"blue"</span><span class="p">]}</span>
+<a href="#__codelineno-48-3" id="__codelineno-48-3" name="__codelineno-48-3"></a><span class="n">x</span><span class="p">[</span><span class="n">c</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 </code></pre></div>
 <p><em>Setter</em>: A Json value can be set similarly as:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-40-1" id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"color"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"red"</span><span class="p">,</span> <span class="s2">"blue"</span><span class="p">]}</span>
-<a href="#__codelineno-40-2" id="__codelineno-40-2" name="__codelineno-40-2"></a><span class="n">x</span><span class="o">.</span><span class="n">color</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"purple"</span>
-<a href="#__codelineno-40-3" id="__codelineno-40-3" name="__codelineno-40-3"></a><span class="n">x</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-49-1" id="__codelineno-49-1" name="__codelineno-49-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"color"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"red"</span><span class="p">,</span> <span class="s2">"blue"</span><span class="p">]}</span>
+<a href="#__codelineno-49-2" id="__codelineno-49-2" name="__codelineno-49-2"></a><span class="n">x</span><span class="o">.</span><span class="n">color</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"purple"</span>
+<a href="#__codelineno-49-3" id="__codelineno-49-3" name="__codelineno-49-3"></a><span class="n">x</span>
 </code></pre></div>
 <p>output is:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-41-1" id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="p">{</span><span class="s2">"color"</span><span class="p">:[</span><span class="s2">"red"</span><span class="p">,</span><span class="s2">"purple"</span><span class="p">]}</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-50-1" id="__codelineno-50-1" name="__codelineno-50-1"></a><span class="p">{</span><span class="s2">"color"</span><span class="p">:[</span><span class="s2">"red"</span><span class="p">,</span><span class="s2">"purple"</span><span class="p">]}</span>
 </code></pre></div>
 <p>Mpl Json statement can also take a variable for any Json field. These variables will be resolved by Mpl, before creating the Json object. e.g.,</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-42-1" id="__codelineno-42-1" name="__codelineno-42-1"></a><span class="n">c</span> <span class="o">=</span> <span class="s2">"purple"</span>
-<a href="#__codelineno-42-2" id="__codelineno-42-2" name="__codelineno-42-2"></a><span class="n">k</span> <span class="o">=</span> <span class="s2">"color"</span>
-<a href="#__codelineno-42-3" id="__codelineno-42-3" name="__codelineno-42-3"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">[</span><span class="s2">"red"</span><span class="p">,</span> <span class="n">c</span><span class="p">]}</span>
-<a href="#__codelineno-42-4" id="__codelineno-42-4" name="__codelineno-42-4"></a><span class="n">x</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-51-1" id="__codelineno-51-1" name="__codelineno-51-1"></a><span class="n">c</span> <span class="o">=</span> <span class="s2">"purple"</span>
+<a href="#__codelineno-51-2" id="__codelineno-51-2" name="__codelineno-51-2"></a><span class="n">k</span> <span class="o">=</span> <span class="s2">"color"</span>
+<a href="#__codelineno-51-3" id="__codelineno-51-3" name="__codelineno-51-3"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="p">[</span><span class="s2">"red"</span><span class="p">,</span> <span class="n">c</span><span class="p">]}</span>
+<a href="#__codelineno-51-4" id="__codelineno-51-4" name="__codelineno-51-4"></a><span class="n">x</span>
 </code></pre></div>
 <p>output is:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-43-1" id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="p">{</span><span class="s2">"color"</span><span class="p">:[</span><span class="s2">"red"</span><span class="p">,</span><span class="s2">"purple"</span><span class="p">]}</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-52-1" id="__codelineno-52-1" name="__codelineno-52-1"></a><span class="p">{</span><span class="s2">"color"</span><span class="p">:[</span><span class="s2">"red"</span><span class="p">,</span><span class="s2">"purple"</span><span class="p">]}</span>
 </code></pre></div>
 <p><em>Methods</em>:</p>
 <ol>
 <li>
 <p>append: append method appends an element to the end of the list.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-53-1" id="__codelineno-53-1" name="__codelineno-53-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]}</span>
+<a href="#__codelineno-53-2" id="__codelineno-53-2" name="__codelineno-53-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<a href="#__codelineno-53-3" id="__codelineno-53-3" name="__codelineno-53-3"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span>
+<a href="#__codelineno-53-4" id="__codelineno-53-4" name="__codelineno-53-4"></a><span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">]}</span>
+</code></pre></div>
 </li>
 <li>
-<p>clear: clear method removes all the elements from a list.</p>
+<p>clear: clear method removes all the elements from a list.  </p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-54-1" id="__codelineno-54-1" name="__codelineno-54-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]}</span>
+<a href="#__codelineno-54-2" id="__codelineno-54-2" name="__codelineno-54-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<a href="#__codelineno-54-3" id="__codelineno-54-3" name="__codelineno-54-3"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span>
+<a href="#__codelineno-54-4" id="__codelineno-54-4" name="__codelineno-54-4"></a><span class="p">{</span><span class="s2">"a"</span><span class="p">:[]}</span>
+</code></pre></div>
 </li>
 <li>
 <p>copy: copy method returns a copy of the specified list.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-55-1" id="__codelineno-55-1" name="__codelineno-55-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]}</span>
+<a href="#__codelineno-55-2" id="__codelineno-55-2" name="__codelineno-55-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<a href="#__codelineno-55-3" id="__codelineno-55-3" name="__codelineno-55-3"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<a href="#__codelineno-55-4" id="__codelineno-55-4" name="__codelineno-55-4"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a href="#__codelineno-55-5" id="__codelineno-55-5" name="__codelineno-55-5"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<a href="#__codelineno-55-6" id="__codelineno-55-6" name="__codelineno-55-6"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span>
+<a href="#__codelineno-55-7" id="__codelineno-55-7" name="__codelineno-55-7"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</code></pre></div>
 </li>
 <li>
 <p>count(value): count method returns the number of elements with the specified value in a list.</p>
-<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-44-1" id="__codelineno-44-1" name="__codelineno-44-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]}</span>
-<a href="#__codelineno-44-2" id="__codelineno-44-2" name="__codelineno-44-2"></a><span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-56-1" id="__codelineno-56-1" name="__codelineno-56-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]}</span>
+<a href="#__codelineno-56-2" id="__codelineno-56-2" name="__codelineno-56-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<a href="#__codelineno-56-3" id="__codelineno-56-3" name="__codelineno-56-3"></a><span class="mi">1</span>
 </code></pre></div>
- output is:
- <div class="highlight"><pre><span></span><code><a href="#__codelineno-45-1" id="__codelineno-45-1" name="__codelineno-45-1"></a><span class="mi">1</span>
-</code></pre></div></p>
 </li>
 <li>
 <p>extend: extend method adds the specified list elements to the end of the current list.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-57-1" id="__codelineno-57-1" name="__codelineno-57-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">]}</span>
+<a href="#__codelineno-57-2" id="__codelineno-57-2" name="__codelineno-57-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">"aGB"</span><span class="p">,</span> <span class="n">true</span><span class="p">]</span>
+<a href="#__codelineno-57-3" id="__codelineno-57-3" name="__codelineno-57-3"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">r</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a href="#__codelineno-57-4" id="__codelineno-57-4" name="__codelineno-57-4"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span>
+<a href="#__codelineno-57-5" id="__codelineno-57-5" name="__codelineno-57-5"></a><span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="s2">"aGB"</span><span class="p">,</span><span class="n">true</span><span class="p">]}</span>
+</code></pre></div>
 </li>
 <li>
 <p>get(string, [number|string|bool]): get method returns the value of the item with the specified key. If key is not found, default value is returned. e.g.,</p>
-<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-46-1" id="__codelineno-46-1" name="__codelineno-46-1"></a><span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">:</span> <span class="s2">"aa"</span><span class="p">}</span>
-<a href="#__codelineno-46-2" id="__codelineno-46-2" name="__codelineno-46-2"></a><span class="n">y</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"b"</span><span class="p">,</span> <span class="s2">"not found"</span><span class="p">)</span>
-</code></pre></div>
- output is:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-47-1" id="__codelineno-47-1" name="__codelineno-47-1"></a><span class="s2">"aa"</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-58-1" id="__codelineno-58-1" name="__codelineno-58-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">:</span> <span class="s2">"aa"</span><span class="p">}</span>
+<a href="#__codelineno-58-2" id="__codelineno-58-2" name="__codelineno-58-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"b"</span><span class="p">,</span> <span class="s2">"not found"</span><span class="p">)</span>
+<a href="#__codelineno-58-3" id="__codelineno-58-3" name="__codelineno-58-3"></a><span class="s2">"aa"</span>
 </code></pre></div>
 </li>
 <li>
 <p>index: index method returns the position at the first occurrence of the specified value.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-59-1" id="__codelineno-59-1" name="__codelineno-59-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">true</span><span class="p">]}</span>
+<a href="#__codelineno-59-2" id="__codelineno-59-2" name="__codelineno-59-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="n">y</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">true</span><span class="p">)</span>
+<a href="#__codelineno-59-3" id="__codelineno-59-3" name="__codelineno-59-3"></a><span class="mi">4</span>
+</code></pre></div>
 </li>
 <li>
 <p>insert: insert method inserts the specified value at the specified position</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-60-1" id="__codelineno-60-1" name="__codelineno-60-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]}</span>   
+<a href="#__codelineno-60-2" id="__codelineno-60-2" name="__codelineno-60-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">z</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<a href="#__codelineno-60-3" id="__codelineno-60-3" name="__codelineno-60-3"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">l</span><span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<a href="#__codelineno-60-4" id="__codelineno-60-4" name="__codelineno-60-4"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">l</span>
+<a href="#__codelineno-60-5" id="__codelineno-60-5" name="__codelineno-60-5"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+</code></pre></div>
 </li>
 <li>
 <p>keys: keys method returns json list containing the keys of the json map.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-61-1" id="__codelineno-61-1" name="__codelineno-61-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<a href="#__codelineno-61-2" id="__codelineno-61-2" name="__codelineno-61-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<a href="#__codelineno-61-3" id="__codelineno-61-3" name="__codelineno-61-3"></a><span class="p">[</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"b"</span><span class="p">]</span>
+</code></pre></div>
 </li>
 <li>
 <p>pop: pop method removes the element at the specified position.</p>
-</li>
-<li>
-<p>remove: remove method removes the first occurrence of the element with the specified value. e.g.,
-     <div class="highlight"><pre><span></span><code><a href="#__codelineno-48-1" id="__codelineno-48-1" name="__codelineno-48-1"></a><span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">]}</span>
-<a href="#__codelineno-48-2" id="__codelineno-48-2" name="__codelineno-48-2"></a><span class="n">y</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<a href="#__codelineno-48-3" id="__codelineno-48-3" name="__codelineno-48-3"></a><span class="n">y</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
-<a href="#__codelineno-48-4" id="__codelineno-48-4" name="__codelineno-48-4"></a><span class="n">y</span>
-</code></pre></div>
-     output is:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-49-1" id="__codelineno-49-1" name="__codelineno-49-1"></a><span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">]}</span> 
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-62-1" id="__codelineno-62-1" name="__codelineno-62-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]}</span>
+<a href="#__codelineno-62-2" id="__codelineno-62-2" name="__codelineno-62-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a href="#__codelineno-62-3" id="__codelineno-62-3" name="__codelineno-62-3"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span>
+<a href="#__codelineno-62-4" id="__codelineno-62-4" name="__codelineno-62-4"></a><span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]}</span>
 </code></pre></div>
 </li>
 <li>
-<p>reverse: reverse method reverses the sorting order of the elements.</p>
+<p>remove: remove method deletes the first occurrence of the element with the specified value. e.g.,</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-63-1" id="__codelineno-63-1" name="__codelineno-63-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">]}</span>
+<a href="#__codelineno-63-2" id="__codelineno-63-2" name="__codelineno-63-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<a href="#__codelineno-63-3" id="__codelineno-63-3" name="__codelineno-63-3"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
+<a href="#__codelineno-63-4" id="__codelineno-63-4" name="__codelineno-63-4"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span>
+<a href="#__codelineno-63-5" id="__codelineno-63-5" name="__codelineno-63-5"></a><span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">]}</span> 
+</code></pre></div>
+</li>
+<li>
+<p>reverse: reverse method reverses the sorting order of the elements. </p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-64-1" id="__codelineno-64-1" name="__codelineno-64-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">]}</span>
+<a href="#__codelineno-64-2" id="__codelineno-64-2" name="__codelineno-64-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">r</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span> 
+<a href="#__codelineno-64-3" id="__codelineno-64-3" name="__codelineno-64-3"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span>
+<a href="#__codelineno-64-4" id="__codelineno-64-4" name="__codelineno-64-4"></a><span class="p">{</span><span class="s2">"a"</span><span class="p">:[</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">]}</span>
+</code></pre></div>
 </li>
 <li>
 <p>string: string method returns string representation of Json value.</p>
 </li>
 <li>
 <p>sort([boolean], [stirng]): sort returns sorted copy of Json. if reverse arg sorts the array in descending order. If key is specified sort is done on array of maps based on value of specified key. e.g.,</p>
-<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-50-1" id="__codelineno-50-1" name="__codelineno-50-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
-<a href="#__codelineno-50-2" id="__codelineno-50-2" name="__codelineno-50-2"></a><span class="n">x</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-65-1" id="__codelineno-65-1" name="__codelineno-65-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<a href="#__codelineno-65-2" id="__codelineno-65-2" name="__codelineno-65-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<a href="#__codelineno-65-3" id="__codelineno-65-3" name="__codelineno-65-3"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</code></pre></div>
+<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-66-1" id="__codelineno-66-1" name="__codelineno-66-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">,</span><span class="mi">2</span><span class="p">}]</span>
+<a href="#__codelineno-66-2" id="__codelineno-66-2" name="__codelineno-66-2"></a><span class="n">x</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">true</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">)</span>
 </code></pre></div>
  output is:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-51-1" id="__codelineno-51-1" name="__codelineno-51-1"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-</code></pre></div>
-<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-52-1" id="__codelineno-52-1" name="__codelineno-52-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">,</span><span class="mi">2</span><span class="p">}]</span>
-<a href="#__codelineno-52-2" id="__codelineno-52-2" name="__codelineno-52-2"></a><span class="n">x</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">true</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">)</span>
-</code></pre></div>
- output is:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-53-1" id="__codelineno-53-1" name="__codelineno-53-1"></a><span class="p">[{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">3</span><span class="p">},{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">2</span><span class="p">},{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">}]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-67-1" id="__codelineno-67-1" name="__codelineno-67-1"></a><span class="p">[{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">3</span><span class="p">},{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">2</span><span class="p">},{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">}]</span>
 </code></pre></div>
 </li>
 <li>
 <p>update: update method inserts the specified items to the dictionary. It takes a json map as input.</p>
-<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-54-1" id="__codelineno-54-1" name="__codelineno-54-1"></a><span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">:</span> <span class="s2">"aa"</span><span class="p">}</span>
-<a href="#__codelineno-54-2" id="__codelineno-54-2" name="__codelineno-54-2"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"c"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"d"</span><span class="p">:</span> <span class="s2">"bb"</span><span class="p">}</span>
-<a href="#__codelineno-54-3" id="__codelineno-54-3" name="__codelineno-54-3"></a><span class="n">y</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</code></pre></div>
- output is:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-55-1" id="__codelineno-55-1" name="__codelineno-55-1"></a><span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">"b"</span><span class="p">:</span><span class="s2">"aa"</span><span class="p">,</span><span class="s2">"c"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">"d"</span><span class="p">:</span><span class="s2">"bb"</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-68-1" id="__codelineno-68-1" name="__codelineno-68-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">:</span> <span class="s2">"aa"</span><span class="p">}</span>
+<a href="#__codelineno-68-2" id="__codelineno-68-2" name="__codelineno-68-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"c"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">"d"</span><span class="p">:</span> <span class="s2">"bb"</span><span class="p">}</span>
+<a href="#__codelineno-68-3" id="__codelineno-68-3" name="__codelineno-68-3"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a href="#__codelineno-68-4" id="__codelineno-68-4" name="__codelineno-68-4"></a><span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">"b"</span><span class="p">:</span><span class="s2">"aa"</span><span class="p">,</span><span class="s2">"c"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">"d"</span><span class="p">:</span><span class="s2">"bb"</span><span class="p">}</span>
 </code></pre></div>
 </li>
 <li>
-<p>values: values method returns json list containing the values of the json map. </p>
+<p>values: values method returns json list containing the values of the json map. 
+     <div class="highlight"><pre><span></span><code><a href="#__codelineno-69-1" id="__codelineno-69-1" name="__codelineno-69-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">:</span> <span class="s2">"aaC"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">:</span> <span class="n">true</span><span class="p">}</span>
+<a href="#__codelineno-69-2" id="__codelineno-69-2" name="__codelineno-69-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">y</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<a href="#__codelineno-69-3" id="__codelineno-69-3" name="__codelineno-69-3"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="s2">"aaC"</span><span class="p">,</span><span class="n">true</span><span class="p">]</span>
+</code></pre></div></p>
 </li>
 </ol>
 </article>

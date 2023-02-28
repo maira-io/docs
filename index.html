@@ -154,13 +154,18 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#automation-and-deployment">
-    Automation and deployment.
+<a class="md-nav__link" href="#creating-a-workflow">
+    Creating a workflow
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#deployment">
     Deployment
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#slack">
+    Slack
   </a>
 </li>
 </ul>
@@ -2971,13 +2976,18 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#automation-and-deployment">
-    Automation and deployment.
+<a class="md-nav__link" href="#creating-a-workflow">
+    Creating a workflow
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#deployment">
     Deployment
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#slack">
+    Slack
   </a>
 </li>
 </ul>
@@ -3086,7 +3096,8 @@ apps and makes them available as CLIs. Here we will use <strong>k8s</strong> CLI
 <a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>hello-python-75b7fb8899-qz5d7<span class="w">   </span>Running<span class="w">                 </span>hello-python<span class="w">    </span>2d20h
 <a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>r1-maira-agent-69c87875b9-pq2dd<span class="w"> </span>Running<span class="w">                 </span>maira-gateway<span class="w">   </span>2d20h
 </code></pre></div>
-<p>Most of the <em>get</em> commands like the above prints output human-friendly tabular format.
+<p>In MPL, all integrations as available as CLI and are entered with <code>!</code> prefix.
+Most of the <em>get</em> commands like the above prints output human-friendly tabular format.
 To programmatically access CLI output fields, traversing JSON is the best way.
 For that, in MPL, any CLI output can be assigned to a variable, as shown below.</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="err">!</span><span class="n">k8s</span> <span class="nb">list</span><span class="o">-</span><span class="n">pods</span>
@@ -3102,9 +3113,12 @@ For that, in MPL, any CLI output can be assigned to a variable, as shown below.<
 <a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>                <span class="s2">"image"</span><span class="p">:</span> <span class="s2">"gcr.io/macro-context-293714/hello-python:latest"</span><span class="p">,</span>
 <a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>                <span class="s2">"state"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
 </code></pre></div>
-<p>Note that when CLI output is assigned to a variable, the variable is assigned a
-JSON object. <em>JSON is first class object type in MPL.</em>
-Maira supports intuitive syntax to access JSON fields. E.g., below, we are going
+<p>Note that when CLI output is assigned, the variable (<code>x</code> in above example) is assigned a
+JSON object as receicved from backend CLI implementation. <em>JSON is first class object type in MPL.</em>
+If the CLI is entered without assigning to a variable, MPL repl assumes
+human-friendly tabular output is desired, so it renders underlyig JSON tabular
+format.  </p>
+<p>Maira supports intuitive syntax to access JSON fields. E.g., below, we are going
 through all array elements in <code>x</code> by not specifying the index (<code>x[]</code>), and then for
 each element, we are accessing the <code>name</code> field at index <code>0</code> in
 the <code>containers</code> array. This is basically printing the CONTAINERS column in the table
@@ -3114,10 +3128,10 @@ output.
 <a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="s2">"hello-python"</span><span class="p">,</span>
 <a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="s2">"maira-gateway"</span>
 </code></pre></div></p>
-<p>Now we have to get the name of the pod which contains <code>"agent"</code> in the image name.
-For this, we have to <strong>filter</strong> those containers that have the <code>image</code> field value
-containing <code>agent</code>. This is accomplished by the filter operator, <code>[? ..]</code> where we
-specifiy simple comprator <code>==</code> which matches a glob speciefied with backtics, as
+<p>Next we have to get the name of the pod which contains <code>"agent"</code> in the image name.
+For this, we <strong>filter</strong> those containers that have the <code>image</code> field value
+containing string <code>agent</code>. This is accomplished by the supported filter operator, <code>[? ..]</code> where we
+specifiy  comparator <code>==</code> which matches a glob, (speciefied within backtics), as
 below. More on this in later chapters.</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">containers</span><span class="p">[</span><span class="err">?</span> <span class="o">.</span><span class="n">image</span> <span class="o">==</span> <span class="err">`</span><span class="o">*</span><span class="n">agent</span><span class="o">*</span><span class="err">`</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
 <a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="s2">"maira-gateway"</span>
@@ -3126,12 +3140,13 @@ below. More on this in later chapters.</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">p</span> <span class="o">=</span> <span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">containers</span><span class="p">[</span><span class="err">?</span> <span class="o">.</span><span class="n">image</span> <span class="o">==</span> <span class="err">`</span><span class="o">*</span><span class="n">agent</span><span class="o">*</span><span class="err">`</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
 <a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="err">!</span><span class="n">k8s</span> <span class="n">delete</span><span class="o">-</span><span class="n">pod</span> <span class="n">p</span>
 </code></pre></div>
-<p>But what if we want an <strong>approval</strong> before deleting the pod in real life? Well, we
+<p>But what if we want an <strong>approval</strong> before deleting the pod? For this we 
 simply use the <code>confirm</code> command before deploying the workflow. The <code>confirm</code>
-command sends an email to a pre configured email list and waits for a user to
-click on approval link.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">msg</span> <span class="o">=</span> <span class="s2">"can i delete pod "</span> <span class="o">+</span> <span class="n">p</span>
-<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">z</span> <span class="o">=</span> <span class="err">!</span> <span class="n">confirm</span> <span class="n">message</span>
+command sends an email to a pre configured email list and waits for the
+recepients to click on approval link. The workflow orechestrator will simply wait 
+for the approval to arrive.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">msg</span> <span class="o">=</span> <span class="s2">"can i delete pod: "</span> <span class="o">+</span> <span class="n">p</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">z</span> <span class="o">=</span> <span class="err">!</span> <span class="n">confirm</span> <span class="n">msg</span>
 <a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">if</span> <span class="n">z</span> <span class="o">==</span> <span class="s2">"confirmed"</span><span class="p">:</span>
 <a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="err">!</span> <span class="n">k8s</span> <span class="n">delete</span><span class="o">-</span><span class="n">pod</span> <span class="n">p</span>
 </code></pre></div>
@@ -3139,10 +3154,11 @@ click on approval link.</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">msg</span> <span class="o">=</span> <span class="s2">"delete pod: "</span> <span class="o">+</span> <span class="n">p</span>
 <a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="err">!</span> <span class="n">slack</span> <span class="n">send</span><span class="o">-</span><span class="n">message</span> <span class="o">--</span><span class="n">name</span> <span class="s2">"#general"</span> <span class="o">--</span><span class="n">message</span> <span class="n">msg</span>
 </code></pre></div>
-<h3 id="automation-and-deployment">Automation and deployment.</h3>
-<p>Now above was the troubleshooting steps executed in MPL repl shell. The best
-part of a <strong>session</strong> in MPL is that one can go back and resume it, with all
-prev state intact. e.g., below you can see that previous variables <code>p</code> or <code>x</code>
+<h3 id="creating-a-workflow">Creating a workflow</h3>
+<p>We saw the troubleshooting steps executed in MPL repl shell. Lets say after few
+days we decide to automate those steps and deplpy them as a workflow. <em>MPL</em>
+supports <strong>resuming any session</strong> from the past, with all
+prev program state in the repl intact. e.g., below you can see that previous variables <code>p</code> or <code>x</code>
 are intact. (Note: <code>-r</code> resumes the previous session if no session-id is provided)</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>&gt;<span class="w"> </span>mpl<span class="w"> </span>-r
 <a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>
@@ -3157,8 +3173,9 @@ are intact. (Note: <code>-r</code> resumes the previous session if no session-id
 <a href="#__codelineno-7-11" id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="s2">"hello-python"</span>,
 <a href="#__codelineno-7-12" id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="s2">"maira-gateway"</span>
 </code></pre></div>
-<p>Now you can use <code>/save-session</code> command to save the session in local file and
-edit it. Following is edites session file to be deployed as <strong>workflow</strong>.</p>
+<p>Next we can add few commands if desired to session and then use <code>/save-session</code> 
+command to save the session in local file and edit it in a text editor/IDE. 
+Following is edites session file to be deployed as <strong>workflow</strong>.</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>&gt;<span class="w"> </span>cat<span class="w"> </span>session.mpl
 <a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>!k8s<span class="w"> </span>list-pods
 <a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="nv">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>x<span class="o">[]</span>.containers<span class="o">[</span>?<span class="w"> </span>.image<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sb">`</span>*agent*<span class="sb">`</span><span class="o">]</span>.name
@@ -3173,13 +3190,20 @@ edit it. Following is edites session file to be deployed as <strong>workflow</st
 <a href="#__codelineno-8-12" id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">    </span><span class="nv">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Did not delete pod: "</span>+p
 <a href="#__codelineno-8-13" id="__codelineno-8-13" name="__codelineno-8-13"></a>!<span class="w"> </span>slack<span class="w"> </span>send-message<span class="w"> </span>--name<span class="w"> </span><span class="s2">"#general"</span><span class="w"> </span>--message<span class="w"> </span>msg
 </code></pre></div>
-<p>Now this is our workflow. No need to replicate the logic and CLIs in a Python or
-JS. What you try is what you get. The CLIs are directly usable in the script
-with common Python syntax and features available in MPL. The same is executed on
-the cloud orchestrator. No need to import any package. Everything you need is
-available in MPL. No code bloat. Even a high schooler can make sense of this
-code. A similar script in Python will be at least 5x longer and overtime will
-have code bloat. </p>
+<p>Note that the exact repl session dump is our workflow. 
+No need to replicate the logic and CLIs in a Python or JS. 
+<em>What you try is what you get</em>. The CLIs are directly usable in the MPL script,
+with common Python syntax and integration features available in MPL, 
+creating workflow has neven beein easier. The same script is executed on 
+the cloud orchestrator as <em>stateful workflow</em>. 
+No need to import any package or worry about 
+persisiting data to recover from failure. Suppose the program dies because of
+infra failure while waiting on <code>confirm</code> command, the data in <code>x</code> is
+automatically stored and the program will be recovered and resumed as if no
+failure happened. </p>
+<p>Everything you need for automation is available in MPL. No code bloat. 
+Even a high schooler can make sense of this code. An equivalent Python script 
+will be at least 5x more complex and harder to develop and maintain.</p>
 <h3 id="deployment">Deployment</h3>
 <p>Deploy it simply as:
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>&gt;<span class="w">  </span>mairactl<span class="w"> </span>playbook<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span><span class="s2">"my-first-workflow"</span><span class="w"> </span>-f<span class="w"> </span>./session.mpl
@@ -3190,6 +3214,33 @@ endpoint, run periodically or manually. The deployed worklow looks as below.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="img/wf1-ss.png"><img alt="Workflow in WebUI" src="img/wf1-ss.png"/></a>
 </p>
 <figcaption>Workflow in WebUI</figcaption>
+</figure>
+<p>If one so desires, the exact workflow can be created via visual UI interface via
+drag-and-drop method as well. Each integration CLI is available as visual block.</p>
+<h3 id="slack">Slack</h3>
+<p>Lets take a quick tour of slack integration. The power of CLI is that it can be
+executed from anywhere including 'slack'. The concept of <em>session</em> is adopted
+in slack as well. So, when we enter a CLI, its executed in same manner as in
+repl shell with all variable state intact. This gives a true <strong>ChatOps</strong>
+capability for the operators.</p>
+<figure>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="img/slack.png"><img alt="CLI in slack" src="img/slack.png"/></a>
+</p>
+<figcaption>CLI execution via Slack </figcaption>
+</figure>
+<p>Apart from CLI execution slack can be used for getting user input or
+notifications. e.g., following CLI.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>opt = json ["disable", "reset password", "ignore"]
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>x = !slack ask --message msg --name slack_user --options opt --timeout "10 s" --retry_interval "5 s"
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>if x == "disable":
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>    ...
+</code></pre></div>
+<p>sends slack message with 3 options and selection is retuerned to the running
+workflow.</p>
+<figure>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="img/slack-ask.png"><img alt="Slack ask command" src="img/slack-ask.png"/></a>
+</p>
+<figcaption>Slack ask command</figcaption>
 </figure>
 </article>
 </div>
