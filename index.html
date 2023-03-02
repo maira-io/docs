@@ -159,8 +159,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#deployment">
-    Deployment
+<a class="md-nav__link" href="#deploying-workflow">
+    Deploying workflow
   </a>
 </li>
 <li class="md-nav__item">
@@ -2981,8 +2981,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#deployment">
-    Deployment
+<a class="md-nav__link" href="#deploying-workflow">
+    Deploying workflow
   </a>
 </li>
 <li class="md-nav__item">
@@ -3001,7 +3001,23 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="introducing-maira">Introducing Maira</h1>
-<p><strong>Maira</strong> is a <strong>low-code workflow</strong> platform built for SRE and Ops teams to help them automate their high-toil <strong>day-2</strong> activities. day-2 of operations includes everything needed to operate a cloud application optimally after the deployment phase is over -- from troubleshooting, security, and compliance to cost control. Using Maira, the operations team (CloudOps, SRE, SecOps NetOps, or anyOps) or developers can rapidly develop sophisticated <strong>human-in-loop</strong> stateful automation <strong>as code</strong>.</p>
+<p><strong>Maira</strong> is a <strong>low-code workflow</strong> platform built for SRE and Ops teams to help them 
+automate their high-toil <strong>day-2</strong> activities. day-2 of operations includes 
+everything needed to operate a cloud application optimally after the deployment phase is 
+over -- from troubleshooting, security, and compliance to cost control. Using Maira, 
+the operations team (CloudOps, SRE, SecOps NetOps, or anyOps) or developers can 
+rapidly develop sophisticated <strong>human-in-loop</strong> stateful automation <strong>as code</strong>.</p>
+<figure>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://uploads-ssl.webflow.com/62f54b2eb9180fd1134fd6bf/63fff179281a4391bfc7ac2f_maira.svg"><img alt="Maira overview" src="https://uploads-ssl.webflow.com/62f54b2eb9180fd1134fd6bf/63fff179281a4391bfc7ac2f_maira.svg"/></a>
+</p>
+<figcaption>Maira overview</figcaption>
+</figure>
+<p>Purpose built as a centralized troubleshooting and automation platform for modern ops
+teams, Maira enables engineers of all skill levels to automate in self service
+manner. It includes an interactive repl, fine grain access control, and observability to 
+help busy ops to shift-left some of their high-toil activities. 
+With just-right privilege control and audit capabilities, the ops team retains complete control 
+and visibility into the production system while enabling their citizen developers to be productive.</p>
 <h2 id="bridging-the-gap-between-dev-friendly-and-low-code">Bridging the gap between Dev-friendly and Low Code.</h2>
 <p>Low-code platforms are typically built for non-developers to enable them 
 to automate a task without involving developers or relying on IT departments. 
@@ -3028,29 +3044,39 @@ operational overhead.</p>
 <h2 id="what-is-a-workflow">What is a workflow?</h2>
 <p><strong>Workflow</strong>, at its core, is a set of steps executed reliably irrespective of how long 
 it takes to complete them. The platform would guarantee durable execution, 
-state recovery, and resumption if the step failed for any reason. This is achieved 
-by implementing the concept of 'durable function' popularized by Azure. There are 
-wa few popular general-purpose workflow platforms available in the market, 
+state recovery, and resumption if the step failed for any reason. This fault tolerance is achieved 
+by implementing the concept of 'durable function' popularized by Azure. The fault-tolerant and
+stateful execution simplifies the life of automation developers. Implementing
+human-in-loop and other long-running steps is just a matter of 1 line code.
+Orchestrator does the heavy lifting of suspending and resuming the workflow
+program while waiting for human input. All in-memory data is automatically
+persisted in durable storage so the program can continue after a fault without the
+developers needing anything special in code. Similarly, there is no need to persist any
+data to make the program fault tolerant.</p>
+<p>There are few popular general-purpose workflow platforms available in the market, 
 like Apache airflow, Netflix conductor, and Temporal. They differ in scalability and 
 abstractions available to the developer. Out of these, we think Temporal is the leading 
-workflow platform for modern developers, so we built the Maira cloud orchestrator with Temporal.</p>
-<p>Apart from constraining UI interface with a workflow platform, developers also require to implement their logic in terms of predefined DAGs. DAGs are a collection of tasks stitched together in a dependency graph. They are either expressed in Python or in a markup language like YAML. This unnatural rethinking in terms of DAG and steps is a significant roadblock in automation velocity and maintainability.</p>
+workflow platform for today's developers, so we built the Maira cloud orchestrator with Temporal.</p>
+<p>Apart from constraining UI interface with a workflow platform, developers also require to implement their 
+logic in terms of predefined DAGs. DAGs are a collection of tasks stitched together in a dependency graph. 
+They are either expressed in Python or in a markup language like YAML. This unnatural rethinking in 
+terms of DAG and steps is a significant roadblock in automation velocity and maintainability.</p>
 <p>Compared to others, Maira provides clear benefits like:</p>
 <ul>
 <li>
-<p>Ability to create workflows from a simple Python like code. No need to think in terms of steps or DAG.</p>
+<p><strong>Create workflows using simple Python like code</strong>. No need to think in terms of steps or DAG.</p>
 </li>
 <li>
-<p>No compromise on the low-code promise for non-developers. Use the drag-and-drop interface if desired.</p>
+<p>No compromise on the <strong>low-code</strong> promise for non-developers. Use the drag-and-drop interface if desired.</p>
 </li>
 <li>
-<p>Self-service secure platform with a rich set of integrations at your fingertips. With apps you like, from k8s, Aws, Datadog, and Elastic to Slack and email. </p>
+<p>Self-service secure platform with a <strong>rich set of integrations</strong> at your fingertips. Interact with apps you already use, from k8s, Aws, Datadog, and Elastic to Slack and Email. </p>
 </li>
 <li>
-<p>Hosted reliable orchestration, on-prem, cloud, or SaaS.</p>
+<p><strong>Managed orchestration</strong>, on-prem, cloud, or SaaS.</p>
 </li>
 <li>
-<p>repl shell to try CLIs and resume any past session.</p>
+<p><strong>Repl shell</strong> to try CLIs &amp; scripts. Resume any past session backed up on cloud.</p>
 </li>
 </ul>
 <h2 id="use-cases">Use cases</h2>
@@ -3069,10 +3095,11 @@ to reach out to us for any automation use cases you can think of.</p>
 <li>Generate periodic reports as needed for compliance and user tracking.</li>
 </ul>
 <h2 id="maira-tour">Maira tour</h2>
-<p>Let's go through a quick tour of the platform by going through typical activities
-carried out by operators. We take a highly made-up example. Here the operator
-wants to delete an experimental pod running if the container image matches a
-pattern. This might be just to do small chaos testing.</p>
+<p>Let's go through a quick tour of the platform by going through a case that may
+carried out by operators. In this case, the operator could be experimenting with
+chaos testing, so he/she wants to periodically delete a pod running container with
+<code>agent</code> in its image name. For this typically following activities will be
+carried out:</p>
 <ul>
 <li>
 <p>interactively root cause and try actions.</p>
@@ -3085,7 +3112,7 @@ pattern. This might be just to do small chaos testing.</p>
 </li>
 </ul>
 <p>Let's go through this journey with Maira. We will assume that Maira is already
-deployed as explained here.</p>
+deployed as explained <a href="https://docs.maira.io/deployment/">here</a>.</p>
 <h3 id="interactive-troubleshooting">Interactive troubleshooting</h3>
 <p>The best way for an operator to troubleshoot the application is via MPL
 repl. This repl shell supports all the available Maira integrations with other
@@ -3204,8 +3231,8 @@ failure happened. </p>
 <p>Everything you need for automation is available in MPL. No code bloat. 
 Even a high schooler can make sense of this code. An equivalent Python script 
 will be at least 5x more complex and harder to develop and maintain.</p>
-<h3 id="deployment">Deployment</h3>
-<p>Deploy it simply as:
+<h3 id="deploying-workflow">Deploying workflow</h3>
+<p>Deploy the avove workflow scripts simply as:
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>&gt;<span class="w">  </span>mairactl<span class="w"> </span>playbook<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span><span class="s2">"my-first-workflow"</span><span class="w"> </span>-f<span class="w"> </span>./session.mpl
 </code></pre></div></p>
 <p>This deployed workflow can be triggered on receving an event on our webhook
@@ -3218,11 +3245,13 @@ endpoint, run periodically or manually. The deployed worklow looks as below.</p>
 <p>If one so desires, the exact workflow can be created via visual UI interface via
 drag-and-drop method as well. Each integration CLI is available as visual block.</p>
 <h3 id="slack">Slack</h3>
-<p>Lets take a quick tour of slack integration. The power of CLI is that it can be
-executed from anywhere including 'slack'. The concept of <em>session</em> is adopted
-in slack as well. So, when we enter a CLI, its executed in same manner as in
-repl shell with all variable state intact. This gives a true <strong>ChatOps</strong>
-capability for the operators.</p>
+<p>Lets take a quick tour of Maira slack integration. Maira's CLIs can be
+executed from any client including 'slack'. The concept of <em>session</em> remains
+intact in slack as well. When the user enters the Command, its executed in same manner as in
+repl shell with all variable state intact. Internally a separate session 
+called <code>slack</code> is used to <em>statefully</em> execute CLIs and MPL scripts.
+This gives a true <strong>ChatOps</strong> capability for the operators. Entire workflow
+can be tried in Slack with collaborative troubleshooting.</p>
 <figure>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="img/slack.png"><img alt="CLI in slack" src="img/slack.png"/></a>
 </p>
