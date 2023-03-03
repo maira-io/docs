@@ -3082,7 +3082,7 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>! k8s update-deployment --labels `{"abc":"def"}` --annotations `{"ghi":"jkl"}` "kafka3"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span> <span class="n">k8s</span> <span class="n">update</span><span class="o">-</span><span class="n">deployment</span> <span class="o">--</span><span class="n">labels</span> <span class="err">`</span><span class="p">{</span><span class="s2">"abc"</span><span class="p">:</span><span class="s2">"def"</span><span class="p">}</span><span class="err">`</span> <span class="o">--</span><span class="n">annotations</span> <span class="err">`</span><span class="p">{</span><span class="s2">"ghi"</span><span class="p">:</span><span class="s2">"jkl"</span><span class="p">}</span><span class="err">`</span> <span class="s2">"kafka3"</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>deployment kafka3 updated

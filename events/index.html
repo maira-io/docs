@@ -2963,7 +2963,6 @@
 <p>When an event is received by Maira, it is converted into a <code>Maira Event</code> and stored in our DataBase. Standard fields such as event name, timestamp, severity etc are extracted from the received event. All other fields are stored as labels in the <code>Event</code> object. When a workflow is executed for an event, this entire object is passed to the workflow as a JSON object. If you want to see the details of the event object that will be passed to the workflow, then click on the event occurrence to see the event few different formats (Human readable, JSON or YAML)</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="event_detail.png"><img alt="Event Details" src="event_detail.png" title="Event Details" width="45%"/></a>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="event_json.png"><img alt="Event JSON" src="event_json.png" title="Event JSON" width="40%"/></a></p>
-<p>With the above event example, the fields can be accessed using mpl JSON syntax. E.g. <code>input.severity</code> will be <code>"warning"</code> and <code>input.labels.consumer</code> will be <code>"consumer-1"</code>.</p>
 </article>
 </div>
 </div>

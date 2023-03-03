@@ -3082,13 +3082,13 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>! prometheus get-label-values --site "localhost" --start_time "2021-10-19T20:10:51.781Z" --end_time "2021-10-20T20:10:51.781Z" --series_selector "up" "instance"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span> <span class="n">prometheus</span> <span class="n">get</span><span class="o">-</span><span class="n">label</span><span class="o">-</span><span class="n">values</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost"</span> <span class="o">--</span><span class="n">start_time</span> <span class="s2">"2021-10-19T20:10:51.781Z"</span> <span class="o">--</span><span class="n">end_time</span> <span class="s2">"2021-10-20T20:10:51.781Z"</span> <span class="o">--</span><span class="n">series_selector</span> <span class="s2">"up"</span> <span class="s2">"instance"</span>
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>{
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>  "status": "success",
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>  "data": ["localhost:1234", "localhost:9090", "localhost:9100"]
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"localhost:1234"</span><span class="p">,</span><span class="w"> </span><span class="s2">"localhost:9090"</span><span class="p">,</span><span class="w"> </span><span class="s2">"localhost:9100"</span><span class="p">]</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">}</span>
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

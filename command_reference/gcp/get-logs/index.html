@@ -3132,43 +3132,43 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>x=! gcp get-logs --site "localhost:8081" --severity "INFO"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">x</span><span class="o">=</span><span class="err">!</span> <span class="n">gcp</span> <span class="n">get</span><span class="o">-</span><span class="n">logs</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost:8081"</span> <span class="o">--</span><span class="n">severity</span> <span class="s2">"INFO"</span>
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>{
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>    "entries": [
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>        {
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>            "logName": "projects/macro-context-293714/logs/stdout",
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>            "resource": {
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>                "type": "k8s_container",
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>                "labels": {
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>                    "cluster_name": "cluster-2",
-<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>                    "container_name": "cassandra",
-<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>                    "location": "us-central1-c",
-<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>                    "namespace_name": "cass-operator",
-<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>                    "pod_name": "cluster1-dc1-default-sts-0",
-<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>                    "project_id": "macro-context-293714"
-<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>                }
-<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>            },
-<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>            "textPayload": "INFO  [nioEventLoopGroup-2-2] 2022-10-14 18:33:07,313 Cli.java:617 - address=/10.44.2.1:41262 url=/api/v0/probes/readiness status=200 OK",
-<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>            "timestamp": "2022-10-14T18:33:07.313548359Z",
-<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>            "receiveTimestamp": "2022-10-14T18:33:10.224351324Z",
-<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>            "severity": "INFO",
-<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>            "insertId": "0opzd7uiep1lo5ao",
-<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>            "labels": {
-<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>                "compute.googleapis.com/resource_name": "gke-cluster-2-default-pool-58fe26d9-qil9",
-<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>                "k8s-pod/app_kubernetes_io/managed-by": "cass-operator",
-<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>                "k8s-pod/cassandra_datastax_com/cluster": "cluster1",
-<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>                "k8s-pod/cassandra_datastax_com/datacenter": "dc1",
-<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>                "k8s-pod/cassandra_datastax_com/node-state": "Started",
-<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>                "k8s-pod/cassandra_datastax_com/rack": "default",
-<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>                "k8s-pod/cassandra_datastax_com/seed-node": "true",
-<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>                "k8s-pod/controller-revision-hash": "cluster1-dc1-default-sts-59c94c67cc",
-<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a>                "k8s-pod/statefulset_kubernetes_io/pod-name": "cluster1-dc1-default-sts-0"
-<a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a>            }
-<a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a>        }
-<a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a>    ]
-<a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a>}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="nt">"entries"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">        </span><span class="p">{</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">            </span><span class="nt">"logName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"projects/macro-context-293714/logs/stdout"</span><span class="p">,</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">            </span><span class="nt">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"k8s_container"</span><span class="p">,</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">                </span><span class="nt">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">                    </span><span class="nt">"cluster_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cluster-2"</span><span class="p">,</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">                    </span><span class="nt">"container_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cassandra"</span><span class="p">,</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">                    </span><span class="nt">"location"</span><span class="p">:</span><span class="w"> </span><span class="s2">"us-central1-c"</span><span class="p">,</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">                    </span><span class="nt">"namespace_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cass-operator"</span><span class="p">,</span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">                    </span><span class="nt">"pod_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cluster1-dc1-default-sts-0"</span><span class="p">,</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">                    </span><span class="nt">"project_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"macro-context-293714"</span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">                </span><span class="p">}</span>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">            </span><span class="p">},</span>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">            </span><span class="nt">"textPayload"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INFO  [nioEventLoopGroup-2-2] 2022-10-14 18:33:07,313 Cli.java:617 - address=/10.44.2.1:41262 url=/api/v0/probes/readiness status=200 OK"</span><span class="p">,</span>
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">            </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-10-14T18:33:07.313548359Z"</span><span class="p">,</span>
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">            </span><span class="nt">"receiveTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-10-14T18:33:10.224351324Z"</span><span class="p">,</span>
+<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">            </span><span class="nt">"severity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INFO"</span><span class="p">,</span>
+<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">            </span><span class="nt">"insertId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0opzd7uiep1lo5ao"</span><span class="p">,</span>
+<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">            </span><span class="nt">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">                </span><span class="nt">"compute.googleapis.com/resource_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gke-cluster-2-default-pool-58fe26d9-qil9"</span><span class="p">,</span>
+<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">                </span><span class="nt">"k8s-pod/app_kubernetes_io/managed-by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cass-operator"</span><span class="p">,</span>
+<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">                </span><span class="nt">"k8s-pod/cassandra_datastax_com/cluster"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cluster1"</span><span class="p">,</span>
+<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">                </span><span class="nt">"k8s-pod/cassandra_datastax_com/datacenter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dc1"</span><span class="p">,</span>
+<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">                </span><span class="nt">"k8s-pod/cassandra_datastax_com/node-state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Started"</span><span class="p">,</span>
+<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">                </span><span class="nt">"k8s-pod/cassandra_datastax_com/rack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span>
+<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">                </span><span class="nt">"k8s-pod/cassandra_datastax_com/seed-node"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span>
+<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">                </span><span class="nt">"k8s-pod/controller-revision-hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cluster1-dc1-default-sts-59c94c67cc"</span><span class="p">,</span>
+<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">                </span><span class="nt">"k8s-pod/statefulset_kubernetes_io/pod-name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cluster1-dc1-default-sts-0"</span>
+<a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">            </span><span class="p">}</span>
+<a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">        </span><span class="p">}</span>
+<a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">    </span><span class="p">]</span>
+<a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="p">}</span>
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

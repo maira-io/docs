@@ -3082,13 +3082,13 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>! send-email --to "varghese@maira.io" --subject "Hello" --body "Hello there"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span> <span class="n">send</span><span class="o">-</span><span class="n">email</span> <span class="o">--</span><span class="n">to</span> <span class="s2">"varghese@maira.io"</span> <span class="o">--</span><span class="n">subject</span> <span class="s2">"Hello"</span> <span class="o">--</span><span class="n">body</span> <span class="s2">"Hello there"</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>Email Sent!
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>! send-email --to "varghese@maira.io" --template "d-09e71fe13d354a90aedf1bb8e733d8c7" `{"name":"Varghese", "message":"Hello"}`
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="err">!</span> <span class="n">send</span><span class="o">-</span><span class="n">email</span> <span class="o">--</span><span class="n">to</span> <span class="s2">"varghese@maira.io"</span> <span class="o">--</span><span class="n">template</span> <span class="s2">"d-09e71fe13d354a90aedf1bb8e733d8c7"</span> <span class="err">`</span><span class="p">{</span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"Varghese"</span><span class="p">,</span> <span class="s2">"message"</span><span class="p">:</span><span class="s2">"Hello"</span><span class="p">}</span><span class="err">`</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>Email Sent!

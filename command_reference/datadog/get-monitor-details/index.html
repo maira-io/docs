@@ -3148,7 +3148,7 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!datadog get-monitor-details
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">datadog</span> <span class="n">get</span><span class="o">-</span><span class="n">monitor</span><span class="o">-</span><span class="n">details</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ID      NAME        TYPE        MESSAGE         PRIORITY    QUERY                                                       CREATOR              
@@ -3158,7 +3158,7 @@ Output:
 <a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>78570   testNames2  query alert create moniotr         3    avg(last_5m):sum:system.net.bytes_rcvd{host:host0} &gt; 100    Avinash Bharti - EXT     
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>!datadog get-monitor-details --monitor 78566
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="err">!</span><span class="n">datadog</span> <span class="n">get</span><span class="o">-</span><span class="n">monitor</span><span class="o">-</span><span class="n">details</span> <span class="o">--</span><span class="n">monitor</span> <span class="mi">78566</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>ID      NAME        TYPE        MESSAGE         PRIORITY    QUERY                                                       CREATOR              

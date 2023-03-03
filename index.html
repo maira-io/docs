@@ -3133,18 +3133,143 @@ apps and makes them available as CLIs. Here we will use <strong>k8s</strong> CLI
 Most of the <em>get</em> commands like the above prints output human-friendly tabular format.
 To programmatically access CLI output fields, traversing JSON is the best way.
 For that, in MPL, any CLI output can be assigned to a variable, as shown below.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="err">!</span><span class="n">k8s</span> <span class="nb">list</span><span class="o">-</span><span class="n">pods</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="nb">print</span> <span class="n">x</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">mpl&gt;</span><span class="w"> </span><span class="err">x</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">!k</span><span class="mi">8</span><span class="err">s</span><span class="w"> </span><span class="err">lis</span><span class="kc">t</span><span class="mi">-</span><span class="err">pods</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="err">mpl&gt;</span><span class="w"> </span><span class="err">pri</span><span class="kc">nt</span><span class="w"> </span><span class="err">x</span>
 <a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">[</span>
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="p">{</span>
-<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="s2">"cluster"</span><span class="p">:</span> <span class="s2">"in-cluster"</span><span class="p">,</span>
-<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>        <span class="s2">"namespace"</span><span class="p">:</span> <span class="s2">"default"</span><span class="p">,</span>
-<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"hello-python-75b7fb8899-n2fzc"</span><span class="p">,</span>
-<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>        <span class="s2">"containers"</span><span class="p">:</span> <span class="p">[</span>
-<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>            <span class="p">{</span>
-<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"hello-python"</span><span class="p">,</span>
-<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>                <span class="s2">"image"</span><span class="p">:</span> <span class="s2">"gcr.io/macro-context-293714/hello-python:latest"</span><span class="p">,</span>
-<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>                <span class="s2">"state"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="nt">"cluster"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-cluster"</span><span class="p">,</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="nt">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello-python-75b7fb8899-n2fzc"</span><span class="p">,</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="nt">"containers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">            </span><span class="p">{</span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello-python"</span><span class="p">,</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">                </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gcr.io/macro-context-293714/hello-python:latest"</span><span class="p">,</span>
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">                </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">                </span><span class="nt">"ready"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">                </span><span class="nt">"StateDetails"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">                    </span><span class="nt">"StateRunning"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">                </span><span class="p">}</span>
+<a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">            </span><span class="p">}</span>
+<a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">        </span><span class="p">],</span>
+<a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">        </span><span class="nt">"node_ip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.128.15.203"</span><span class="p">,</span>
+<a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">        </span><span class="nt">"pod_ip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.44.0.14"</span><span class="p">,</span>
+<a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">        </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a href="#__codelineno-1-22" id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">        </span><span class="nt">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-1-23" id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">            </span><span class="nt">"app"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello-python"</span><span class="p">,</span>
+<a href="#__codelineno-1-24" id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">            </span><span class="nt">"pod-template-hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"75b7fb8899"</span>
+<a href="#__codelineno-1-25" id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">        </span><span class="p">},</span>
+<a href="#__codelineno-1-26" id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">        </span><span class="nt">"pod_conditions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-1-27" id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">            </span><span class="p">{</span>
+<a href="#__codelineno-1-28" id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a href="#__codelineno-1-29" id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<a href="#__codelineno-1-30" id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">            </span><span class="p">},</span>
+<a href="#__codelineno-1-31" id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">            </span><span class="p">{</span>
+<a href="#__codelineno-1-32" id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a href="#__codelineno-1-33" id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<a href="#__codelineno-1-34" id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">            </span><span class="p">},</span>
+<a href="#__codelineno-1-35" id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="w">            </span><span class="p">{</span>
+<a href="#__codelineno-1-36" id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a href="#__codelineno-1-37" id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<a href="#__codelineno-1-38" id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="w">            </span><span class="p">},</span>
+<a href="#__codelineno-1-39" id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="w">            </span><span class="p">{</span>
+<a href="#__codelineno-1-40" id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<a href="#__codelineno-1-41" id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<a href="#__codelineno-1-42" id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="w">            </span><span class="p">}</span>
+<a href="#__codelineno-1-43" id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="w">        </span><span class="p">],</span>
+<a href="#__codelineno-1-44" id="__codelineno-1-44" name="__codelineno-1-44"></a><span class="w">        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Running"</span><span class="p">,</span>
+<a href="#__codelineno-1-45" id="__codelineno-1-45" name="__codelineno-1-45"></a><span class="w">        </span><span class="nt">"start_time_millis"</span><span class="p">:</span><span class="w"> </span><span class="mi">1677207124000</span>
+<a href="#__codelineno-1-46" id="__codelineno-1-46" name="__codelineno-1-46"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-1-47" id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-1-48" id="__codelineno-1-48" name="__codelineno-1-48"></a><span class="w">        </span><span class="nt">"cluster"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-cluster"</span><span class="p">,</span>
+<a href="#__codelineno-1-49" id="__codelineno-1-49" name="__codelineno-1-49"></a><span class="w">        </span><span class="nt">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span>
+<a href="#__codelineno-1-50" id="__codelineno-1-50" name="__codelineno-1-50"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello-python-75b7fb8899-qz5d7"</span><span class="p">,</span>
+<a href="#__codelineno-1-51" id="__codelineno-1-51" name="__codelineno-1-51"></a><span class="w">        </span><span class="nt">"containers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-1-52" id="__codelineno-1-52" name="__codelineno-1-52"></a><span class="w">            </span><span class="p">{</span>
+<a href="#__codelineno-1-53" id="__codelineno-1-53" name="__codelineno-1-53"></a><span class="w">                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello-python"</span><span class="p">,</span>
+<a href="#__codelineno-1-54" id="__codelineno-1-54" name="__codelineno-1-54"></a><span class="w">                </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gcr.io/macro-context-293714/hello-python:latest"</span><span class="p">,</span>
+<a href="#__codelineno-1-55" id="__codelineno-1-55" name="__codelineno-1-55"></a><span class="w">                </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a href="#__codelineno-1-56" id="__codelineno-1-56" name="__codelineno-1-56"></a><span class="w">                </span><span class="nt">"ready"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a href="#__codelineno-1-57" id="__codelineno-1-57" name="__codelineno-1-57"></a><span class="w">                </span><span class="nt">"StateDetails"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-1-58" id="__codelineno-1-58" name="__codelineno-1-58"></a><span class="w">                    </span><span class="nt">"StateRunning"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<a href="#__codelineno-1-59" id="__codelineno-1-59" name="__codelineno-1-59"></a><span class="w">                </span><span class="p">}</span>
+<a href="#__codelineno-1-60" id="__codelineno-1-60" name="__codelineno-1-60"></a><span class="w">            </span><span class="p">}</span>
+<a href="#__codelineno-1-61" id="__codelineno-1-61" name="__codelineno-1-61"></a><span class="w">        </span><span class="p">],</span>
+<a href="#__codelineno-1-62" id="__codelineno-1-62" name="__codelineno-1-62"></a><span class="w">        </span><span class="nt">"node_ip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.128.15.201"</span><span class="p">,</span>
+<a href="#__codelineno-1-63" id="__codelineno-1-63" name="__codelineno-1-63"></a><span class="w">        </span><span class="nt">"pod_ip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.44.3.4"</span><span class="p">,</span>
+<a href="#__codelineno-1-64" id="__codelineno-1-64" name="__codelineno-1-64"></a><span class="w">        </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a href="#__codelineno-1-65" id="__codelineno-1-65" name="__codelineno-1-65"></a><span class="w">        </span><span class="nt">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-1-66" id="__codelineno-1-66" name="__codelineno-1-66"></a><span class="w">            </span><span class="nt">"app"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello-python"</span><span class="p">,</span>
+<a href="#__codelineno-1-67" id="__codelineno-1-67" name="__codelineno-1-67"></a><span class="w">            </span><span class="nt">"pod-template-hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"75b7fb8899"</span>
+<a href="#__codelineno-1-68" id="__codelineno-1-68" name="__codelineno-1-68"></a><span class="w">        </span><span class="p">},</span>
+<a href="#__codelineno-1-69" id="__codelineno-1-69" name="__codelineno-1-69"></a><span class="w">        </span><span class="nt">"pod_conditions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-1-70" id="__codelineno-1-70" name="__codelineno-1-70"></a><span class="w">            </span><span class="p">{</span>
+<a href="#__codelineno-1-71" id="__codelineno-1-71" name="__codelineno-1-71"></a><span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a href="#__codelineno-1-72" id="__codelineno-1-72" name="__codelineno-1-72"></a><span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<a href="#__codelineno-1-73" id="__codelineno-1-73" name="__codelineno-1-73"></a><span class="w">            </span><span class="p">},</span>
+<a href="#__codelineno-1-74" id="__codelineno-1-74" name="__codelineno-1-74"></a><span class="w">            </span><span class="p">{</span>
+<a href="#__codelineno-1-75" id="__codelineno-1-75" name="__codelineno-1-75"></a><span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a href="#__codelineno-1-76" id="__codelineno-1-76" name="__codelineno-1-76"></a><span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<a href="#__codelineno-1-77" id="__codelineno-1-77" name="__codelineno-1-77"></a><span class="w">            </span><span class="p">},</span>
+<a href="#__codelineno-1-78" id="__codelineno-1-78" name="__codelineno-1-78"></a><span class="w">            </span><span class="p">{</span>
+<a href="#__codelineno-1-79" id="__codelineno-1-79" name="__codelineno-1-79"></a><span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a href="#__codelineno-1-80" id="__codelineno-1-80" name="__codelineno-1-80"></a><span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<a href="#__codelineno-1-81" id="__codelineno-1-81" name="__codelineno-1-81"></a><span class="w">            </span><span class="p">},</span>
+<a href="#__codelineno-1-82" id="__codelineno-1-82" name="__codelineno-1-82"></a><span class="w">            </span><span class="p">{</span>
+<a href="#__codelineno-1-83" id="__codelineno-1-83" name="__codelineno-1-83"></a><span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<a href="#__codelineno-1-84" id="__codelineno-1-84" name="__codelineno-1-84"></a><span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<a href="#__codelineno-1-85" id="__codelineno-1-85" name="__codelineno-1-85"></a><span class="w">            </span><span class="p">}</span>
+<a href="#__codelineno-1-86" id="__codelineno-1-86" name="__codelineno-1-86"></a><span class="w">        </span><span class="p">],</span>
+<a href="#__codelineno-1-87" id="__codelineno-1-87" name="__codelineno-1-87"></a><span class="w">        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Running"</span><span class="p">,</span>
+<a href="#__codelineno-1-88" id="__codelineno-1-88" name="__codelineno-1-88"></a><span class="w">        </span><span class="nt">"start_time_millis"</span><span class="p">:</span><span class="w"> </span><span class="mi">1677206678000</span>
+<a href="#__codelineno-1-89" id="__codelineno-1-89" name="__codelineno-1-89"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-1-90" id="__codelineno-1-90" name="__codelineno-1-90"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-1-91" id="__codelineno-1-91" name="__codelineno-1-91"></a><span class="w">        </span><span class="nt">"cluster"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-cluster"</span><span class="p">,</span>
+<a href="#__codelineno-1-92" id="__codelineno-1-92" name="__codelineno-1-92"></a><span class="w">        </span><span class="nt">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span>
+<a href="#__codelineno-1-93" id="__codelineno-1-93" name="__codelineno-1-93"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"r1-maira-agent-69c87875b9-pq2dd"</span><span class="p">,</span>
+<a href="#__codelineno-1-94" id="__codelineno-1-94" name="__codelineno-1-94"></a><span class="w">        </span><span class="nt">"containers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-1-95" id="__codelineno-1-95" name="__codelineno-1-95"></a><span class="w">            </span><span class="p">{</span>
+<a href="#__codelineno-1-96" id="__codelineno-1-96" name="__codelineno-1-96"></a><span class="hll"><span class="w">                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"maira-gateway"</span><span class="p">,</span>
+</span><a href="#__codelineno-1-97" id="__codelineno-1-97" name="__codelineno-1-97"></a><span class="hll"><span class="w">                </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gcr.io/maira-public/maira-agent:latest"</span><span class="p">,</span>
+</span><a href="#__codelineno-1-98" id="__codelineno-1-98" name="__codelineno-1-98"></a><span class="w">                </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a href="#__codelineno-1-99" id="__codelineno-1-99" name="__codelineno-1-99"></a><span class="w">                </span><span class="nt">"ready"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a href="#__codelineno-1-100" id="__codelineno-1-100" name="__codelineno-1-100"></a><span class="w">                </span><span class="nt">"StateDetails"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-1-101" id="__codelineno-1-101" name="__codelineno-1-101"></a><span class="w">                    </span><span class="nt">"StateRunning"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<a href="#__codelineno-1-102" id="__codelineno-1-102" name="__codelineno-1-102"></a><span class="w">                </span><span class="p">}</span>
+<a href="#__codelineno-1-103" id="__codelineno-1-103" name="__codelineno-1-103"></a><span class="w">            </span><span class="p">}</span>
+<a href="#__codelineno-1-104" id="__codelineno-1-104" name="__codelineno-1-104"></a><span class="w">        </span><span class="p">],</span>
+<a href="#__codelineno-1-105" id="__codelineno-1-105" name="__codelineno-1-105"></a><span class="w">        </span><span class="nt">"node_ip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.128.15.202"</span><span class="p">,</span>
+<a href="#__codelineno-1-106" id="__codelineno-1-106" name="__codelineno-1-106"></a><span class="w">        </span><span class="nt">"pod_ip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.44.2.4"</span><span class="p">,</span>
+<a href="#__codelineno-1-107" id="__codelineno-1-107" name="__codelineno-1-107"></a><span class="w">        </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a href="#__codelineno-1-108" id="__codelineno-1-108" name="__codelineno-1-108"></a><span class="w">        </span><span class="nt">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-1-109" id="__codelineno-1-109" name="__codelineno-1-109"></a><span class="w">            </span><span class="nt">"app.kubernetes.io/instance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"r1"</span><span class="p">,</span>
+<a href="#__codelineno-1-110" id="__codelineno-1-110" name="__codelineno-1-110"></a><span class="w">            </span><span class="nt">"app.kubernetes.io/name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"maira-agent"</span><span class="p">,</span>
+<a href="#__codelineno-1-111" id="__codelineno-1-111" name="__codelineno-1-111"></a><span class="w">            </span><span class="nt">"pod-template-hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69c87875b9"</span>
+<a href="#__codelineno-1-112" id="__codelineno-1-112" name="__codelineno-1-112"></a><span class="w">        </span><span class="p">},</span>
+<a href="#__codelineno-1-113" id="__codelineno-1-113" name="__codelineno-1-113"></a><span class="w">        </span><span class="nt">"annotations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-1-114" id="__codelineno-1-114" name="__codelineno-1-114"></a><span class="w">            </span><span class="nt">"kubectl.kubernetes.io/restartedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-11-09T12:50:19-08:00"</span>
+<a href="#__codelineno-1-115" id="__codelineno-1-115" name="__codelineno-1-115"></a><span class="w">        </span><span class="p">},</span>
+<a href="#__codelineno-1-116" id="__codelineno-1-116" name="__codelineno-1-116"></a><span class="w">        </span><span class="nt">"pod_conditions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-1-117" id="__codelineno-1-117" name="__codelineno-1-117"></a><span class="w">            </span><span class="p">{</span>
+<a href="#__codelineno-1-118" id="__codelineno-1-118" name="__codelineno-1-118"></a><span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a href="#__codelineno-1-119" id="__codelineno-1-119" name="__codelineno-1-119"></a><span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<a href="#__codelineno-1-120" id="__codelineno-1-120" name="__codelineno-1-120"></a><span class="w">            </span><span class="p">},</span>
+<a href="#__codelineno-1-121" id="__codelineno-1-121" name="__codelineno-1-121"></a><span class="w">            </span><span class="p">{</span>
+<a href="#__codelineno-1-122" id="__codelineno-1-122" name="__codelineno-1-122"></a><span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a href="#__codelineno-1-123" id="__codelineno-1-123" name="__codelineno-1-123"></a><span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<a href="#__codelineno-1-124" id="__codelineno-1-124" name="__codelineno-1-124"></a><span class="w">            </span><span class="p">},</span>
+<a href="#__codelineno-1-125" id="__codelineno-1-125" name="__codelineno-1-125"></a><span class="w">            </span><span class="p">{</span>
+<a href="#__codelineno-1-126" id="__codelineno-1-126" name="__codelineno-1-126"></a><span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a href="#__codelineno-1-127" id="__codelineno-1-127" name="__codelineno-1-127"></a><span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<a href="#__codelineno-1-128" id="__codelineno-1-128" name="__codelineno-1-128"></a><span class="w">            </span><span class="p">},</span>
+<a href="#__codelineno-1-129" id="__codelineno-1-129" name="__codelineno-1-129"></a><span class="w">            </span><span class="p">{</span>
+<a href="#__codelineno-1-130" id="__codelineno-1-130" name="__codelineno-1-130"></a><span class="w">                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<a href="#__codelineno-1-131" id="__codelineno-1-131" name="__codelineno-1-131"></a><span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<a href="#__codelineno-1-132" id="__codelineno-1-132" name="__codelineno-1-132"></a><span class="w">            </span><span class="p">}</span>
+<a href="#__codelineno-1-133" id="__codelineno-1-133" name="__codelineno-1-133"></a><span class="w">        </span><span class="p">],</span>
+<a href="#__codelineno-1-134" id="__codelineno-1-134" name="__codelineno-1-134"></a><span class="w">        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Running"</span><span class="p">,</span>
+<a href="#__codelineno-1-135" id="__codelineno-1-135" name="__codelineno-1-135"></a><span class="w">        </span><span class="nt">"start_time_millis"</span><span class="p">:</span><span class="w"> </span><span class="mi">1677206896000</span>
+<a href="#__codelineno-1-136" id="__codelineno-1-136" name="__codelineno-1-136"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-1-137" id="__codelineno-1-137" name="__codelineno-1-137"></a><span class="p">]</span>
 </code></pre></div>
 <p>Note that when CLI output is assigned, the variable (<code>x</code> in above example) is assigned a
 JSON object as receicved from backend CLI implementation. <em>JSON is first class object type in MPL.</em>
@@ -3209,19 +3334,19 @@ are intact. (Note: <code>-r</code> resumes the previous session if no session-id
 <p>Next we can add few commands if desired to session and then use <code>/save-session</code> 
 command to save the session in local file and edit it in a text editor/IDE. 
 Following is edites session file to be deployed as <strong>workflow</strong>.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>&gt;<span class="w"> </span>cat<span class="w"> </span>session.mpl
-<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>!k8s<span class="w"> </span>list-pods
-<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="nv">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>x<span class="o">[]</span>.containers<span class="o">[</span>?<span class="w"> </span>.image<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sb">`</span>*agent*<span class="sb">`</span><span class="o">]</span>.name
-<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="nv">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"can i delete pod "</span><span class="w"> </span>+<span class="w"> </span>p
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="o">&gt;</span> <span class="n">cat</span> <span class="n">session</span><span class="o">.</span><span class="n">mpl</span>
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">x</span> <span class="o">=</span> <span class="err">!</span><span class="n">k8s</span> <span class="nb">list</span><span class="o">-</span><span class="n">pods</span>
+<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">p</span> <span class="o">=</span> <span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">containers</span><span class="p">[</span><span class="err">?</span> <span class="o">.</span><span class="n">image</span> <span class="o">==</span> <span class="err">`</span><span class="o">*</span><span class="n">agent</span><span class="o">*</span><span class="err">`</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">msg</span> <span class="o">=</span> <span class="s2">"can i delete pod "</span> <span class="o">+</span> <span class="n">p</span>
 <a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="c1"># @label: Got approval?</span>
-<a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="nv">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>!<span class="w"> </span>confirm<span class="w"> </span>message
-<a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="nv">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Deleted pod: "</span>+p
+<a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="n">z</span> <span class="o">=</span> <span class="err">!</span> <span class="n">confirm</span> <span class="n">message</span>
+<a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="n">msg</span> <span class="o">=</span> <span class="s2">"Deleted pod: "</span><span class="o">+</span><span class="n">p</span>
 <a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="c1"># @label: If approved?</span>
-<a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="k">if</span><span class="w"> </span><span class="nv">z</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"confirmed"</span>:
-<a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">    </span>!<span class="w"> </span>k8s<span class="w"> </span>delete-pod<span class="w"> </span>p
-<a href="#__codelineno-8-11" id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="k">else</span>:
-<a href="#__codelineno-8-12" id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">    </span><span class="nv">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Did not delete pod: "</span>+p
-<a href="#__codelineno-8-13" id="__codelineno-8-13" name="__codelineno-8-13"></a>!<span class="w"> </span>slack<span class="w"> </span>send-message<span class="w"> </span>--name<span class="w"> </span><span class="s2">"#general"</span><span class="w"> </span>--message<span class="w"> </span>msg
+<a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="k">if</span> <span class="n">z</span> <span class="o">==</span> <span class="s2">"confirmed"</span><span class="p">:</span>
+<a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a>    <span class="err">!</span> <span class="n">k8s</span> <span class="n">delete</span><span class="o">-</span><span class="n">pod</span> <span class="n">p</span>
+<a href="#__codelineno-8-11" id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="k">else</span><span class="p">:</span>
+<a href="#__codelineno-8-12" id="__codelineno-8-12" name="__codelineno-8-12"></a>    <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Did not delete pod: "</span><span class="o">+</span><span class="n">p</span>
+<a href="#__codelineno-8-13" id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="err">!</span> <span class="n">slack</span> <span class="n">send</span><span class="o">-</span><span class="n">message</span> <span class="o">--</span><span class="n">name</span> <span class="s2">"#general"</span> <span class="o">--</span><span class="n">message</span> <span class="n">msg</span>
 </code></pre></div>
 <p>Note that the exact repl session dump is our workflow. 
 No need to replicate the logic and CLIs in a Python or JS. 
@@ -3238,7 +3363,7 @@ failure happened. </p>
 Even a high schooler can make sense of this code. An equivalent Python script 
 will be at least 5x more complex and harder to develop and maintain.</p>
 <h3 id="deploying-workflow">Deploying workflow</h3>
-<p>Deploy the avove workflow scripts simply as:
+<p>Deploy the above workflow scripts simply as:
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>&gt;<span class="w">  </span>mairactl<span class="w"> </span>playbook<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span><span class="s2">"my-first-workflow"</span><span class="w"> </span>-f<span class="w"> </span>./session.mpl
 </code></pre></div></p>
 <p>This deployed workflow can be triggered on receving an event on our webhook
@@ -3263,14 +3388,30 @@ can be tried in Slack with collaborative troubleshooting.</p>
 </p>
 <figcaption>CLI execution via Slack </figcaption>
 </figure>
-<p>Apart from CLI execution slack can be used for getting user input or
-notifications. e.g., following CLI.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>opt = json ["disable", "reset password", "ignore"]
-<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>x = !slack ask --message msg --name slack_user --options opt --timeout "10 s" --retry_interval "5 s"
-<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>if x == "disable":
-<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>    ...
+<p>Internally Maira resumes the session before executing any 
+command user enters in salck.  Infact the session called <em>slack</em> can be 
+resumed in mpl console with all program state intact. </p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="o">&gt;</span> <span class="n">mpl</span> <span class="o">-</span><span class="n">r</span> <span class="n">slack</span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">Resumed</span> <span class="n">session</span><span class="p">:</span> <span class="n">slack</span>
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="o">/</span><span class="n">history</span>
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>   <span class="mi">1</span>  <span class="err">!</span><span class="n">k8s</span> <span class="nb">list</span><span class="o">-</span><span class="n">pods</span>
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>   <span class="mi">2</span>  <span class="n">x</span> <span class="o">=</span> <span class="err">!</span><span class="n">k8s</span> <span class="nb">list</span><span class="o">-</span><span class="n">pods</span>
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>   <span class="mi">3</span>  <span class="nb">print</span> <span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">containers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>
+<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="o">/</span><span class="err">!</span><span class="mi">3</span>
+<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="nb">print</span> <span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">containers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="s2">"hello-python"</span><span class="p">,</span>
+<a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="s2">"hello-python"</span><span class="p">,</span>
+<a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="s2">"maira-gateway"</span>
 </code></pre></div>
-<p>sends slack message with 3 options and selection is retuerned to the running
+<p>Apart from CLI execution slack can be used for getting human input, surveys and
+notifications. e.g., following CLI.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">opt</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[</span><span class="s2">"disable"</span><span class="p">,</span> <span class="s2">"reset password"</span><span class="p">,</span> <span class="s2">"ignore"</span><span class="p">]</span>
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">x</span> <span class="o">=</span> <span class="err">!</span><span class="n">slack</span> <span class="n">ask</span> <span class="o">--</span><span class="n">message</span> <span class="n">msg</span> <span class="o">--</span><span class="n">name</span> <span class="n">slack_user</span> <span class="o">--</span><span class="n">options</span> <span class="n">opt</span> <span class="o">--</span><span class="n">timeout</span> <span class="s2">"10 s"</span> <span class="o">--</span><span class="n">retry_interval</span> <span class="s2">"5 s"</span>
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">"disable"</span><span class="p">:</span>
+<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a>    <span class="o">...</span>
+</code></pre></div>
+<p>Above CLI sends a slack message with 3 options and selection is retuerned to the running
 workflow.</p>
 <figure>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="img/slack-ask.png"><img alt="Slack ask command" src="img/slack-ask.png"/></a>

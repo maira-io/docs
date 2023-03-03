@@ -3082,7 +3082,7 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>! kafka create-partitions --site "localhost" "test-topic-1" --total_partition_count 5 --assignment ‘[[1,2],[2,3]]’
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span> <span class="n">kafka</span> <span class="n">create</span><span class="o">-</span><span class="n">partitions</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost"</span> <span class="s2">"test-topic-1"</span> <span class="o">--</span><span class="n">total_partition_count</span> <span class="mi">5</span> <span class="o">--</span><span class="n">assignment</span> <span class="err">‘</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span><span class="err">’</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>Partitions for the topic test-topic-1 created

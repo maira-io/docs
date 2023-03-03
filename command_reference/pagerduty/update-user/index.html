@@ -3102,14 +3102,14 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!pagerduty update-user --site "localhost:8081" --user_id "PAGNO81" --name "AB" --email "testMail@email.com"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">pagerduty</span> <span class="n">update</span><span class="o">-</span><span class="n">user</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost:8081"</span> <span class="o">--</span><span class="n">user_id</span> <span class="s2">"PAGNO81"</span> <span class="o">--</span><span class="n">name</span> <span class="s2">"AB"</span> <span class="o">--</span><span class="n">email</span> <span class="s2">"testMail@email.com"</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ID      NAME    EMAIL               ROLE    TEAMS   CONTACT-METHOD  NOTIFICATION-RULE 
 <a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>PAGNO81 AB      testmail@email.com  user    PPGILFO P4JILQW         PIIJ9MO, PMV7NBB 
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>x= !pagerduty update-user --site "localhost:8081" --user_id "PAGNO81" --name "AB" --email "testMail@email.com"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">x</span><span class="o">=</span> <span class="err">!</span><span class="n">pagerduty</span> <span class="n">update</span><span class="o">-</span><span class="n">user</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost:8081"</span> <span class="o">--</span><span class="n">user_id</span> <span class="s2">"PAGNO81"</span> <span class="o">--</span><span class="n">name</span> <span class="s2">"AB"</span> <span class="o">--</span><span class="n">email</span> <span class="s2">"testMail@email.com"</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>{

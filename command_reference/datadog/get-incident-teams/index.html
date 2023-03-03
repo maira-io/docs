@@ -3086,7 +3086,7 @@
           allowed values: <code>users, attachments</code></p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!datadog get-incident-teams
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">datadog</span> <span class="n">get</span><span class="o">-</span><span class="n">incident</span><span class="o">-</span><span class="n">teams</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ID                                      NAME                CREATOR                              
@@ -3094,7 +3094,7 @@ Output:
 <a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>0cfcc7b1-4462-5b74-8b4a-28528c442701    testTeam            0a587d98-0727-41fc-b926-027cb686ec8d    
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>!datadog get-incident-teams --team "f616dd89-1421-5daf-ac2c-6795ee48b1a4"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="err">!</span><span class="n">datadog</span> <span class="n">get</span><span class="o">-</span><span class="n">incident</span><span class="o">-</span><span class="n">teams</span> <span class="o">--</span><span class="n">team</span> <span class="s2">"f616dd89-1421-5daf-ac2c-6795ee48b1a4"</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>ID                                      NAME                CREATOR                              

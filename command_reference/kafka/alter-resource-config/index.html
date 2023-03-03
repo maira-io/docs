@@ -3082,7 +3082,7 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>! kafka alter-resource-config --site "localhost" --resource_type "TopicResource" --resource_name "test-topic-1" `{"file.delete.delay.ms":"10000", "delete.retention.ms":"1000000"}`
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span> <span class="n">kafka</span> <span class="n">alter</span><span class="o">-</span><span class="n">resource</span><span class="o">-</span><span class="n">config</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost"</span> <span class="o">--</span><span class="n">resource_type</span> <span class="s2">"TopicResource"</span> <span class="o">--</span><span class="n">resource_name</span> <span class="s2">"test-topic-1"</span> <span class="err">`</span><span class="p">{</span><span class="s2">"file.delete.delay.ms"</span><span class="p">:</span><span class="s2">"10000"</span><span class="p">,</span> <span class="s2">"delete.retention.ms"</span><span class="p">:</span><span class="s2">"1000000"</span><span class="p">}</span><span class="err">`</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>Config for the resource test-topic-1 updated

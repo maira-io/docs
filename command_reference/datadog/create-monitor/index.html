@@ -3116,7 +3116,7 @@
           allowed values: <code>composite, event alert, log alert, metric alert, process alert, query alert, rum alert, service check, synthetics alert, trace-analytics alert, slo alert, event-v2 alert, audit alert, ci-pipelines alert, ci-tests alert, error-tracking alert</code></p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!datadog create-monitor --query "avg(last_5m):sum:system.net.bytes_rcvd{host:host0} &gt; 100" --type "query alert" --message "create moniotr" --name "testNames2" --tags "testta" --priority 3
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">datadog</span> <span class="n">create</span><span class="o">-</span><span class="n">monitor</span> <span class="o">--</span><span class="n">query</span> <span class="s2">"avg(last_5m):sum:system.net.bytes_rcvd{host:host0} &gt; 100"</span> <span class="o">--</span><span class="nb">type</span> <span class="s2">"query alert"</span> <span class="o">--</span><span class="n">message</span> <span class="s2">"create moniotr"</span> <span class="o">--</span><span class="n">name</span> <span class="s2">"testNames2"</span> <span class="o">--</span><span class="n">tags</span> <span class="s2">"testta"</span> <span class="o">--</span><span class="n">priority</span> <span class="mi">3</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ID      ORG-ID      NAME        MESSAGE         TYPE        
