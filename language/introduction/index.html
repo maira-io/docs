@@ -2908,17 +2908,23 @@
 <h1 id="introduction">Introduction</h1>
 <p>Today, a general-purpose language, like Python, Javascript, or plain old shell scripts, is the tool of choice for automation. These scripts are invariably hard to create and maintain. The developer is responsible for complex error checking, retries, and state management. Even then, the resulting apps are stateless and non-fault tolerant. Depending on the organizational policies and language choices, each team may adopt a different language, further complicating the automation environment with the proliferation of languages and packages, resulting in a maintenance nightmare for the Ops team on the front lines.</p>
 <p><em>Mpl</em> (Maira playbook language) is a Domain Specific Language purpose-built to help Ops quickly build automated workflows and micro applications. MPL largely retains the Python syntax, enabling the ops team to rapidly develop <em>stateful workflows</em> orchestrated in Maira. Unlike other products that use YAML or complex DAGs representation for workflows, MPL is simple, maintainable code with a low learning curve. Mpl's core mission is to reduce code bloat for ops engineers while maintaining the flexibility and familiarity of a language like Python. One can execute these Mpl apps independently in Repl or through the Maira orchestration platform. The developer writes simple monolith imperative code in MPL and gets stateful, fault-tolerant execution with the Maira orchestrator built on Temporal, the industry-leading workflow platform.</p>
-<p>Cloud operators realize that automated workflows developed in languages like Python quickly become code bloat. While choosing a dev environment for automation, 'less is more.' Often package bloats and dependencies are unnecessary evil for Ops. Mpl is a Python-like language designed to power 'low code' automated workflows. These workflows can also be created and visualized in UI, enabling even non-programmers to deploy their workflows independently. Mpl combines the power of the command-line interface (CLI) with an easy language to stitch these commands into a workflow. CLIs let users try steps in a Repl and use the same steps and the business logic in the deployed workflow. Unlike a general-purpose language environment, automation is not a separate effort in Mpl. Developers do not need to undertake an independent project to convert the CLIs and business logic that worked in a manual debug session to Python code. With Mpl, the final workflow is the CLIs and transformation logic used in Repl. Mpl enables the entire team to work in a minimal environment avoiding code bloat and high maintenance cost.</p>
+<p>Cloud operators realize that automated workflows developed in languages like Python quickly become code bloat. While choosing a dev environment for automation, 'less is more.' Package bloats and dependency proliferation are unnecessary burden. Mpl is a Python-like language designed to power 'low code' automated workflows. Language has everything built-in to create automation. These workflows can also be created and visualized in UI, enabling even non-programmers to develop their workflows independently. Mpl combines the power of the command-line interface (CLI) with an easy language to stitch these commands into a workflow. CLIs let users try steps in a Repl and use the same steps and the business logic in the workflow. These CLIs outputs in <em>user friendly tabular format</em>. Unlike a general-purpose language case, automation is not a separate effort in Mpl. Developers do not need to undertake an independent project to convert the CLIs and business logic that worked in a manual debug session to Python for automation to work. With Mpl, the final workflow is the CLIs and the transformation logic you tried in Repl. Mpl enables the entire team to work in a minimal environment avoiding code bloat and high maintenance cost.</p>
 <p>Mpl is designed to be independent of the target application. Developers can use Mpl to create workflows for employee onboarding to vendor management. The only dependency is the integration commands available in Maira. MPL has follwoing benefits. (For details, check this blog <a href="https://medium.com/maira-io/why-do-we-need-a-dsl-for-low-code-1e353a89077a">post</a>).</p>
 <ul>
 <li>
 <p>Stateful exeution of Monolith Python like code. Easily create human-in-loop automation. In memory data is automatically persisted in real time. No need to store state in external db. </p>
 </li>
 <li>
-<p>Practically no error checking as orchestrator has retries built in. Workflows can be resumed in case of failures. </p>
+<p>Practically no error checking needed in code as orchestrator has retries built in. Workflows can be resumed in case of failures. </p>
 </li>
 <li>
-<p>Use integration CLIs in MPL as is. Better readability and reusability while troubleshooting.</p>
+<p>No need to worry about steps or data sharing between steps. Just write simple monolith script. The platform takes care of stateful executition.</p>
+</li>
+<li>
+<p>Everything needed to transform data like JSON filtering, comprehension, time etc is supported in the DSL. </p>
+</li>
+<li>
+<p>Use integration CLIs in MPL as is. Better readability and reusability while troubleshooting. CLI command completion.</p>
 </li>
 <li>
 <p>2 way translation from visual code block to MPL code. Best of both the worlds. Empower expert developers to non-coders.</p>
@@ -2933,10 +2939,7 @@
 <p>Deep audit of all actions.</p>
 </li>
 <li>
-<p>Rbac not only at workflow level but at each CLI and resource level.</p>
-</li>
-<li>
-<p>Everything needed to transform CLI data like JSON filtering, comprehension, time etc is supported in the DSL. </p>
+<p>Rbac at each CLI and resource level.</p>
 </li>
 <li>
 <p>Bring your own integration CLIs. Any mission critical script can be easily resued in Maira.</p>
