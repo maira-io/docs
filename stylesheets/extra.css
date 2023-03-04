@@ -23,10 +23,6 @@
   color: #D82120;
 }
 
-.md-typeset pre > code {
-    max-height: var(--md-codeblock-height, 20rem); 
-}
-
 .md-typeset h1 {
     color: #00013a;
     font-weight: 500;
