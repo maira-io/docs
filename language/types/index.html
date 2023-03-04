@@ -3479,6 +3479,46 @@ Time object can be added or subtracted with duration. e.g.,</p>
 <a href="#__codelineno-69-3" id="__codelineno-69-3" name="__codelineno-69-3"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="s2">"aaC"</span><span class="p">,</span><span class="n">true</span><span class="p">]</span>
 </code></pre></div></p>
 </li>
+<li>
+<p>to_keyval: to_keyval returns a new Json with  map entries changed to array of tuple, <code>"key":&lt;key&gt;</code> &amp; <code>"value":&lt;value&gt;</code>. This is useful if one wants to access the "key" of the Json map. e.g.,</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-70-1" id="__codelineno-70-1" name="__codelineno-70-1"></a><span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<a href="#__codelineno-70-2" id="__codelineno-70-2" name="__codelineno-70-2"></a><span class="n">y</span><span class="o">.</span><span class="n">to_keyval</span><span class="p">()</span>
+</code></pre></div>
+<p>output is:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-71-1" id="__codelineno-71-1" name="__codelineno-71-1"></a><span class="p">[{</span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"value"</span><span class="p">:</span><span class="mi">1</span><span class="p">},{</span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"value"</span><span class="p">:</span><span class="mi">2</span><span class="p">}]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-72-1" id="__codelineno-72-1" name="__codelineno-72-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[{</span><span class="s2">"n1"</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="s2">"n2"</span><span class="p">:</span><span class="mi">2</span><span class="p">}]</span>
+<a href="#__codelineno-72-2" id="__codelineno-72-2" name="__codelineno-72-2"></a><span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">to_keyval</span><span class="p">()</span>
+</code></pre></div>
+<p>output is a Json list:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-73-1" id="__codelineno-73-1" name="__codelineno-73-1"></a><span class="p">{</span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"n1"</span><span class="p">,</span><span class="s2">"value"</span><span class="p">:</span><span class="mi">1</span><span class="p">},{</span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"n2"</span><span class="p">,</span><span class="s2">"value"</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+</code></pre></div>
+<p>To get Json list of all keys.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-74-1" id="__codelineno-74-1" name="__codelineno-74-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[{</span><span class="s2">"n1"</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="s2">"n2"</span><span class="p">:</span><span class="mi">2</span><span class="p">}]</span>
+<a href="#__codelineno-74-2" id="__codelineno-74-2" name="__codelineno-74-2"></a><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">to_keyval</span><span class="p">()</span>
+<a href="#__codelineno-74-3" id="__codelineno-74-3" name="__codelineno-74-3"></a><span class="n">y</span><span class="p">[]</span><span class="o">.</span><span class="n">key</span>
+</code></pre></div>
+<p>output is:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-75-1" id="__codelineno-75-1" name="__codelineno-75-1"></a><span class="p">[</span><span class="s2">"n1"</span><span class="p">,</span> <span class="s2">"n2"</span><span class="p">]</span>
+</code></pre></div>
+</li>
+<li>
+<p>from_keyval: from_keyval is complementary functon of to_keyval(). It converts the Json output of to_keyval() back to the original format. e.g.,</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-76-1" id="__codelineno-76-1" name="__codelineno-76-1"></a><span class="n">p</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[{</span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"value"</span><span class="p">:</span><span class="mi">1</span><span class="p">},{</span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"value"</span><span class="p">:</span><span class="mi">2</span><span class="p">}]</span> 
+<a href="#__codelineno-76-2" id="__codelineno-76-2" name="__codelineno-76-2"></a><span class="n">p</span><span class="o">.</span><span class="n">from_keyval</span><span class="p">()</span>
+</code></pre></div>
+<p>output is:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-77-1" id="__codelineno-77-1" name="__codelineno-77-1"></a><span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">"b"</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+</code></pre></div>
+<p>similarly:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-78-1" id="__codelineno-78-1" name="__codelineno-78-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[{</span><span class="s2">"n1"</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="s2">"n2"</span><span class="p">:</span><span class="mi">2</span><span class="p">}]</span>
+<a href="#__codelineno-78-2" id="__codelineno-78-2" name="__codelineno-78-2"></a><span class="n">a</span> <span class="o">=</span> <span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">to_keyval</span><span class="p">()</span>
+<a href="#__codelineno-78-3" id="__codelineno-78-3" name="__codelineno-78-3"></a><span class="n">a</span><span class="o">.</span><span class="n">from_keyval</span><span class="p">()</span>
+</code></pre></div>
+<p>output is:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-79-1" id="__codelineno-79-1" name="__codelineno-79-1"></a><span class="p">{</span><span class="s2">"n1"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">"n2"</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+</code></pre></div>
+</li>
 </ol>
 </article>
 </div>

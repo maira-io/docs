@@ -2925,49 +2925,14 @@ in below statement, <code>name</code> is key in <code>animals</code> and <code>w
 <p>output is:</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="s2">"lion"</span><span class="p">,</span><span class="s2">"cow"</span><span class="p">,</span><span class="s2">"sparrow"</span><span class="p">,</span><span class="s2">"dove"</span>
 </code></pre></div>
-<p><em>Methods</em>:</p>
-<ol>
-<li>
-<p>to_keyval: to_keyval returns a new Json with  map entries changed to array of tuple, <code>"key":&lt;key&gt;</code> &amp; <code>"value":&lt;value&gt;</code>. This is useful if one wants to access the "key" of the Json map. e.g.,</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
-<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">y</span><span class="o">.</span><span class="n">to_keyval</span><span class="p">()</span>
+<p>Sometimes seemingly simple but complex filtering requirements comes up for json maps. <code>to_keyval()</code> and <code>from_keyval()</code> can be very handy for such cases. User with experience with <code>jq</code> tool would be familiar with this. In the following json we want to extract all objects with value <code>ignore</code>.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">y</span> <span class="o">=</span> <span class="n">json</span> <span class="p">{</span><span class="s2">"#general"</span><span class="p">:</span> <span class="s2">"ignore"</span><span class="p">,</span><span class="s2">"#random"</span><span class="p">:</span> <span class="s2">"ignore"</span><span class="p">,</span>  <span class="s2">"#admins"</span><span class="p">:</span> <span class="s2">"delete"</span><span class="p">}</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">y</span><span class="o">.</span><span class="n">to_keyval</span><span class="p">()[</span><span class="err">?</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s2">"ignore"</span><span class="p">]</span><span class="o">.</span><span class="n">from_keyval</span><span class="p">()</span>
 </code></pre></div>
 <p>output is:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">[{</span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"value"</span><span class="p">:</span><span class="mi">1</span><span class="p">},{</span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"value"</span><span class="p">:</span><span class="mi">2</span><span class="p">}]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">{</span><span class="s2">"#general"</span><span class="p">:</span><span class="s2">"ignore"</span><span class="p">,</span><span class="s2">"#random"</span><span class="p">:</span><span class="s2">"ignore"</span><span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[{</span><span class="s2">"n1"</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="s2">"n2"</span><span class="p">:</span><span class="mi">2</span><span class="p">}]</span>
-<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">to_keyval</span><span class="p">()</span>
-</code></pre></div>
-<p>output is a Json list:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="p">{</span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"n1"</span><span class="p">,</span><span class="s2">"value"</span><span class="p">:</span><span class="mi">1</span><span class="p">},{</span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"n2"</span><span class="p">,</span><span class="s2">"value"</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
-</code></pre></div>
-<p>To get Json list of all keys.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[{</span><span class="s2">"n1"</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="s2">"n2"</span><span class="p">:</span><span class="mi">2</span><span class="p">}]</span>
-<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">to_keyval</span><span class="p">()</span>
-<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">y</span><span class="p">[]</span><span class="o">.</span><span class="n">key</span>
-</code></pre></div>
-<p>output is:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="p">[</span><span class="s2">"n1"</span><span class="p">,</span> <span class="s2">"n2"</span><span class="p">]</span>
-</code></pre></div>
-</li>
-<li>
-<p>from_keyval: from_keyval is complementary functon of to_keyval(). It converts the Json output of to_keyval() back to the original format. e.g.,</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">p</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[{</span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"value"</span><span class="p">:</span><span class="mi">1</span><span class="p">},{</span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"b"</span><span class="p">,</span><span class="s2">"value"</span><span class="p">:</span><span class="mi">2</span><span class="p">}]</span> 
-<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">p</span><span class="o">.</span><span class="n">from_keyval</span><span class="p">()</span>
-</code></pre></div>
-<p>output is:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="p">{</span><span class="s2">"a"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">"b"</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
-</code></pre></div>
-<p>similarly:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[{</span><span class="s2">"n1"</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="s2">"n2"</span><span class="p">:</span><span class="mi">2</span><span class="p">}]</span>
-<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="n">a</span> <span class="o">=</span> <span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">to_keyval</span><span class="p">()</span>
-<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="n">a</span><span class="o">.</span><span class="n">from_keyval</span><span class="p">()</span>
-</code></pre></div>
-<p>output is:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="p">{</span><span class="s2">"n1"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">"n2"</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
-</code></pre></div>
-</li>
-</ol>
+<p>for details on inner workings of these json methods, refer to the Json type chapter.</p>
 </article>
 </div>
 </div>

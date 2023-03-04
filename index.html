@@ -3017,24 +3017,29 @@ rapidly develop sophisticated <strong>human-in-loop stateful automation as code<
 </p>
 <figcaption>Maira overview</figcaption>
 </figure>
-<p>No team can succeed if the automation remains a parallel activity for a 
-small group. Automation scripts will always lag or be buggy if users interact
-with the system using different tools or interfaces for daily
+<p>No team can succeed in the automation journey if it remains a parallel activity and
+responsibility of select few team members.
+Automation scripts will always lag or be buggy if users interact
+with the system using different tools for their daily
 troubleshooting and operational needs.
 An automation platform must enable the entire
 organization to be on the same page and work collaboratively with the same 
 tools, even for interactive manual activities. In general, ops automation is 
 built over time as the application evolves and the team gains operational 
-experience. The platform must be helpful with daily system interaction, 
-as experiences gained from these sessions ultimately result in automation. 
+experience. The platform must make it super easy to automate the steps
+tried manually, as experiences gained from these sessions ultimately result in automation. 
 This is why besides automation, <strong>manual troubleshooting</strong>, <strong>access control</strong>,
-and <strong>observability</strong>, etc., must be part of any day-2 product offering. </p>
-<p>We built Maira as a centralized troubleshooting
-and automation platform for modern ops teams to help them with <em>all day-2</em>
-activities. With Maira, the busy ops team can <em>shift left</em> many of their high-toil activities.
-With just-right privilege grants and audit capabilities, the ops team retains complete control
-and visibility into production system while empowering distributed citizen developers 
-to contribute to the automation journey.</p>
+and <strong>observability</strong>, etc., must converge on a common platform.</p>
+<p>Today the line between dev and various ops teams is constantly blurring. We built 
+Maira grounds up to be a centralized platform for modern ops to help engineers
+on the frontline wearing multiple hats. With the right privilege grants and 
+audit capabilities, the core ops team retains complete control
+and visibility into the production system while empowering distributed citizen 
+developers and part-time operators across teams to contribute. Maira improves 
+the security and compliance of the production environment while reducing 
+knowledge silos. An effective <strong>shift-left</strong> strategy
+removes bottlenecks in ops and helps service owners operate their apps
+optimally, reducing busy work for everyone.</p>
 <h2 id="bridging-the-gap-between-dev-friendly-and-low-code">Bridging the gap between Dev-friendly and Low Code.</h2>
 <p>Low-code platforms are typically built for non-developers to enable them 
 to automate a task without involving developers or relying on IT departments. 
@@ -3071,15 +3076,16 @@ program while waiting for human input. All in-memory data is automatically
 persisted in durable storage so the program can continue after a fault without the
 developers needing anything special in code. Similarly, there is no need to persist any
 data to make the program fault tolerant.</p>
-<p>There are few popular general-purpose workflow platforms available in the market, 
-like Apache airflow, Netflix conductor, and Temporal. They differ in scalability and 
+<p>There are a few popular general-purpose workflow platforms available in the market, 
+like Apache airflow, Netflix conductor, and Temporal. Exhaustive comparison among these tools
+is out of the scope of this document; however, they differ in scalability and 
 abstractions available to the developer. Out of these, we think Temporal is the leading 
-workflow platform for today's developers, so we built the Maira cloud orchestrator with Temporal.</p>
+workflow platform for today's developers, so we built the Maira cloud orchestrator around that.</p>
 <p>Apart from constraining UI interface with a workflow platform, developers also require to implement their 
 logic in terms of predefined DAGs. DAGs are a collection of tasks stitched together in a dependency graph. 
 They are either expressed in Python or in a markup language like YAML. This unnatural rethinking in 
 terms of DAG and steps is a significant roadblock in automation velocity and maintainability.</p>
-<p>Compared to others, Maira provides clear benefits like:</p>
+<p>Compared to other low code platforms, Maira provides clear benefits like:</p>
 <ul>
 <li>
 <p><strong>Create workflows using simple Python like code</strong>. No need to think in terms of steps or DAG.</p>
@@ -3094,7 +3100,8 @@ terms of DAG and steps is a significant roadblock in automation velocity and mai
 <p><strong>Managed orchestration</strong>, on-prem, cloud, or SaaS.</p>
 </li>
 <li>
-<p><strong>Repl shell</strong> to try CLIs &amp; scripts. Resume any past session backed up on cloud.</p>
+<p>Developer friendly <strong>Repl shell</strong> with builtin CLI support. Fast troubleshooting
+    using CLIs in terminal you love backed by fine grain <strong>access control</strong>. Resume and audit any old repl session.</p>
 </li>
 </ul>
 <h2 id="use-cases">Use cases</h2>
@@ -3111,6 +3118,7 @@ to reach out to us for any automation use cases you can think of.</p>
 <li>Segmenting access to the production cluster within the team using Maira's sophisticated RBAC capabilities.</li>
 <li>Upgrade or deploy security patches on a large number of target devices.</li>
 <li>Generate periodic reports as needed for compliance and user tracking.</li>
+<li>Build internal tools.</li>
 </ul>
 <h2 id="maira-tour">Maira tour</h2>
 <p>Let's go through a quick tour of the platform by going through a case that may

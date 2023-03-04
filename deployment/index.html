@@ -2951,13 +2951,13 @@
 <h2 id="maira-deployment-with-saas-model">Maira Deployment with SaaS model</h2>
 <p>Maira supports two kinds of deployment: SaaS and On-Prem. In SaaS model, Maira runs the Workflow Orchestrator in its own GCP based cloud and Maira Gateway will still run in customer premises. This is a single process application that can be run in many different ways. The most simple is to run using <a href="https://github.com/maira-io/maira-gateway-helm-charts">Maira Gateway Helm Chart</a>.</p>
 <p>You need to update the values.yaml file to update various parameters. The <code>maira</code> section is to configure parameters needed to connect to Maira Site manager. It contains the following fields</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>maira:
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>  siteManagerAddress: "sitemanager.demo.maira.io:443"
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>  site: maira-site-1
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>  tenant: maira.io
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>  namespace: default
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>  auth_client_id: id1
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>  auth_client_secret: secret1
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">maira</span><span class="p">:</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="nt">siteManagerAddress</span><span class="p">:</span><span class="w"> </span><span class="s">"sitemanager.demo.maira.io:443"</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="nt">site</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">maira-site-1</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="nt">tenant</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">maira.io</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="nt">auth_client_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id1</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="nt">auth_client_secret</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secret1</span>
 </code></pre></div>
 <p><code>siteManagerAddress</code> is the address at which to connec to site manager. For our demo deployment, it is <code>sitemanager.demo.maira.io:443</code>. For our production deployment, it is <code>sitemanager.maira.io:443</code>. If you are using any other deployment, please reach out to Maira.</p>
 <p><code>site</code> is unique name for your site. If you have more than one site, please make sure to pick a different name for each site, otherwise site manager will only pick one of those connections. Each site also needs to be approved by the customer in Maira dashboard before it is accepted.</p>
