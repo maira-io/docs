@@ -135,7 +135,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../slack/">
-        Slack Ops with Maira
+        SlackOps
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
@@ -3026,11 +3026,11 @@
 <h2 id="description">Description</h2>
 <p>describes k8s configmap</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>k8s get-configmap
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--cluster &lt;cluster&gt;]
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [--namespace|-n &lt;namespace&gt;]
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    &lt;name&gt;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>k8s<span class="w"> </span>get-configmap
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--cluster<span class="w"> </span>&lt;cluster&gt;<span class="o">]</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--namespace<span class="p">|</span>-n<span class="w"> </span>&lt;namespace&gt;<span class="o">]</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span>&lt;name&gt;
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3055,27 +3055,27 @@
      Attributes: <em>required</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>! k8s get-configmaps "dynamic-config"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span> <span class="n">k8s</span> <span class="n">get</span><span class="o">-</span><span class="n">configmaps</span> <span class="s2">"dynamic-config"</span>
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>{
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>  "cluster": "in-cluster",
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>  "namespace": "default",
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>  "name": "dynamic-config",
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>  "annotations": {
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>      "meta.helm.sh/release-name": "test",
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>      "meta.helm.sh/release-namespace": "default"
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>  },
-<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>  "labels": {
-<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>      "app.kubernetes.io/instance": "test",
-<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>      "app.kubernetes.io/managed-by": "Helm",
-<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>      "app.kubernetes.io/version": "1.12.0",
-<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>      "helm.sh/chart": "test-0.12.0"
-<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>  },
-<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>  "data": {
-<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>      "dynamic_config.yaml": ""
-<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>  }
-<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">"cluster"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-cluster"</span><span class="p">,</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="nt">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dynamic-config"</span><span class="p">,</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">  </span><span class="nt">"annotations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">      </span><span class="nt">"meta.helm.sh/release-name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">      </span><span class="nt">"meta.helm.sh/release-namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">  </span><span class="p">},</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">  </span><span class="nt">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">      </span><span class="nt">"app.kubernetes.io/instance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">      </span><span class="nt">"app.kubernetes.io/managed-by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Helm"</span><span class="p">,</span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">      </span><span class="nt">"app.kubernetes.io/version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.12.0"</span><span class="p">,</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">      </span><span class="nt">"helm.sh/chart"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test-0.12.0"</span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">  </span><span class="p">},</span>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">      </span><span class="nt">"dynamic_config.yaml"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span>
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">  </span><span class="p">}</span>
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="p">}</span>
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

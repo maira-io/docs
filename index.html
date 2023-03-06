@@ -164,6 +164,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#command-completion">
+    Command completion
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#slack">
     Slack
   </a>
@@ -191,7 +196,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="slack/">
-        Slack Ops with Maira
+        SlackOps
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
@@ -2996,6 +3001,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#command-completion">
+    Command completion
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#slack">
     Slack
   </a>
@@ -3051,23 +3061,23 @@ to automate a task without involving developers or relying on IT departments.
 These platforms support a visual drag-and-drop interface and pre-built feature blocks. 
 Such products are effective in environments with low development volume, 
 complexity, and security concerns. In the Ops environment, automation scripts 
-frequently change with the ever-growing application complexity. 
-Hence, a typical low-code platform backed by YAML or another markup language is 
-unsuitable for use-cases. It boxes the developer with a visual interface 
-that is quite limiting. Developing anything beyond a few 
-steps is painful or impossible. Imagine making sense of a large script in a
-graphical interface with so many paths. Version control is also very
-difficult in YAML world.</p>
-<p>Maira is architected to give the developers full power of a high-level language. 
+frequently churn as application complexity grows. 
+Hence, a typical low-code platform (backed by YAML, etc.) 
+unsuitable for such use cases as boxes the developers in a visual interface. 
+Developing anything beyond a few steps is painful or impossible in UI. 
+Imagine making sense of a large script in a
+graphical interface with many paths. Version control and other production
+code maintainability are problematic in the drag-and-drop world.</p>
+<p>Maira is architected to provide the full power of a high-level language. 
 It allows developers to create <strong>'stateful workflows'</strong> using a Python-like 
-domain-specific language (DSL) called MPL. MPL provides a sophisticated development 
+a domain-specific language (DSL) called MPL. MPL provides a sophisticated development 
 environment without compromising on the benefits of workflows. Today ops teams 
 are used to the power of a general-purpose language like Python that allows them 
 to create complex scripts. Now with MPL, the same development flexibility is 
 available, and with out of box <strong>integrations</strong>, one can develop fail-proof, scalable, 
 long-running applications with much less code. Non-programmers can also use the 
 familiar drag-and-drop visual interface for development. Maira's hosted workflow 
-orchestrator takes care of scheduling and reliably executing these workflows -- with no
+orchestrator handles scheduling etc., and reliably executes these workflows with no
 operational overhead.</p>
 <h2 id="what-is-a-workflow">What is a workflow?</h2>
 <p><strong>Workflow</strong>, at its core, is a set of steps executed reliably irrespective of how long 
@@ -3093,20 +3103,24 @@ terms of DAG and steps is a significant roadblock in automation velocity and mai
 <p>Compared to other low code platforms, Maira provides clear benefits like:</p>
 <ul>
 <li>
-<p><strong>Create workflows using simple Python like code</strong>. No need to think in terms of steps or DAG.</p>
+<p><strong>Create workflows using simple Python-like code</strong>. No need to think in terms of steps or DAG. Write simple imperative code, and get workflows.</p>
 </li>
 <li>
 <p>No compromise on the <strong>low-code</strong> promise for non-developers. Use the drag-and-drop interface if desired.</p>
 </li>
 <li>
-<p>Self-service secure platform with a <strong>rich set of integrations</strong> at your fingertips. Interact with apps you already use, from k8s, Aws, Datadog, and Elastic to Slack and Email. </p>
+<p>A secure self-service platform with a <strong>rich set of integrations</strong> at your fingertips. Interact with apps you already use, from k8s, Aws, Datadog, and Elastic to Slack and Email.</p>
 </li>
 <li>
 <p><strong>Managed orchestration</strong>, on-prem, cloud, or SaaS.</p>
 </li>
 <li>
 <p>Developer friendly <strong>Repl shell</strong> with builtin CLI support. Fast troubleshooting
-    using CLIs in terminal you love backed by fine grain <strong>access control</strong>. Resume and audit any old repl session.</p>
+    using CLIs in the terminal you love backed by fine-grain <strong>access control</strong>. Resume and audit any old repl session.</p>
+</li>
+<li>
+<p><strong>Low learning curve -- expert Python developers are not required</strong>. 
+    Easy syntax. Much <strong>smaller code</strong>, as complexities are absorbed in integration CLIs.</p>
 </li>
 </ul>
 <h2 id="use-cases">Use cases</h2>
@@ -3296,21 +3310,23 @@ For that, in MPL, any CLI output can be assigned to a variable, as shown below.<
 <a href="#__codelineno-1-136" id="__codelineno-1-136" name="__codelineno-1-136"></a><span class="w">    </span><span class="p">}</span>
 <a href="#__codelineno-1-137" id="__codelineno-1-137" name="__codelineno-1-137"></a><span class="p">]</span>
 </code></pre></div>
-<p>Note that when CLI output is assigned, the variable (<code>x</code> in above example) is assigned a
-JSON object as receicved from backend CLI implementation. <em>JSON is first class object type in MPL.</em>
+<p>Note that when CLI output is assigned to a variable (<code>x</code> in the above example),
+it is of type <code>JSON</code> with a value of CLI output received from the backend. 
+<em>JSON is first class object type in MPL.</em>
 If the CLI is entered without assigning to a variable, MPL repl assumes
-human-friendly tabular output is desired, so it renders underlyig JSON tabular
-format.  </p>
-<p>Maira supports intuitive syntax to access JSON fields. E.g., below, we are going
+that a tabular output is desired, so it renders the JSON into a tabular
+format. This feature makes troubleshooting any app much easier. There
+is no need to parse through complex JSON during an outage scenario.</p>
+<p>Maira supports intuitive syntax to access JSON fields. E.g. below, we are going
 through all array elements in <code>x</code> by not specifying the index (<code>x[]</code>), and then for
 each element, we are accessing the <code>name</code> field at index <code>0</code> in
 the <code>containers</code> array. This is basically printing the CONTAINERS column in the table
-output.
+output.</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="nb">print</span> <span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">containers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
 <a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="s2">"hello-python"</span><span class="p">,</span>
 <a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="s2">"hello-python"</span><span class="p">,</span>
 <a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="s2">"maira-gateway"</span>
-</code></pre></div></p>
+</code></pre></div>
 <p>Next we have to get the name of the pod which contains <code>"agent"</code> in the image name.
 For this, we <strong>filter</strong> those containers that have the <code>image</code> field value
 containing string <code>agent</code>. This is accomplished by the supported filter operator, <code>[? ..]</code> where we
@@ -3400,48 +3416,27 @@ endpoint, run periodically or manually. The deployed worklow looks as below.</p>
 </figure>
 <p>If one so desires, the exact workflow can be created via visual UI interface via
 drag-and-drop method as well. Each integration CLI is available as visual block.</p>
+<h3 id="command-completion">Command completion</h3>
+<p>REPL shell has command completion built in. This is immense time saver for
+operators in war room situations. CLIs args can be completed dynamically by
+fetching args in the background. Press <code>ctrl-s</code> to fetch args.</p>
+<figure>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://uploads-ssl.webflow.com/62f54b2eb9180fd1134fd6bf/640652e946be0de0492762d1_mpl-term.gif"><img alt="Command
+  completion" src="https://uploads-ssl.webflow.com/62f54b2eb9180fd1134fd6bf/640652e946be0de0492762d1_mpl-term.gif"/></a>
+</p>
+<figcaption>Command completion</figcaption>
+</figure>
 <h3 id="slack">Slack</h3>
-<p>Lets take a quick tour of Maira slack integration. Maira's CLIs can be
-executed from any client including 'slack'. The concept of <em>session</em> remains
-intact in slack as well. When the user enters the Command, its executed in same manner as in
-repl shell with all variable state intact. Internally a separate session 
-called <code>slack</code> is used to <em>statefully</em> execute CLIs and MPL scripts.
-This gives a true <strong>ChatOps</strong> capability for the operators. Entire workflow
-can be tried in Slack with collaborative troubleshooting.</p>
+<p>Operators can execute CLIs from slack as well. The concept of <em>session</em> remains
+valid here as well. When the user enters a CLI, its executed in the same manner as in
+REPL shell with all variable state intact. Internally a separate session 
+called <code>slack</code> is used to <em>statefully</em> execute CLIs after restoring previous
+state. This gives a true <strong>ChatOps</strong> capability for the operators. 
+For more details refer to <a href="https://docs.maira.io/slack/">SlackOps</a> section.</p>
 <figure>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="img/slack.png"><img alt="CLI in slack" src="img/slack.png"/></a>
 </p>
 <figcaption>CLI execution via Slack </figcaption>
-</figure>
-<p>Internally Maira resumes the session before executing any 
-command user enters in salck.  Infact the session called <em>slack</em> can be 
-resumed in mpl console with all program state intact. </p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="o">&gt;</span> <span class="n">mpl</span> <span class="o">-</span><span class="n">r</span> <span class="n">slack</span>
-<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">Resumed</span> <span class="n">session</span><span class="p">:</span> <span class="n">slack</span>
-<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="o">/</span><span class="n">history</span>
-<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>   <span class="mi">1</span>  <span class="err">!</span><span class="n">k8s</span> <span class="nb">list</span><span class="o">-</span><span class="n">pods</span>
-<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>   <span class="mi">2</span>  <span class="n">x</span> <span class="o">=</span> <span class="err">!</span><span class="n">k8s</span> <span class="nb">list</span><span class="o">-</span><span class="n">pods</span>
-<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>   <span class="mi">3</span>  <span class="nb">print</span> <span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">containers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
-<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>
-<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="o">/</span><span class="err">!</span><span class="mi">3</span>
-<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="nb">print</span> <span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">containers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
-<a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="s2">"hello-python"</span><span class="p">,</span>
-<a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="s2">"hello-python"</span><span class="p">,</span>
-<a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="s2">"maira-gateway"</span>
-</code></pre></div>
-<p>Apart from CLI execution slack can be used for getting human input, surveys and
-notifications. e.g., following CLI.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">opt</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[</span><span class="s2">"disable"</span><span class="p">,</span> <span class="s2">"reset password"</span><span class="p">,</span> <span class="s2">"ignore"</span><span class="p">]</span>
-<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">x</span> <span class="o">=</span> <span class="err">!</span><span class="n">slack</span> <span class="n">ask</span> <span class="o">--</span><span class="n">message</span> <span class="n">msg</span> <span class="o">--</span><span class="n">name</span> <span class="n">slack_user</span> <span class="o">--</span><span class="n">options</span> <span class="n">opt</span> <span class="o">--</span><span class="n">timeout</span> <span class="s2">"10 s"</span> <span class="o">--</span><span class="n">retry_interval</span> <span class="s2">"5 s"</span>
-<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">"disable"</span><span class="p">:</span>
-<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a>    <span class="o">...</span>
-</code></pre></div>
-<p>Above CLI sends a slack message with 3 options and selection is retuerned to the running
-workflow.</p>
-<figure>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="img/slack-ask.png"><img alt="Slack ask command" src="img/slack-ask.png"/></a>
-</p>
-<figcaption>Slack ask command</figcaption>
 </figure>
 </article>
 </div>

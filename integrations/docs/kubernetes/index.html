@@ -135,7 +135,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../slack/">
-        Slack Ops with Maira
+        SlackOps
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
@@ -2950,28 +2950,28 @@
 <p>Kubernetes integration gives you ability to access many of your kubernetes resources using maira commands. Maira can access kubernetes if maira-agent is running within the cluster (default) or outside the cluster. If running within the cluster, Maira agent helm chart will provision all the access permissions required for the agent. If running outside, you can provide a kubeconfig file that contains the credentials to access the cluster.</p>
 <h2 id="installation">Installation</h2>
 <p>If running in cluster, you only need to enable k8s module and service in maira-agent config file</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>modules:
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>  - name: clutch.module.k8s
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>  - name: maira_io.module.k8s
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>services:
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>  - name: clutch.service.k8s
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>  - name: maira_io.service.k8s
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">modules</span><span class="p">:</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clutch.module.k8s</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">maira_io.module.k8s</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="nt">services</span><span class="p">:</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clutch.service.k8s</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">maira_io.service.k8s</span>
 </code></pre></div>
 <p>If running outside cluster, add path to kubeconfig files in agent config file or by setting <code>KUBECONFIG</code>  environment variable. If neither is provided, the agent will look for kubeconfig in default location, which is <code>$HOME/.kube/config</code></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>modules:
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>  - name: clutch.module.k8s
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>  - name: maira_io.module.k8s
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>services:
-<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>  - name: clutch.service.k8s
-<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>    typed_config:
-<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>      "@type": types.google.com/clutch.config.service.k8s.v1.Config
-<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>    kubeconfigs:
-<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>      - /path/to/kubeconfig
-<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>  - name: maira_io.service.k8s
-<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>    typed_config:
-<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a>      "@type": types.google.com/clutch.config.service.k8s.v1.Config
-<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a>    kubeconfigs:
-<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>      - /path/to/kubeconfig
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">modules</span><span class="p">:</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clutch.module.k8s</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">maira_io.module.k8s</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nt">services</span><span class="p">:</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clutch.service.k8s</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="nt">typed_config</span><span class="p">:</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">      </span><span class="s">"@type"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">types.google.com/clutch.config.service.k8s.v1.Config</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="nt">kubeconfigs</span><span class="p">:</span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/kubeconfig</span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">maira_io.service.k8s</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="nt">typed_config</span><span class="p">:</span>
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">      </span><span class="s">"@type"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">types.google.com/clutch.config.service.k8s.v1.Config</span>
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="nt">kubeconfigs</span><span class="p">:</span>
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/path/to/kubeconfig</span>
 </code></pre></div>
 </article>
 </div>

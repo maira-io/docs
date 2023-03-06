@@ -135,7 +135,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../slack/">
-        Slack Ops with Maira
+        SlackOps
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
@@ -3016,10 +3016,10 @@
 <h2 id="description">Description</h2>
 <p>Show overview of BGP information</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>junos show-bgp-neighbor
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--cluster &lt;cluster&gt;]
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [&lt;neighbor&gt;]
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>junos<span class="w"> </span>show-bgp-neighbor
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--cluster<span class="w"> </span>&lt;cluster&gt;<span class="o">]</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>&lt;neighbor&gt;<span class="o">]</span>
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3039,7 +3039,7 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!junos show-bgp-neighbor "10.100.14.2"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">junos</span> <span class="n">show</span><span class="o">-</span><span class="n">bgp</span><span class="o">-</span><span class="n">neighbor</span> <span class="s2">"10.100.14.2"</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>Peer: 10.100.14.2+62371 AS 64544 Local: 10.100.14.1+179 AS 64500
@@ -3086,407 +3086,407 @@ Output:
 <a href="#__codelineno-2-42" id="__codelineno-2-42" name="__codelineno-2-42"></a>  Output Queue[1]: 0            (inet.0, inet-unicast)
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>x = !junos show-bgp-neighbor "10.100.14.2"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">x</span> <span class="o">=</span> <span class="err">!</span><span class="n">junos</span> <span class="n">show</span><span class="o">-</span><span class="n">bgp</span><span class="o">-</span><span class="n">neighbor</span> <span class="s2">"10.100.14.2"</span>
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>{
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>    "bgp-information": [
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>        {
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>            "bgp-peer": [
-<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>                {
-<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>                    "attributes": {
-<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>                        "junos:style": "detail"
-<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>                    },
-<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>                    "peer-address": [
-<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>                        {
-<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>                            "data": "10.100.14.2+62371"
-<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>                        }
-<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>                    ],
-<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>                    "peer-as": [
-<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>                        {
-<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>                            "data": "64544"
-<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a>                        }
-<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>                    ],
-<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a>                    "local-address": [
-<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>                        {
-<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a>                            "data": "10.100.14.1+179"
-<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a>                        }
-<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a>                    ],
-<a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a>                    "local-as": [
-<a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a>                        {
-<a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a>                            "data": "64500"
-<a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a>                        }
-<a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a>                    ],
-<a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a>                    "description": [
-<a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a>                        {
-<a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a>                            "data": "to vMX4"
-<a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a>                        }
-<a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a>                    ],
-<a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a>                    "peer-group": [
-<a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a>                        {
-<a href="#__codelineno-4-36" id="__codelineno-4-36" name="__codelineno-4-36"></a>                            "data": "EBGP-to-64544"
-<a href="#__codelineno-4-37" id="__codelineno-4-37" name="__codelineno-4-37"></a>                        }
-<a href="#__codelineno-4-38" id="__codelineno-4-38" name="__codelineno-4-38"></a>                    ],
-<a href="#__codelineno-4-39" id="__codelineno-4-39" name="__codelineno-4-39"></a>                    "peer-cfg-rti": [
-<a href="#__codelineno-4-40" id="__codelineno-4-40" name="__codelineno-4-40"></a>                        {
-<a href="#__codelineno-4-41" id="__codelineno-4-41" name="__codelineno-4-41"></a>                            "data": "master"
-<a href="#__codelineno-4-42" id="__codelineno-4-42" name="__codelineno-4-42"></a>                        }
-<a href="#__codelineno-4-43" id="__codelineno-4-43" name="__codelineno-4-43"></a>                    ],
-<a href="#__codelineno-4-44" id="__codelineno-4-44" name="__codelineno-4-44"></a>                    "peer-fwd-rti": [
-<a href="#__codelineno-4-45" id="__codelineno-4-45" name="__codelineno-4-45"></a>                        {
-<a href="#__codelineno-4-46" id="__codelineno-4-46" name="__codelineno-4-46"></a>                            "data": "master"
-<a href="#__codelineno-4-47" id="__codelineno-4-47" name="__codelineno-4-47"></a>                        }
-<a href="#__codelineno-4-48" id="__codelineno-4-48" name="__codelineno-4-48"></a>                    ],
-<a href="#__codelineno-4-49" id="__codelineno-4-49" name="__codelineno-4-49"></a>                    "peer-type": [
-<a href="#__codelineno-4-50" id="__codelineno-4-50" name="__codelineno-4-50"></a>                        {
-<a href="#__codelineno-4-51" id="__codelineno-4-51" name="__codelineno-4-51"></a>                            "data": "External"
-<a href="#__codelineno-4-52" id="__codelineno-4-52" name="__codelineno-4-52"></a>                        }
-<a href="#__codelineno-4-53" id="__codelineno-4-53" name="__codelineno-4-53"></a>                    ],
-<a href="#__codelineno-4-54" id="__codelineno-4-54" name="__codelineno-4-54"></a>                    "peer-state": [
-<a href="#__codelineno-4-55" id="__codelineno-4-55" name="__codelineno-4-55"></a>                        {
-<a href="#__codelineno-4-56" id="__codelineno-4-56" name="__codelineno-4-56"></a>                            "data": "Established"
-<a href="#__codelineno-4-57" id="__codelineno-4-57" name="__codelineno-4-57"></a>                        }
-<a href="#__codelineno-4-58" id="__codelineno-4-58" name="__codelineno-4-58"></a>                    ],
-<a href="#__codelineno-4-59" id="__codelineno-4-59" name="__codelineno-4-59"></a>                    "peer-flags": [
-<a href="#__codelineno-4-60" id="__codelineno-4-60" name="__codelineno-4-60"></a>                        {
-<a href="#__codelineno-4-61" id="__codelineno-4-61" name="__codelineno-4-61"></a>                            "data": "Sync"
-<a href="#__codelineno-4-62" id="__codelineno-4-62" name="__codelineno-4-62"></a>                        }
-<a href="#__codelineno-4-63" id="__codelineno-4-63" name="__codelineno-4-63"></a>                    ],
-<a href="#__codelineno-4-64" id="__codelineno-4-64" name="__codelineno-4-64"></a>                    "rsync-flags": [
-<a href="#__codelineno-4-65" id="__codelineno-4-65" name="__codelineno-4-65"></a>                        {}
-<a href="#__codelineno-4-66" id="__codelineno-4-66" name="__codelineno-4-66"></a>                    ],
-<a href="#__codelineno-4-67" id="__codelineno-4-67" name="__codelineno-4-67"></a>                    "last-state": [
-<a href="#__codelineno-4-68" id="__codelineno-4-68" name="__codelineno-4-68"></a>                        {
-<a href="#__codelineno-4-69" id="__codelineno-4-69" name="__codelineno-4-69"></a>                            "data": "OpenConfirm"
-<a href="#__codelineno-4-70" id="__codelineno-4-70" name="__codelineno-4-70"></a>                        }
-<a href="#__codelineno-4-71" id="__codelineno-4-71" name="__codelineno-4-71"></a>                    ],
-<a href="#__codelineno-4-72" id="__codelineno-4-72" name="__codelineno-4-72"></a>                    "last-event": [
-<a href="#__codelineno-4-73" id="__codelineno-4-73" name="__codelineno-4-73"></a>                        {
-<a href="#__codelineno-4-74" id="__codelineno-4-74" name="__codelineno-4-74"></a>                            "data": "RecvKeepAlive"
-<a href="#__codelineno-4-75" id="__codelineno-4-75" name="__codelineno-4-75"></a>                        }
-<a href="#__codelineno-4-76" id="__codelineno-4-76" name="__codelineno-4-76"></a>                    ],
-<a href="#__codelineno-4-77" id="__codelineno-4-77" name="__codelineno-4-77"></a>                    "last-error": [
-<a href="#__codelineno-4-78" id="__codelineno-4-78" name="__codelineno-4-78"></a>                        {
-<a href="#__codelineno-4-79" id="__codelineno-4-79" name="__codelineno-4-79"></a>                            "data": "None"
-<a href="#__codelineno-4-80" id="__codelineno-4-80" name="__codelineno-4-80"></a>                        }
-<a href="#__codelineno-4-81" id="__codelineno-4-81" name="__codelineno-4-81"></a>                    ],
-<a href="#__codelineno-4-82" id="__codelineno-4-82" name="__codelineno-4-82"></a>                    "bgp-option-information": [
-<a href="#__codelineno-4-83" id="__codelineno-4-83" name="__codelineno-4-83"></a>                        {
-<a href="#__codelineno-4-84" id="__codelineno-4-84" name="__codelineno-4-84"></a>                            "attributes": {
-<a href="#__codelineno-4-85" id="__codelineno-4-85" name="__codelineno-4-85"></a>                                "xmlns": "http://xml.juniper.net/junos/21.1R0/junos-routing"
-<a href="#__codelineno-4-86" id="__codelineno-4-86" name="__codelineno-4-86"></a>                            },
-<a href="#__codelineno-4-87" id="__codelineno-4-87" name="__codelineno-4-87"></a>                            "bgp-options": [
-<a href="#__codelineno-4-88" id="__codelineno-4-88" name="__codelineno-4-88"></a>                                {
-<a href="#__codelineno-4-89" id="__codelineno-4-89" name="__codelineno-4-89"></a>                                    "data": "PeerAS Refresh"
-<a href="#__codelineno-4-90" id="__codelineno-4-90" name="__codelineno-4-90"></a>                                }
-<a href="#__codelineno-4-91" id="__codelineno-4-91" name="__codelineno-4-91"></a>                            ],
-<a href="#__codelineno-4-92" id="__codelineno-4-92" name="__codelineno-4-92"></a>                            "bgp-options2": [
-<a href="#__codelineno-4-93" id="__codelineno-4-93" name="__codelineno-4-93"></a>                                {}
-<a href="#__codelineno-4-94" id="__codelineno-4-94" name="__codelineno-4-94"></a>                            ],
-<a href="#__codelineno-4-95" id="__codelineno-4-95" name="__codelineno-4-95"></a>                            "bgp-options-extended": [
-<a href="#__codelineno-4-96" id="__codelineno-4-96" name="__codelineno-4-96"></a>                                {
-<a href="#__codelineno-4-97" id="__codelineno-4-97" name="__codelineno-4-97"></a>                                    "data": "GracefulShutdownRcv"
-<a href="#__codelineno-4-98" id="__codelineno-4-98" name="__codelineno-4-98"></a>                                }
-<a href="#__codelineno-4-99" id="__codelineno-4-99" name="__codelineno-4-99"></a>                            ],
-<a href="#__codelineno-4-100" id="__codelineno-4-100" name="__codelineno-4-100"></a>                            "holdtime": [
-<a href="#__codelineno-4-101" id="__codelineno-4-101" name="__codelineno-4-101"></a>                                {
-<a href="#__codelineno-4-102" id="__codelineno-4-102" name="__codelineno-4-102"></a>                                    "data": "90"
-<a href="#__codelineno-4-103" id="__codelineno-4-103" name="__codelineno-4-103"></a>                                }
-<a href="#__codelineno-4-104" id="__codelineno-4-104" name="__codelineno-4-104"></a>                            ],
-<a href="#__codelineno-4-105" id="__codelineno-4-105" name="__codelineno-4-105"></a>                            "preference": [
-<a href="#__codelineno-4-106" id="__codelineno-4-106" name="__codelineno-4-106"></a>                                {
-<a href="#__codelineno-4-107" id="__codelineno-4-107" name="__codelineno-4-107"></a>                                    "data": "170"
-<a href="#__codelineno-4-108" id="__codelineno-4-108" name="__codelineno-4-108"></a>                                }
-<a href="#__codelineno-4-109" id="__codelineno-4-109" name="__codelineno-4-109"></a>                            ],
-<a href="#__codelineno-4-110" id="__codelineno-4-110" name="__codelineno-4-110"></a>                            "gshut-recv-local-preference": [
-<a href="#__codelineno-4-111" id="__codelineno-4-111" name="__codelineno-4-111"></a>                                {
-<a href="#__codelineno-4-112" id="__codelineno-4-112" name="__codelineno-4-112"></a>                                    "data": "0"
-<a href="#__codelineno-4-113" id="__codelineno-4-113" name="__codelineno-4-113"></a>                                }
-<a href="#__codelineno-4-114" id="__codelineno-4-114" name="__codelineno-4-114"></a>                            ]
-<a href="#__codelineno-4-115" id="__codelineno-4-115" name="__codelineno-4-115"></a>                        }
-<a href="#__codelineno-4-116" id="__codelineno-4-116" name="__codelineno-4-116"></a>                    ],
-<a href="#__codelineno-4-117" id="__codelineno-4-117" name="__codelineno-4-117"></a>                    "flap-count": [
-<a href="#__codelineno-4-118" id="__codelineno-4-118" name="__codelineno-4-118"></a>                        {
-<a href="#__codelineno-4-119" id="__codelineno-4-119" name="__codelineno-4-119"></a>                            "data": "0"
-<a href="#__codelineno-4-120" id="__codelineno-4-120" name="__codelineno-4-120"></a>                        }
-<a href="#__codelineno-4-121" id="__codelineno-4-121" name="__codelineno-4-121"></a>                    ],
-<a href="#__codelineno-4-122" id="__codelineno-4-122" name="__codelineno-4-122"></a>                    "peer-id": [
-<a href="#__codelineno-4-123" id="__codelineno-4-123" name="__codelineno-4-123"></a>                        {
-<a href="#__codelineno-4-124" id="__codelineno-4-124" name="__codelineno-4-124"></a>                            "data": "10.100.100.4"
-<a href="#__codelineno-4-125" id="__codelineno-4-125" name="__codelineno-4-125"></a>                        }
-<a href="#__codelineno-4-126" id="__codelineno-4-126" name="__codelineno-4-126"></a>                    ],
-<a href="#__codelineno-4-127" id="__codelineno-4-127" name="__codelineno-4-127"></a>                    "local-id": [
-<a href="#__codelineno-4-128" id="__codelineno-4-128" name="__codelineno-4-128"></a>                        {
-<a href="#__codelineno-4-129" id="__codelineno-4-129" name="__codelineno-4-129"></a>                            "data": "10.100.100.1"
-<a href="#__codelineno-4-130" id="__codelineno-4-130" name="__codelineno-4-130"></a>                        }
-<a href="#__codelineno-4-131" id="__codelineno-4-131" name="__codelineno-4-131"></a>                    ],
-<a href="#__codelineno-4-132" id="__codelineno-4-132" name="__codelineno-4-132"></a>                    "active-holdtime": [
-<a href="#__codelineno-4-133" id="__codelineno-4-133" name="__codelineno-4-133"></a>                        {
-<a href="#__codelineno-4-134" id="__codelineno-4-134" name="__codelineno-4-134"></a>                            "data": "90"
-<a href="#__codelineno-4-135" id="__codelineno-4-135" name="__codelineno-4-135"></a>                        }
-<a href="#__codelineno-4-136" id="__codelineno-4-136" name="__codelineno-4-136"></a>                    ],
-<a href="#__codelineno-4-137" id="__codelineno-4-137" name="__codelineno-4-137"></a>                    "keepalive-interval": [
-<a href="#__codelineno-4-138" id="__codelineno-4-138" name="__codelineno-4-138"></a>                        {
-<a href="#__codelineno-4-139" id="__codelineno-4-139" name="__codelineno-4-139"></a>                            "data": "30"
-<a href="#__codelineno-4-140" id="__codelineno-4-140" name="__codelineno-4-140"></a>                        }
-<a href="#__codelineno-4-141" id="__codelineno-4-141" name="__codelineno-4-141"></a>                    ],
-<a href="#__codelineno-4-142" id="__codelineno-4-142" name="__codelineno-4-142"></a>                    "group-index": [
-<a href="#__codelineno-4-143" id="__codelineno-4-143" name="__codelineno-4-143"></a>                        {
-<a href="#__codelineno-4-144" id="__codelineno-4-144" name="__codelineno-4-144"></a>                            "data": "0"
-<a href="#__codelineno-4-145" id="__codelineno-4-145" name="__codelineno-4-145"></a>                        }
-<a href="#__codelineno-4-146" id="__codelineno-4-146" name="__codelineno-4-146"></a>                    ],
-<a href="#__codelineno-4-147" id="__codelineno-4-147" name="__codelineno-4-147"></a>                    "peer-index": [
-<a href="#__codelineno-4-148" id="__codelineno-4-148" name="__codelineno-4-148"></a>                        {
-<a href="#__codelineno-4-149" id="__codelineno-4-149" name="__codelineno-4-149"></a>                            "data": "0"
-<a href="#__codelineno-4-150" id="__codelineno-4-150" name="__codelineno-4-150"></a>                        }
-<a href="#__codelineno-4-151" id="__codelineno-4-151" name="__codelineno-4-151"></a>                    ],
-<a href="#__codelineno-4-152" id="__codelineno-4-152" name="__codelineno-4-152"></a>                    "snmp-index": [
-<a href="#__codelineno-4-153" id="__codelineno-4-153" name="__codelineno-4-153"></a>                        {
-<a href="#__codelineno-4-154" id="__codelineno-4-154" name="__codelineno-4-154"></a>                            "data": "0"
-<a href="#__codelineno-4-155" id="__codelineno-4-155" name="__codelineno-4-155"></a>                        }
-<a href="#__codelineno-4-156" id="__codelineno-4-156" name="__codelineno-4-156"></a>                    ],
-<a href="#__codelineno-4-157" id="__codelineno-4-157" name="__codelineno-4-157"></a>                    "bgp-peer-iosession": [
-<a href="#__codelineno-4-158" id="__codelineno-4-158" name="__codelineno-4-158"></a>                        {
-<a href="#__codelineno-4-159" id="__codelineno-4-159" name="__codelineno-4-159"></a>                            "iosession-thread-name": [
-<a href="#__codelineno-4-160" id="__codelineno-4-160" name="__codelineno-4-160"></a>                                {
-<a href="#__codelineno-4-161" id="__codelineno-4-161" name="__codelineno-4-161"></a>                                    "data": "bgpio-0"
-<a href="#__codelineno-4-162" id="__codelineno-4-162" name="__codelineno-4-162"></a>                                }
-<a href="#__codelineno-4-163" id="__codelineno-4-163" name="__codelineno-4-163"></a>                            ],
-<a href="#__codelineno-4-164" id="__codelineno-4-164" name="__codelineno-4-164"></a>                            "iosession-state": [
-<a href="#__codelineno-4-165" id="__codelineno-4-165" name="__codelineno-4-165"></a>                                {
-<a href="#__codelineno-4-166" id="__codelineno-4-166" name="__codelineno-4-166"></a>                                    "data": "Enabled"
-<a href="#__codelineno-4-167" id="__codelineno-4-167" name="__codelineno-4-167"></a>                                }
-<a href="#__codelineno-4-168" id="__codelineno-4-168" name="__codelineno-4-168"></a>                            ]
-<a href="#__codelineno-4-169" id="__codelineno-4-169" name="__codelineno-4-169"></a>                        }
-<a href="#__codelineno-4-170" id="__codelineno-4-170" name="__codelineno-4-170"></a>                    ],
-<a href="#__codelineno-4-171" id="__codelineno-4-171" name="__codelineno-4-171"></a>                    "bgp-bfd": [
-<a href="#__codelineno-4-172" id="__codelineno-4-172" name="__codelineno-4-172"></a>                        {
-<a href="#__codelineno-4-173" id="__codelineno-4-173" name="__codelineno-4-173"></a>                            "bfd-configuration-state": [
-<a href="#__codelineno-4-174" id="__codelineno-4-174" name="__codelineno-4-174"></a>                                {
-<a href="#__codelineno-4-175" id="__codelineno-4-175" name="__codelineno-4-175"></a>                                    "data": "disabled"
-<a href="#__codelineno-4-176" id="__codelineno-4-176" name="__codelineno-4-176"></a>                                }
-<a href="#__codelineno-4-177" id="__codelineno-4-177" name="__codelineno-4-177"></a>                            ],
-<a href="#__codelineno-4-178" id="__codelineno-4-178" name="__codelineno-4-178"></a>                            "bfd-operational-state": [
-<a href="#__codelineno-4-179" id="__codelineno-4-179" name="__codelineno-4-179"></a>                                {
-<a href="#__codelineno-4-180" id="__codelineno-4-180" name="__codelineno-4-180"></a>                                    "data": "down"
-<a href="#__codelineno-4-181" id="__codelineno-4-181" name="__codelineno-4-181"></a>                                }
-<a href="#__codelineno-4-182" id="__codelineno-4-182" name="__codelineno-4-182"></a>                            ]
-<a href="#__codelineno-4-183" id="__codelineno-4-183" name="__codelineno-4-183"></a>                        }
-<a href="#__codelineno-4-184" id="__codelineno-4-184" name="__codelineno-4-184"></a>                    ],
-<a href="#__codelineno-4-185" id="__codelineno-4-185" name="__codelineno-4-185"></a>                    "local-interface-name": [
-<a href="#__codelineno-4-186" id="__codelineno-4-186" name="__codelineno-4-186"></a>                        {
-<a href="#__codelineno-4-187" id="__codelineno-4-187" name="__codelineno-4-187"></a>                            "data": "ge-0/0/2.0"
-<a href="#__codelineno-4-188" id="__codelineno-4-188" name="__codelineno-4-188"></a>                        }
-<a href="#__codelineno-4-189" id="__codelineno-4-189" name="__codelineno-4-189"></a>                    ],
-<a href="#__codelineno-4-190" id="__codelineno-4-190" name="__codelineno-4-190"></a>                    "local-interface-index": [
-<a href="#__codelineno-4-191" id="__codelineno-4-191" name="__codelineno-4-191"></a>                        {
-<a href="#__codelineno-4-192" id="__codelineno-4-192" name="__codelineno-4-192"></a>                            "data": "545"
-<a href="#__codelineno-4-193" id="__codelineno-4-193" name="__codelineno-4-193"></a>                        }
-<a href="#__codelineno-4-194" id="__codelineno-4-194" name="__codelineno-4-194"></a>                    ],
-<a href="#__codelineno-4-195" id="__codelineno-4-195" name="__codelineno-4-195"></a>                    "peer-restart-nlri-configured": [
-<a href="#__codelineno-4-196" id="__codelineno-4-196" name="__codelineno-4-196"></a>                        {
-<a href="#__codelineno-4-197" id="__codelineno-4-197" name="__codelineno-4-197"></a>                            "data": "inet-unicast"
-<a href="#__codelineno-4-198" id="__codelineno-4-198" name="__codelineno-4-198"></a>                        }
-<a href="#__codelineno-4-199" id="__codelineno-4-199" name="__codelineno-4-199"></a>                    ],
-<a href="#__codelineno-4-200" id="__codelineno-4-200" name="__codelineno-4-200"></a>                    "nlri-type-peer": [
-<a href="#__codelineno-4-201" id="__codelineno-4-201" name="__codelineno-4-201"></a>                        {
-<a href="#__codelineno-4-202" id="__codelineno-4-202" name="__codelineno-4-202"></a>                            "data": "inet-unicast"
-<a href="#__codelineno-4-203" id="__codelineno-4-203" name="__codelineno-4-203"></a>                        }
-<a href="#__codelineno-4-204" id="__codelineno-4-204" name="__codelineno-4-204"></a>                    ],
-<a href="#__codelineno-4-205" id="__codelineno-4-205" name="__codelineno-4-205"></a>                    "nlri-type-session": [
-<a href="#__codelineno-4-206" id="__codelineno-4-206" name="__codelineno-4-206"></a>                        {
-<a href="#__codelineno-4-207" id="__codelineno-4-207" name="__codelineno-4-207"></a>                            "data": "inet-unicast"
-<a href="#__codelineno-4-208" id="__codelineno-4-208" name="__codelineno-4-208"></a>                        }
-<a href="#__codelineno-4-209" id="__codelineno-4-209" name="__codelineno-4-209"></a>                    ],
-<a href="#__codelineno-4-210" id="__codelineno-4-210" name="__codelineno-4-210"></a>                    "peer-refresh-capability": [
-<a href="#__codelineno-4-211" id="__codelineno-4-211" name="__codelineno-4-211"></a>                        {
-<a href="#__codelineno-4-212" id="__codelineno-4-212" name="__codelineno-4-212"></a>                            "data": "2"
-<a href="#__codelineno-4-213" id="__codelineno-4-213" name="__codelineno-4-213"></a>                        }
-<a href="#__codelineno-4-214" id="__codelineno-4-214" name="__codelineno-4-214"></a>                    ],
-<a href="#__codelineno-4-215" id="__codelineno-4-215" name="__codelineno-4-215"></a>                    "peer-stale-route-time-configured": [
-<a href="#__codelineno-4-216" id="__codelineno-4-216" name="__codelineno-4-216"></a>                        {
-<a href="#__codelineno-4-217" id="__codelineno-4-217" name="__codelineno-4-217"></a>                            "data": "300"
-<a href="#__codelineno-4-218" id="__codelineno-4-218" name="__codelineno-4-218"></a>                        }
-<a href="#__codelineno-4-219" id="__codelineno-4-219" name="__codelineno-4-219"></a>                    ],
-<a href="#__codelineno-4-220" id="__codelineno-4-220" name="__codelineno-4-220"></a>                    "peer-no-restart": [
-<a href="#__codelineno-4-221" id="__codelineno-4-221" name="__codelineno-4-221"></a>                        {
-<a href="#__codelineno-4-222" id="__codelineno-4-222" name="__codelineno-4-222"></a>                            "data": [null]
-<a href="#__codelineno-4-223" id="__codelineno-4-223" name="__codelineno-4-223"></a>                        }
-<a href="#__codelineno-4-224" id="__codelineno-4-224" name="__codelineno-4-224"></a>                    ],
-<a href="#__codelineno-4-225" id="__codelineno-4-225" name="__codelineno-4-225"></a>                    "peer-restart-flags-received": [
-<a href="#__codelineno-4-226" id="__codelineno-4-226" name="__codelineno-4-226"></a>                        {
-<a href="#__codelineno-4-227" id="__codelineno-4-227" name="__codelineno-4-227"></a>                            "data": "Notification"
-<a href="#__codelineno-4-228" id="__codelineno-4-228" name="__codelineno-4-228"></a>                        }
-<a href="#__codelineno-4-229" id="__codelineno-4-229" name="__codelineno-4-229"></a>                    ],
-<a href="#__codelineno-4-230" id="__codelineno-4-230" name="__codelineno-4-230"></a>                    "peer-restart-nlri-negotiated": [
-<a href="#__codelineno-4-231" id="__codelineno-4-231" name="__codelineno-4-231"></a>                        {
-<a href="#__codelineno-4-232" id="__codelineno-4-232" name="__codelineno-4-232"></a>                            "data": "inet-unicast"
-<a href="#__codelineno-4-233" id="__codelineno-4-233" name="__codelineno-4-233"></a>                        }
-<a href="#__codelineno-4-234" id="__codelineno-4-234" name="__codelineno-4-234"></a>                    ],
-<a href="#__codelineno-4-235" id="__codelineno-4-235" name="__codelineno-4-235"></a>                    "peer-end-of-rib-received": [
-<a href="#__codelineno-4-236" id="__codelineno-4-236" name="__codelineno-4-236"></a>                        {
-<a href="#__codelineno-4-237" id="__codelineno-4-237" name="__codelineno-4-237"></a>                            "data": "inet-unicast"
-<a href="#__codelineno-4-238" id="__codelineno-4-238" name="__codelineno-4-238"></a>                        }
-<a href="#__codelineno-4-239" id="__codelineno-4-239" name="__codelineno-4-239"></a>                    ],
-<a href="#__codelineno-4-240" id="__codelineno-4-240" name="__codelineno-4-240"></a>                    "peer-end-of-rib-sent": [
-<a href="#__codelineno-4-241" id="__codelineno-4-241" name="__codelineno-4-241"></a>                        {
-<a href="#__codelineno-4-242" id="__codelineno-4-242" name="__codelineno-4-242"></a>                            "data": "inet-unicast"
-<a href="#__codelineno-4-243" id="__codelineno-4-243" name="__codelineno-4-243"></a>                        }
-<a href="#__codelineno-4-244" id="__codelineno-4-244" name="__codelineno-4-244"></a>                    ],
-<a href="#__codelineno-4-245" id="__codelineno-4-245" name="__codelineno-4-245"></a>                    "peer-end-of-rib-scheduled": [
-<a href="#__codelineno-4-246" id="__codelineno-4-246" name="__codelineno-4-246"></a>                        {}
-<a href="#__codelineno-4-247" id="__codelineno-4-247" name="__codelineno-4-247"></a>                    ],
-<a href="#__codelineno-4-248" id="__codelineno-4-248" name="__codelineno-4-248"></a>                    "peer-no-llgr-restarter": [
-<a href="#__codelineno-4-249" id="__codelineno-4-249" name="__codelineno-4-249"></a>                        {
-<a href="#__codelineno-4-250" id="__codelineno-4-250" name="__codelineno-4-250"></a>                            "data": [null]
-<a href="#__codelineno-4-251" id="__codelineno-4-251" name="__codelineno-4-251"></a>                        }
-<a href="#__codelineno-4-252" id="__codelineno-4-252" name="__codelineno-4-252"></a>                    ],
-<a href="#__codelineno-4-253" id="__codelineno-4-253" name="__codelineno-4-253"></a>                    "peer-4byte-as-capability-advertised": [
-<a href="#__codelineno-4-254" id="__codelineno-4-254" name="__codelineno-4-254"></a>                        {
-<a href="#__codelineno-4-255" id="__codelineno-4-255" name="__codelineno-4-255"></a>                            "data": "64544"
-<a href="#__codelineno-4-256" id="__codelineno-4-256" name="__codelineno-4-256"></a>                        }
-<a href="#__codelineno-4-257" id="__codelineno-4-257" name="__codelineno-4-257"></a>                    ],
-<a href="#__codelineno-4-258" id="__codelineno-4-258" name="__codelineno-4-258"></a>                    "peer-addpath-not-supported": [
-<a href="#__codelineno-4-259" id="__codelineno-4-259" name="__codelineno-4-259"></a>                        {
-<a href="#__codelineno-4-260" id="__codelineno-4-260" name="__codelineno-4-260"></a>                            "data": [null]
-<a href="#__codelineno-4-261" id="__codelineno-4-261" name="__codelineno-4-261"></a>                        }
-<a href="#__codelineno-4-262" id="__codelineno-4-262" name="__codelineno-4-262"></a>                    ],
-<a href="#__codelineno-4-263" id="__codelineno-4-263" name="__codelineno-4-263"></a>                    "bgp-rib": [
-<a href="#__codelineno-4-264" id="__codelineno-4-264" name="__codelineno-4-264"></a>                        {
-<a href="#__codelineno-4-265" id="__codelineno-4-265" name="__codelineno-4-265"></a>                            "attributes": {
-<a href="#__codelineno-4-266" id="__codelineno-4-266" name="__codelineno-4-266"></a>                                "junos:style": "detail"
-<a href="#__codelineno-4-267" id="__codelineno-4-267" name="__codelineno-4-267"></a>                            },
-<a href="#__codelineno-4-268" id="__codelineno-4-268" name="__codelineno-4-268"></a>                            "name": [
-<a href="#__codelineno-4-269" id="__codelineno-4-269" name="__codelineno-4-269"></a>                                {
-<a href="#__codelineno-4-270" id="__codelineno-4-270" name="__codelineno-4-270"></a>                                    "data": "inet.0"
-<a href="#__codelineno-4-271" id="__codelineno-4-271" name="__codelineno-4-271"></a>                                }
-<a href="#__codelineno-4-272" id="__codelineno-4-272" name="__codelineno-4-272"></a>                            ],
-<a href="#__codelineno-4-273" id="__codelineno-4-273" name="__codelineno-4-273"></a>                            "rib-bit": [
-<a href="#__codelineno-4-274" id="__codelineno-4-274" name="__codelineno-4-274"></a>                                {
-<a href="#__codelineno-4-275" id="__codelineno-4-275" name="__codelineno-4-275"></a>                                    "data": "20000"
-<a href="#__codelineno-4-276" id="__codelineno-4-276" name="__codelineno-4-276"></a>                                }
-<a href="#__codelineno-4-277" id="__codelineno-4-277" name="__codelineno-4-277"></a>                            ],
-<a href="#__codelineno-4-278" id="__codelineno-4-278" name="__codelineno-4-278"></a>                            "bgp-rib-state": [
-<a href="#__codelineno-4-279" id="__codelineno-4-279" name="__codelineno-4-279"></a>                                {
-<a href="#__codelineno-4-280" id="__codelineno-4-280" name="__codelineno-4-280"></a>                                    "data": "BGP restart is complete"
-<a href="#__codelineno-4-281" id="__codelineno-4-281" name="__codelineno-4-281"></a>                                }
-<a href="#__codelineno-4-282" id="__codelineno-4-282" name="__codelineno-4-282"></a>                            ],
-<a href="#__codelineno-4-283" id="__codelineno-4-283" name="__codelineno-4-283"></a>                            "send-state": [
-<a href="#__codelineno-4-284" id="__codelineno-4-284" name="__codelineno-4-284"></a>                                {
-<a href="#__codelineno-4-285" id="__codelineno-4-285" name="__codelineno-4-285"></a>                                    "data": "in sync"
-<a href="#__codelineno-4-286" id="__codelineno-4-286" name="__codelineno-4-286"></a>                                }
-<a href="#__codelineno-4-287" id="__codelineno-4-287" name="__codelineno-4-287"></a>                            ],
-<a href="#__codelineno-4-288" id="__codelineno-4-288" name="__codelineno-4-288"></a>                            "active-prefix-count": [
-<a href="#__codelineno-4-289" id="__codelineno-4-289" name="__codelineno-4-289"></a>                                {
-<a href="#__codelineno-4-290" id="__codelineno-4-290" name="__codelineno-4-290"></a>                                    "data": "0"
-<a href="#__codelineno-4-291" id="__codelineno-4-291" name="__codelineno-4-291"></a>                                }
-<a href="#__codelineno-4-292" id="__codelineno-4-292" name="__codelineno-4-292"></a>                            ],
-<a href="#__codelineno-4-293" id="__codelineno-4-293" name="__codelineno-4-293"></a>                            "received-prefix-count": [
-<a href="#__codelineno-4-294" id="__codelineno-4-294" name="__codelineno-4-294"></a>                                {
-<a href="#__codelineno-4-295" id="__codelineno-4-295" name="__codelineno-4-295"></a>                                    "data": "0"
-<a href="#__codelineno-4-296" id="__codelineno-4-296" name="__codelineno-4-296"></a>                                }
-<a href="#__codelineno-4-297" id="__codelineno-4-297" name="__codelineno-4-297"></a>                            ],
-<a href="#__codelineno-4-298" id="__codelineno-4-298" name="__codelineno-4-298"></a>                            "accepted-prefix-count": [
-<a href="#__codelineno-4-299" id="__codelineno-4-299" name="__codelineno-4-299"></a>                                {
-<a href="#__codelineno-4-300" id="__codelineno-4-300" name="__codelineno-4-300"></a>                                    "data": "0"
-<a href="#__codelineno-4-301" id="__codelineno-4-301" name="__codelineno-4-301"></a>                                }
-<a href="#__codelineno-4-302" id="__codelineno-4-302" name="__codelineno-4-302"></a>                            ],
-<a href="#__codelineno-4-303" id="__codelineno-4-303" name="__codelineno-4-303"></a>                            "suppressed-prefix-count": [
-<a href="#__codelineno-4-304" id="__codelineno-4-304" name="__codelineno-4-304"></a>                                {
-<a href="#__codelineno-4-305" id="__codelineno-4-305" name="__codelineno-4-305"></a>                                    "data": "0"
-<a href="#__codelineno-4-306" id="__codelineno-4-306" name="__codelineno-4-306"></a>                                }
-<a href="#__codelineno-4-307" id="__codelineno-4-307" name="__codelineno-4-307"></a>                            ],
-<a href="#__codelineno-4-308" id="__codelineno-4-308" name="__codelineno-4-308"></a>                            "advertised-prefix-count": [
-<a href="#__codelineno-4-309" id="__codelineno-4-309" name="__codelineno-4-309"></a>                                {
-<a href="#__codelineno-4-310" id="__codelineno-4-310" name="__codelineno-4-310"></a>                                    "data": "0"
-<a href="#__codelineno-4-311" id="__codelineno-4-311" name="__codelineno-4-311"></a>                                }
-<a href="#__codelineno-4-312" id="__codelineno-4-312" name="__codelineno-4-312"></a>                            ]
-<a href="#__codelineno-4-313" id="__codelineno-4-313" name="__codelineno-4-313"></a>                        }
-<a href="#__codelineno-4-314" id="__codelineno-4-314" name="__codelineno-4-314"></a>                    ],
-<a href="#__codelineno-4-315" id="__codelineno-4-315" name="__codelineno-4-315"></a>                    "last-received": [
-<a href="#__codelineno-4-316" id="__codelineno-4-316" name="__codelineno-4-316"></a>                        {
-<a href="#__codelineno-4-317" id="__codelineno-4-317" name="__codelineno-4-317"></a>                            "data": "3"
-<a href="#__codelineno-4-318" id="__codelineno-4-318" name="__codelineno-4-318"></a>                        }
-<a href="#__codelineno-4-319" id="__codelineno-4-319" name="__codelineno-4-319"></a>                    ],
-<a href="#__codelineno-4-320" id="__codelineno-4-320" name="__codelineno-4-320"></a>                    "last-sent": [
-<a href="#__codelineno-4-321" id="__codelineno-4-321" name="__codelineno-4-321"></a>                        {
-<a href="#__codelineno-4-322" id="__codelineno-4-322" name="__codelineno-4-322"></a>                            "data": "15"
-<a href="#__codelineno-4-323" id="__codelineno-4-323" name="__codelineno-4-323"></a>                        }
-<a href="#__codelineno-4-324" id="__codelineno-4-324" name="__codelineno-4-324"></a>                    ],
-<a href="#__codelineno-4-325" id="__codelineno-4-325" name="__codelineno-4-325"></a>                    "last-checked": [
-<a href="#__codelineno-4-326" id="__codelineno-4-326" name="__codelineno-4-326"></a>                        {
-<a href="#__codelineno-4-327" id="__codelineno-4-327" name="__codelineno-4-327"></a>                            "data": "15613"
-<a href="#__codelineno-4-328" id="__codelineno-4-328" name="__codelineno-4-328"></a>                        }
-<a href="#__codelineno-4-329" id="__codelineno-4-329" name="__codelineno-4-329"></a>                    ],
-<a href="#__codelineno-4-330" id="__codelineno-4-330" name="__codelineno-4-330"></a>                    "input-messages": [
-<a href="#__codelineno-4-331" id="__codelineno-4-331" name="__codelineno-4-331"></a>                        {
-<a href="#__codelineno-4-332" id="__codelineno-4-332" name="__codelineno-4-332"></a>                            "data": "580"
-<a href="#__codelineno-4-333" id="__codelineno-4-333" name="__codelineno-4-333"></a>                        }
-<a href="#__codelineno-4-334" id="__codelineno-4-334" name="__codelineno-4-334"></a>                    ],
-<a href="#__codelineno-4-335" id="__codelineno-4-335" name="__codelineno-4-335"></a>                    "input-updates": [
-<a href="#__codelineno-4-336" id="__codelineno-4-336" name="__codelineno-4-336"></a>                        {
-<a href="#__codelineno-4-337" id="__codelineno-4-337" name="__codelineno-4-337"></a>                            "data": "1"
-<a href="#__codelineno-4-338" id="__codelineno-4-338" name="__codelineno-4-338"></a>                        }
-<a href="#__codelineno-4-339" id="__codelineno-4-339" name="__codelineno-4-339"></a>                    ],
-<a href="#__codelineno-4-340" id="__codelineno-4-340" name="__codelineno-4-340"></a>                    "input-refreshes": [
-<a href="#__codelineno-4-341" id="__codelineno-4-341" name="__codelineno-4-341"></a>                        {
-<a href="#__codelineno-4-342" id="__codelineno-4-342" name="__codelineno-4-342"></a>                            "data": "0"
-<a href="#__codelineno-4-343" id="__codelineno-4-343" name="__codelineno-4-343"></a>                        }
-<a href="#__codelineno-4-344" id="__codelineno-4-344" name="__codelineno-4-344"></a>                    ],
-<a href="#__codelineno-4-345" id="__codelineno-4-345" name="__codelineno-4-345"></a>                    "input-octets": [
-<a href="#__codelineno-4-346" id="__codelineno-4-346" name="__codelineno-4-346"></a>                        {
-<a href="#__codelineno-4-347" id="__codelineno-4-347" name="__codelineno-4-347"></a>                            "data": "11068"
-<a href="#__codelineno-4-348" id="__codelineno-4-348" name="__codelineno-4-348"></a>                        }
-<a href="#__codelineno-4-349" id="__codelineno-4-349" name="__codelineno-4-349"></a>                    ],
-<a href="#__codelineno-4-350" id="__codelineno-4-350" name="__codelineno-4-350"></a>                    "output-messages": [
-<a href="#__codelineno-4-351" id="__codelineno-4-351" name="__codelineno-4-351"></a>                        {
-<a href="#__codelineno-4-352" id="__codelineno-4-352" name="__codelineno-4-352"></a>                            "data": "577"
-<a href="#__codelineno-4-353" id="__codelineno-4-353" name="__codelineno-4-353"></a>                        }
-<a href="#__codelineno-4-354" id="__codelineno-4-354" name="__codelineno-4-354"></a>                    ],
-<a href="#__codelineno-4-355" id="__codelineno-4-355" name="__codelineno-4-355"></a>                    "output-updates": [
-<a href="#__codelineno-4-356" id="__codelineno-4-356" name="__codelineno-4-356"></a>                        {
-<a href="#__codelineno-4-357" id="__codelineno-4-357" name="__codelineno-4-357"></a>                            "data": "0"
-<a href="#__codelineno-4-358" id="__codelineno-4-358" name="__codelineno-4-358"></a>                        }
-<a href="#__codelineno-4-359" id="__codelineno-4-359" name="__codelineno-4-359"></a>                    ],
-<a href="#__codelineno-4-360" id="__codelineno-4-360" name="__codelineno-4-360"></a>                    "output-refreshes": [
-<a href="#__codelineno-4-361" id="__codelineno-4-361" name="__codelineno-4-361"></a>                        {
-<a href="#__codelineno-4-362" id="__codelineno-4-362" name="__codelineno-4-362"></a>                            "data": "0"
-<a href="#__codelineno-4-363" id="__codelineno-4-363" name="__codelineno-4-363"></a>                        }
-<a href="#__codelineno-4-364" id="__codelineno-4-364" name="__codelineno-4-364"></a>                    ],
-<a href="#__codelineno-4-365" id="__codelineno-4-365" name="__codelineno-4-365"></a>                    "output-octets": [
-<a href="#__codelineno-4-366" id="__codelineno-4-366" name="__codelineno-4-366"></a>                        {
-<a href="#__codelineno-4-367" id="__codelineno-4-367" name="__codelineno-4-367"></a>                            "data": "10967"
-<a href="#__codelineno-4-368" id="__codelineno-4-368" name="__codelineno-4-368"></a>                        }
-<a href="#__codelineno-4-369" id="__codelineno-4-369" name="__codelineno-4-369"></a>                    ],
-<a href="#__codelineno-4-370" id="__codelineno-4-370" name="__codelineno-4-370"></a>                    "bgp-output-queue": [
-<a href="#__codelineno-4-371" id="__codelineno-4-371" name="__codelineno-4-371"></a>                        {
-<a href="#__codelineno-4-372" id="__codelineno-4-372" name="__codelineno-4-372"></a>                            "number": [
-<a href="#__codelineno-4-373" id="__codelineno-4-373" name="__codelineno-4-373"></a>                                {
-<a href="#__codelineno-4-374" id="__codelineno-4-374" name="__codelineno-4-374"></a>                                    "data": "1"
-<a href="#__codelineno-4-375" id="__codelineno-4-375" name="__codelineno-4-375"></a>                                }
-<a href="#__codelineno-4-376" id="__codelineno-4-376" name="__codelineno-4-376"></a>                            ],
-<a href="#__codelineno-4-377" id="__codelineno-4-377" name="__codelineno-4-377"></a>                            "count": [
-<a href="#__codelineno-4-378" id="__codelineno-4-378" name="__codelineno-4-378"></a>                                {
-<a href="#__codelineno-4-379" id="__codelineno-4-379" name="__codelineno-4-379"></a>                                    "data": "0"
-<a href="#__codelineno-4-380" id="__codelineno-4-380" name="__codelineno-4-380"></a>                                }
-<a href="#__codelineno-4-381" id="__codelineno-4-381" name="__codelineno-4-381"></a>                            ],
-<a href="#__codelineno-4-382" id="__codelineno-4-382" name="__codelineno-4-382"></a>                            "table-name": [
-<a href="#__codelineno-4-383" id="__codelineno-4-383" name="__codelineno-4-383"></a>                                {
-<a href="#__codelineno-4-384" id="__codelineno-4-384" name="__codelineno-4-384"></a>                                    "data": "inet.0"
-<a href="#__codelineno-4-385" id="__codelineno-4-385" name="__codelineno-4-385"></a>                                }
-<a href="#__codelineno-4-386" id="__codelineno-4-386" name="__codelineno-4-386"></a>                            ],
-<a href="#__codelineno-4-387" id="__codelineno-4-387" name="__codelineno-4-387"></a>                            "rib-adv-nlri": [
-<a href="#__codelineno-4-388" id="__codelineno-4-388" name="__codelineno-4-388"></a>                                {
-<a href="#__codelineno-4-389" id="__codelineno-4-389" name="__codelineno-4-389"></a>                                    "data": "inet-unicast"
-<a href="#__codelineno-4-390" id="__codelineno-4-390" name="__codelineno-4-390"></a>                                }
-<a href="#__codelineno-4-391" id="__codelineno-4-391" name="__codelineno-4-391"></a>                            ]
-<a href="#__codelineno-4-392" id="__codelineno-4-392" name="__codelineno-4-392"></a>                        }
-<a href="#__codelineno-4-393" id="__codelineno-4-393" name="__codelineno-4-393"></a>                    ]
-<a href="#__codelineno-4-394" id="__codelineno-4-394" name="__codelineno-4-394"></a>                }
-<a href="#__codelineno-4-395" id="__codelineno-4-395" name="__codelineno-4-395"></a>            ]
-<a href="#__codelineno-4-396" id="__codelineno-4-396" name="__codelineno-4-396"></a>        }
-<a href="#__codelineno-4-397" id="__codelineno-4-397" name="__codelineno-4-397"></a>    ]
-<a href="#__codelineno-4-398" id="__codelineno-4-398" name="__codelineno-4-398"></a>}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">{</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="nt">"bgp-information"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">        </span><span class="p">{</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">            </span><span class="nt">"bgp-peer"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">                </span><span class="p">{</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">                    </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">                        </span><span class="nt">"junos:style"</span><span class="p">:</span><span class="w"> </span><span class="s2">"detail"</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">                    </span><span class="p">},</span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">                    </span><span class="nt">"peer-address"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.100.14.2+62371"</span>
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">                    </span><span class="nt">"peer-as"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"64544"</span>
+<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">                    </span><span class="nt">"local-address"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.100.14.1+179"</span>
+<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">                    </span><span class="nt">"local-as"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"64500"</span>
+<a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="w">                    </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"to vMX4"</span>
+<a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="w">                    </span><span class="nt">"peer-group"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-36" id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EBGP-to-64544"</span>
+<a href="#__codelineno-4-37" id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-38" id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-39" id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="w">                    </span><span class="nt">"peer-cfg-rti"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-40" id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-41" id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"master"</span>
+<a href="#__codelineno-4-42" id="__codelineno-4-42" name="__codelineno-4-42"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-43" id="__codelineno-4-43" name="__codelineno-4-43"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-44" id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="w">                    </span><span class="nt">"peer-fwd-rti"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-45" id="__codelineno-4-45" name="__codelineno-4-45"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-46" id="__codelineno-4-46" name="__codelineno-4-46"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"master"</span>
+<a href="#__codelineno-4-47" id="__codelineno-4-47" name="__codelineno-4-47"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-48" id="__codelineno-4-48" name="__codelineno-4-48"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-49" id="__codelineno-4-49" name="__codelineno-4-49"></a><span class="w">                    </span><span class="nt">"peer-type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-50" id="__codelineno-4-50" name="__codelineno-4-50"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-51" id="__codelineno-4-51" name="__codelineno-4-51"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"External"</span>
+<a href="#__codelineno-4-52" id="__codelineno-4-52" name="__codelineno-4-52"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-53" id="__codelineno-4-53" name="__codelineno-4-53"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-54" id="__codelineno-4-54" name="__codelineno-4-54"></a><span class="w">                    </span><span class="nt">"peer-state"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-55" id="__codelineno-4-55" name="__codelineno-4-55"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-56" id="__codelineno-4-56" name="__codelineno-4-56"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Established"</span>
+<a href="#__codelineno-4-57" id="__codelineno-4-57" name="__codelineno-4-57"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-58" id="__codelineno-4-58" name="__codelineno-4-58"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-59" id="__codelineno-4-59" name="__codelineno-4-59"></a><span class="w">                    </span><span class="nt">"peer-flags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-60" id="__codelineno-4-60" name="__codelineno-4-60"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-61" id="__codelineno-4-61" name="__codelineno-4-61"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sync"</span>
+<a href="#__codelineno-4-62" id="__codelineno-4-62" name="__codelineno-4-62"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-63" id="__codelineno-4-63" name="__codelineno-4-63"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-64" id="__codelineno-4-64" name="__codelineno-4-64"></a><span class="w">                    </span><span class="nt">"rsync-flags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-65" id="__codelineno-4-65" name="__codelineno-4-65"></a><span class="w">                        </span><span class="p">{}</span>
+<a href="#__codelineno-4-66" id="__codelineno-4-66" name="__codelineno-4-66"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-67" id="__codelineno-4-67" name="__codelineno-4-67"></a><span class="w">                    </span><span class="nt">"last-state"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-68" id="__codelineno-4-68" name="__codelineno-4-68"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-69" id="__codelineno-4-69" name="__codelineno-4-69"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OpenConfirm"</span>
+<a href="#__codelineno-4-70" id="__codelineno-4-70" name="__codelineno-4-70"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-71" id="__codelineno-4-71" name="__codelineno-4-71"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-72" id="__codelineno-4-72" name="__codelineno-4-72"></a><span class="w">                    </span><span class="nt">"last-event"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-73" id="__codelineno-4-73" name="__codelineno-4-73"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-74" id="__codelineno-4-74" name="__codelineno-4-74"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RecvKeepAlive"</span>
+<a href="#__codelineno-4-75" id="__codelineno-4-75" name="__codelineno-4-75"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-76" id="__codelineno-4-76" name="__codelineno-4-76"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-77" id="__codelineno-4-77" name="__codelineno-4-77"></a><span class="w">                    </span><span class="nt">"last-error"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-78" id="__codelineno-4-78" name="__codelineno-4-78"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-79" id="__codelineno-4-79" name="__codelineno-4-79"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"None"</span>
+<a href="#__codelineno-4-80" id="__codelineno-4-80" name="__codelineno-4-80"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-81" id="__codelineno-4-81" name="__codelineno-4-81"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-82" id="__codelineno-4-82" name="__codelineno-4-82"></a><span class="w">                    </span><span class="nt">"bgp-option-information"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-83" id="__codelineno-4-83" name="__codelineno-4-83"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-84" id="__codelineno-4-84" name="__codelineno-4-84"></a><span class="w">                            </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-85" id="__codelineno-4-85" name="__codelineno-4-85"></a><span class="w">                                </span><span class="nt">"xmlns"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://xml.juniper.net/junos/21.1R0/junos-routing"</span>
+<a href="#__codelineno-4-86" id="__codelineno-4-86" name="__codelineno-4-86"></a><span class="w">                            </span><span class="p">},</span>
+<a href="#__codelineno-4-87" id="__codelineno-4-87" name="__codelineno-4-87"></a><span class="w">                            </span><span class="nt">"bgp-options"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-88" id="__codelineno-4-88" name="__codelineno-4-88"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-89" id="__codelineno-4-89" name="__codelineno-4-89"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PeerAS Refresh"</span>
+<a href="#__codelineno-4-90" id="__codelineno-4-90" name="__codelineno-4-90"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-91" id="__codelineno-4-91" name="__codelineno-4-91"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-92" id="__codelineno-4-92" name="__codelineno-4-92"></a><span class="w">                            </span><span class="nt">"bgp-options2"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-93" id="__codelineno-4-93" name="__codelineno-4-93"></a><span class="w">                                </span><span class="p">{}</span>
+<a href="#__codelineno-4-94" id="__codelineno-4-94" name="__codelineno-4-94"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-95" id="__codelineno-4-95" name="__codelineno-4-95"></a><span class="w">                            </span><span class="nt">"bgp-options-extended"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-96" id="__codelineno-4-96" name="__codelineno-4-96"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-97" id="__codelineno-4-97" name="__codelineno-4-97"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GracefulShutdownRcv"</span>
+<a href="#__codelineno-4-98" id="__codelineno-4-98" name="__codelineno-4-98"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-99" id="__codelineno-4-99" name="__codelineno-4-99"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-100" id="__codelineno-4-100" name="__codelineno-4-100"></a><span class="w">                            </span><span class="nt">"holdtime"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-101" id="__codelineno-4-101" name="__codelineno-4-101"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-102" id="__codelineno-4-102" name="__codelineno-4-102"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90"</span>
+<a href="#__codelineno-4-103" id="__codelineno-4-103" name="__codelineno-4-103"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-104" id="__codelineno-4-104" name="__codelineno-4-104"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-105" id="__codelineno-4-105" name="__codelineno-4-105"></a><span class="w">                            </span><span class="nt">"preference"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-106" id="__codelineno-4-106" name="__codelineno-4-106"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-107" id="__codelineno-4-107" name="__codelineno-4-107"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"170"</span>
+<a href="#__codelineno-4-108" id="__codelineno-4-108" name="__codelineno-4-108"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-109" id="__codelineno-4-109" name="__codelineno-4-109"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-110" id="__codelineno-4-110" name="__codelineno-4-110"></a><span class="w">                            </span><span class="nt">"gshut-recv-local-preference"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-111" id="__codelineno-4-111" name="__codelineno-4-111"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-112" id="__codelineno-4-112" name="__codelineno-4-112"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-113" id="__codelineno-4-113" name="__codelineno-4-113"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-114" id="__codelineno-4-114" name="__codelineno-4-114"></a><span class="w">                            </span><span class="p">]</span>
+<a href="#__codelineno-4-115" id="__codelineno-4-115" name="__codelineno-4-115"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-116" id="__codelineno-4-116" name="__codelineno-4-116"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-117" id="__codelineno-4-117" name="__codelineno-4-117"></a><span class="w">                    </span><span class="nt">"flap-count"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-118" id="__codelineno-4-118" name="__codelineno-4-118"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-119" id="__codelineno-4-119" name="__codelineno-4-119"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-120" id="__codelineno-4-120" name="__codelineno-4-120"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-121" id="__codelineno-4-121" name="__codelineno-4-121"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-122" id="__codelineno-4-122" name="__codelineno-4-122"></a><span class="w">                    </span><span class="nt">"peer-id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-123" id="__codelineno-4-123" name="__codelineno-4-123"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-124" id="__codelineno-4-124" name="__codelineno-4-124"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.100.100.4"</span>
+<a href="#__codelineno-4-125" id="__codelineno-4-125" name="__codelineno-4-125"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-126" id="__codelineno-4-126" name="__codelineno-4-126"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-127" id="__codelineno-4-127" name="__codelineno-4-127"></a><span class="w">                    </span><span class="nt">"local-id"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-128" id="__codelineno-4-128" name="__codelineno-4-128"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-129" id="__codelineno-4-129" name="__codelineno-4-129"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.100.100.1"</span>
+<a href="#__codelineno-4-130" id="__codelineno-4-130" name="__codelineno-4-130"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-131" id="__codelineno-4-131" name="__codelineno-4-131"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-132" id="__codelineno-4-132" name="__codelineno-4-132"></a><span class="w">                    </span><span class="nt">"active-holdtime"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-133" id="__codelineno-4-133" name="__codelineno-4-133"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-134" id="__codelineno-4-134" name="__codelineno-4-134"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90"</span>
+<a href="#__codelineno-4-135" id="__codelineno-4-135" name="__codelineno-4-135"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-136" id="__codelineno-4-136" name="__codelineno-4-136"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-137" id="__codelineno-4-137" name="__codelineno-4-137"></a><span class="w">                    </span><span class="nt">"keepalive-interval"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-138" id="__codelineno-4-138" name="__codelineno-4-138"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-139" id="__codelineno-4-139" name="__codelineno-4-139"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30"</span>
+<a href="#__codelineno-4-140" id="__codelineno-4-140" name="__codelineno-4-140"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-141" id="__codelineno-4-141" name="__codelineno-4-141"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-142" id="__codelineno-4-142" name="__codelineno-4-142"></a><span class="w">                    </span><span class="nt">"group-index"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-143" id="__codelineno-4-143" name="__codelineno-4-143"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-144" id="__codelineno-4-144" name="__codelineno-4-144"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-145" id="__codelineno-4-145" name="__codelineno-4-145"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-146" id="__codelineno-4-146" name="__codelineno-4-146"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-147" id="__codelineno-4-147" name="__codelineno-4-147"></a><span class="w">                    </span><span class="nt">"peer-index"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-148" id="__codelineno-4-148" name="__codelineno-4-148"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-149" id="__codelineno-4-149" name="__codelineno-4-149"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-150" id="__codelineno-4-150" name="__codelineno-4-150"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-151" id="__codelineno-4-151" name="__codelineno-4-151"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-152" id="__codelineno-4-152" name="__codelineno-4-152"></a><span class="w">                    </span><span class="nt">"snmp-index"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-153" id="__codelineno-4-153" name="__codelineno-4-153"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-154" id="__codelineno-4-154" name="__codelineno-4-154"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-155" id="__codelineno-4-155" name="__codelineno-4-155"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-156" id="__codelineno-4-156" name="__codelineno-4-156"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-157" id="__codelineno-4-157" name="__codelineno-4-157"></a><span class="w">                    </span><span class="nt">"bgp-peer-iosession"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-158" id="__codelineno-4-158" name="__codelineno-4-158"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-159" id="__codelineno-4-159" name="__codelineno-4-159"></a><span class="w">                            </span><span class="nt">"iosession-thread-name"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-160" id="__codelineno-4-160" name="__codelineno-4-160"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-161" id="__codelineno-4-161" name="__codelineno-4-161"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bgpio-0"</span>
+<a href="#__codelineno-4-162" id="__codelineno-4-162" name="__codelineno-4-162"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-163" id="__codelineno-4-163" name="__codelineno-4-163"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-164" id="__codelineno-4-164" name="__codelineno-4-164"></a><span class="w">                            </span><span class="nt">"iosession-state"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-165" id="__codelineno-4-165" name="__codelineno-4-165"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-166" id="__codelineno-4-166" name="__codelineno-4-166"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Enabled"</span>
+<a href="#__codelineno-4-167" id="__codelineno-4-167" name="__codelineno-4-167"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-168" id="__codelineno-4-168" name="__codelineno-4-168"></a><span class="w">                            </span><span class="p">]</span>
+<a href="#__codelineno-4-169" id="__codelineno-4-169" name="__codelineno-4-169"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-170" id="__codelineno-4-170" name="__codelineno-4-170"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-171" id="__codelineno-4-171" name="__codelineno-4-171"></a><span class="w">                    </span><span class="nt">"bgp-bfd"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-172" id="__codelineno-4-172" name="__codelineno-4-172"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-173" id="__codelineno-4-173" name="__codelineno-4-173"></a><span class="w">                            </span><span class="nt">"bfd-configuration-state"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-174" id="__codelineno-4-174" name="__codelineno-4-174"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-175" id="__codelineno-4-175" name="__codelineno-4-175"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"disabled"</span>
+<a href="#__codelineno-4-176" id="__codelineno-4-176" name="__codelineno-4-176"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-177" id="__codelineno-4-177" name="__codelineno-4-177"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-178" id="__codelineno-4-178" name="__codelineno-4-178"></a><span class="w">                            </span><span class="nt">"bfd-operational-state"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-179" id="__codelineno-4-179" name="__codelineno-4-179"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-180" id="__codelineno-4-180" name="__codelineno-4-180"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"down"</span>
+<a href="#__codelineno-4-181" id="__codelineno-4-181" name="__codelineno-4-181"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-182" id="__codelineno-4-182" name="__codelineno-4-182"></a><span class="w">                            </span><span class="p">]</span>
+<a href="#__codelineno-4-183" id="__codelineno-4-183" name="__codelineno-4-183"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-184" id="__codelineno-4-184" name="__codelineno-4-184"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-185" id="__codelineno-4-185" name="__codelineno-4-185"></a><span class="w">                    </span><span class="nt">"local-interface-name"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-186" id="__codelineno-4-186" name="__codelineno-4-186"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-187" id="__codelineno-4-187" name="__codelineno-4-187"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ge-0/0/2.0"</span>
+<a href="#__codelineno-4-188" id="__codelineno-4-188" name="__codelineno-4-188"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-189" id="__codelineno-4-189" name="__codelineno-4-189"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-190" id="__codelineno-4-190" name="__codelineno-4-190"></a><span class="w">                    </span><span class="nt">"local-interface-index"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-191" id="__codelineno-4-191" name="__codelineno-4-191"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-192" id="__codelineno-4-192" name="__codelineno-4-192"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"545"</span>
+<a href="#__codelineno-4-193" id="__codelineno-4-193" name="__codelineno-4-193"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-194" id="__codelineno-4-194" name="__codelineno-4-194"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-195" id="__codelineno-4-195" name="__codelineno-4-195"></a><span class="w">                    </span><span class="nt">"peer-restart-nlri-configured"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-196" id="__codelineno-4-196" name="__codelineno-4-196"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-197" id="__codelineno-4-197" name="__codelineno-4-197"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inet-unicast"</span>
+<a href="#__codelineno-4-198" id="__codelineno-4-198" name="__codelineno-4-198"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-199" id="__codelineno-4-199" name="__codelineno-4-199"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-200" id="__codelineno-4-200" name="__codelineno-4-200"></a><span class="w">                    </span><span class="nt">"nlri-type-peer"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-201" id="__codelineno-4-201" name="__codelineno-4-201"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-202" id="__codelineno-4-202" name="__codelineno-4-202"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inet-unicast"</span>
+<a href="#__codelineno-4-203" id="__codelineno-4-203" name="__codelineno-4-203"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-204" id="__codelineno-4-204" name="__codelineno-4-204"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-205" id="__codelineno-4-205" name="__codelineno-4-205"></a><span class="w">                    </span><span class="nt">"nlri-type-session"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-206" id="__codelineno-4-206" name="__codelineno-4-206"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-207" id="__codelineno-4-207" name="__codelineno-4-207"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inet-unicast"</span>
+<a href="#__codelineno-4-208" id="__codelineno-4-208" name="__codelineno-4-208"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-209" id="__codelineno-4-209" name="__codelineno-4-209"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-210" id="__codelineno-4-210" name="__codelineno-4-210"></a><span class="w">                    </span><span class="nt">"peer-refresh-capability"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-211" id="__codelineno-4-211" name="__codelineno-4-211"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-212" id="__codelineno-4-212" name="__codelineno-4-212"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span>
+<a href="#__codelineno-4-213" id="__codelineno-4-213" name="__codelineno-4-213"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-214" id="__codelineno-4-214" name="__codelineno-4-214"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-215" id="__codelineno-4-215" name="__codelineno-4-215"></a><span class="w">                    </span><span class="nt">"peer-stale-route-time-configured"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-216" id="__codelineno-4-216" name="__codelineno-4-216"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-217" id="__codelineno-4-217" name="__codelineno-4-217"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"300"</span>
+<a href="#__codelineno-4-218" id="__codelineno-4-218" name="__codelineno-4-218"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-219" id="__codelineno-4-219" name="__codelineno-4-219"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-220" id="__codelineno-4-220" name="__codelineno-4-220"></a><span class="w">                    </span><span class="nt">"peer-no-restart"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-221" id="__codelineno-4-221" name="__codelineno-4-221"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-222" id="__codelineno-4-222" name="__codelineno-4-222"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="kc">null</span><span class="p">]</span>
+<a href="#__codelineno-4-223" id="__codelineno-4-223" name="__codelineno-4-223"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-224" id="__codelineno-4-224" name="__codelineno-4-224"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-225" id="__codelineno-4-225" name="__codelineno-4-225"></a><span class="w">                    </span><span class="nt">"peer-restart-flags-received"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-226" id="__codelineno-4-226" name="__codelineno-4-226"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-227" id="__codelineno-4-227" name="__codelineno-4-227"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Notification"</span>
+<a href="#__codelineno-4-228" id="__codelineno-4-228" name="__codelineno-4-228"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-229" id="__codelineno-4-229" name="__codelineno-4-229"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-230" id="__codelineno-4-230" name="__codelineno-4-230"></a><span class="w">                    </span><span class="nt">"peer-restart-nlri-negotiated"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-231" id="__codelineno-4-231" name="__codelineno-4-231"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-232" id="__codelineno-4-232" name="__codelineno-4-232"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inet-unicast"</span>
+<a href="#__codelineno-4-233" id="__codelineno-4-233" name="__codelineno-4-233"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-234" id="__codelineno-4-234" name="__codelineno-4-234"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-235" id="__codelineno-4-235" name="__codelineno-4-235"></a><span class="w">                    </span><span class="nt">"peer-end-of-rib-received"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-236" id="__codelineno-4-236" name="__codelineno-4-236"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-237" id="__codelineno-4-237" name="__codelineno-4-237"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inet-unicast"</span>
+<a href="#__codelineno-4-238" id="__codelineno-4-238" name="__codelineno-4-238"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-239" id="__codelineno-4-239" name="__codelineno-4-239"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-240" id="__codelineno-4-240" name="__codelineno-4-240"></a><span class="w">                    </span><span class="nt">"peer-end-of-rib-sent"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-241" id="__codelineno-4-241" name="__codelineno-4-241"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-242" id="__codelineno-4-242" name="__codelineno-4-242"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inet-unicast"</span>
+<a href="#__codelineno-4-243" id="__codelineno-4-243" name="__codelineno-4-243"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-244" id="__codelineno-4-244" name="__codelineno-4-244"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-245" id="__codelineno-4-245" name="__codelineno-4-245"></a><span class="w">                    </span><span class="nt">"peer-end-of-rib-scheduled"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-246" id="__codelineno-4-246" name="__codelineno-4-246"></a><span class="w">                        </span><span class="p">{}</span>
+<a href="#__codelineno-4-247" id="__codelineno-4-247" name="__codelineno-4-247"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-248" id="__codelineno-4-248" name="__codelineno-4-248"></a><span class="w">                    </span><span class="nt">"peer-no-llgr-restarter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-249" id="__codelineno-4-249" name="__codelineno-4-249"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-250" id="__codelineno-4-250" name="__codelineno-4-250"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="kc">null</span><span class="p">]</span>
+<a href="#__codelineno-4-251" id="__codelineno-4-251" name="__codelineno-4-251"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-252" id="__codelineno-4-252" name="__codelineno-4-252"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-253" id="__codelineno-4-253" name="__codelineno-4-253"></a><span class="w">                    </span><span class="nt">"peer-4byte-as-capability-advertised"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-254" id="__codelineno-4-254" name="__codelineno-4-254"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-255" id="__codelineno-4-255" name="__codelineno-4-255"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"64544"</span>
+<a href="#__codelineno-4-256" id="__codelineno-4-256" name="__codelineno-4-256"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-257" id="__codelineno-4-257" name="__codelineno-4-257"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-258" id="__codelineno-4-258" name="__codelineno-4-258"></a><span class="w">                    </span><span class="nt">"peer-addpath-not-supported"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-259" id="__codelineno-4-259" name="__codelineno-4-259"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-260" id="__codelineno-4-260" name="__codelineno-4-260"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="kc">null</span><span class="p">]</span>
+<a href="#__codelineno-4-261" id="__codelineno-4-261" name="__codelineno-4-261"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-262" id="__codelineno-4-262" name="__codelineno-4-262"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-263" id="__codelineno-4-263" name="__codelineno-4-263"></a><span class="w">                    </span><span class="nt">"bgp-rib"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-264" id="__codelineno-4-264" name="__codelineno-4-264"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-265" id="__codelineno-4-265" name="__codelineno-4-265"></a><span class="w">                            </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-266" id="__codelineno-4-266" name="__codelineno-4-266"></a><span class="w">                                </span><span class="nt">"junos:style"</span><span class="p">:</span><span class="w"> </span><span class="s2">"detail"</span>
+<a href="#__codelineno-4-267" id="__codelineno-4-267" name="__codelineno-4-267"></a><span class="w">                            </span><span class="p">},</span>
+<a href="#__codelineno-4-268" id="__codelineno-4-268" name="__codelineno-4-268"></a><span class="w">                            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-269" id="__codelineno-4-269" name="__codelineno-4-269"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-270" id="__codelineno-4-270" name="__codelineno-4-270"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inet.0"</span>
+<a href="#__codelineno-4-271" id="__codelineno-4-271" name="__codelineno-4-271"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-272" id="__codelineno-4-272" name="__codelineno-4-272"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-273" id="__codelineno-4-273" name="__codelineno-4-273"></a><span class="w">                            </span><span class="nt">"rib-bit"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-274" id="__codelineno-4-274" name="__codelineno-4-274"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-275" id="__codelineno-4-275" name="__codelineno-4-275"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20000"</span>
+<a href="#__codelineno-4-276" id="__codelineno-4-276" name="__codelineno-4-276"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-277" id="__codelineno-4-277" name="__codelineno-4-277"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-278" id="__codelineno-4-278" name="__codelineno-4-278"></a><span class="w">                            </span><span class="nt">"bgp-rib-state"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-279" id="__codelineno-4-279" name="__codelineno-4-279"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-280" id="__codelineno-4-280" name="__codelineno-4-280"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BGP restart is complete"</span>
+<a href="#__codelineno-4-281" id="__codelineno-4-281" name="__codelineno-4-281"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-282" id="__codelineno-4-282" name="__codelineno-4-282"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-283" id="__codelineno-4-283" name="__codelineno-4-283"></a><span class="w">                            </span><span class="nt">"send-state"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-284" id="__codelineno-4-284" name="__codelineno-4-284"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-285" id="__codelineno-4-285" name="__codelineno-4-285"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in sync"</span>
+<a href="#__codelineno-4-286" id="__codelineno-4-286" name="__codelineno-4-286"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-287" id="__codelineno-4-287" name="__codelineno-4-287"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-288" id="__codelineno-4-288" name="__codelineno-4-288"></a><span class="w">                            </span><span class="nt">"active-prefix-count"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-289" id="__codelineno-4-289" name="__codelineno-4-289"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-290" id="__codelineno-4-290" name="__codelineno-4-290"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-291" id="__codelineno-4-291" name="__codelineno-4-291"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-292" id="__codelineno-4-292" name="__codelineno-4-292"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-293" id="__codelineno-4-293" name="__codelineno-4-293"></a><span class="w">                            </span><span class="nt">"received-prefix-count"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-294" id="__codelineno-4-294" name="__codelineno-4-294"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-295" id="__codelineno-4-295" name="__codelineno-4-295"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-296" id="__codelineno-4-296" name="__codelineno-4-296"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-297" id="__codelineno-4-297" name="__codelineno-4-297"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-298" id="__codelineno-4-298" name="__codelineno-4-298"></a><span class="w">                            </span><span class="nt">"accepted-prefix-count"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-299" id="__codelineno-4-299" name="__codelineno-4-299"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-300" id="__codelineno-4-300" name="__codelineno-4-300"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-301" id="__codelineno-4-301" name="__codelineno-4-301"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-302" id="__codelineno-4-302" name="__codelineno-4-302"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-303" id="__codelineno-4-303" name="__codelineno-4-303"></a><span class="w">                            </span><span class="nt">"suppressed-prefix-count"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-304" id="__codelineno-4-304" name="__codelineno-4-304"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-305" id="__codelineno-4-305" name="__codelineno-4-305"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-306" id="__codelineno-4-306" name="__codelineno-4-306"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-307" id="__codelineno-4-307" name="__codelineno-4-307"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-308" id="__codelineno-4-308" name="__codelineno-4-308"></a><span class="w">                            </span><span class="nt">"advertised-prefix-count"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-309" id="__codelineno-4-309" name="__codelineno-4-309"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-310" id="__codelineno-4-310" name="__codelineno-4-310"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-311" id="__codelineno-4-311" name="__codelineno-4-311"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-312" id="__codelineno-4-312" name="__codelineno-4-312"></a><span class="w">                            </span><span class="p">]</span>
+<a href="#__codelineno-4-313" id="__codelineno-4-313" name="__codelineno-4-313"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-314" id="__codelineno-4-314" name="__codelineno-4-314"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-315" id="__codelineno-4-315" name="__codelineno-4-315"></a><span class="w">                    </span><span class="nt">"last-received"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-316" id="__codelineno-4-316" name="__codelineno-4-316"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-317" id="__codelineno-4-317" name="__codelineno-4-317"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span>
+<a href="#__codelineno-4-318" id="__codelineno-4-318" name="__codelineno-4-318"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-319" id="__codelineno-4-319" name="__codelineno-4-319"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-320" id="__codelineno-4-320" name="__codelineno-4-320"></a><span class="w">                    </span><span class="nt">"last-sent"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-321" id="__codelineno-4-321" name="__codelineno-4-321"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-322" id="__codelineno-4-322" name="__codelineno-4-322"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15"</span>
+<a href="#__codelineno-4-323" id="__codelineno-4-323" name="__codelineno-4-323"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-324" id="__codelineno-4-324" name="__codelineno-4-324"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-325" id="__codelineno-4-325" name="__codelineno-4-325"></a><span class="w">                    </span><span class="nt">"last-checked"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-326" id="__codelineno-4-326" name="__codelineno-4-326"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-327" id="__codelineno-4-327" name="__codelineno-4-327"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15613"</span>
+<a href="#__codelineno-4-328" id="__codelineno-4-328" name="__codelineno-4-328"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-329" id="__codelineno-4-329" name="__codelineno-4-329"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-330" id="__codelineno-4-330" name="__codelineno-4-330"></a><span class="w">                    </span><span class="nt">"input-messages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-331" id="__codelineno-4-331" name="__codelineno-4-331"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-332" id="__codelineno-4-332" name="__codelineno-4-332"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"580"</span>
+<a href="#__codelineno-4-333" id="__codelineno-4-333" name="__codelineno-4-333"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-334" id="__codelineno-4-334" name="__codelineno-4-334"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-335" id="__codelineno-4-335" name="__codelineno-4-335"></a><span class="w">                    </span><span class="nt">"input-updates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-336" id="__codelineno-4-336" name="__codelineno-4-336"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-337" id="__codelineno-4-337" name="__codelineno-4-337"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span>
+<a href="#__codelineno-4-338" id="__codelineno-4-338" name="__codelineno-4-338"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-339" id="__codelineno-4-339" name="__codelineno-4-339"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-340" id="__codelineno-4-340" name="__codelineno-4-340"></a><span class="w">                    </span><span class="nt">"input-refreshes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-341" id="__codelineno-4-341" name="__codelineno-4-341"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-342" id="__codelineno-4-342" name="__codelineno-4-342"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-343" id="__codelineno-4-343" name="__codelineno-4-343"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-344" id="__codelineno-4-344" name="__codelineno-4-344"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-345" id="__codelineno-4-345" name="__codelineno-4-345"></a><span class="w">                    </span><span class="nt">"input-octets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-346" id="__codelineno-4-346" name="__codelineno-4-346"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-347" id="__codelineno-4-347" name="__codelineno-4-347"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11068"</span>
+<a href="#__codelineno-4-348" id="__codelineno-4-348" name="__codelineno-4-348"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-349" id="__codelineno-4-349" name="__codelineno-4-349"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-350" id="__codelineno-4-350" name="__codelineno-4-350"></a><span class="w">                    </span><span class="nt">"output-messages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-351" id="__codelineno-4-351" name="__codelineno-4-351"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-352" id="__codelineno-4-352" name="__codelineno-4-352"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"577"</span>
+<a href="#__codelineno-4-353" id="__codelineno-4-353" name="__codelineno-4-353"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-354" id="__codelineno-4-354" name="__codelineno-4-354"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-355" id="__codelineno-4-355" name="__codelineno-4-355"></a><span class="w">                    </span><span class="nt">"output-updates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-356" id="__codelineno-4-356" name="__codelineno-4-356"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-357" id="__codelineno-4-357" name="__codelineno-4-357"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-358" id="__codelineno-4-358" name="__codelineno-4-358"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-359" id="__codelineno-4-359" name="__codelineno-4-359"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-360" id="__codelineno-4-360" name="__codelineno-4-360"></a><span class="w">                    </span><span class="nt">"output-refreshes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-361" id="__codelineno-4-361" name="__codelineno-4-361"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-362" id="__codelineno-4-362" name="__codelineno-4-362"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-363" id="__codelineno-4-363" name="__codelineno-4-363"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-364" id="__codelineno-4-364" name="__codelineno-4-364"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-365" id="__codelineno-4-365" name="__codelineno-4-365"></a><span class="w">                    </span><span class="nt">"output-octets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-366" id="__codelineno-4-366" name="__codelineno-4-366"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-367" id="__codelineno-4-367" name="__codelineno-4-367"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10967"</span>
+<a href="#__codelineno-4-368" id="__codelineno-4-368" name="__codelineno-4-368"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-369" id="__codelineno-4-369" name="__codelineno-4-369"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-370" id="__codelineno-4-370" name="__codelineno-4-370"></a><span class="w">                    </span><span class="nt">"bgp-output-queue"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-371" id="__codelineno-4-371" name="__codelineno-4-371"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-372" id="__codelineno-4-372" name="__codelineno-4-372"></a><span class="w">                            </span><span class="nt">"number"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-373" id="__codelineno-4-373" name="__codelineno-4-373"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-374" id="__codelineno-4-374" name="__codelineno-4-374"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span>
+<a href="#__codelineno-4-375" id="__codelineno-4-375" name="__codelineno-4-375"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-376" id="__codelineno-4-376" name="__codelineno-4-376"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-377" id="__codelineno-4-377" name="__codelineno-4-377"></a><span class="w">                            </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-378" id="__codelineno-4-378" name="__codelineno-4-378"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-379" id="__codelineno-4-379" name="__codelineno-4-379"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-380" id="__codelineno-4-380" name="__codelineno-4-380"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-381" id="__codelineno-4-381" name="__codelineno-4-381"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-382" id="__codelineno-4-382" name="__codelineno-4-382"></a><span class="w">                            </span><span class="nt">"table-name"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-383" id="__codelineno-4-383" name="__codelineno-4-383"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-384" id="__codelineno-4-384" name="__codelineno-4-384"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inet.0"</span>
+<a href="#__codelineno-4-385" id="__codelineno-4-385" name="__codelineno-4-385"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-386" id="__codelineno-4-386" name="__codelineno-4-386"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-387" id="__codelineno-4-387" name="__codelineno-4-387"></a><span class="w">                            </span><span class="nt">"rib-adv-nlri"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-388" id="__codelineno-4-388" name="__codelineno-4-388"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-389" id="__codelineno-4-389" name="__codelineno-4-389"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inet-unicast"</span>
+<a href="#__codelineno-4-390" id="__codelineno-4-390" name="__codelineno-4-390"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-391" id="__codelineno-4-391" name="__codelineno-4-391"></a><span class="w">                            </span><span class="p">]</span>
+<a href="#__codelineno-4-392" id="__codelineno-4-392" name="__codelineno-4-392"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-393" id="__codelineno-4-393" name="__codelineno-4-393"></a><span class="w">                    </span><span class="p">]</span>
+<a href="#__codelineno-4-394" id="__codelineno-4-394" name="__codelineno-4-394"></a><span class="w">                </span><span class="p">}</span>
+<a href="#__codelineno-4-395" id="__codelineno-4-395" name="__codelineno-4-395"></a><span class="w">            </span><span class="p">]</span>
+<a href="#__codelineno-4-396" id="__codelineno-4-396" name="__codelineno-4-396"></a><span class="w">        </span><span class="p">}</span>
+<a href="#__codelineno-4-397" id="__codelineno-4-397" name="__codelineno-4-397"></a><span class="w">    </span><span class="p">]</span>
+<a href="#__codelineno-4-398" id="__codelineno-4-398" name="__codelineno-4-398"></a><span class="p">}</span>
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

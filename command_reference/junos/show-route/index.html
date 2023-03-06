@@ -135,7 +135,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../slack/">
-        Slack Ops with Maira
+        SlackOps
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
@@ -3016,10 +3016,10 @@
 <h2 id="description">Description</h2>
 <p>Show routing table information</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>junos show-route
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--cluster &lt;cluster&gt;]
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [&lt;destination&gt;]
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>junos<span class="w"> </span>show-route
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--cluster<span class="w"> </span>&lt;cluster&gt;<span class="o">]</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>&lt;destination&gt;<span class="o">]</span>
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3039,7 +3039,7 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!junos show-route "10.100.14.2"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">junos</span> <span class="n">show</span><span class="o">-</span><span class="n">route</span> <span class="s2">"10.100.14.2"</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>inet.0: 21 destinations, 21 routes (21 active, 0 holddown, 0 hidden)
@@ -3049,112 +3049,112 @@ Output:
 <a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>                    &amp;gt;  via ge-0/0/2.0
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>x = !junos show-route "10.100.14.2"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">x</span> <span class="o">=</span> <span class="err">!</span><span class="n">junos</span> <span class="n">show</span><span class="o">-</span><span class="n">route</span> <span class="s2">"10.100.14.2"</span>
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>{
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>    "route-information": [
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>        {
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>            "route-table": [
-<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>                {
-<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>                    "table-name": [
-<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>                        {
-<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>                            "data": "inet.0"
-<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>                        }
-<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>                    ],
-<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>                    "destination-count": [
-<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>                        {
-<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>                            "data": "21"
-<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>                        }
-<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>                    ],
-<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>                    "total-route-count": [
-<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a>                        {
-<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>                            "data": "21"
-<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a>                        }
-<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>                    ],
-<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a>                    "active-route-count": [
-<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a>                        {
-<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a>                            "data": "21"
-<a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a>                        }
-<a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a>                    ],
-<a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a>                    "holddown-route-count": [
-<a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a>                        {
-<a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a>                            "data": "0"
-<a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a>                        }
-<a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a>                    ],
-<a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a>                    "hidden-route-count": [
-<a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a>                        {
-<a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a>                            "data": "0"
-<a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a>                        }
-<a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a>                    ],
-<a href="#__codelineno-4-36" id="__codelineno-4-36" name="__codelineno-4-36"></a>                    "rt": [
-<a href="#__codelineno-4-37" id="__codelineno-4-37" name="__codelineno-4-37"></a>                        {
-<a href="#__codelineno-4-38" id="__codelineno-4-38" name="__codelineno-4-38"></a>                            "attributes": {
-<a href="#__codelineno-4-39" id="__codelineno-4-39" name="__codelineno-4-39"></a>                                "junos:style": "brief"
-<a href="#__codelineno-4-40" id="__codelineno-4-40" name="__codelineno-4-40"></a>                            },
-<a href="#__codelineno-4-41" id="__codelineno-4-41" name="__codelineno-4-41"></a>                            "rt-destination": [
-<a href="#__codelineno-4-42" id="__codelineno-4-42" name="__codelineno-4-42"></a>                                {
-<a href="#__codelineno-4-43" id="__codelineno-4-43" name="__codelineno-4-43"></a>                                    "data": "10.100.14.0/24"
-<a href="#__codelineno-4-44" id="__codelineno-4-44" name="__codelineno-4-44"></a>                                }
-<a href="#__codelineno-4-45" id="__codelineno-4-45" name="__codelineno-4-45"></a>                            ],
-<a href="#__codelineno-4-46" id="__codelineno-4-46" name="__codelineno-4-46"></a>                            "rt-entry": [
-<a href="#__codelineno-4-47" id="__codelineno-4-47" name="__codelineno-4-47"></a>                                {
-<a href="#__codelineno-4-48" id="__codelineno-4-48" name="__codelineno-4-48"></a>                                    "active-tag": [
-<a href="#__codelineno-4-49" id="__codelineno-4-49" name="__codelineno-4-49"></a>                                        {
-<a href="#__codelineno-4-50" id="__codelineno-4-50" name="__codelineno-4-50"></a>                                            "data": "*"
-<a href="#__codelineno-4-51" id="__codelineno-4-51" name="__codelineno-4-51"></a>                                        }
-<a href="#__codelineno-4-52" id="__codelineno-4-52" name="__codelineno-4-52"></a>                                    ],
-<a href="#__codelineno-4-53" id="__codelineno-4-53" name="__codelineno-4-53"></a>                                    "current-active": [
-<a href="#__codelineno-4-54" id="__codelineno-4-54" name="__codelineno-4-54"></a>                                        {
-<a href="#__codelineno-4-55" id="__codelineno-4-55" name="__codelineno-4-55"></a>                                            "data": [null]
-<a href="#__codelineno-4-56" id="__codelineno-4-56" name="__codelineno-4-56"></a>                                        }
-<a href="#__codelineno-4-57" id="__codelineno-4-57" name="__codelineno-4-57"></a>                                    ],
-<a href="#__codelineno-4-58" id="__codelineno-4-58" name="__codelineno-4-58"></a>                                    "last-active": [
-<a href="#__codelineno-4-59" id="__codelineno-4-59" name="__codelineno-4-59"></a>                                        {
-<a href="#__codelineno-4-60" id="__codelineno-4-60" name="__codelineno-4-60"></a>                                            "data": [null]
-<a href="#__codelineno-4-61" id="__codelineno-4-61" name="__codelineno-4-61"></a>                                        }
-<a href="#__codelineno-4-62" id="__codelineno-4-62" name="__codelineno-4-62"></a>                                    ],
-<a href="#__codelineno-4-63" id="__codelineno-4-63" name="__codelineno-4-63"></a>                                    "protocol-name": [
-<a href="#__codelineno-4-64" id="__codelineno-4-64" name="__codelineno-4-64"></a>                                        {
-<a href="#__codelineno-4-65" id="__codelineno-4-65" name="__codelineno-4-65"></a>                                            "data": "Direct"
-<a href="#__codelineno-4-66" id="__codelineno-4-66" name="__codelineno-4-66"></a>                                        }
-<a href="#__codelineno-4-67" id="__codelineno-4-67" name="__codelineno-4-67"></a>                                    ],
-<a href="#__codelineno-4-68" id="__codelineno-4-68" name="__codelineno-4-68"></a>                                    "preference": [
-<a href="#__codelineno-4-69" id="__codelineno-4-69" name="__codelineno-4-69"></a>                                        {
-<a href="#__codelineno-4-70" id="__codelineno-4-70" name="__codelineno-4-70"></a>                                            "data": "0"
-<a href="#__codelineno-4-71" id="__codelineno-4-71" name="__codelineno-4-71"></a>                                        }
-<a href="#__codelineno-4-72" id="__codelineno-4-72" name="__codelineno-4-72"></a>                                    ],
-<a href="#__codelineno-4-73" id="__codelineno-4-73" name="__codelineno-4-73"></a>                                    "age": [
-<a href="#__codelineno-4-74" id="__codelineno-4-74" name="__codelineno-4-74"></a>                                        {
-<a href="#__codelineno-4-75" id="__codelineno-4-75" name="__codelineno-4-75"></a>                                            "data": "04:22:19",
-<a href="#__codelineno-4-76" id="__codelineno-4-76" name="__codelineno-4-76"></a>                                            "attributes": {
-<a href="#__codelineno-4-77" id="__codelineno-4-77" name="__codelineno-4-77"></a>                                                "junos:seconds": "15739"
-<a href="#__codelineno-4-78" id="__codelineno-4-78" name="__codelineno-4-78"></a>                                            }
-<a href="#__codelineno-4-79" id="__codelineno-4-79" name="__codelineno-4-79"></a>                                        }
-<a href="#__codelineno-4-80" id="__codelineno-4-80" name="__codelineno-4-80"></a>                                    ],
-<a href="#__codelineno-4-81" id="__codelineno-4-81" name="__codelineno-4-81"></a>                                    "nh": [
-<a href="#__codelineno-4-82" id="__codelineno-4-82" name="__codelineno-4-82"></a>                                        {
-<a href="#__codelineno-4-83" id="__codelineno-4-83" name="__codelineno-4-83"></a>                                            "selected-next-hop": [
-<a href="#__codelineno-4-84" id="__codelineno-4-84" name="__codelineno-4-84"></a>                                                {
-<a href="#__codelineno-4-85" id="__codelineno-4-85" name="__codelineno-4-85"></a>                                                    "data": [null]
-<a href="#__codelineno-4-86" id="__codelineno-4-86" name="__codelineno-4-86"></a>                                                }
-<a href="#__codelineno-4-87" id="__codelineno-4-87" name="__codelineno-4-87"></a>                                            ],
-<a href="#__codelineno-4-88" id="__codelineno-4-88" name="__codelineno-4-88"></a>                                            "via": [
-<a href="#__codelineno-4-89" id="__codelineno-4-89" name="__codelineno-4-89"></a>                                                {
-<a href="#__codelineno-4-90" id="__codelineno-4-90" name="__codelineno-4-90"></a>                                                    "data": "ge-0/0/2.0"
-<a href="#__codelineno-4-91" id="__codelineno-4-91" name="__codelineno-4-91"></a>                                                }
-<a href="#__codelineno-4-92" id="__codelineno-4-92" name="__codelineno-4-92"></a>                                            ]
-<a href="#__codelineno-4-93" id="__codelineno-4-93" name="__codelineno-4-93"></a>                                        }
-<a href="#__codelineno-4-94" id="__codelineno-4-94" name="__codelineno-4-94"></a>                                    ]
-<a href="#__codelineno-4-95" id="__codelineno-4-95" name="__codelineno-4-95"></a>                                }
-<a href="#__codelineno-4-96" id="__codelineno-4-96" name="__codelineno-4-96"></a>                            ]
-<a href="#__codelineno-4-97" id="__codelineno-4-97" name="__codelineno-4-97"></a>                        }
-<a href="#__codelineno-4-98" id="__codelineno-4-98" name="__codelineno-4-98"></a>                    ]
-<a href="#__codelineno-4-99" id="__codelineno-4-99" name="__codelineno-4-99"></a>                }
-<a href="#__codelineno-4-100" id="__codelineno-4-100" name="__codelineno-4-100"></a>            ]
-<a href="#__codelineno-4-101" id="__codelineno-4-101" name="__codelineno-4-101"></a>        }
-<a href="#__codelineno-4-102" id="__codelineno-4-102" name="__codelineno-4-102"></a>    ]
-<a href="#__codelineno-4-103" id="__codelineno-4-103" name="__codelineno-4-103"></a>}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">{</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="nt">"route-information"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">        </span><span class="p">{</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">            </span><span class="nt">"route-table"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">                </span><span class="p">{</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">                    </span><span class="nt">"table-name"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"inet.0"</span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">                    </span><span class="nt">"destination-count"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21"</span>
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">                    </span><span class="nt">"total-route-count"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21"</span>
+<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">                    </span><span class="nt">"active-route-count"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21"</span>
+<a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">                    </span><span class="nt">"holddown-route-count"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="w">                    </span><span class="nt">"hidden-route-count"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="w">                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="w">                    </span><span class="p">],</span>
+<a href="#__codelineno-4-36" id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="w">                    </span><span class="nt">"rt"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-37" id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="w">                        </span><span class="p">{</span>
+<a href="#__codelineno-4-38" id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="w">                            </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-39" id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="w">                                </span><span class="nt">"junos:style"</span><span class="p">:</span><span class="w"> </span><span class="s2">"brief"</span>
+<a href="#__codelineno-4-40" id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="w">                            </span><span class="p">},</span>
+<a href="#__codelineno-4-41" id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="w">                            </span><span class="nt">"rt-destination"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-42" id="__codelineno-4-42" name="__codelineno-4-42"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-43" id="__codelineno-4-43" name="__codelineno-4-43"></a><span class="w">                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.100.14.0/24"</span>
+<a href="#__codelineno-4-44" id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-45" id="__codelineno-4-45" name="__codelineno-4-45"></a><span class="w">                            </span><span class="p">],</span>
+<a href="#__codelineno-4-46" id="__codelineno-4-46" name="__codelineno-4-46"></a><span class="w">                            </span><span class="nt">"rt-entry"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-47" id="__codelineno-4-47" name="__codelineno-4-47"></a><span class="w">                                </span><span class="p">{</span>
+<a href="#__codelineno-4-48" id="__codelineno-4-48" name="__codelineno-4-48"></a><span class="w">                                    </span><span class="nt">"active-tag"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-49" id="__codelineno-4-49" name="__codelineno-4-49"></a><span class="w">                                        </span><span class="p">{</span>
+<a href="#__codelineno-4-50" id="__codelineno-4-50" name="__codelineno-4-50"></a><span class="w">                                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span>
+<a href="#__codelineno-4-51" id="__codelineno-4-51" name="__codelineno-4-51"></a><span class="w">                                        </span><span class="p">}</span>
+<a href="#__codelineno-4-52" id="__codelineno-4-52" name="__codelineno-4-52"></a><span class="w">                                    </span><span class="p">],</span>
+<a href="#__codelineno-4-53" id="__codelineno-4-53" name="__codelineno-4-53"></a><span class="w">                                    </span><span class="nt">"current-active"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-54" id="__codelineno-4-54" name="__codelineno-4-54"></a><span class="w">                                        </span><span class="p">{</span>
+<a href="#__codelineno-4-55" id="__codelineno-4-55" name="__codelineno-4-55"></a><span class="w">                                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="kc">null</span><span class="p">]</span>
+<a href="#__codelineno-4-56" id="__codelineno-4-56" name="__codelineno-4-56"></a><span class="w">                                        </span><span class="p">}</span>
+<a href="#__codelineno-4-57" id="__codelineno-4-57" name="__codelineno-4-57"></a><span class="w">                                    </span><span class="p">],</span>
+<a href="#__codelineno-4-58" id="__codelineno-4-58" name="__codelineno-4-58"></a><span class="w">                                    </span><span class="nt">"last-active"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-59" id="__codelineno-4-59" name="__codelineno-4-59"></a><span class="w">                                        </span><span class="p">{</span>
+<a href="#__codelineno-4-60" id="__codelineno-4-60" name="__codelineno-4-60"></a><span class="w">                                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="kc">null</span><span class="p">]</span>
+<a href="#__codelineno-4-61" id="__codelineno-4-61" name="__codelineno-4-61"></a><span class="w">                                        </span><span class="p">}</span>
+<a href="#__codelineno-4-62" id="__codelineno-4-62" name="__codelineno-4-62"></a><span class="w">                                    </span><span class="p">],</span>
+<a href="#__codelineno-4-63" id="__codelineno-4-63" name="__codelineno-4-63"></a><span class="w">                                    </span><span class="nt">"protocol-name"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-64" id="__codelineno-4-64" name="__codelineno-4-64"></a><span class="w">                                        </span><span class="p">{</span>
+<a href="#__codelineno-4-65" id="__codelineno-4-65" name="__codelineno-4-65"></a><span class="w">                                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Direct"</span>
+<a href="#__codelineno-4-66" id="__codelineno-4-66" name="__codelineno-4-66"></a><span class="w">                                        </span><span class="p">}</span>
+<a href="#__codelineno-4-67" id="__codelineno-4-67" name="__codelineno-4-67"></a><span class="w">                                    </span><span class="p">],</span>
+<a href="#__codelineno-4-68" id="__codelineno-4-68" name="__codelineno-4-68"></a><span class="w">                                    </span><span class="nt">"preference"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-69" id="__codelineno-4-69" name="__codelineno-4-69"></a><span class="w">                                        </span><span class="p">{</span>
+<a href="#__codelineno-4-70" id="__codelineno-4-70" name="__codelineno-4-70"></a><span class="w">                                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span>
+<a href="#__codelineno-4-71" id="__codelineno-4-71" name="__codelineno-4-71"></a><span class="w">                                        </span><span class="p">}</span>
+<a href="#__codelineno-4-72" id="__codelineno-4-72" name="__codelineno-4-72"></a><span class="w">                                    </span><span class="p">],</span>
+<a href="#__codelineno-4-73" id="__codelineno-4-73" name="__codelineno-4-73"></a><span class="w">                                    </span><span class="nt">"age"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-74" id="__codelineno-4-74" name="__codelineno-4-74"></a><span class="w">                                        </span><span class="p">{</span>
+<a href="#__codelineno-4-75" id="__codelineno-4-75" name="__codelineno-4-75"></a><span class="w">                                            </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04:22:19"</span><span class="p">,</span>
+<a href="#__codelineno-4-76" id="__codelineno-4-76" name="__codelineno-4-76"></a><span class="w">                                            </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-77" id="__codelineno-4-77" name="__codelineno-4-77"></a><span class="w">                                                </span><span class="nt">"junos:seconds"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15739"</span>
+<a href="#__codelineno-4-78" id="__codelineno-4-78" name="__codelineno-4-78"></a><span class="w">                                            </span><span class="p">}</span>
+<a href="#__codelineno-4-79" id="__codelineno-4-79" name="__codelineno-4-79"></a><span class="w">                                        </span><span class="p">}</span>
+<a href="#__codelineno-4-80" id="__codelineno-4-80" name="__codelineno-4-80"></a><span class="w">                                    </span><span class="p">],</span>
+<a href="#__codelineno-4-81" id="__codelineno-4-81" name="__codelineno-4-81"></a><span class="w">                                    </span><span class="nt">"nh"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-82" id="__codelineno-4-82" name="__codelineno-4-82"></a><span class="w">                                        </span><span class="p">{</span>
+<a href="#__codelineno-4-83" id="__codelineno-4-83" name="__codelineno-4-83"></a><span class="w">                                            </span><span class="nt">"selected-next-hop"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-84" id="__codelineno-4-84" name="__codelineno-4-84"></a><span class="w">                                                </span><span class="p">{</span>
+<a href="#__codelineno-4-85" id="__codelineno-4-85" name="__codelineno-4-85"></a><span class="w">                                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="kc">null</span><span class="p">]</span>
+<a href="#__codelineno-4-86" id="__codelineno-4-86" name="__codelineno-4-86"></a><span class="w">                                                </span><span class="p">}</span>
+<a href="#__codelineno-4-87" id="__codelineno-4-87" name="__codelineno-4-87"></a><span class="w">                                            </span><span class="p">],</span>
+<a href="#__codelineno-4-88" id="__codelineno-4-88" name="__codelineno-4-88"></a><span class="w">                                            </span><span class="nt">"via"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-89" id="__codelineno-4-89" name="__codelineno-4-89"></a><span class="w">                                                </span><span class="p">{</span>
+<a href="#__codelineno-4-90" id="__codelineno-4-90" name="__codelineno-4-90"></a><span class="w">                                                    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ge-0/0/2.0"</span>
+<a href="#__codelineno-4-91" id="__codelineno-4-91" name="__codelineno-4-91"></a><span class="w">                                                </span><span class="p">}</span>
+<a href="#__codelineno-4-92" id="__codelineno-4-92" name="__codelineno-4-92"></a><span class="w">                                            </span><span class="p">]</span>
+<a href="#__codelineno-4-93" id="__codelineno-4-93" name="__codelineno-4-93"></a><span class="w">                                        </span><span class="p">}</span>
+<a href="#__codelineno-4-94" id="__codelineno-4-94" name="__codelineno-4-94"></a><span class="w">                                    </span><span class="p">]</span>
+<a href="#__codelineno-4-95" id="__codelineno-4-95" name="__codelineno-4-95"></a><span class="w">                                </span><span class="p">}</span>
+<a href="#__codelineno-4-96" id="__codelineno-4-96" name="__codelineno-4-96"></a><span class="w">                            </span><span class="p">]</span>
+<a href="#__codelineno-4-97" id="__codelineno-4-97" name="__codelineno-4-97"></a><span class="w">                        </span><span class="p">}</span>
+<a href="#__codelineno-4-98" id="__codelineno-4-98" name="__codelineno-4-98"></a><span class="w">                    </span><span class="p">]</span>
+<a href="#__codelineno-4-99" id="__codelineno-4-99" name="__codelineno-4-99"></a><span class="w">                </span><span class="p">}</span>
+<a href="#__codelineno-4-100" id="__codelineno-4-100" name="__codelineno-4-100"></a><span class="w">            </span><span class="p">]</span>
+<a href="#__codelineno-4-101" id="__codelineno-4-101" name="__codelineno-4-101"></a><span class="w">        </span><span class="p">}</span>
+<a href="#__codelineno-4-102" id="__codelineno-4-102" name="__codelineno-4-102"></a><span class="w">    </span><span class="p">]</span>
+<a href="#__codelineno-4-103" id="__codelineno-4-103" name="__codelineno-4-103"></a><span class="p">}</span>
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

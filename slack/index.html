@@ -10,7 +10,7 @@
 <link href="../language/introduction/" rel="next"/>
 <link href="../img/maira-icon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.12" name="generator"/>
-<title>Slack Ops with Maira - Maira Docs</title>
+<title>SlackOps - Maira Docs</title>
 <link href="../assets/stylesheets/main.0d440cfe.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -60,7 +60,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Slack Ops with Maira
+              SlackOps
             
           </span>
 </div>
@@ -136,11 +136,11 @@
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Slack Ops with Maira
+          SlackOps
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Slack Ops with Maira
+        SlackOps
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -156,11 +156,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#slash-commands">
     Slash commands
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#shortcuts">
-    Shortcuts
   </a>
 </li>
 <li class="md-nav__item">
@@ -196,6 +191,11 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shortcuts">
+    Shortcuts
+  </a>
 </li>
 </ul>
 </nav>
@@ -2976,11 +2976,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#shortcuts">
-    Shortcuts
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#issuing-slack-commands-from-your-workflows">
     Issuing slack commands from your workflows
   </a>
@@ -3013,6 +3008,11 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shortcuts">
+    Shortcuts
+  </a>
 </li>
 </ul>
 </nav>
@@ -3047,6 +3047,58 @@
 <p>Once you have connected your slack identity with your Maira identity, you can run slash commands that will execute MPL commands on Maira Cloud. To run these, you can run command like <code>/mpl !k8s list-pods</code> in Slack input box. Below is an example of the output you can expect.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../img/slack.png"><img alt="Slash commands" src="../img/slack.png"/></a></p>
 <p>As you can see from the example, you can assign values to variables and the system remembers those values. This allows user to use those variables in a subsequent call, making this a <em>session</em> like one from MPL REPL shell. You can start a new session by issuing <code>/mpl session-new</code> command. For list of available commands, use <code>/mpl help</code>.</p>
+<p>Internally Maira resumes the session before executing any 
+command user enters in slack.  Infact the session called <em>slack</em> can be 
+resumed in mpl console with all the states intact. </p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">&gt;</span> <span class="n">mpl</span> <span class="o">-</span><span class="n">r</span> <span class="n">slack</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">Resumed</span> <span class="n">session</span><span class="p">:</span> <span class="n">slack</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="o">/</span><span class="n">history</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>   <span class="mi">1</span>  <span class="err">!</span><span class="n">k8s</span> <span class="nb">list</span><span class="o">-</span><span class="n">pods</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>   <span class="mi">2</span>  <span class="n">x</span> <span class="o">=</span> <span class="err">!</span><span class="n">k8s</span> <span class="nb">list</span><span class="o">-</span><span class="n">pods</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>   <span class="mi">3</span>  <span class="nb">print</span> <span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">containers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">mpl</span><span class="o">&gt;</span> <span class="o">/</span><span class="err">!</span><span class="mi">3</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="nb">print</span> <span class="n">x</span><span class="p">[]</span><span class="o">.</span><span class="n">containers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="s2">"hello-python"</span><span class="p">,</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="s2">"hello-python"</span><span class="p">,</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="s2">"maira-gateway"</span>
+</code></pre></div>
+<h2 id="issuing-slack-commands-from-your-workflows">Issuing slack commands from your workflows</h2>
+<p>Besides accessing Maira commands from within workflows, you can also use slack as a tool to involve users in your workflows. Maira supports notifying users, asking a question, surveying the users, managing channels etc.</p>
+<h3 id="notifying-users-on-slack">Notifying users on slack</h3>
+<p>You can notify any slack channel or user (who have connected their slack identity with Maira identity) using a command in your workflow. To do that, use a command like this:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!slack ask --message "Test message from Maira App --name "#general"
+</code></pre></div>
+<p>This should show a notification in the <code>#general</code> channel in your slack workspace like this:</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*btlYcfcq_e2LipjEyJLhZA.jpeg"><img alt="" src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*btlYcfcq_e2LipjEyJLhZA.jpeg"/></a></p>
+<h3 id="asking-a-question-from-a-user-or-channel">Asking a question from a user or channel</h3>
+<p>You can use slack as a convenient way to ask a question about anything. Based on the answer, the workflow can take different paths. Here is an example:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>opt = json ["disable", "reset password", "ignore"]
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>x = !slack ask --message msg --name slack_user --options opt --timeout "1 hour" --retry_interval "20 m"
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>if x == "disable":
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>    ...
+</code></pre></div>
+<p>This will send a message that looks like the following:
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../img/slack-ask.png"><img alt="Slack ask command" src="../img/slack-ask.png"/></a></p>
+<p>Maira will also send a reminder every 20 minutes up to 3 times if no response is received. The workflow will wait for response and continue automatically when a response is received. There is no need to explicitly save state and/or poll. </p>
+<h3 id="surveying-multiple-users-or-channels">Surveying multiple users or channels</h3>
+<p>A slight variation of the <code>ask</code> command allows you to send a survey to multiple users or channels. It will wait until a response has been received from all users/channels up to specified timeout. After that, the workflow will receive results as a JSON object and can take different steps based on the responses. Below is an example:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>opt = json ["disable", "reset password", "ignore"]
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>users = json ["@alice", "@bob"]
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>x = !slack survey --message msg --name users --options opt --timeout "1 hour" --retry_interval "20 m"
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>if x["@alice"] == "disable" &amp;&amp; x["@bob"] == "disable":
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>    ...
+</code></pre></div>
+<h3 id="channel-management">Channel management</h3>
+<p>Maira Slack app allows you to manage slack channels right from your workflows. This allows you to do things like creating a new channel for a high priority incident and assign users to it. You can also send periodic updates on the channel until the incident is resolved. For this, Maira provides commands to list channels, users, creating channels, and updating users. For a complete listing of our slack commands, please refer to our <a href="../command_reference/slack/">Command Documentation for Slack</a>.</p>
+<h3 id="auto-completion-of-command-arguments">Auto-completion of command arguments</h3>
+<p>Like most other Maira commands, when running from MPL REPL shell, Maira will dynamically auto-complete the arguments so that you don't have to remember the available channel and user names. Please see below screenshot for an example.</p>
+<figure>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="autocomplete.png"><img alt="Command completion" src="autocomplete.png"/></a>
+</p>
+<figcaption>Command completion </figcaption>
+</figure>
 <h2 id="shortcuts">Shortcuts</h2>
 <p>It is easy to make a few errors/mistakes while typing the full command for a service in slack. To ease the access of Maira/MPL commands, the slack app provides a <em>shortcut</em> features which helps to:
 * remove dependency on typing the complete exact command for a service and instead use a UI designed specifically for this.
@@ -3056,38 +3108,6 @@
 <p>As you can see from the above screenshots, the entire Maira command library is available as slack shortcut along with help for each parameter.</p>
 <p>In addition, Maira slack app also provides another <em>shortcut</em> to execute <em>multi-line workflows</em> as seen below.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://miro.medium.com/v2/resize:fit:640/format:webp/1*zMnmhE8eW8nO4EEugB_YSA.jpeg"><img alt="" src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*zMnmhE8eW8nO4EEugB_YSA.jpeg" title="Multi-line workflow"/></a></p>
-<h2 id="issuing-slack-commands-from-your-workflows">Issuing slack commands from your workflows</h2>
-<p>Besides accessing Maira commands from within workflows, you can also use slack as a tool to involve users in your workflows. Maira supports notifying users, asking a question, surveying the users, managing channels etc.</p>
-<h3 id="notifying-users-on-slack">Notifying users on slack</h3>
-<p>You can notify any slack channel or user (who have connected their slack identity with Maira identity) using a command in your workflow. To do that, use a command like this:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>!slack ask --message "Test message from Maira App --name "#general"
-</code></pre></div>
-<p>This should show a notification in the <code>#general</code> channel in your slack workspace like this:</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*btlYcfcq_e2LipjEyJLhZA.jpeg"><img alt="" src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*btlYcfcq_e2LipjEyJLhZA.jpeg"/></a></p>
-<h3 id="asking-a-question-from-a-user-or-channel">Asking a question from a user or channel</h3>
-<p>You can use slack as a convenient way to ask a question about anything. Based on the answer, the workflow can take different paths. Here is an example:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>opt = json ["disable", "reset password", "ignore"]
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>x = !slack ask --message msg --name slack_user --options opt --timeout "1 hour" --retry_interval "20 m"
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>if x == "disable":
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>    ...
-</code></pre></div>
-<p>This will send a message that looks like the following:
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="../img/slack-ask.png"><img alt="Slack ask command" src="../img/slack-ask.png"/></a></p>
-<p>Maira will also send a reminder every 20 minutes up to 3 times if no response is received. The workflow will wait for response and continue automatically when a response is received. There is no need to explicitly save state and/or poll. </p>
-<h3 id="surveying-multiple-users-or-channels">Surveying multiple users or channels</h3>
-<p>A slight variation of the <code>ask</code> command allows you to send a survey to multiple users or channels. It will wait until a response has been received from all users/channels up to specified timeout. After that, the workflow will receive results as a JSON object and can take different steps based on the responses. Below is an example:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>opt = json ["disable", "reset password", "ignore"]
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>users = json ["@alice", "@bob"]
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>x = !slack survey --message msg --name users --options opt --timeout "1 hour" --retry_interval "20 m"
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>if x["@alice"] == "disable" &amp;&amp; x["@bob"] == "disable":
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>    ...
-</code></pre></div>
-<h3 id="channel-management">Channel management</h3>
-<p>Maira Slack app allows you to manage slack channels right from your workflows. This allows you to do things like creating a new channel for a high priority incident and assign users to it. You can also send periodic updates on the channel until the incident is resolved. For this, Maira provides commands to list channels, users, creating channels, and updating users. For a complete listing of our slack commands, please refer to our <a href="../command_reference/slack/">Command Documentation for Slack</a>.</p>
-<h3 id="auto-completion-of-command-arguments">Auto-completion of command arguments</h3>
-<p>Like most other Maira commands, when running from MPL REPL shell, Maira will auto-complete the arguments so that you don't have to remember the channel and user names. Please see below screenshot for an example.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="autocomplete.png"><img alt="" src="autocomplete.png" title="Auto-completion of command arguments"/></a></p>
 </article>
 </div>
 </div>

@@ -135,7 +135,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../slack/">
-        Slack Ops with Maira
+        SlackOps
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
@@ -2953,22 +2953,22 @@
 <p>Below is sample configuration for enabling zookeeper integration</p>
 <p>If running in cluster, you only need to enable k8s module and service in maira-agent config file</p>
 <p>Make sure that there is one cluster named <code>default</code>. This will be used by maira commands if no cluster argument is specified.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>modules:
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>  - name: maira_io.module.zookeeper
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>services:
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>  - name: maira_io.service.zookeeper
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    typed_config:
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>      "@type": types.google.com/maira_io.config.service.zookeeper.v1.Config
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>      clusters:
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>        cluster1:
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>          addresses: [localhost:2181]
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>        default:
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>          addresses: [localhost:2181,localhost:2182,localhost:2183]
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>          tls_config:
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>            cert_file: ./certs/dev/localhost.crt
-<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>            key_file: ./certs/dev/localhost.key
-<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>            ca_cert: ./certs/dev/CA.crt
-<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>            insecure: true
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">modules</span><span class="p">:</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">maira_io.module.zookeeper</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nt">services</span><span class="p">:</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">maira_io.service.zookeeper</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nt">typed_config</span><span class="p">:</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">      </span><span class="s">"@type"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">types.google.com/maira_io.config.service.zookeeper.v1.Config</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">      </span><span class="nt">clusters</span><span class="p">:</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="nt">cluster1</span><span class="p">:</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">          </span><span class="nt">addresses</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">localhost</span><span class="p p-Indicator">:</span><span class="nv">2181</span><span class="p p-Indicator">]</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="nt">default</span><span class="p">:</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">          </span><span class="nt">addresses</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">localhost</span><span class="p p-Indicator">:</span><span class="nv">2181</span><span class="p p-Indicator">,</span><span class="nv">localhost</span><span class="p p-Indicator">:</span><span class="nv">2182</span><span class="p p-Indicator">,</span><span class="nv">localhost</span><span class="p p-Indicator">:</span><span class="nv">2183</span><span class="p p-Indicator">]</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">          </span><span class="nt">tls_config</span><span class="p">:</span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">            </span><span class="nt">cert_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./certs/dev/localhost.crt</span>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">            </span><span class="nt">key_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./certs/dev/localhost.key</span>
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">            </span><span class="nt">ca_cert</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./certs/dev/CA.crt</span>
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">            </span><span class="nt">insecure</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </article>
 </div>

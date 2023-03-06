@@ -135,7 +135,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../slack/">
-        Slack Ops with Maira
+        SlackOps
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
@@ -2951,21 +2951,21 @@
 <h2 id="installation">Installation</h2>
 <p>For integrating with Junos, you need to provide your Junos host addresses and authorization token. Make sure that service_name is set as <code>junos</code> and there is one cluster named <code>junos-default</code> since this will be used by default if no cluster is specified in the command.</p>
 <p>Below is sample configuration for enabling Junos integration</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>modules:
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>  - name: maira_io.module.http
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>services:
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>  - name: maira_io.service.http
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    typed_config:
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>      "@type": types.google.com/maira_io.config.service.http.v1.Config
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>      clusters:
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>        - name: junos-default
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>          addresses:
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>            - "http://66.129.234.213:35004"
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>          username: jcluser
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>          password: password
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>          request_headers_add:
-<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>            "content-type": "application/xml"
-<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>          service_name: junos
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">modules</span><span class="p">:</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">maira_io.module.http</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nt">services</span><span class="p">:</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">maira_io.service.http</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nt">typed_config</span><span class="p">:</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">      </span><span class="s">"@type"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">types.google.com/maira_io.config.service.http.v1.Config</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">      </span><span class="nt">clusters</span><span class="p">:</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">junos-default</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">          </span><span class="nt">addresses</span><span class="p">:</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"http://66.129.234.213:35004"</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">          </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jcluser</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">          </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password</span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">          </span><span class="nt">request_headers_add</span><span class="p">:</span>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">            </span><span class="s">"content-type"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">"application/xml"</span>
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">          </span><span class="nt">service_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">junos</span>
 </code></pre></div>
 </article>
 </div>
