@@ -10,7 +10,7 @@
 <link href="../deployment/" rel="next"/>
 <link href="../img/maira-icon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.12" name="generator"/>
-<title>Workflow Overview - Maira Docs</title>
+<title>Understanding Workflow - Maira Docs</title>
 <link href="../assets/stylesheets/main.0d440cfe.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -60,7 +60,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Workflow Overview
+              Understanding Workflow
             
           </span>
 </div>
@@ -121,11 +121,11 @@
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Workflow Overview
+          Understanding Workflow
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Workflow Overview
+        Understanding Workflow
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -151,7 +151,7 @@
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#handling-security-incidents">
-    Handling Security Incidents
+    Handling security incidents
   </a>
 </li>
 <li class="md-nav__item">
@@ -2973,7 +2973,7 @@
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#handling-security-incidents">
-    Handling Security Incidents
+    Handling security incidents
   </a>
 </li>
 <li class="md-nav__item">
@@ -3013,18 +3013,18 @@ like Apache airflow, Netflix conductor, and Temporal. Exhaustive comparison amon
 is out of the scope of this document; however, they differ in scalability and 
 abstractions available to the developer. Out of these, we think Temporal is the leading 
 workflow platform for today's developers, so we built the Maira cloud orchestrator around that.</p>
-<p>Apart from constraining UI interface with a workflow platform, developers also require to implement their 
+<p>With a traditional workflow platform, developers require to implement their 
 logic in terms of predefined DAGs. DAGs are a collection of tasks stitched together in a dependency graph. 
-They are either expressed in Python or in a markup language like YAML. This unnatural rethinking in 
-terms of DAG and steps is a significant roadblock in automation velocity and maintainability.</p>
+They are either expressed in Python or constructed in UI. This unnatural rethinking in 
+terms of DAG and steps is a significant roadblock in automation velocity and maintainability. Such low code products are not useful in fast paced ops environment.</p>
 <h2 id="maira-workflow-benefits">Maira workflow benefits</h2>
-<p>Compared to other low code and workflow platforms, Maira provides clear benefits like:</p>
+<p>Compared to existing low code and workflow platforms, Maira has the following benefits:</p>
 <ul>
 <li>
 <p><strong>Create workflows using simple Python-like code</strong>. No need to think in terms of steps or DAG. Write simple imperative code, and get workflows.</p>
 </li>
 <li>
-<p>No compromise on the <strong>low-code</strong> promise for non-developers. Use the drag-and-drop interface if desired.</p>
+<p>No compromise on the <strong>low-code</strong> promise for non-developers. Use the <strong>drag-and-drop interface</strong> if desired.</p>
 </li>
 <li>
 <p>A secure self-service platform with a <strong>rich set of integrations</strong> at your fingertips. Interact with apps you already use, from k8s, Aws, Datadog, and Elastic to Slack and Email.</p>
@@ -3054,18 +3054,18 @@ continues executing normally.</p>
 </p>
 <figcaption>Durable Stateful executution with MPL</figcaption>
 </figure>
-<p>With Maira, however, the developer do not have to think in terms of steps or
-durable function calls. The language understands what commands and built-ins
-(like time statement <code>now</code> above) are to be executed in durable manner. This
-stateful execution of MPL code has many benefits:</p>
+<p>However, the developer does not have to think about steps or
+durable function calls with Maira. The language understands what commands and built-ins
+(like the time statement <code>now</code> above) are to be executed in a durable manner. This
+stateful execution of MPL code has the following benefits:</p>
 <ul>
 <li>
-<p><strong><em>Error handling</em></strong> is not needed in most of the cases as retries etc are part of
-    stateful execution. This simplifies the code.</p>
+<p><strong><em>Error handling</em></strong> is not needed in most cases as retries are part of
+    stateful execution. </p>
 </li>
 <li>
-<p>Orcehstrator can <strong><em>suspend and resume</em></strong> and long running call. Long running could
-    be 1 second to more than a year. The developer don't need to do anything
+<p>Orcehstrator can <strong><em>suspend and resume</em></strong> and long running call. Long-running could
+    be 1 second to more than a year. The developer doesn't need to do anything
     special.</p>
 </li>
 <li>
@@ -3073,17 +3073,18 @@ stateful execution of MPL code has many benefits:</p>
 </li>
 <li>
 <p><strong><em>In-memory code</em></strong> -- no need to save states in db in most cases. Developers
-    familiar with writing application with REST paradigm are used to saving state in db, 
-    but here entire business logic can be written as monolith code without
-    worrying about failures of infra or a cli call within the program. </p>
+    familiar with writing applications with REST paradigm is used to holding states in db, 
+    but here, entire business logic can be written as monolith code without
+    worrying about failures during the multi-step app.</p>
 </li>
 </ul>
 <h2 id="examples">Examples</h2>
-<h3 id="handling-security-incidents">Handling Security Incidents</h3>
-<p>Secops teams receive many incidents every day wrt on passoword compromise etc. In
-this workflow the impacted user is automatically notified on slack and
-action is taken based on his input. This workflow can be triggered on receiving
-notification from SIEM system.</p>
+<h3 id="handling-security-incidents">Handling security incidents</h3>
+<p>Secops teams receive many incidents every day about password compromise etc.
+Responding to each of these manually is impossible.  This workflow automates the process, where, 
+the impacted user is automatically notified on slack
+This workflow is triggered on receiving notification from the SIEM system and all incidents 
+are handled at scale, taking inputs from the affected party and security admin.</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">msg</span> <span class="o">=</span> <span class="s2">"Your user account had a malicious login attempt. What would you like to do?"</span>
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">options</span> <span class="o">=</span> <span class="n">json</span> <span class="p">[</span><span class="s2">"disable"</span><span class="p">,</span> <span class="s2">"reset password"</span><span class="p">,</span> <span class="s2">"ignore"</span><span class="p">]</span>
 <a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">slack_user</span> <span class="o">=</span> <span class="s2">"@"</span><span class="o">+</span><span class="nb">input</span><span class="o">.</span><span class="n">user</span>
@@ -3107,31 +3108,48 @@ notification from SIEM system.</p>
 <a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>    <span class="n">msg</span> <span class="o">=</span> <span class="s2">"Malicious login event ignored"</span>
 <a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>    <span class="n">y</span> <span class="o">=</span> <span class="err">!</span><span class="n">slack</span> <span class="n">send</span><span class="o">-</span><span class="n">message</span> <span class="o">--</span><span class="n">name</span> <span class="n">slack_user</span> <span class="o">--</span><span class="n">message</span> <span class="n">msg</span>
 </code></pre></div>
+<details class="diagram">
+<summary>Block diagram</summary>
+<p><figure markdown="">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://uploads-ssl.webflow.com/62f54b2eb9180fd1134fd6bf/640a45f334c8e4f410bcac74_sec-wf.png"><img alt="Handling security incidents" src="https://uploads-ssl.webflow.com/62f54b2eb9180fd1134fd6bf/640a45f334c8e4f410bcac74_sec-wf.png"/></a>
+<figcaption>Handling security incidents</figcaption>
+</figure></p>
+</details>
 <p>Note that multiple instances of this workflow can be running with its
 own states with multiple user interacting with them. This is where the
 scalability and reliablity of workflows makes life easier for
 automation and tools developers.</p>
 <h3 id="delete-unattached-aws-volume">Delete unattached aws volume</h3>
-<p>This is an example of <strong>cost saving</strong> through continuous monitoring app.
-This is a janitor workflow that can detect and cleanup unused ec2 volumes.
-With Maira its only 2 lines of code even if we have 1000s of ununsed
-resources. We iterate on the list returned by <code>list-volumes</code> command.
-Even if the program dies for some reason while processing the list,
-it can continue from there. In normal cases workflow will terminate only
-if several retries has failed. Net net the developer need not handle
-any failure scenario resulting in simple code.</p>
+<p>Below is an example of <strong>cost saving</strong> through a continuous monitoring app.
+This is a janitor workflow, scheduled periodically by the orchestrator, 
+that can detect and clean up detached ec2 volumes.
+We iterate on the list returned by the <code>ec2 list-volumes</code> command.
+Even if the program dies while processing the list,
+it can resume processing. In typical cases, the workflow will terminate 
+in case several retries have failed. The developer need not handle
+any failure scenario, which results in simpler code. 
+Note that with Maira's low-code platform, it's only two lines of code 
+even if we could be handling 1000s of unused resources.</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># find all volumes 'available' to be attached.</span>
 <a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">vols</span> <span class="o">=</span> <span class="err">!</span><span class="n">ec2</span> <span class="nb">list</span><span class="o">-</span><span class="n">volumes</span> <span class="o">--</span><span class="n">state</span> <span class="s2">"available"</span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="k">for</span> <span class="n">vol</span> <span class="ow">in</span> <span class="n">vols</span><span class="o">.</span><span class="n">volumes</span><span class="p">[]</span><span class="o">.</span><span class="n">volume_id</span><span class="p">:</span>
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="err">!</span><span class="n">ec2</span> <span class="n">delete</span><span class="o">-</span><span class="n">volume</span> <span class="n">vol</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1"># @label: for all unattached volumes</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">for</span> <span class="n">vol</span> <span class="ow">in</span> <span class="n">vols</span><span class="o">.</span><span class="n">volumes</span><span class="p">[]</span><span class="o">.</span><span class="n">volume_id</span><span class="p">:</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="err">!</span><span class="n">ec2</span> <span class="n">delete</span><span class="o">-</span><span class="n">volume</span> <span class="n">vol</span>
 </code></pre></div>
+<details class="diagram">
+<summary>Block diagram</summary>
+<p><figure markdown="">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://uploads-ssl.webflow.com/62f54b2eb9180fd1134fd6bf/640a49a0cdb3d165f094bb31_vol-wf.png"><img alt="Delete unattached volumes" src="https://uploads-ssl.webflow.com/62f54b2eb9180fd1134fd6bf/640a49a0cdb3d165f094bb31_vol-wf.png"/></a>
+<figcaption>Delete unattached volumes</figcaption>
+</figure></p>
+</details>
 <h3 id="bgp-flap">BGP flap</h3>
-<p><strong>Collect real time data</strong> -- In this playbook we look for bgp flaps and if
-it happens constantly we send a report to admin with data collected overtime.
-This is an example of a simple code which potentially runs for long duration
-collecting data (e.g., real time ping and route information) in memory without 
+<p><strong>Collect real-time data</strong> -- This playbook monitors bgp flaps; if
+it happens constantly, it sends a report to admin with data collected for each
+in real-time for each flap.  This example is a simple code 
+that runs long, collecting data (e.g., real-time ping and route information) in memory without 
 worrying about failures or losing data.  Essentially the developer 
-writes simple monolith code, and gets fail proof long running app.</p>
+writes simple monolith code and gets a fail-proof long-running app.</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># @label: Find flap count for peer</span>
 <a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">def</span> <span class="nf">find_flap_count</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">peer</span><span class="p">):</span>
 <a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="c1"># @label: loop through the peers to find the specified one</span>
@@ -3178,7 +3196,13 @@ writes simple monolith code, and gets fail proof long running app.</p>
 <a href="#__codelineno-2-44" id="__codelineno-2-44" name="__codelineno-2-44"></a>        <span class="err">!</span> <span class="n">slack</span> <span class="n">send</span><span class="o">-</span><span class="n">message</span> <span class="o">--</span><span class="n">name</span> <span class="s2">"#general"</span> <span class="o">--</span><span class="n">message</span> <span class="n">msg</span>
 <a href="#__codelineno-2-45" id="__codelineno-2-45" name="__codelineno-2-45"></a>        <span class="k">break</span>
 </code></pre></div>
-<p>ss</p>
+<details class="diagram">
+<summary>Block diagram</summary>
+<p><figure markdown="">
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://uploads-ssl.webflow.com/62f54b2eb9180fd1134fd6bf/640a471983ef101cc4d1dde7_bgp-wf.png"><img alt="Collect debug data for bgp flap" src="https://uploads-ssl.webflow.com/62f54b2eb9180fd1134fd6bf/640a471983ef101cc4d1dde7_bgp-wf.png"/></a>
+<figcaption>Collect debug data for bgp flap</figcaption>
+</figure></p>
+</details>
 </article>
 </div>
 </div>
