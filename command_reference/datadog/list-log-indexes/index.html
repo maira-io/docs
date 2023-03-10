@@ -3011,9 +3011,9 @@
 <h2 id="description">Description</h2>
 <p>This endpoint returns an array of the LogIndex objects</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog<span class="w"> </span>list-log-indexes
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span>--index<span class="w"> </span>&lt;index&gt;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog list-log-indexes
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    --index &lt;index&gt;
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3028,7 +3028,7 @@
      Attributes: <em>required</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">datadog</span> <span class="nb">list</span><span class="o">-</span><span class="n">log</span><span class="o">-</span><span class="n">indexes</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!datadog list-log-indexes
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>NAME    RATE-LIMITED    FILTER-QUERY    EXCLUSION-FILTERS   DAILY-LIMIT 
@@ -3037,7 +3037,7 @@ Output:
 <a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>mdsdain false           source:python   payment               300000000 
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="err">!</span><span class="n">datadog</span> <span class="nb">list</span><span class="o">-</span><span class="n">log</span><span class="o">-</span><span class="n">indexes</span> <span class="o">--</span><span class="n">index</span> <span class="s2">"main"</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>!datadog list-log-indexes --index "main"
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>NAME    RATE-LIMITED    FILTER-QUERY    EXCLUSION-FILTERS   DAILY-LIMIT 

@@ -2982,6 +2982,15 @@
 <a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">            </span><span class="s">"Authorization"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">"Token</span><span class="nv"> </span><span class="s">token=&lt;token&gt;"</span>
 <a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">          </span><span class="nt">service_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pagerduty</span>
 </code></pre></div>
+<p>Below is sample configuration for enabling pagerduty integration through Helm Chart Values file</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">pagerduty</span><span class="p">:</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">disabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">"https://api.pagerduty.com"</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">token</span><span class="p">:</span><span class="w"> </span><span class="s">"Token</span><span class="nv"> </span><span class="s">token=&lt;token&gt;"</span>
+</code></pre></div>
+<ul>
+<li>disabled tag can be set to true to temporarily disable the service without removing the config</li>
+</ul>
 <h2 id="instructions-to-add-a-webhook">Instructions to add a webhook</h2>
 <p>Maira client can Add a webhook to track incident actions like trigger, acknowledge, etc., in Maira. After addding webhook, for every incident action a new Maira event is created and can be monitored using event commands.
 To Add webhook follow the steps below:

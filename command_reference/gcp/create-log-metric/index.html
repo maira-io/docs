@@ -3091,17 +3091,17 @@
 <h2 id="description">Description</h2>
 <p>create log metric for gcp logs</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>gcp<span class="w"> </span>create-log-metric
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>&lt;name&gt;<span class="o">]</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--description<span class="w"> </span>&lt;description&gt;<span class="o">]</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="o">[</span>--filter<span class="w"> </span>&lt;filter&gt;<span class="o">]</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="o">[</span>--disabled<span class="o">]</span>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="o">[</span>--log_name<span class="w"> </span>&lt;log_name&gt;<span class="o">]</span>
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="o">[</span>--severity<span class="w"> </span>&lt;severity&gt;<span class="o">]</span>
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="o">[</span>--filter<span class="w"> </span>&lt;filter&gt;<span class="o">]</span>
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="o">[</span>--start_time<span class="w"> </span>&lt;start_time&gt;<span class="o">]</span>
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="o">[</span>--end_time<span class="w"> </span>&lt;end_time&gt;<span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>gcp create-log-metric
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [&lt;name&gt;]
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [--description &lt;description&gt;]
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    [--filter &lt;filter&gt;]
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    [--disabled]
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    [--log_name &lt;log_name&gt;]
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>    [--severity &lt;severity&gt;]
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>    [--filter &lt;filter&gt;]
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>    [--start_time &lt;start_time&gt;]
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>    [--end_time &lt;end_time&gt;]
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3158,21 +3158,21 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">x</span><span class="o">=</span><span class="err">!</span> <span class="n">gcp</span> <span class="n">create</span><span class="o">-</span><span class="n">log</span><span class="o">-</span><span class="n">metric</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost:8081"</span> <span class="s2">"testMetric3"</span> <span class="o">--</span><span class="n">description</span> <span class="s2">"testDesc"</span> <span class="o">--</span><span class="nb">filter</span> <span class="s2">"protoPayload.status &gt;= 400 AND sample(insertId, 0.1)"</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>x=! gcp create-log-metric --site "localhost:8081" "testMetric3" --description "testDesc" --filter "protoPayload.status &gt;= 400 AND sample(insertId, 0.1)"
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">"metric"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testMetric3"</span><span class="p">,</span>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testDesc"</span><span class="p">,</span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"protoPayload.status &gt;= 400 AND sample(insertId, 0.1)"</span><span class="p">,</span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nt">"createTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-10-14T08:33:18.198693597Z"</span><span class="p">,</span>
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="nt">"updateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-10-14T08:33:18.198693597Z"</span>
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">  </span><span class="p">}</span>
-<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>{
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>  "metric": {
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>    "name": "testMetric3",
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>    "description": "testDesc",
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>    "filter": "protoPayload.status &gt;= 400 AND sample(insertId, 0.1)",
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>    "createTime": "2022-10-14T08:33:18.198693597Z",
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>    "updateTime": "2022-10-14T08:33:18.198693597Z"
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>  }
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>}
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="err">!</span> <span class="n">gcp</span> <span class="n">create</span><span class="o">-</span><span class="n">log</span><span class="o">-</span><span class="n">metric</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost:8081"</span> <span class="s2">"testMetric5"</span> <span class="o">--</span><span class="n">description</span> <span class="s2">"testDesc"</span> <span class="o">--</span><span class="nb">filter</span> <span class="s2">"protoPayload.status &gt;= 400 AND sample(insertId, 0.1)"</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>! gcp create-log-metric --site "localhost:8081" "testMetric5" --description "testDesc" --filter "protoPayload.status &gt;= 400 AND sample(insertId, 0.1)"
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>NAME            DESCRIPTION     FILTER 

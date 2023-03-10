@@ -3031,11 +3031,11 @@
 <h2 id="description">Description</h2>
 <p>Get information on the current status of workload management.</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>splunk<span class="w"> </span>get-workloads-status
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span>--site<span class="w"> </span>&lt;site&gt;
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--count<span class="w"> </span>&lt;count&gt;<span class="o">]</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--sort_key<span class="w"> </span>&lt;sort_key&gt;<span class="o">]</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="o">[</span>--sort_dir<span class="w"> </span>&lt;sort_dir&gt;<span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>splunk get-workloads-status
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    --site &lt;site&gt;
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--count &lt;count&gt;]
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [--sort_key &lt;sort_key&gt;]
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    [--sort_dir &lt;sort_dir&gt;]
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3062,7 +3062,7 @@
           allowed values: <code>asc, desc</code></p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">splunk</span> <span class="n">get</span><span class="o">-</span><span class="n">workloads</span><span class="o">-</span><span class="n">status</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!splunk get-workloads-status
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>UPDATED                     AUTHOR  NAME                       
@@ -3070,96 +3070,96 @@ Output:
 <a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>1970-01-01T05:30:00+05:30   system  workload-management-status
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">x</span><span class="o">=</span> <span class="err">!</span><span class="n">splunk</span> <span class="n">get</span><span class="o">-</span><span class="n">workloads</span><span class="o">-</span><span class="n">status</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>x= !splunk get-workloads-status
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">{</span>
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">   </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">   </span><span class="nt">"origin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8089/servicesNS/admin/-/workloads/status"</span><span class="p">,</span>
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">   </span><span class="nt">"updated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-02-07T15:45:21+05:30"</span><span class="p">,</span>
-<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">   </span><span class="nt">"generator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">     </span><span class="nt">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dd0128b1f8cd"</span><span class="p">,</span>
-<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">     </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9.0.3"</span>
-<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">   </span><span class="p">},</span>
-<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">   </span><span class="nt">"entry"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">     </span><span class="p">{</span>
-<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">       </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admission-control-status"</span><span class="p">,</span>
-<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">       </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8089/servicesNS/admin/-/workloads/status/admission-control-status"</span><span class="p">,</span>
-<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">       </span><span class="nt">"updated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1970-01-01T05:30:00+05:30"</span><span class="p">,</span>
-<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">       </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">         </span><span class="nt">"alternate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/servicesNS/admin/-/workloads/status/admission-control-status"</span><span class="p">,</span>
-<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">         </span><span class="nt">"list"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/servicesNS/admin/-/workloads/status/admission-control-status"</span>
-<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">       </span><span class="p">},</span>
-<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">       </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system"</span><span class="p">,</span>
-<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">       </span><span class="nt">"acl"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">         </span><span class="nt">"app"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
-<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">         </span><span class="nt">"can_list"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">         </span><span class="nt">"can_write"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">         </span><span class="nt">"modifiable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">         </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system"</span><span class="p">,</span>
-<a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">         </span><span class="nt">"perms"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">           </span><span class="nt">"read"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="w">             </span><span class="s2">"admin"</span><span class="p">,</span>
-<a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="w">             </span><span class="s2">"splunk-system-role"</span>
-<a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="w">           </span><span class="p">],</span>
-<a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="w">           </span><span class="nt">"write"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
-<a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="w">         </span><span class="p">},</span>
-<a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="w">         </span><span class="nt">"removable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="w">         </span><span class="nt">"sharing"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system"</span>
-<a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="w">       </span><span class="p">},</span>
-<a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="w">       </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-36" id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="w">         </span><span class="nt">"eai:acl"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-4-37" id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="w">         </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
-<a href="#__codelineno-4-38" id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="w">         </span><span class="nt">"search-filter-rules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
-<a href="#__codelineno-4-39" id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="w">       </span><span class="p">}</span>
-<a href="#__codelineno-4-40" id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="w">     </span><span class="p">},</span>
-<a href="#__codelineno-4-41" id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="w">     </span><span class="p">{</span>
-<a href="#__codelineno-4-42" id="__codelineno-4-42" name="__codelineno-4-42"></a><span class="w">       </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"workload-management-status"</span><span class="p">,</span>
-<a href="#__codelineno-4-43" id="__codelineno-4-43" name="__codelineno-4-43"></a><span class="w">       </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8089/servicesNS/admin/-/workloads/status/workload-management-status"</span><span class="p">,</span>
-<a href="#__codelineno-4-44" id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="w">       </span><span class="nt">"updated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1970-01-01T05:30:00+05:30"</span><span class="p">,</span>
-<a href="#__codelineno-4-45" id="__codelineno-4-45" name="__codelineno-4-45"></a><span class="w">       </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-46" id="__codelineno-4-46" name="__codelineno-4-46"></a><span class="w">         </span><span class="nt">"alternate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/servicesNS/admin/-/workloads/status/workload-management-status"</span><span class="p">,</span>
-<a href="#__codelineno-4-47" id="__codelineno-4-47" name="__codelineno-4-47"></a><span class="w">         </span><span class="nt">"list"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/servicesNS/admin/-/workloads/status/workload-management-status"</span>
-<a href="#__codelineno-4-48" id="__codelineno-4-48" name="__codelineno-4-48"></a><span class="w">       </span><span class="p">},</span>
-<a href="#__codelineno-4-49" id="__codelineno-4-49" name="__codelineno-4-49"></a><span class="w">       </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system"</span><span class="p">,</span>
-<a href="#__codelineno-4-50" id="__codelineno-4-50" name="__codelineno-4-50"></a><span class="w">       </span><span class="nt">"acl"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-51" id="__codelineno-4-51" name="__codelineno-4-51"></a><span class="w">         </span><span class="nt">"app"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
-<a href="#__codelineno-4-52" id="__codelineno-4-52" name="__codelineno-4-52"></a><span class="w">         </span><span class="nt">"can_list"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a href="#__codelineno-4-53" id="__codelineno-4-53" name="__codelineno-4-53"></a><span class="w">         </span><span class="nt">"can_write"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a href="#__codelineno-4-54" id="__codelineno-4-54" name="__codelineno-4-54"></a><span class="w">         </span><span class="nt">"modifiable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-4-55" id="__codelineno-4-55" name="__codelineno-4-55"></a><span class="w">         </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system"</span><span class="p">,</span>
-<a href="#__codelineno-4-56" id="__codelineno-4-56" name="__codelineno-4-56"></a><span class="w">         </span><span class="nt">"perms"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-57" id="__codelineno-4-57" name="__codelineno-4-57"></a><span class="w">           </span><span class="nt">"read"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a href="#__codelineno-4-58" id="__codelineno-4-58" name="__codelineno-4-58"></a><span class="w">             </span><span class="s2">"admin"</span><span class="p">,</span>
-<a href="#__codelineno-4-59" id="__codelineno-4-59" name="__codelineno-4-59"></a><span class="w">             </span><span class="s2">"splunk-system-role"</span>
-<a href="#__codelineno-4-60" id="__codelineno-4-60" name="__codelineno-4-60"></a><span class="w">           </span><span class="p">],</span>
-<a href="#__codelineno-4-61" id="__codelineno-4-61" name="__codelineno-4-61"></a><span class="w">           </span><span class="nt">"write"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
-<a href="#__codelineno-4-62" id="__codelineno-4-62" name="__codelineno-4-62"></a><span class="w">         </span><span class="p">},</span>
-<a href="#__codelineno-4-63" id="__codelineno-4-63" name="__codelineno-4-63"></a><span class="w">         </span><span class="nt">"removable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-4-64" id="__codelineno-4-64" name="__codelineno-4-64"></a><span class="w">         </span><span class="nt">"sharing"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system"</span>
-<a href="#__codelineno-4-65" id="__codelineno-4-65" name="__codelineno-4-65"></a><span class="w">       </span><span class="p">},</span>
-<a href="#__codelineno-4-66" id="__codelineno-4-66" name="__codelineno-4-66"></a><span class="w">       </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-67" id="__codelineno-4-67" name="__codelineno-4-67"></a><span class="w">         </span><span class="nt">"eai:acl"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-4-68" id="__codelineno-4-68" name="__codelineno-4-68"></a><span class="w">         </span><span class="nt">"general"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-69" id="__codelineno-4-69" name="__codelineno-4-69"></a><span class="w">           </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
-<a href="#__codelineno-4-70" id="__codelineno-4-70" name="__codelineno-4-70"></a><span class="w">           </span><span class="nt">"error_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Workload management cannot be enabled on this system because the feature is not supported. Check the status of workload management preflight checks for additional information."</span><span class="p">,</span>
-<a href="#__codelineno-4-71" id="__codelineno-4-71" name="__codelineno-4-71"></a><span class="w">           </span><span class="nt">"isSupported"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
-<a href="#__codelineno-4-72" id="__codelineno-4-72" name="__codelineno-4-72"></a><span class="w">           </span><span class="nt">"os_build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#64-Ubuntu SMP Thu Jan 5 11:43:13 UTC 2023"</span><span class="p">,</span>
-<a href="#__codelineno-4-73" id="__codelineno-4-73" name="__codelineno-4-73"></a><span class="w">           </span><span class="nt">"os_extended_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Linux"</span><span class="p">,</span>
-<a href="#__codelineno-4-74" id="__codelineno-4-74" name="__codelineno-4-74"></a><span class="w">           </span><span class="nt">"os_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Linux"</span><span class="p">,</span>
-<a href="#__codelineno-4-75" id="__codelineno-4-75" name="__codelineno-4-75"></a><span class="w">           </span><span class="nt">"os_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.15.0-58-generic"</span>
-<a href="#__codelineno-4-76" id="__codelineno-4-76" name="__codelineno-4-76"></a><span class="w">         </span><span class="p">},</span>
-<a href="#__codelineno-4-77" id="__codelineno-4-77" name="__codelineno-4-77"></a><span class="w">         </span><span class="nt">"workload-rules"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
-<a href="#__codelineno-4-78" id="__codelineno-4-78" name="__codelineno-4-78"></a><span class="w">       </span><span class="p">}</span>
-<a href="#__codelineno-4-79" id="__codelineno-4-79" name="__codelineno-4-79"></a><span class="w">     </span><span class="p">}</span>
-<a href="#__codelineno-4-80" id="__codelineno-4-80" name="__codelineno-4-80"></a><span class="w">   </span><span class="p">],</span>
-<a href="#__codelineno-4-81" id="__codelineno-4-81" name="__codelineno-4-81"></a><span class="w">   </span><span class="nt">"paging"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-82" id="__codelineno-4-82" name="__codelineno-4-82"></a><span class="w">     </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<a href="#__codelineno-4-83" id="__codelineno-4-83" name="__codelineno-4-83"></a><span class="w">     </span><span class="nt">"perPage"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
-<a href="#__codelineno-4-84" id="__codelineno-4-84" name="__codelineno-4-84"></a><span class="w">     </span><span class="nt">"offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
-<a href="#__codelineno-4-85" id="__codelineno-4-85" name="__codelineno-4-85"></a><span class="w">   </span><span class="p">},</span>
-<a href="#__codelineno-4-86" id="__codelineno-4-86" name="__codelineno-4-86"></a><span class="w">   </span><span class="nt">"messages"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
-<a href="#__codelineno-4-87" id="__codelineno-4-87" name="__codelineno-4-87"></a><span class="w"> </span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>{
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>   "links": {},
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>   "origin": "https://localhost:8089/servicesNS/admin/-/workloads/status",
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>   "updated": "2023-02-07T15:45:21+05:30",
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>   "generator": {
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>     "build": "dd0128b1f8cd",
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>     "version": "9.0.3"
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>   },
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>   "entry": [
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>     {
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>       "name": "admission-control-status",
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>       "id": "https://localhost:8089/servicesNS/admin/-/workloads/status/admission-control-status",
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>       "updated": "1970-01-01T05:30:00+05:30",
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>       "links": {
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>         "alternate": "/servicesNS/admin/-/workloads/status/admission-control-status",
+<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>         "list": "/servicesNS/admin/-/workloads/status/admission-control-status"
+<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a>       },
+<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>       "author": "system",
+<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a>       "acl": {
+<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>         "app": "",
+<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a>         "can_list": true,
+<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a>         "can_write": true,
+<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a>         "modifiable": false,
+<a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a>         "owner": "system",
+<a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a>         "perms": {
+<a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a>           "read": [
+<a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a>             "admin",
+<a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a>             "splunk-system-role"
+<a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a>           ],
+<a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a>           "write": []
+<a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a>         },
+<a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a>         "removable": false,
+<a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a>         "sharing": "system"
+<a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a>       },
+<a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a>       "content": {
+<a href="#__codelineno-4-36" id="__codelineno-4-36" name="__codelineno-4-36"></a>         "eai:acl": null,
+<a href="#__codelineno-4-37" id="__codelineno-4-37" name="__codelineno-4-37"></a>         "enabled": "0",
+<a href="#__codelineno-4-38" id="__codelineno-4-38" name="__codelineno-4-38"></a>         "search-filter-rules": null
+<a href="#__codelineno-4-39" id="__codelineno-4-39" name="__codelineno-4-39"></a>       }
+<a href="#__codelineno-4-40" id="__codelineno-4-40" name="__codelineno-4-40"></a>     },
+<a href="#__codelineno-4-41" id="__codelineno-4-41" name="__codelineno-4-41"></a>     {
+<a href="#__codelineno-4-42" id="__codelineno-4-42" name="__codelineno-4-42"></a>       "name": "workload-management-status",
+<a href="#__codelineno-4-43" id="__codelineno-4-43" name="__codelineno-4-43"></a>       "id": "https://localhost:8089/servicesNS/admin/-/workloads/status/workload-management-status",
+<a href="#__codelineno-4-44" id="__codelineno-4-44" name="__codelineno-4-44"></a>       "updated": "1970-01-01T05:30:00+05:30",
+<a href="#__codelineno-4-45" id="__codelineno-4-45" name="__codelineno-4-45"></a>       "links": {
+<a href="#__codelineno-4-46" id="__codelineno-4-46" name="__codelineno-4-46"></a>         "alternate": "/servicesNS/admin/-/workloads/status/workload-management-status",
+<a href="#__codelineno-4-47" id="__codelineno-4-47" name="__codelineno-4-47"></a>         "list": "/servicesNS/admin/-/workloads/status/workload-management-status"
+<a href="#__codelineno-4-48" id="__codelineno-4-48" name="__codelineno-4-48"></a>       },
+<a href="#__codelineno-4-49" id="__codelineno-4-49" name="__codelineno-4-49"></a>       "author": "system",
+<a href="#__codelineno-4-50" id="__codelineno-4-50" name="__codelineno-4-50"></a>       "acl": {
+<a href="#__codelineno-4-51" id="__codelineno-4-51" name="__codelineno-4-51"></a>         "app": "",
+<a href="#__codelineno-4-52" id="__codelineno-4-52" name="__codelineno-4-52"></a>         "can_list": true,
+<a href="#__codelineno-4-53" id="__codelineno-4-53" name="__codelineno-4-53"></a>         "can_write": true,
+<a href="#__codelineno-4-54" id="__codelineno-4-54" name="__codelineno-4-54"></a>         "modifiable": false,
+<a href="#__codelineno-4-55" id="__codelineno-4-55" name="__codelineno-4-55"></a>         "owner": "system",
+<a href="#__codelineno-4-56" id="__codelineno-4-56" name="__codelineno-4-56"></a>         "perms": {
+<a href="#__codelineno-4-57" id="__codelineno-4-57" name="__codelineno-4-57"></a>           "read": [
+<a href="#__codelineno-4-58" id="__codelineno-4-58" name="__codelineno-4-58"></a>             "admin",
+<a href="#__codelineno-4-59" id="__codelineno-4-59" name="__codelineno-4-59"></a>             "splunk-system-role"
+<a href="#__codelineno-4-60" id="__codelineno-4-60" name="__codelineno-4-60"></a>           ],
+<a href="#__codelineno-4-61" id="__codelineno-4-61" name="__codelineno-4-61"></a>           "write": []
+<a href="#__codelineno-4-62" id="__codelineno-4-62" name="__codelineno-4-62"></a>         },
+<a href="#__codelineno-4-63" id="__codelineno-4-63" name="__codelineno-4-63"></a>         "removable": false,
+<a href="#__codelineno-4-64" id="__codelineno-4-64" name="__codelineno-4-64"></a>         "sharing": "system"
+<a href="#__codelineno-4-65" id="__codelineno-4-65" name="__codelineno-4-65"></a>       },
+<a href="#__codelineno-4-66" id="__codelineno-4-66" name="__codelineno-4-66"></a>       "content": {
+<a href="#__codelineno-4-67" id="__codelineno-4-67" name="__codelineno-4-67"></a>         "eai:acl": null,
+<a href="#__codelineno-4-68" id="__codelineno-4-68" name="__codelineno-4-68"></a>         "general": {
+<a href="#__codelineno-4-69" id="__codelineno-4-69" name="__codelineno-4-69"></a>           "enabled": "0",
+<a href="#__codelineno-4-70" id="__codelineno-4-70" name="__codelineno-4-70"></a>           "error_message": "Workload management cannot be enabled on this system because the feature is not supported. Check the status of workload management preflight checks for additional information.",
+<a href="#__codelineno-4-71" id="__codelineno-4-71" name="__codelineno-4-71"></a>           "isSupported": "0",
+<a href="#__codelineno-4-72" id="__codelineno-4-72" name="__codelineno-4-72"></a>           "os_build": "#64-Ubuntu SMP Thu Jan 5 11:43:13 UTC 2023",
+<a href="#__codelineno-4-73" id="__codelineno-4-73" name="__codelineno-4-73"></a>           "os_extended_name": "Linux",
+<a href="#__codelineno-4-74" id="__codelineno-4-74" name="__codelineno-4-74"></a>           "os_name": "Linux",
+<a href="#__codelineno-4-75" id="__codelineno-4-75" name="__codelineno-4-75"></a>           "os_version": "5.15.0-58-generic"
+<a href="#__codelineno-4-76" id="__codelineno-4-76" name="__codelineno-4-76"></a>         },
+<a href="#__codelineno-4-77" id="__codelineno-4-77" name="__codelineno-4-77"></a>         "workload-rules": null
+<a href="#__codelineno-4-78" id="__codelineno-4-78" name="__codelineno-4-78"></a>       }
+<a href="#__codelineno-4-79" id="__codelineno-4-79" name="__codelineno-4-79"></a>     }
+<a href="#__codelineno-4-80" id="__codelineno-4-80" name="__codelineno-4-80"></a>   ],
+<a href="#__codelineno-4-81" id="__codelineno-4-81" name="__codelineno-4-81"></a>   "paging": {
+<a href="#__codelineno-4-82" id="__codelineno-4-82" name="__codelineno-4-82"></a>     "total": 2,
+<a href="#__codelineno-4-83" id="__codelineno-4-83" name="__codelineno-4-83"></a>     "perPage": 30,
+<a href="#__codelineno-4-84" id="__codelineno-4-84" name="__codelineno-4-84"></a>     "offset": 0
+<a href="#__codelineno-4-85" id="__codelineno-4-85" name="__codelineno-4-85"></a>   },
+<a href="#__codelineno-4-86" id="__codelineno-4-86" name="__codelineno-4-86"></a>   "messages": []
+<a href="#__codelineno-4-87" id="__codelineno-4-87" name="__codelineno-4-87"></a> }
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

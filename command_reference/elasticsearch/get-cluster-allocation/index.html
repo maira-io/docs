@@ -3061,14 +3061,14 @@
 <h2 id="description">Description</h2>
 <p>Get an explanation for shards current allocation.</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>elasticsearch<span class="w"> </span>get-cluster-allocation
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--cluster<span class="w"> </span>&lt;cluster&gt;<span class="o">]</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--filter_path<span class="w"> </span>&lt;filter_path&gt;<span class="o">]</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span>--index<span class="w"> </span>&lt;index&gt;
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span>&lt;shard&gt;
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="o">[</span>--primary<span class="o">]</span>
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span>--current_node<span class="w"> </span>&lt;current_node&gt;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>elasticsearch get-cluster-allocation
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--cluster &lt;cluster&gt;]
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [--filter_path &lt;filter_path&gt;]
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    --index &lt;index&gt;
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    &lt;shard&gt;
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    [--primary]
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>    --current_node &lt;current_node&gt;
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3108,44 +3108,44 @@
      Attributes: <em>required</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span> <span class="n">elasticsearch</span> <span class="n">get</span><span class="o">-</span><span class="n">cluster</span><span class="o">-</span><span class="n">allocation</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost"</span> <span class="o">--</span><span class="n">cluster</span> <span class="s2">"elastic-1"</span> <span class="o">--</span><span class="n">primary</span> <span class="o">--</span><span class="n">index</span> <span class="s2">"class"</span> <span class="mi">1</span> <span class="o">--</span><span class="n">current_node</span> <span class="s2">"beehyv-H81M-S"</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>! elasticsearch get-cluster-allocation --site "localhost" --cluster "elastic-1" --primary --index "class" 1 --current_node "beehyv-H81M-S"
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">"index"</span><span class="p">:</span><span class="w"> </span><span class="s2">"class"</span><span class="p">,</span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="nt">"shard"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="nt">"primary"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">  </span><span class="nt">"current_state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"started"</span><span class="p">,</span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">  </span><span class="nt">"current_node"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qQmwEJbkTdW-ixce6PgTFQ"</span><span class="p">,</span>
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"beehyv-H81M-S"</span><span class="p">,</span>
-<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="nt">"transport_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"127.0.0.1:9300"</span><span class="p">,</span>
-<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">      </span><span class="nt">"ml.machine_memory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16714620928"</span><span class="p">,</span>
-<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">      </span><span class="nt">"xpack.installed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span>
-<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">      </span><span class="nt">"transform.node"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span>
-<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">      </span><span class="nt">"ml.max_open_jobs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"512"</span><span class="p">,</span>
-<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">      </span><span class="nt">"ml.max_jvm_size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1073741824"</span>
-<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">    </span><span class="p">},</span>
-<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="nt">"weight_ranking"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
-<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">  </span><span class="p">},</span>
-<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">  </span><span class="nt">"can_remain_on_current_node"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yes"</span><span class="p">,</span>
-<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">  </span><span class="nt">"can_rebalance_cluster"</span><span class="p">:</span><span class="w"> </span><span class="s2">"no"</span><span class="p">,</span>
-<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">  </span><span class="nt">"can_rebalance_cluster_decisions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="p">{</span>
-<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">      </span><span class="nt">"decider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rebalance_only_when_active"</span><span class="p">,</span>
-<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">      </span><span class="nt">"decision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NO"</span><span class="p">,</span>
-<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">      </span><span class="nt">"explanation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rebalancing is not allowed until all replicas in the cluster are active"</span>
-<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">    </span><span class="p">},</span>
-<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">    </span><span class="p">{</span>
-<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">      </span><span class="nt">"decider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cluster_rebalance"</span><span class="p">,</span>
-<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">      </span><span class="nt">"decision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NO"</span><span class="p">,</span>
-<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">      </span><span class="nt">"explanation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"the cluster has unassigned shards and cluster setting [cluster.routing.allocation.allow_rebalance] is set to [indices_all_active]"</span>
-<a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">    </span><span class="p">}</span>
-<a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">  </span><span class="p">],</span>
-<a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">  </span><span class="nt">"can_rebalance_to_other_node"</span><span class="p">:</span><span class="w"> </span><span class="s2">"no"</span><span class="p">,</span>
-<a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">  </span><span class="nt">"rebalance_explanation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rebalancing is not allowed"</span>
-<a href="#__codelineno-2-35" id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>{
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>  "index": "class",
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>  "shard": 1,
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>  "primary": true,
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>  "current_state": "started",
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>  "current_node": {
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>    "id": "qQmwEJbkTdW-ixce6PgTFQ",
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>    "name": "beehyv-H81M-S",
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>    "transport_address": "127.0.0.1:9300",
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>    "attributes": {
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>      "ml.machine_memory": "16714620928",
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>      "xpack.installed": "true",
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>      "transform.node": "true",
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>      "ml.max_open_jobs": "512",
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>      "ml.max_jvm_size": "1073741824"
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>    },
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>    "weight_ranking": 1
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>  },
+<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>  "can_remain_on_current_node": "yes",
+<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>  "can_rebalance_cluster": "no",
+<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>  "can_rebalance_cluster_decisions": [
+<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>    {
+<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>      "decider": "rebalance_only_when_active",
+<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>      "decision": "NO",
+<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>      "explanation": "rebalancing is not allowed until all replicas in the cluster are active"
+<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>    },
+<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>    {
+<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>      "decider": "cluster_rebalance",
+<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>      "decision": "NO",
+<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a>      "explanation": "the cluster has unassigned shards and cluster setting [cluster.routing.allocation.allow_rebalance] is set to [indices_all_active]"
+<a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a>    }
+<a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a>  ],
+<a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a>  "can_rebalance_to_other_node": "no",
+<a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a>  "rebalance_explanation": "rebalancing is not allowed"
+<a href="#__codelineno-2-35" id="__codelineno-2-35" name="__codelineno-2-35"></a>}
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

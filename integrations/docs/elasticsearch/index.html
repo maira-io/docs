@@ -2972,6 +2972,17 @@ indexes, segments, documents, tasks, shards, cluster settings/stats, node settin
 <a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">            </span><span class="s">"content-type"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">"application/json"</span>
 <a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">          </span><span class="nt">service_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">elasticsearch</span>
 </code></pre></div>
+<p>Below is sample configuration for enabling elastic search integration through Helm Chart Values file</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">es</span><span class="p">:</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">disabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nt">clusters</span><span class="p">:</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="nt">elasticsearch-default</span><span class="p">:</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">"http://localhost:9200"</span>
+</code></pre></div>
+<ul>
+<li>disabled tag can be set to true to temporarily disable the service without removing the config</li>
+<li>multiple clusters can be added under tag "clusters"</li>
+</ul>
 </article>
 </div>
 </div>

@@ -3171,25 +3171,25 @@
 <h2 id="description">Description</h2>
 <p>Update a downtime</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog<span class="w"> </span>update-downtime
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span>&lt;downtime&gt;
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--disabled<span class="o">]</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="o">[</span>--end<span class="w"> </span>&lt;end&gt;<span class="o">]</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="o">[</span>--message<span class="w"> </span>&lt;message&gt;<span class="o">]</span>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="o">[</span>--id<span class="w"> </span>&lt;id&gt;<span class="o">]</span>
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="o">[</span>--tags<span class="w"> </span>&lt;tags&gt;<span class="o">]</span>
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="o">[</span>--mute_first_recovery_notification<span class="o">]</span>
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="o">[</span>--parent<span class="w"> </span>&lt;parent&gt;<span class="o">]</span>
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="o">[</span>--period<span class="w"> </span>&lt;period&gt;<span class="o">]</span>
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="o">[</span>--rrule<span class="w"> </span>&lt;rrule&gt;<span class="o">]</span>
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="o">[</span>--type<span class="w"> </span>&lt;type&gt;<span class="o">]</span>
-<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="o">[</span>--until<span class="w"> </span>&lt;<span class="k">until</span>&gt;<span class="o">]</span>
-<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="o">[</span>--occurrences<span class="w"> </span>&lt;occurrences&gt;<span class="o">]</span>
-<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="o">[</span>--days<span class="w"> </span>&lt;days&gt;<span class="o">]</span>
-<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="o">[</span>--scope<span class="w"> </span>&lt;scope&gt;<span class="o">]</span>
-<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="o">[</span>--start<span class="w"> </span>&lt;start&gt;<span class="o">]</span>
-<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="o">[</span>--timezone<span class="w"> </span>&lt;timezone&gt;<span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog update-downtime
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    &lt;downtime&gt;
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [--disabled]
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    [--end &lt;end&gt;]
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    [--message &lt;message&gt;]
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    [--id &lt;id&gt;]
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>    [--tags &lt;tags&gt;]
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>    [--mute_first_recovery_notification]
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>    [--parent &lt;parent&gt;]
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>    [--period &lt;period&gt;]
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>    [--rrule &lt;rrule&gt;]
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>    [--type &lt;type&gt;]
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>    [--until &lt;until&gt;]
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>    [--occurrences &lt;occurrences&gt;]
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>    [--days &lt;days&gt;]
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>    [--scope &lt;scope&gt;]
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>    [--start &lt;start&gt;]
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>    [--timezone &lt;timezone&gt;]
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
