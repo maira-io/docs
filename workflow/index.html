@@ -3125,9 +3125,9 @@ This is a janitor workflow, scheduled periodically by the orchestrator,
 that can detect and clean up detached ec2 volumes.
 We iterate on the list returned by the <code>ec2 list-volumes</code> command.
 Even if the program dies while processing the list,
-it can resume processing. In typical cases, the workflow will terminate 
-in case several retries have failed. The developer need not handle
-any failure scenario, which results in simpler code. 
+it can resume processing. Here the workflow will terminate 
+only in case several retries have failed while executing the CLI. The developer need not handle
+any failure scenario, as workflow can be resumed when system and network recovers. 
 Note that with Maira's low-code platform, it's only two lines of code 
 even if we could be handling 1000s of unused resources.</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1"># find all volumes 'available' to be attached.</span>
@@ -3146,8 +3146,8 @@ even if we could be handling 1000s of unused resources.</p>
 <h3 id="bgp-flap">BGP flap</h3>
 <p><strong>Collect real-time data</strong> -- This playbook monitors bgp flaps; if
 it happens constantly, it sends a report to admin with data collected for each
-in real-time for each flap.  This example is a simple code 
-that runs long, collecting data (e.g., real-time ping and route information) in memory without 
+in real-time for each flap. Here the data (ping and route information when 
+a flap is detected) is collected overtime, in memory, without 
 worrying about failures or losing data.  Essentially the developer 
 writes simple monolith code and gets a fail-proof long-running app.</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1"># @label: Find flap count for peer</span>
