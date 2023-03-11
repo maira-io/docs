@@ -3020,7 +3020,7 @@
 automate their high-toil <strong>day-2</strong> activities. day-2 of operations includes 
 everything needed to operate a cloud application optimally after the deployment phase is 
 over -- from troubleshooting, security, and compliance to cost control. Using Maira, 
-the operations team (CloudOps, SRE, SecOps NetOps, or anyOps) or developers can 
+the operations team (CloudOps, SRE, SecOps, NetOps, or anyOps) or developers can 
 rapidly develop sophisticated <strong>human-in-loop stateful automation as code</strong>.</p>
 <figure>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://uploads-ssl.webflow.com/62f54b2eb9180fd1134fd6bf/6401602a0178422d674fda28_maira.svg"><img alt="Maira overview" src="https://uploads-ssl.webflow.com/62f54b2eb9180fd1134fd6bf/6401602a0178422d674fda28_maira.svg"/></a>
@@ -3070,31 +3070,28 @@ environment without compromising on the benefits of workflows. Today ops teams
 are used to the power of a general-purpose language like Python that allows them 
 to create complex scripts. Now with MPL, the same development flexibility is 
 available, and with out of box <strong>integrations</strong>, one can develop fail-proof, scalable, 
-long-running applications with much less code. Non-programmers can also use the 
+long-running applications with much <strong>less code</strong>. Non-programmers can also use the 
 familiar drag-and-drop visual interface for development. Maira's hosted workflow 
-orchestrator handles scheduling etc., and reliably executes these workflows with no
-operational overhead.</p>
+orchestrator handles scheduling, scaling, fault-tolerance, etc., to execute the workflows reliably without operational overhead.</p>
 <h2 id="use-cases">Use cases</h2>
-<p>Operators use Maira for various use cases. Some of them are listed below. Maira
-is evolving continuously with new integrations and language capabilities. Feel free
-to reach out to us for any automation use cases you can think of.</p>
+<p>Operators use Maira for various use cases. Some of them are listed below. Maira is evolving continuously with new integrations and language capabilities. Feel free to contact us for any automation use cases you may have.</p>
 <ul>
 <li>Manual and automated troubleshooting.</li>
-<li>Trigger workflows on receiving events to collect system state in real-time.</li>
+<li>Trigger workflows on receiving events. Collect system state in real-time.</li>
 <li>Automatically respond to security events. Collect forensic data and take action based on the impacted user's input.</li>
 <li>Periodic compliance tasks like certificate rotation, password reset, etc. </li>
-<li>Manage cloud costs by continuously monitoring, notifying, and deleting resources after approval.</li>
+<li>Manage cloud costs by continuously monitoring, notifying, and deleting resources upon approval.</li>
 <li>Various human-in-loop automation tasks using notification and survey features on slack.</li>
-<li>Segmenting access to the production cluster within the team using Maira's sophisticated RBAC capabilities.</li>
+<li>Segmenting access to the production cluster within the team using Maira's deep RBAC capabilities.</li>
 <li>Upgrade or deploy security patches on a large number of target devices.</li>
 <li>Generate periodic reports as needed for compliance and user tracking.</li>
 <li>Build internal tools.</li>
 </ul>
 <h2 id="maira-tour">Maira tour</h2>
-<p>Let's go through a quick tour of the platform by going through a case that may
-carried out by operators. In this case, the operator could be experimenting with
-chaos testing, so he/she wants to periodically delete a pod running container with
-<code>agent</code> in its image name. For this typically following activities will be
+<p>Let's take a quick tour of the platform by reviewing a 
+case that operators may carry out. Here, the operator is experimenting with
+chaos testing, so they want to periodically delete a pod where the container has
+<code>agent</code> in its image name. For this, typically following activities will be
 carried out:</p>
 <ul>
 <li>
@@ -3108,7 +3105,7 @@ carried out:</p>
 </li>
 </ul>
 <p>Let's go through this journey with Maira. We will assume that Maira is already
-deployed as explained <a href="https://docs.maira.io/deployment/">here</a>.</p>
+deployed as described <a href="https://docs.maira.io/deployment/">here</a>.</p>
 <h3 id="interactive-troubleshooting">Interactive troubleshooting</h3>
 <p>The best way for an operator to troubleshoot the application is via MPL
 repl. This repl shell supports all the available Maira integrations with other

@@ -3041,12 +3041,12 @@
 <h2 id="description">Description</h2>
 <p>Create new discussion for gitlab issue</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>gitlab create-discussion
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    --project &lt;project&gt;
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    --issue &lt;issue&gt;
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    &lt;body&gt;
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    [--created_at &lt;created_at&gt;]
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>gitlab<span class="w"> </span>create-discussion
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span>--project<span class="w"> </span>&lt;project&gt;
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span>--issue<span class="w"> </span>&lt;issue&gt;
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span>&lt;body&gt;
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="o">[</span>--created_at<span class="w"> </span>&lt;created_at&gt;<span class="o">]</span>
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3076,38 +3076,38 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>x = ! gitlab create-discussion --site "localhost" --project "saiprakash_maira/testing" --issue 4 "hello discussion 2"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">x</span> <span class="o">=</span> <span class="err">!</span> <span class="n">gitlab</span> <span class="n">create</span><span class="o">-</span><span class="n">discussion</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost"</span> <span class="o">--</span><span class="n">project</span> <span class="s2">"saiprakash_maira/testing"</span> <span class="o">--</span><span class="n">issue</span> <span class="mi">4</span> <span class="s2">"hello discussion 2"</span>
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>{
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>  "id": "d92e0d28ff5fe5a407effb55aa6fe977b66d9e77",
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>  "individual_note": false,
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>  "notes": [
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>    {
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>      "id": 734515843,
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>      "type": "DiscussionNote",
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>      "body": "hello discussion 2",
-<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>      "attachment": null,
-<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>      "author": {
-<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>        "id": 10215385,
-<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>        "name": "Sai Prakash V",
-<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>        "username": "saiprakash_maira",
-<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>        "state": "active",
-<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>        "avatar_url": "https://secure.gravatar.com/avatar/21de8fa15da66206e835a51bf9b68c32?s=80\u0026d=identicon",
-<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>        "web_url": "https://gitlab.com/saiprakash_maira"
-<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>      },
-<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>      "created_at": "2021-11-16T12:52:11.405Z",
-<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>      "updated_at": "2021-11-16T12:52:11.405Z",
-<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>      "system": false,
-<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>      "noteable_id": 97399269,
-<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>      "noteable_type": "Issue",
-<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>      "resolvable": false,
-<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>      "confidential": false,
-<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>      "noteable_iid": 4,
-<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>      "commands_changes": {}
-<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>    }
-<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>  ]
-<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"d92e0d28ff5fe5a407effb55aa6fe977b66d9e77"</span><span class="p">,</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="nt">"individual_note"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">734515843</span><span class="p">,</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DiscussionNote"</span><span class="p">,</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">      </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello discussion 2"</span><span class="p">,</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">      </span><span class="nt">"attachment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">      </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10215385</span><span class="p">,</span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sai Prakash V"</span><span class="p">,</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"saiprakash_maira"</span><span class="p">,</span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">        </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">        </span><span class="nt">"avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://secure.gravatar.com/avatar/21de8fa15da66206e835a51bf9b68c32?s=80\u0026d=identicon"</span><span class="p">,</span>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">        </span><span class="nt">"web_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://gitlab.com/saiprakash_maira"</span>
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">      </span><span class="p">},</span>
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">      </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-11-16T12:52:11.405Z"</span><span class="p">,</span>
+<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">      </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-11-16T12:52:11.405Z"</span><span class="p">,</span>
+<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">      </span><span class="nt">"system"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">      </span><span class="nt">"noteable_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">97399269</span><span class="p">,</span>
+<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">      </span><span class="nt">"noteable_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Issue"</span><span class="p">,</span>
+<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">      </span><span class="nt">"resolvable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">      </span><span class="nt">"confidential"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">      </span><span class="nt">"noteable_iid"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">      </span><span class="nt">"commands_changes"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">  </span><span class="p">]</span>
+<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="p">}</span>
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

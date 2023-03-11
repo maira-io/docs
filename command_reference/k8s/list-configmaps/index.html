@@ -3031,11 +3031,11 @@
 <h2 id="description">Description</h2>
 <p>Get the kubernetes configmaps that satisfies the provided arguments</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>k8s list-configmaps
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--cluster &lt;cluster&gt;]
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [--namespace|-n &lt;namespace&gt;]
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    [&lt;selector&gt;]
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>k8s<span class="w"> </span>list-configmaps
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--cluster<span class="w"> </span>&lt;cluster&gt;<span class="o">]</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--namespace<span class="p">|</span>-n<span class="w"> </span>&lt;namespace&gt;<span class="o">]</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="o">[</span>&lt;selector&gt;<span class="o">]</span>
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3060,7 +3060,7 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>! k8s list-configmaps
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span> <span class="n">k8s</span> <span class="nb">list</span><span class="o">-</span><span class="n">configmaps</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>NAME                   DATA
@@ -3070,29 +3070,29 @@ Output:
 <a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>r1-maira-agent-ssh     -
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>x = ! k8s list-configmaps
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">x</span> <span class="o">=</span> <span class="err">!</span> <span class="n">k8s</span> <span class="nb">list</span><span class="o">-</span><span class="n">configmaps</span>
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>[
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>    {
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>      "cluster": "in-cluster",
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>      "namespace": "default",
-<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>      "name": "dynamic-config",
-<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>      "annotations": {
-<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>          "meta.helm.sh/release-name": "test",
-<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>          "meta.helm.sh/release-namespace": "default"
-<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>      },
-<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>      "labels": {
-<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>          "app.kubernetes.io/instance": "test",
-<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>          "app.kubernetes.io/managed-by": "Helm",
-<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>          "app.kubernetes.io/version": "1.12.0",
-<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>          "helm.sh/chart": "test-0.12.0"
-<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>      },
-<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>      "data": {
-<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a>          "dynamic_config.yaml": ""
-<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>      }
-<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a>    }
-<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>]
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">[</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">      </span><span class="nt">"cluster"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-cluster"</span><span class="p">,</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">      </span><span class="nt">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dynamic-config"</span><span class="p">,</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">      </span><span class="nt">"annotations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">          </span><span class="nt">"meta.helm.sh/release-name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">          </span><span class="nt">"meta.helm.sh/release-namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">      </span><span class="p">},</span>
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">      </span><span class="nt">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">          </span><span class="nt">"app.kubernetes.io/instance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span>
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">          </span><span class="nt">"app.kubernetes.io/managed-by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Helm"</span><span class="p">,</span>
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">          </span><span class="nt">"app.kubernetes.io/version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.12.0"</span><span class="p">,</span>
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">          </span><span class="nt">"helm.sh/chart"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test-0.12.0"</span>
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">      </span><span class="p">},</span>
+<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">      </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">          </span><span class="nt">"dynamic_config.yaml"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span>
+<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">      </span><span class="p">}</span>
+<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="p">]</span>
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

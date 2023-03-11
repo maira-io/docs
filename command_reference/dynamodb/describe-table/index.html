@@ -3021,10 +3021,10 @@
 <h2 id="description">Description</h2>
 <p>Describe dynamodb table metadata</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>dynamodb describe-table
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--region &lt;region&gt;]
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    &lt;name&gt;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>dynamodb<span class="w"> </span>describe-table
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--region<span class="w"> </span>&lt;region&gt;<span class="o">]</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span>&lt;name&gt;
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3044,42 +3044,42 @@
      Attributes: <em>required</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>x=! dynamodb describe-table --site "localhost:8081" "testtable1"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">x</span><span class="o">=</span><span class="err">!</span> <span class="n">dynamodb</span> <span class="n">describe</span><span class="o">-</span><span class="n">table</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost:8081"</span> <span class="s2">"testtable1"</span>
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>{
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>  "name": "testtable1",
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>  "region": "us-east-1",
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>  "provisionedThroughput": {
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>    "writeCapacityUnits": "1",
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>    "readCapacityUnits": "1"
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>  },
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>  "status": "ACTIVE",
-<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>  "billingMode": "PROVISIONED",
-<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>  "keySchemas": [
-<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>    {
-<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>      "attributeName": "testpk1",
-<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>      "type": "HASH"
-<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>    },
-<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>    {
-<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>      "attributeName": "testsk1",
-<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>      "type": "RANGE"
-<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>    }
-<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>  ],
-<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>  "attributeDefinitions": [
-<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>    {
-<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>      "attributeName": "testpk1",
-<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>      "attributeType": "S"
-<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>    },
-<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>    {
-<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>      "attributeName": "testsk1",
-<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>      "attributeType": "S"
-<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>    }
-<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>  ]
-<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a>}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testtable1"</span><span class="p">,</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"us-east-1"</span><span class="p">,</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="nt">"provisionedThroughput"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="nt">"writeCapacityUnits"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nt">"readCapacityUnits"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">  </span><span class="p">},</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="p">,</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">  </span><span class="nt">"billingMode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PROVISIONED"</span><span class="p">,</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">  </span><span class="nt">"keySchemas"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">      </span><span class="nt">"attributeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testpk1"</span><span class="p">,</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HASH"</span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">      </span><span class="nt">"attributeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testsk1"</span><span class="p">,</span>
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RANGE"</span>
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">  </span><span class="p">],</span>
+<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">  </span><span class="nt">"attributeDefinitions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">      </span><span class="nt">"attributeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testpk1"</span><span class="p">,</span>
+<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">      </span><span class="nt">"attributeType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"S"</span>
+<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">    </span><span class="p">{</span>
+<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">      </span><span class="nt">"attributeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testsk1"</span><span class="p">,</span>
+<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">      </span><span class="nt">"attributeType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"S"</span>
+<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">  </span><span class="p">]</span>
+<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="p">}</span>
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>! dynamodb describe-table --site "localhost:8081" "testtable1"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="err">!</span> <span class="n">dynamodb</span> <span class="n">describe</span><span class="o">-</span><span class="n">table</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost:8081"</span> <span class="s2">"testtable1"</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>NAME            REGION          STATUS 

@@ -3211,29 +3211,29 @@
 <h2 id="description">Description</h2>
 <p>List gitlab issue</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>gitlab list-issues
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    --project &lt;project&gt;
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [--assignee &lt;assignee&gt;]
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    [--author &lt;author&gt;]
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    [--confidential]
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    [--created_after &lt;created_after&gt;]
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>    [--created_before &lt;created_before&gt;]
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>    [--due_date &lt;due_date&gt;]
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>    [--issues &lt;issues&gt;]
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>    [--issue_type &lt;issue_type&gt;]
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>    [--iteration_title &lt;iteration_title&gt;]
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>    [--labels &lt;labels&gt;]
-<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>    [--non_archived]
-<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>    [--order_by &lt;order_by&gt;]
-<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>    [--scope &lt;scope&gt;]
-<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>    [--search &lt;search&gt;]
-<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>    [--sort &lt;sort&gt;]
-<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>    [--state &lt;state&gt;]
-<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>    [--updated_after &lt;updated_after&gt;]
-<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>    [--updated_before &lt;updated_before&gt;]
-<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>    [--weight &lt;weight&gt;]
-<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>    [--with_labels_details]
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>gitlab<span class="w"> </span>list-issues
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span>--project<span class="w"> </span>&lt;project&gt;
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--assignee<span class="w"> </span>&lt;assignee&gt;<span class="o">]</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="o">[</span>--author<span class="w"> </span>&lt;author&gt;<span class="o">]</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="o">[</span>--confidential<span class="o">]</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="o">[</span>--created_after<span class="w"> </span>&lt;created_after&gt;<span class="o">]</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="o">[</span>--created_before<span class="w"> </span>&lt;created_before&gt;<span class="o">]</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="o">[</span>--due_date<span class="w"> </span>&lt;due_date&gt;<span class="o">]</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="o">[</span>--issues<span class="w"> </span>&lt;issues&gt;<span class="o">]</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="o">[</span>--issue_type<span class="w"> </span>&lt;issue_type&gt;<span class="o">]</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="o">[</span>--iteration_title<span class="w"> </span>&lt;iteration_title&gt;<span class="o">]</span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="o">[</span>--labels<span class="w"> </span>&lt;labels&gt;<span class="o">]</span>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="o">[</span>--non_archived<span class="o">]</span>
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="o">[</span>--order_by<span class="w"> </span>&lt;order_by&gt;<span class="o">]</span>
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="o">[</span>--scope<span class="w"> </span>&lt;scope&gt;<span class="o">]</span>
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="o">[</span>--search<span class="w"> </span>&lt;search&gt;<span class="o">]</span>
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="o">[</span>--sort<span class="w"> </span>&lt;sort&gt;<span class="o">]</span>
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="o">[</span>--state<span class="w"> </span>&lt;state&gt;<span class="o">]</span>
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="o">[</span>--updated_after<span class="w"> </span>&lt;updated_after&gt;<span class="o">]</span>
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="o">[</span>--updated_before<span class="w"> </span>&lt;updated_before&gt;<span class="o">]</span>
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="o">[</span>--weight<span class="w"> </span>&lt;weight&gt;<span class="o">]</span>
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">    </span><span class="o">[</span>--with_labels_details<span class="o">]</span>
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3370,7 +3370,7 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!gitlab list-issues --site "localhost:8080" --project "gitlab-com/sales-team/field-operations/sales-operations"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">gitlab</span> <span class="nb">list</span><span class="o">-</span><span class="n">issues</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost:8080"</span> <span class="o">--</span><span class="n">project</span> <span class="s2">"gitlab-com/sales-team/field-operations/sales-operations"</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>NUMBER  LABELS                          STATE   ASSIGNEES       MILESTONE                           TITLE
@@ -3380,88 +3380,88 @@ Output:
 <a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>3026    LeanData                        closed  Astahn          SalesOp: 06/06/2022 - 06/19/2022    Steve Xu Territory Change
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>x = ! gitlab list-issues --site "localhost" --labels "new_label"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">x</span> <span class="o">=</span> <span class="err">!</span> <span class="n">gitlab</span> <span class="nb">list</span><span class="o">-</span><span class="n">issues</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost"</span> <span class="o">--</span><span class="n">labels</span> <span class="s2">"new_label"</span>
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>[
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>  {
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>    "id": 97399269,
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>    "iid": 4,
-<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>    "project_id": 31319463,
-<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>    "title": "issue3",
-<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>    "description": "hello new edit",
-<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>    "state": "opened",
-<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>    "created_at": "2016-03-11T03:45:40.000Z",
-<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>    "updated_at": "2021-11-16T12:52:11.470Z",
-<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>    "closed_at": null,
-<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>    "closed_by": null,
-<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>    "labels": ["new_label"],
-<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>    "milestone": null,
-<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>    "assignees": [
-<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>      {
-<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a>        "id": 10215385,
-<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>        "name": "Sai Prakash V",
-<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a>        "username": "saiprakash_maira",
-<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>        "state": "active",
-<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a>        "avatar_url": "https://secure.gravatar.com/avatar/21de8fa15da66206e835a51bf9b68c32?s=80\u0026d=identicon",
-<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a>        "web_url": "https://gitlab.com/saiprakash_maira"
-<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a>      }
-<a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a>    ],
-<a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a>    "author": {
-<a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a>      "id": 10215385,
-<a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a>      "name": "Sai Prakash V",
-<a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a>      "username": "saiprakash_maira",
-<a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a>      "state": "active",
-<a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a>      "avatar_url": "https://secure.gravatar.com/avatar/21de8fa15da66206e835a51bf9b68c32?s=80\u0026d=identicon",
-<a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a>      "web_url": "https://gitlab.com/saiprakash_maira"
-<a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a>    },
-<a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a>    "type": "ISSUE",
-<a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a>    "assignee": {
-<a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a>      "id": 10215385,
-<a href="#__codelineno-4-36" id="__codelineno-4-36" name="__codelineno-4-36"></a>      "name": "Sai Prakash V",
-<a href="#__codelineno-4-37" id="__codelineno-4-37" name="__codelineno-4-37"></a>      "username": "saiprakash_maira",
-<a href="#__codelineno-4-38" id="__codelineno-4-38" name="__codelineno-4-38"></a>      "state": "active",
-<a href="#__codelineno-4-39" id="__codelineno-4-39" name="__codelineno-4-39"></a>      "avatar_url": "https://secure.gravatar.com/avatar/21de8fa15da66206e835a51bf9b68c32?s=80\u0026d=identicon",
-<a href="#__codelineno-4-40" id="__codelineno-4-40" name="__codelineno-4-40"></a>      "web_url": "https://gitlab.com/saiprakash_maira"
-<a href="#__codelineno-4-41" id="__codelineno-4-41" name="__codelineno-4-41"></a>    },
-<a href="#__codelineno-4-42" id="__codelineno-4-42" name="__codelineno-4-42"></a>    "user_notes_count": 3,
-<a href="#__codelineno-4-43" id="__codelineno-4-43" name="__codelineno-4-43"></a>    "merge_requests_count": 0,
-<a href="#__codelineno-4-44" id="__codelineno-4-44" name="__codelineno-4-44"></a>    "upvotes": 0,
-<a href="#__codelineno-4-45" id="__codelineno-4-45" name="__codelineno-4-45"></a>    "downvotes": 0,
-<a href="#__codelineno-4-46" id="__codelineno-4-46" name="__codelineno-4-46"></a>    "due_date": "2021-12-12",
-<a href="#__codelineno-4-47" id="__codelineno-4-47" name="__codelineno-4-47"></a>    "confidential": false,
-<a href="#__codelineno-4-48" id="__codelineno-4-48" name="__codelineno-4-48"></a>    "discussion_locked": false,
-<a href="#__codelineno-4-49" id="__codelineno-4-49" name="__codelineno-4-49"></a>    "issue_type": "issue",
-<a href="#__codelineno-4-50" id="__codelineno-4-50" name="__codelineno-4-50"></a>    "web_url": "https://gitlab.com/saiprakash_maira/testing/-/issues/4",
-<a href="#__codelineno-4-51" id="__codelineno-4-51" name="__codelineno-4-51"></a>    "time_stats": {
-<a href="#__codelineno-4-52" id="__codelineno-4-52" name="__codelineno-4-52"></a>      "time_estimate": 0,
-<a href="#__codelineno-4-53" id="__codelineno-4-53" name="__codelineno-4-53"></a>      "total_time_spent": 0,
-<a href="#__codelineno-4-54" id="__codelineno-4-54" name="__codelineno-4-54"></a>      "human_time_estimate": null,
-<a href="#__codelineno-4-55" id="__codelineno-4-55" name="__codelineno-4-55"></a>      "human_total_time_spent": null
-<a href="#__codelineno-4-56" id="__codelineno-4-56" name="__codelineno-4-56"></a>    },
-<a href="#__codelineno-4-57" id="__codelineno-4-57" name="__codelineno-4-57"></a>    "task_completion_status": {
-<a href="#__codelineno-4-58" id="__codelineno-4-58" name="__codelineno-4-58"></a>      "count": 0,
-<a href="#__codelineno-4-59" id="__codelineno-4-59" name="__codelineno-4-59"></a>      "completed_count": 0
-<a href="#__codelineno-4-60" id="__codelineno-4-60" name="__codelineno-4-60"></a>    },
-<a href="#__codelineno-4-61" id="__codelineno-4-61" name="__codelineno-4-61"></a>    "weight": 10,
-<a href="#__codelineno-4-62" id="__codelineno-4-62" name="__codelineno-4-62"></a>    "blocking_issues_count": 0,
-<a href="#__codelineno-4-63" id="__codelineno-4-63" name="__codelineno-4-63"></a>    "has_tasks": false,
-<a href="#__codelineno-4-64" id="__codelineno-4-64" name="__codelineno-4-64"></a>    "_links": {
-<a href="#__codelineno-4-65" id="__codelineno-4-65" name="__codelineno-4-65"></a>      "self": "https://gitlab.com/api/v4/projects/31319463/issues/4",
-<a href="#__codelineno-4-66" id="__codelineno-4-66" name="__codelineno-4-66"></a>      "notes": "https://gitlab.com/api/v4/projects/31319463/issues/4/notes",
-<a href="#__codelineno-4-67" id="__codelineno-4-67" name="__codelineno-4-67"></a>      "award_emoji": "https://gitlab.com/api/v4/projects/31319463/issues/4/award_emoji",
-<a href="#__codelineno-4-68" id="__codelineno-4-68" name="__codelineno-4-68"></a>      "project": "https://gitlab.com/api/v4/projects/31319463"
-<a href="#__codelineno-4-69" id="__codelineno-4-69" name="__codelineno-4-69"></a>    },
-<a href="#__codelineno-4-70" id="__codelineno-4-70" name="__codelineno-4-70"></a>    "references": {
-<a href="#__codelineno-4-71" id="__codelineno-4-71" name="__codelineno-4-71"></a>      "short": "#4",
-<a href="#__codelineno-4-72" id="__codelineno-4-72" name="__codelineno-4-72"></a>      "relative": "#4",
-<a href="#__codelineno-4-73" id="__codelineno-4-73" name="__codelineno-4-73"></a>      "full": "saiprakash_maira/testing#4"
-<a href="#__codelineno-4-74" id="__codelineno-4-74" name="__codelineno-4-74"></a>    },
-<a href="#__codelineno-4-75" id="__codelineno-4-75" name="__codelineno-4-75"></a>    "moved_to_id": null,
-<a href="#__codelineno-4-76" id="__codelineno-4-76" name="__codelineno-4-76"></a>    "service_desk_reply_to": null,
-<a href="#__codelineno-4-77" id="__codelineno-4-77" name="__codelineno-4-77"></a>    "health_status": null
-<a href="#__codelineno-4-78" id="__codelineno-4-78" name="__codelineno-4-78"></a>  }
-<a href="#__codelineno-4-79" id="__codelineno-4-79" name="__codelineno-4-79"></a>]
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">[</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="p">{</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">97399269</span><span class="p">,</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="nt">"iid"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="nt">"project_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">31319463</span><span class="p">,</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"issue3"</span><span class="p">,</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello new edit"</span><span class="p">,</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"opened"</span><span class="p">,</span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-03-11T03:45:40.000Z"</span><span class="p">,</span>
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-11-16T12:52:11.470Z"</span><span class="p">,</span>
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="nt">"closed_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">    </span><span class="nt">"closed_by"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="nt">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"new_label"</span><span class="p">],</span>
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span><span class="nt">"milestone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">    </span><span class="nt">"assignees"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">      </span><span class="p">{</span>
+<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10215385</span><span class="p">,</span>
+<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sai Prakash V"</span><span class="p">,</span>
+<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">        </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"saiprakash_maira"</span><span class="p">,</span>
+<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">        </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span>
+<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">        </span><span class="nt">"avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://secure.gravatar.com/avatar/21de8fa15da66206e835a51bf9b68c32?s=80\u0026d=identicon"</span><span class="p">,</span>
+<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">        </span><span class="nt">"web_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://gitlab.com/saiprakash_maira"</span>
+<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">      </span><span class="p">}</span>
+<a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">    </span><span class="p">],</span>
+<a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">    </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10215385</span><span class="p">,</span>
+<a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sai Prakash V"</span><span class="p">,</span>
+<a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="w">      </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"saiprakash_maira"</span><span class="p">,</span>
+<a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="w">      </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span>
+<a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="w">      </span><span class="nt">"avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://secure.gravatar.com/avatar/21de8fa15da66206e835a51bf9b68c32?s=80\u0026d=identicon"</span><span class="p">,</span>
+<a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="w">      </span><span class="nt">"web_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://gitlab.com/saiprakash_maira"</span>
+<a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ISSUE"</span><span class="p">,</span>
+<a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="w">    </span><span class="nt">"assignee"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10215385</span><span class="p">,</span>
+<a href="#__codelineno-4-36" id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sai Prakash V"</span><span class="p">,</span>
+<a href="#__codelineno-4-37" id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="w">      </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"saiprakash_maira"</span><span class="p">,</span>
+<a href="#__codelineno-4-38" id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="w">      </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span>
+<a href="#__codelineno-4-39" id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="w">      </span><span class="nt">"avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://secure.gravatar.com/avatar/21de8fa15da66206e835a51bf9b68c32?s=80\u0026d=identicon"</span><span class="p">,</span>
+<a href="#__codelineno-4-40" id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="w">      </span><span class="nt">"web_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://gitlab.com/saiprakash_maira"</span>
+<a href="#__codelineno-4-41" id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-4-42" id="__codelineno-4-42" name="__codelineno-4-42"></a><span class="w">    </span><span class="nt">"user_notes_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a href="#__codelineno-4-43" id="__codelineno-4-43" name="__codelineno-4-43"></a><span class="w">    </span><span class="nt">"merge_requests_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-4-44" id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="w">    </span><span class="nt">"upvotes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-4-45" id="__codelineno-4-45" name="__codelineno-4-45"></a><span class="w">    </span><span class="nt">"downvotes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-4-46" id="__codelineno-4-46" name="__codelineno-4-46"></a><span class="w">    </span><span class="nt">"due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-12"</span><span class="p">,</span>
+<a href="#__codelineno-4-47" id="__codelineno-4-47" name="__codelineno-4-47"></a><span class="w">    </span><span class="nt">"confidential"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a href="#__codelineno-4-48" id="__codelineno-4-48" name="__codelineno-4-48"></a><span class="w">    </span><span class="nt">"discussion_locked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a href="#__codelineno-4-49" id="__codelineno-4-49" name="__codelineno-4-49"></a><span class="w">    </span><span class="nt">"issue_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"issue"</span><span class="p">,</span>
+<a href="#__codelineno-4-50" id="__codelineno-4-50" name="__codelineno-4-50"></a><span class="w">    </span><span class="nt">"web_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://gitlab.com/saiprakash_maira/testing/-/issues/4"</span><span class="p">,</span>
+<a href="#__codelineno-4-51" id="__codelineno-4-51" name="__codelineno-4-51"></a><span class="w">    </span><span class="nt">"time_stats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-52" id="__codelineno-4-52" name="__codelineno-4-52"></a><span class="w">      </span><span class="nt">"time_estimate"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-4-53" id="__codelineno-4-53" name="__codelineno-4-53"></a><span class="w">      </span><span class="nt">"total_time_spent"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-4-54" id="__codelineno-4-54" name="__codelineno-4-54"></a><span class="w">      </span><span class="nt">"human_time_estimate"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-4-55" id="__codelineno-4-55" name="__codelineno-4-55"></a><span class="w">      </span><span class="nt">"human_total_time_spent"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<a href="#__codelineno-4-56" id="__codelineno-4-56" name="__codelineno-4-56"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-4-57" id="__codelineno-4-57" name="__codelineno-4-57"></a><span class="w">    </span><span class="nt">"task_completion_status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-58" id="__codelineno-4-58" name="__codelineno-4-58"></a><span class="w">      </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-4-59" id="__codelineno-4-59" name="__codelineno-4-59"></a><span class="w">      </span><span class="nt">"completed_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<a href="#__codelineno-4-60" id="__codelineno-4-60" name="__codelineno-4-60"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-4-61" id="__codelineno-4-61" name="__codelineno-4-61"></a><span class="w">    </span><span class="nt">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<a href="#__codelineno-4-62" id="__codelineno-4-62" name="__codelineno-4-62"></a><span class="w">    </span><span class="nt">"blocking_issues_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-4-63" id="__codelineno-4-63" name="__codelineno-4-63"></a><span class="w">    </span><span class="nt">"has_tasks"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a href="#__codelineno-4-64" id="__codelineno-4-64" name="__codelineno-4-64"></a><span class="w">    </span><span class="nt">"_links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-65" id="__codelineno-4-65" name="__codelineno-4-65"></a><span class="w">      </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://gitlab.com/api/v4/projects/31319463/issues/4"</span><span class="p">,</span>
+<a href="#__codelineno-4-66" id="__codelineno-4-66" name="__codelineno-4-66"></a><span class="w">      </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://gitlab.com/api/v4/projects/31319463/issues/4/notes"</span><span class="p">,</span>
+<a href="#__codelineno-4-67" id="__codelineno-4-67" name="__codelineno-4-67"></a><span class="w">      </span><span class="nt">"award_emoji"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://gitlab.com/api/v4/projects/31319463/issues/4/award_emoji"</span><span class="p">,</span>
+<a href="#__codelineno-4-68" id="__codelineno-4-68" name="__codelineno-4-68"></a><span class="w">      </span><span class="nt">"project"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://gitlab.com/api/v4/projects/31319463"</span>
+<a href="#__codelineno-4-69" id="__codelineno-4-69" name="__codelineno-4-69"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-4-70" id="__codelineno-4-70" name="__codelineno-4-70"></a><span class="w">    </span><span class="nt">"references"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-71" id="__codelineno-4-71" name="__codelineno-4-71"></a><span class="w">      </span><span class="nt">"short"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#4"</span><span class="p">,</span>
+<a href="#__codelineno-4-72" id="__codelineno-4-72" name="__codelineno-4-72"></a><span class="w">      </span><span class="nt">"relative"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#4"</span><span class="p">,</span>
+<a href="#__codelineno-4-73" id="__codelineno-4-73" name="__codelineno-4-73"></a><span class="w">      </span><span class="nt">"full"</span><span class="p">:</span><span class="w"> </span><span class="s2">"saiprakash_maira/testing#4"</span>
+<a href="#__codelineno-4-74" id="__codelineno-4-74" name="__codelineno-4-74"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-4-75" id="__codelineno-4-75" name="__codelineno-4-75"></a><span class="w">    </span><span class="nt">"moved_to_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-4-76" id="__codelineno-4-76" name="__codelineno-4-76"></a><span class="w">    </span><span class="nt">"service_desk_reply_to"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-4-77" id="__codelineno-4-77" name="__codelineno-4-77"></a><span class="w">    </span><span class="nt">"health_status"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<a href="#__codelineno-4-78" id="__codelineno-4-78" name="__codelineno-4-78"></a><span class="w">  </span><span class="p">}</span>
+<a href="#__codelineno-4-79" id="__codelineno-4-79" name="__codelineno-4-79"></a><span class="p">]</span>
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>
