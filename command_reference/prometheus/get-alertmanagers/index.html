@@ -3011,9 +3011,9 @@
 <h2 id="description">Description</h2>
 <p>Returns an overview of the current state of the Prometheus alertmanager discovery. Both the active and dropped Alertmanagers are part of the response</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>prometheus<span class="w"> </span>get-alertmanagers
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--cluster<span class="w"> </span>&lt;cluster&gt;<span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>prometheus get-alertmanagers
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--cluster &lt;cluster&gt;]
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3028,20 +3028,20 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span> <span class="n">prometheus</span> <span class="n">get</span><span class="o">-</span><span class="n">alertmanagers</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost"</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>! prometheus get-alertmanagers --site "localhost"
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nt">"activeAlertmanagers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">      </span><span class="p">{</span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:9093/api/v2/alerts"</span>
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">      </span><span class="p">}</span>
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="p">],</span>
-<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="nt">"droppedAlertmanagers"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
-<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">  </span><span class="p">}</span>
-<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>{
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>  "status": "success",
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>  "data": {
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>    "activeAlertmanagers": [
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>      {
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>        "url": "http://localhost:9093/api/v2/alerts"
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>      }
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>    ],
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>    "droppedAlertmanagers": []
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>  }
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>}
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

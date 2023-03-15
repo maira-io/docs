@@ -3031,11 +3031,11 @@
 <h2 id="description">Description</h2>
 <p>Get the kubernetes deployments satisfying the provided args</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>k8s<span class="w"> </span>list-deployments
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--cluster<span class="w"> </span>&lt;cluster&gt;<span class="o">]</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--namespace<span class="p">|</span>-n<span class="w"> </span>&lt;namespace&gt;<span class="o">]</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="o">[</span>&lt;selector&gt;<span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>k8s list-deployments
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--cluster &lt;cluster&gt;]
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [--namespace|-n &lt;namespace&gt;]
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    [&lt;selector&gt;]
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3060,7 +3060,7 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span> <span class="n">k8s</span> <span class="nb">list</span><span class="o">-</span><span class="n">deployments</span>  <span class="s2">"app=kafka3,test"</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>! k8s list-deployments  "app=kafka3,test"
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>CLUSTER        NAMESPACE       NAME            REPLICAS
@@ -3068,44 +3068,44 @@ Output:
 <a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>in-cluster     default         r1-maira-agent         1
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">x</span> <span class="o">=</span> <span class="err">!</span> <span class="n">k8s</span> <span class="nb">list</span><span class="o">-</span><span class="n">deployments</span>  <span class="s2">"app=kafka3,test"</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>x = ! k8s list-deployments  "app=kafka3,test"
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">[</span>
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="p">{</span>
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">        </span><span class="nt">"cluster"</span><span class="p">:</span><span class="w"> </span><span class="s2">"minikube"</span><span class="p">,</span>
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">        </span><span class="nt">"namespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span>
-<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kafka3"</span><span class="p">,</span>
-<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">        </span><span class="nt">"labels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">            </span><span class="nt">"app"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kafka3"</span><span class="p">,</span>
-<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">            </span><span class="nt">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span>
-<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">        </span><span class="p">},</span>
-<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">        </span><span class="nt">"annotations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">            </span><span class="nt">"deployment.kubernetes.io/revision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span>
-<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">            </span><span class="nt">"testing"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testing"</span>
-<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">        </span><span class="p">},</span>
-<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">        </span><span class="nt">"deployment_status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">            </span><span class="nt">"replicas"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">            </span><span class="nt">"updated_replicas"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">            </span><span class="nt">"unavailable_replicas"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">            </span><span class="nt">"deployment_conditions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">                </span><span class="p">{</span>
-<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
-<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">                    </span><span class="nt">"condition_status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">                    </span><span class="nt">"reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NewReplicaSetAvailable"</span><span class="p">,</span>
-<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">                    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ReplicaSet \"kafka3-77bf6975d4\" has successfully progressed."</span>
-<a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">                </span><span class="p">},</span>
-<a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">                </span><span class="p">{</span>
-<a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">                    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="w">                    </span><span class="nt">"condition_status"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="w">                    </span><span class="nt">"reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MinimumReplicasUnavailable"</span><span class="p">,</span>
-<a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="w">                    </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Deployment does not have minimum availability."</span>
-<a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="w">                </span><span class="p">}</span>
-<a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="w">            </span><span class="p">]</span>
-<a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="w">        </span><span class="p">},</span>
-<a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="w">        </span><span class="nt">"creation_time_millis"</span><span class="p">:</span><span class="w"> </span><span class="mi">1629190311000</span>
-<a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="w">    </span><span class="p">}</span>
-<a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>[
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>    {
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>        "cluster": "minikube",
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>        "namespace": "default",
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>        "name": "kafka3",
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>        "labels": {
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>            "app": "kafka3",
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>            "test": "test"
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>        },
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>        "annotations": {
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>            "deployment.kubernetes.io/revision": "1",
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>            "testing": "testing"
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>        },
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>        "deployment_status": {
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>            "replicas": 1,
+<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>            "updated_replicas": 1,
+<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a>            "unavailable_replicas": 1,
+<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>            "deployment_conditions": [
+<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a>                {
+<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>                    "type": 3,
+<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a>                    "condition_status": 1,
+<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a>                    "reason": "NewReplicaSetAvailable",
+<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a>                    "message": "ReplicaSet \"kafka3-77bf6975d4\" has successfully progressed."
+<a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a>                },
+<a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a>                {
+<a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a>                    "type": 2,
+<a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a>                    "condition_status": 2,
+<a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a>                    "reason": "MinimumReplicasUnavailable",
+<a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a>                    "message": "Deployment does not have minimum availability."
+<a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a>                }
+<a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a>            ]
+<a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a>        },
+<a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a>        "creation_time_millis": 1629190311000
+<a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a>    }
+<a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a>]
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

@@ -3021,10 +3021,10 @@
 <h2 id="description">Description</h2>
 <p>Returns collector if ID is provided. Else, returns all collectors</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>appd<span class="w"> </span>get-collector
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--cluster<span class="w"> </span>&lt;cluster&gt;<span class="o">]</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>&lt;id&gt;<span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>appd get-collector
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--cluster &lt;cluster&gt;]
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [&lt;id&gt;]
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3044,85 +3044,85 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">x</span> <span class="o">=</span> <span class="err">!</span> <span class="n">appd</span> <span class="n">get</span><span class="o">-</span><span class="n">collector</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost:8081"</span> <span class="mi">562</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>x = ! appd get-collector --site "localhost:8081" 562
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">"performanceState"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="nt">"collectorStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ERROR"</span><span class="p">,</span>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="nt">"eventSummary"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">  </span><span class="nt">"configId"</span><span class="p">:</span><span class="w"> </span><span class="mi">562</span><span class="p">,</span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">  </span><span class="nt">"nodeId"</span><span class="p">:</span><span class="w"> </span><span class="mi">932032</span><span class="p">,</span>
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">  </span><span class="nt">"config"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">562</span><span class="p">,</span>
-<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
-<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span>
-<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="nt">"nameUnique"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="nt">"builtIn"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="nt">"createdBy"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="nt">"createdOn"</span><span class="p">:</span><span class="w"> </span><span class="mi">1664451680000</span><span class="p">,</span>
-<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="nt">"modifiedBy"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">    </span><span class="nt">"modifiedOn"</span><span class="p">:</span><span class="w"> </span><span class="mi">1664451680000</span><span class="p">,</span>
-<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MONGO"</span><span class="p">,</span>
-<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">    </span><span class="nt">"hostname"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
-<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">    </span><span class="nt">"useWindowsAuth"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">    </span><span class="nt">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"master"</span><span class="p">,</span>
-<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="nt">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
-<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="nt">"port"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
-<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="nt">"loggingEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">    </span><span class="nt">"excludedSchemas"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">    </span><span class="nt">"jdbcConnectionProperties"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
-<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">    </span><span class="nt">"databaseName"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
-<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">    </span><span class="nt">"failoverPartner"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">    </span><span class="nt">"connectAsSysdba"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">    </span><span class="nt">"useServiceName"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">    </span><span class="nt">"sid"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
-<a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">    </span><span class="nt">"customConnectionString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mongodb://localhost:27017"</span><span class="p">,</span>
-<a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">    </span><span class="nt">"enterpriseDB"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">    </span><span class="nt">"useSSL"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-2-35" id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="w">    </span><span class="nt">"enableOSMonitor"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-2-36" id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w">    </span><span class="nt">"hostOS"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-37" id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="w">    </span><span class="nt">"useLocalWMI"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-2-38" id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="w">    </span><span class="nt">"hostDomain"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-39" id="__codelineno-2-39" name="__codelineno-2-39"></a><span class="w">    </span><span class="nt">"hostUsername"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-40" id="__codelineno-2-40" name="__codelineno-2-40"></a><span class="w">    </span><span class="nt">"hostPassword"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-41" id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="w">    </span><span class="nt">"dbInstanceIdentifier"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-42" id="__codelineno-2-42" name="__codelineno-2-42"></a><span class="w">    </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-43" id="__codelineno-2-43" name="__codelineno-2-43"></a><span class="w">    </span><span class="nt">"certificateAuth"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-2-44" id="__codelineno-2-44" name="__codelineno-2-44"></a><span class="w">    </span><span class="nt">"removeLiterals"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a href="#__codelineno-2-45" id="__codelineno-2-45" name="__codelineno-2-45"></a><span class="w">    </span><span class="nt">"sshPort"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
-<a href="#__codelineno-2-46" id="__codelineno-2-46" name="__codelineno-2-46"></a><span class="w">    </span><span class="nt">"agentName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Default Database Agent"</span><span class="p">,</span>
-<a href="#__codelineno-2-47" id="__codelineno-2-47" name="__codelineno-2-47"></a><span class="w">    </span><span class="nt">"dbCyberArkEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-2-48" id="__codelineno-2-48" name="__codelineno-2-48"></a><span class="w">    </span><span class="nt">"dbCyberArkApplication"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-49" id="__codelineno-2-49" name="__codelineno-2-49"></a><span class="w">    </span><span class="nt">"dbCyberArkSafe"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-50" id="__codelineno-2-50" name="__codelineno-2-50"></a><span class="w">    </span><span class="nt">"dbCyberArkFolder"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-51" id="__codelineno-2-51" name="__codelineno-2-51"></a><span class="w">    </span><span class="nt">"dbCyberArkObject"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-52" id="__codelineno-2-52" name="__codelineno-2-52"></a><span class="w">    </span><span class="nt">"hwCyberArkEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-2-53" id="__codelineno-2-53" name="__codelineno-2-53"></a><span class="w">    </span><span class="nt">"hwCyberArkApplication"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-54" id="__codelineno-2-54" name="__codelineno-2-54"></a><span class="w">    </span><span class="nt">"hwCyberArkSafe"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-55" id="__codelineno-2-55" name="__codelineno-2-55"></a><span class="w">    </span><span class="nt">"hwCyberArkFolder"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-56" id="__codelineno-2-56" name="__codelineno-2-56"></a><span class="w">    </span><span class="nt">"hwCyberArkObject"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-57" id="__codelineno-2-57" name="__codelineno-2-57"></a><span class="w">    </span><span class="nt">"orapkiSslEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-2-58" id="__codelineno-2-58" name="__codelineno-2-58"></a><span class="w">    </span><span class="nt">"orasslClientAuthEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-2-59" id="__codelineno-2-59" name="__codelineno-2-59"></a><span class="w">    </span><span class="nt">"orasslTruststoreLoc"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-60" id="__codelineno-2-60" name="__codelineno-2-60"></a><span class="w">    </span><span class="nt">"orasslTruststoreType"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-61" id="__codelineno-2-61" name="__codelineno-2-61"></a><span class="w">    </span><span class="nt">"orasslTruststorePassword"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-62" id="__codelineno-2-62" name="__codelineno-2-62"></a><span class="w">    </span><span class="nt">"orasslKeystoreLoc"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-63" id="__codelineno-2-63" name="__codelineno-2-63"></a><span class="w">    </span><span class="nt">"orasslKeystoreType"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-64" id="__codelineno-2-64" name="__codelineno-2-64"></a><span class="w">    </span><span class="nt">"orasslKeystorePassword"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-65" id="__codelineno-2-65" name="__codelineno-2-65"></a><span class="w">    </span><span class="nt">"ldapEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<a href="#__codelineno-2-66" id="__codelineno-2-66" name="__codelineno-2-66"></a><span class="w">    </span><span class="nt">"customMetrics"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a href="#__codelineno-2-67" id="__codelineno-2-67" name="__codelineno-2-67"></a><span class="w">    </span><span class="nt">"subConfigs"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
-<a href="#__codelineno-2-68" id="__codelineno-2-68" name="__codelineno-2-68"></a><span class="w">    </span><span class="nt">"jmxPort"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
-<a href="#__codelineno-2-69" id="__codelineno-2-69" name="__codelineno-2-69"></a><span class="w">    </span><span class="nt">"backendIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
-<a href="#__codelineno-2-70" id="__codelineno-2-70" name="__codelineno-2-70"></a><span class="w">    </span><span class="nt">"extraProperties"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
-<a href="#__codelineno-2-71" id="__codelineno-2-71" name="__codelineno-2-71"></a><span class="w">  </span><span class="p">},</span>
-<a href="#__codelineno-2-72" id="__codelineno-2-72" name="__codelineno-2-72"></a><span class="w">  </span><span class="nt">"licensesUsed"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span>
-<a href="#__codelineno-2-73" id="__codelineno-2-73" name="__codelineno-2-73"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>{
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>  "performanceState": null,
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>  "collectorStatus": "ERROR",
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>  "eventSummary": null,
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>  "configId": 562,
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>  "nodeId": 932032,
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>  "config": {
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>    "id": 562,
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>    "version": 0,
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>    "name": "test",
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>    "nameUnique": true,
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>    "builtIn": false,
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>    "createdBy": null,
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>    "createdOn": 1664451680000,
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>    "modifiedBy": null,
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>    "modifiedOn": 1664451680000,
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>    "type": "MONGO",
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>    "hostname": "",
+<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>    "useWindowsAuth": false,
+<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>    "username": "master",
+<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>    "password": "",
+<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>    "port": 0,
+<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>    "loggingEnabled": false,
+<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>    "enabled": true,
+<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>    "excludedSchemas": null,
+<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>    "jdbcConnectionProperties": [],
+<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>    "databaseName": "",
+<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>    "failoverPartner": null,
+<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>    "connectAsSysdba": false,
+<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a>    "useServiceName": false,
+<a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a>    "sid": "",
+<a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a>    "customConnectionString": "mongodb://localhost:27017",
+<a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a>    "enterpriseDB": false,
+<a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a>    "useSSL": false,
+<a href="#__codelineno-2-35" id="__codelineno-2-35" name="__codelineno-2-35"></a>    "enableOSMonitor": false,
+<a href="#__codelineno-2-36" id="__codelineno-2-36" name="__codelineno-2-36"></a>    "hostOS": null,
+<a href="#__codelineno-2-37" id="__codelineno-2-37" name="__codelineno-2-37"></a>    "useLocalWMI": false,
+<a href="#__codelineno-2-38" id="__codelineno-2-38" name="__codelineno-2-38"></a>    "hostDomain": null,
+<a href="#__codelineno-2-39" id="__codelineno-2-39" name="__codelineno-2-39"></a>    "hostUsername": null,
+<a href="#__codelineno-2-40" id="__codelineno-2-40" name="__codelineno-2-40"></a>    "hostPassword": null,
+<a href="#__codelineno-2-41" id="__codelineno-2-41" name="__codelineno-2-41"></a>    "dbInstanceIdentifier": null,
+<a href="#__codelineno-2-42" id="__codelineno-2-42" name="__codelineno-2-42"></a>    "region": null,
+<a href="#__codelineno-2-43" id="__codelineno-2-43" name="__codelineno-2-43"></a>    "certificateAuth": false,
+<a href="#__codelineno-2-44" id="__codelineno-2-44" name="__codelineno-2-44"></a>    "removeLiterals": true,
+<a href="#__codelineno-2-45" id="__codelineno-2-45" name="__codelineno-2-45"></a>    "sshPort": 0,
+<a href="#__codelineno-2-46" id="__codelineno-2-46" name="__codelineno-2-46"></a>    "agentName": "Default Database Agent",
+<a href="#__codelineno-2-47" id="__codelineno-2-47" name="__codelineno-2-47"></a>    "dbCyberArkEnabled": false,
+<a href="#__codelineno-2-48" id="__codelineno-2-48" name="__codelineno-2-48"></a>    "dbCyberArkApplication": null,
+<a href="#__codelineno-2-49" id="__codelineno-2-49" name="__codelineno-2-49"></a>    "dbCyberArkSafe": null,
+<a href="#__codelineno-2-50" id="__codelineno-2-50" name="__codelineno-2-50"></a>    "dbCyberArkFolder": null,
+<a href="#__codelineno-2-51" id="__codelineno-2-51" name="__codelineno-2-51"></a>    "dbCyberArkObject": null,
+<a href="#__codelineno-2-52" id="__codelineno-2-52" name="__codelineno-2-52"></a>    "hwCyberArkEnabled": false,
+<a href="#__codelineno-2-53" id="__codelineno-2-53" name="__codelineno-2-53"></a>    "hwCyberArkApplication": null,
+<a href="#__codelineno-2-54" id="__codelineno-2-54" name="__codelineno-2-54"></a>    "hwCyberArkSafe": null,
+<a href="#__codelineno-2-55" id="__codelineno-2-55" name="__codelineno-2-55"></a>    "hwCyberArkFolder": null,
+<a href="#__codelineno-2-56" id="__codelineno-2-56" name="__codelineno-2-56"></a>    "hwCyberArkObject": null,
+<a href="#__codelineno-2-57" id="__codelineno-2-57" name="__codelineno-2-57"></a>    "orapkiSslEnabled": false,
+<a href="#__codelineno-2-58" id="__codelineno-2-58" name="__codelineno-2-58"></a>    "orasslClientAuthEnabled": false,
+<a href="#__codelineno-2-59" id="__codelineno-2-59" name="__codelineno-2-59"></a>    "orasslTruststoreLoc": null,
+<a href="#__codelineno-2-60" id="__codelineno-2-60" name="__codelineno-2-60"></a>    "orasslTruststoreType": null,
+<a href="#__codelineno-2-61" id="__codelineno-2-61" name="__codelineno-2-61"></a>    "orasslTruststorePassword": null,
+<a href="#__codelineno-2-62" id="__codelineno-2-62" name="__codelineno-2-62"></a>    "orasslKeystoreLoc": null,
+<a href="#__codelineno-2-63" id="__codelineno-2-63" name="__codelineno-2-63"></a>    "orasslKeystoreType": null,
+<a href="#__codelineno-2-64" id="__codelineno-2-64" name="__codelineno-2-64"></a>    "orasslKeystorePassword": null,
+<a href="#__codelineno-2-65" id="__codelineno-2-65" name="__codelineno-2-65"></a>    "ldapEnabled": false,
+<a href="#__codelineno-2-66" id="__codelineno-2-66" name="__codelineno-2-66"></a>    "customMetrics": null,
+<a href="#__codelineno-2-67" id="__codelineno-2-67" name="__codelineno-2-67"></a>    "subConfigs": [],
+<a href="#__codelineno-2-68" id="__codelineno-2-68" name="__codelineno-2-68"></a>    "jmxPort": 0,
+<a href="#__codelineno-2-69" id="__codelineno-2-69" name="__codelineno-2-69"></a>    "backendIds": [],
+<a href="#__codelineno-2-70" id="__codelineno-2-70" name="__codelineno-2-70"></a>    "extraProperties": []
+<a href="#__codelineno-2-71" id="__codelineno-2-71" name="__codelineno-2-71"></a>  },
+<a href="#__codelineno-2-72" id="__codelineno-2-72" name="__codelineno-2-72"></a>  "licensesUsed": -1
+<a href="#__codelineno-2-73" id="__codelineno-2-73" name="__codelineno-2-73"></a>}
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="err">!</span> <span class="n">appd</span> <span class="n">get</span><span class="o">-</span><span class="n">collector</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost:8081"</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>! appd get-collector --site "localhost:8081"
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>ID  VERSION NAME                TYPE    HOSTNAME    USERNAME    PORT    DATABASE NAME 
@@ -3132,7 +3132,7 @@ Output:
 <a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>571       0 sample collector    MONGO               null           0                    
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="err">!</span> <span class="n">appd</span> <span class="n">get</span><span class="o">-</span><span class="n">collector</span> <span class="o">--</span><span class="n">site</span> <span class="s2">"localhost:8081"</span> <span class="mi">562</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>! appd get-collector --site "localhost:8081" 562
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>ID  VERSION NAME                TYPE    HOSTNAME    USERNAME    PASSWORD    PORT    DATABASE NAME 

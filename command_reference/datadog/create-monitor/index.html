@@ -3071,15 +3071,15 @@
 <h2 id="description">Description</h2>
 <p>Create a monitor using the specified options</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog<span class="w"> </span>create-monitor
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--message<span class="w"> </span>&lt;message&gt;<span class="o">]</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--name<span class="w"> </span>&lt;name&gt;<span class="o">]</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="o">[</span>--priority<span class="w"> </span>&lt;priority&gt;<span class="o">]</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span>--query<span class="w"> </span>&lt;query&gt;
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="o">[</span>--restricted_roles<span class="w"> </span>&lt;restricted_roles&gt;<span class="o">]</span>
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="o">[</span>--tags<span class="w"> </span>&lt;tags&gt;<span class="o">]</span>
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span>--type<span class="w"> </span>&lt;type&gt;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog create-monitor
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--message &lt;message&gt;]
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [--name &lt;name&gt;]
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    [--priority &lt;priority&gt;]
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    --query &lt;query&gt;
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    [--restricted_roles &lt;restricted_roles&gt;]
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>    [--tags &lt;tags&gt;]
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>    --type &lt;type&gt;
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3126,7 +3126,7 @@
           allowed values: <code>composite, event alert, log alert, metric alert, process alert, query alert, rum alert, service check, synthetics alert, trace-analytics alert, slo alert, event-v2 alert, audit alert, ci-pipelines alert, ci-tests alert, error-tracking alert</code></p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">datadog</span> <span class="n">create</span><span class="o">-</span><span class="n">monitor</span> <span class="o">--</span><span class="n">query</span> <span class="s2">"avg(last_5m):sum:system.net.bytes_rcvd{host:host0} &gt; 100"</span> <span class="o">--</span><span class="nb">type</span> <span class="s2">"query alert"</span> <span class="o">--</span><span class="n">message</span> <span class="s2">"create moniotr"</span> <span class="o">--</span><span class="n">name</span> <span class="s2">"testNames2"</span> <span class="o">--</span><span class="n">tags</span> <span class="s2">"testta"</span> <span class="o">--</span><span class="n">priority</span> <span class="mi">3</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!datadog create-monitor --query "avg(last_5m):sum:system.net.bytes_rcvd{host:host0} &gt; 100" --type "query alert" --message "create moniotr" --name "testNames2" --tags "testta" --priority 3
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ID      ORG-ID      NAME        MESSAGE         TYPE        
