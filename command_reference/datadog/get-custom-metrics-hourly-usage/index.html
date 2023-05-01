@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://docs.maira.io/command_reference/elasticsearch/update-index-settings/" rel="canonical"/>
-<link href="../update-document/" rel="prev"/>
-<link href="../../find/" rel="next"/>
+<link href="https://docs.maira.io/command_reference/datadog/get-custom-metrics-hourly-usage/" rel="canonical"/>
+<link href="../get-custom-metrices-hourly-usage/" rel="prev"/>
+<link href="../get-custom-metrics/" rel="next"/>
 <link href="../../../img/maira-icon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.12" name="generator"/>
-<title>elasticsearch update-index-settings - Maira Docs</title>
+<title>datadog get-custom-metrics-hourly-usage - Maira Docs</title>
 <link href="../../../assets/stylesheets/main.0d440cfe.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -36,7 +36,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#elasticsearch-update-index-settings">
+<a class="md-skip" href="#datadog-get-custom-metrics-hourly-usage">
           Skip to content
         </a>
 </div>
@@ -60,7 +60,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              elasticsearch update-index-settings
+              datadog get-custom-metrics-hourly-usage
             
           </span>
 </div>
@@ -580,422 +580,479 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_9_9" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_9_9" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../../datadog/">datadog</a>
+<a href="../">datadog</a>
 <label for="__nav_9_9">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_9_9_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_9_9_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_9_9">
 <span class="md-nav__icon md-icon"></span>
           datadog
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/add-tags-host/">
+<a class="md-nav__link" href="../add-tags-host/">
         datadog add-tags-host
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/aggregate-logs/">
+<a class="md-nav__link" href="../aggregate-logs/">
         datadog aggregate-logs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/cancel-downtime/">
+<a class="md-nav__link" href="../cancel-downtime/">
         datadog cancel-downtime
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/create-incident-attachment/">
+<a class="md-nav__link" href="../create-incident-attachment/">
         datadog create-incident-attachment
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/create-incident-team/">
+<a class="md-nav__link" href="../create-incident-team/">
         datadog create-incident-team
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/create-incident/">
+<a class="md-nav__link" href="../create-incident/">
         datadog create-incident
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/create-log-archive-azure/">
+<a class="md-nav__link" href="../create-log-archive-azure/">
         datadog create-log-archive-azure
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/create-log-archive-gcs/">
+<a class="md-nav__link" href="../create-log-archive-gcs/">
         datadog create-log-archive-gcs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/create-log-archive-s3/">
+<a class="md-nav__link" href="../create-log-archive-s3/">
         datadog create-log-archive-s3
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/create-log-index/">
+<a class="md-nav__link" href="../create-log-index/">
         datadog create-log-index
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/create-monitor/">
+<a class="md-nav__link" href="../create-monitor/">
         datadog create-monitor
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/create-role/">
+<a class="md-nav__link" href="../create-role/">
         datadog create-role
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/create-rum-application/">
+<a class="md-nav__link" href="../create-rum-application/">
         datadog create-rum-application
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/create-user/">
+<a class="md-nav__link" href="../create-user/">
         datadog create-user
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/delete-incident-attachment/">
+<a class="md-nav__link" href="../delete-incident-attachment/">
         datadog delete-incident-attachment
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/delete-incident-team/">
+<a class="md-nav__link" href="../delete-incident-team/">
         datadog delete-incident-team
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/delete-incident/">
+<a class="md-nav__link" href="../delete-incident/">
         datadog delete-incident
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/delete-log-archive/">
+<a class="md-nav__link" href="../delete-log-archive/">
         datadog delete-log-archive
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/delete-monitor/">
+<a class="md-nav__link" href="../delete-monitor/">
         datadog delete-monitor
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/delete-rum-application/">
+<a class="md-nav__link" href="../delete-rum-application/">
         datadog delete-rum-application
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/delete-tags-host/">
+<a class="md-nav__link" href="../delete-tags-host/">
         datadog delete-tags-host
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/disable-user/">
+<a class="md-nav__link" href="../disable-user/">
         datadog disable-user
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-active-metrics/">
+<a class="md-nav__link" href="../get-active-metrics/">
         datadog get-active-metrics
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-custom-metrices-hourly-usage/">
+<a class="md-nav__link" href="../get-custom-metrices-hourly-usage/">
         datadog get-custom-metrices-hourly-usage
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-custom-metrics-hourly-usage/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          datadog get-custom-metrics-hourly-usage
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         datadog get-custom-metrics-hourly-usage
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#description">
+    Description
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-custom-metrics/">
+<a class="md-nav__link" href="#synopsis">
+    Synopsis
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#arguments">
+    Arguments
+  </a>
+<nav aria-label="Arguments" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#site-string">
+    site - (string)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#start-time">
+    start - (time)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#end-time">
+    end - (time)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples">
+    Examples
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#access-control">
+    Access Control
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../get-custom-metrics/">
         datadog get-custom-metrics
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-dashboard/">
+<a class="md-nav__link" href="../get-dashboard/">
         datadog get-dashboard
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-downtime/">
+<a class="md-nav__link" href="../get-downtime/">
         datadog get-downtime
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-hosts-count/">
+<a class="md-nav__link" href="../get-hosts-count/">
         datadog get-hosts-count
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-hosts/">
+<a class="md-nav__link" href="../get-hosts/">
         datadog get-hosts
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-hourly-usage-attribution/">
+<a class="md-nav__link" href="../get-hourly-usage-attribution/">
         datadog get-hourly-usage-attribution
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-hourly-usage-product-family/">
+<a class="md-nav__link" href="../get-hourly-usage-product-family/">
         datadog get-hourly-usage-product-family
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-incident-teams/">
+<a class="md-nav__link" href="../get-incident-teams/">
         datadog get-incident-teams
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-logs-hourly-usage/">
+<a class="md-nav__link" href="../get-logs-hourly-usage/">
         datadog get-logs-hourly-usage
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-metric/">
+<a class="md-nav__link" href="../get-metric/">
         datadog get-metric
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-monitor-details/">
+<a class="md-nav__link" href="../get-monitor-details/">
         datadog get-monitor-details
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-monthly-usage-attribution/">
+<a class="md-nav__link" href="../get-monthly-usage-attribution/">
         datadog get-monthly-usage-attribution
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/get-rum-application/">
+<a class="md-nav__link" href="../get-rum-application/">
         datadog get-rum-application
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/grant-role-archive/">
+<a class="md-nav__link" href="../grant-role-archive/">
         datadog grant-role-archive
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-active-tags-aggregations/">
+<a class="md-nav__link" href="../list-active-tags-aggregations/">
         datadog list-active-tags-aggregations
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-downtimes/">
+<a class="md-nav__link" href="../list-downtimes/">
         datadog list-downtimes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-events/">
+<a class="md-nav__link" href="../list-events/">
         datadog list-events
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-incident-attachments/">
+<a class="md-nav__link" href="../list-incident-attachments/">
         datadog list-incident-attachments
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-incidents/">
+<a class="md-nav__link" href="../list-incidents/">
         datadog list-incidents
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-log-archives/">
+<a class="md-nav__link" href="../list-log-archives/">
         datadog list-log-archives
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-log-indexes/">
+<a class="md-nav__link" href="../list-log-indexes/">
         datadog list-log-indexes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-logs/">
+<a class="md-nav__link" href="../list-logs/">
         datadog list-logs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-metric-volumes/">
+<a class="md-nav__link" href="../list-metric-volumes/">
         datadog list-metric-volumes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-metrics/">
+<a class="md-nav__link" href="../list-metrics/">
         datadog list-metrics
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-monitors/">
+<a class="md-nav__link" href="../list-monitors/">
         datadog list-monitors
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-permissions/">
+<a class="md-nav__link" href="../list-permissions/">
         datadog list-permissions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-processes/">
+<a class="md-nav__link" href="../list-processes/">
         datadog list-processes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-roles/">
+<a class="md-nav__link" href="../list-roles/">
         datadog list-roles
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-rum-applications/">
+<a class="md-nav__link" href="../list-rum-applications/">
         datadog list-rum-applications
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-tags-config-metric/">
+<a class="md-nav__link" href="../list-tags-config-metric/">
         datadog list-tags-config-metric
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-tags/">
+<a class="md-nav__link" href="../list-tags/">
         datadog list-tags
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/list-users/">
+<a class="md-nav__link" href="../list-users/">
         datadog list-users
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/mute-host/">
+<a class="md-nav__link" href="../mute-host/">
         datadog mute-host
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/mute-monitor/">
+<a class="md-nav__link" href="../mute-monitor/">
         datadog mute-monitor
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/post-event/">
+<a class="md-nav__link" href="../post-event/">
         datadog post-event
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/query-timeseries-points/">
+<a class="md-nav__link" href="../query-timeseries-points/">
         datadog query-timeseries-points
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/revoke-role-archive/">
+<a class="md-nav__link" href="../revoke-role-archive/">
         datadog revoke-role-archive
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/schedule-downtime/">
+<a class="md-nav__link" href="../schedule-downtime/">
         datadog schedule-downtime
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/search-logs/">
+<a class="md-nav__link" href="../search-logs/">
         datadog search-logs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/search-metrics/">
+<a class="md-nav__link" href="../search-metrics/">
         datadog search-metrics
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/service-check/">
+<a class="md-nav__link" href="../service-check/">
         datadog service-check
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/tag-configuration-cardinality-estimator/">
+<a class="md-nav__link" href="../tag-configuration-cardinality-estimator/">
         datadog tag-configuration-cardinality-estimator
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/unmute-host/">
+<a class="md-nav__link" href="../unmute-host/">
         datadog unmute-host
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/unmute-monitor/">
+<a class="md-nav__link" href="../unmute-monitor/">
         datadog unmute-monitor
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/update-downtime/">
+<a class="md-nav__link" href="../update-downtime/">
         datadog update-downtime
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/update-host-tags/">
+<a class="md-nav__link" href="../update-host-tags/">
         datadog update-host-tags
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/update-incident-attachment/">
+<a class="md-nav__link" href="../update-incident-attachment/">
         datadog update-incident-attachment
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/update-incident-team/">
+<a class="md-nav__link" href="../update-incident-team/">
         datadog update-incident-team
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/update-incident/">
+<a class="md-nav__link" href="../update-incident/">
         datadog update-incident
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/update-log-archive-azure/">
+<a class="md-nav__link" href="../update-log-archive-azure/">
         datadog update-log-archive-azure
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/update-log-archive-gcs/">
+<a class="md-nav__link" href="../update-log-archive-gcs/">
         datadog update-log-archive-gcs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/update-log-archive-s3/">
+<a class="md-nav__link" href="../update-log-archive-s3/">
         datadog update-log-archive-s3
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/update-log-index/">
+<a class="md-nav__link" href="../update-log-index/">
         datadog update-log-index
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/update-metric/">
+<a class="md-nav__link" href="../update-metric/">
         datadog update-metric
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/update-rum-application/">
+<a class="md-nav__link" href="../update-rum-application/">
         datadog update-rum-application
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../datadog/update-user/">
+<a class="md-nav__link" href="../update-user/">
         datadog update-user
       </a>
 </li>
@@ -1091,281 +1148,219 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_9_12" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9_12" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">elasticsearch</a>
+<a href="../../elasticsearch/">elasticsearch</a>
 <label for="__nav_9_12">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_9_12_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_9_12_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_9_12">
 <span class="md-nav__icon md-icon"></span>
           elasticsearch
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../cancel-tasks/">
+<a class="md-nav__link" href="../../elasticsearch/cancel-tasks/">
         elasticsearch cancel-tasks
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../clear-cache/">
+<a class="md-nav__link" href="../../elasticsearch/clear-cache/">
         elasticsearch clear-cache
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../close-index/">
+<a class="md-nav__link" href="../../elasticsearch/close-index/">
         elasticsearch close-index
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../cluster-reroute/">
+<a class="md-nav__link" href="../../elasticsearch/cluster-reroute/">
         elasticsearch cluster-reroute
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../create-index/">
+<a class="md-nav__link" href="../../elasticsearch/create-index/">
         elasticsearch create-index
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../delete-by-query/">
+<a class="md-nav__link" href="../../elasticsearch/delete-by-query/">
         elasticsearch delete-by-query
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../delete-document/">
+<a class="md-nav__link" href="../../elasticsearch/delete-document/">
         elasticsearch delete-document
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../delete-index/">
+<a class="md-nav__link" href="../../elasticsearch/delete-index/">
         elasticsearch delete-index
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../get-cluster-allocation/">
+<a class="md-nav__link" href="../../elasticsearch/get-cluster-allocation/">
         elasticsearch get-cluster-allocation
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../get-cluster-health/">
+<a class="md-nav__link" href="../../elasticsearch/get-cluster-health/">
         elasticsearch get-cluster-health
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../get-cluster-settings/">
+<a class="md-nav__link" href="../../elasticsearch/get-cluster-settings/">
         elasticsearch get-cluster-settings
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../get-cluster-state/">
+<a class="md-nav__link" href="../../elasticsearch/get-cluster-state/">
         elasticsearch get-cluster-state
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../get-cluster-statistics/">
+<a class="md-nav__link" href="../../elasticsearch/get-cluster-statistics/">
         elasticsearch get-cluster-statistics
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../get-document/">
+<a class="md-nav__link" href="../../elasticsearch/get-document/">
         elasticsearch get-document
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../get-ilm-status/">
+<a class="md-nav__link" href="../../elasticsearch/get-ilm-status/">
         elasticsearch get-ilm-status
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../get-index-segments/">
+<a class="md-nav__link" href="../../elasticsearch/get-index-segments/">
         elasticsearch get-index-segments
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../get-index-settings/">
+<a class="md-nav__link" href="../../elasticsearch/get-index-settings/">
         elasticsearch get-index-settings
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../get-index-stats/">
+<a class="md-nav__link" href="../../elasticsearch/get-index-stats/">
         elasticsearch get-index-stats
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../get-index/">
+<a class="md-nav__link" href="../../elasticsearch/get-index/">
         elasticsearch get-index
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../get-node-stats/">
+<a class="md-nav__link" href="../../elasticsearch/get-node-stats/">
         elasticsearch get-node-stats
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../get-shards/">
+<a class="md-nav__link" href="../../elasticsearch/get-shards/">
         elasticsearch get-shards
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../get-tasks/">
+<a class="md-nav__link" href="../../elasticsearch/get-tasks/">
         elasticsearch get-tasks
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ilm-explain/">
+<a class="md-nav__link" href="../../elasticsearch/ilm-explain/">
         elasticsearch ilm-explain
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../ilm-retry/">
+<a class="md-nav__link" href="../../elasticsearch/ilm-retry/">
         elasticsearch ilm-retry
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../list-cluster-allocation/">
+<a class="md-nav__link" href="../../elasticsearch/list-cluster-allocation/">
         elasticsearch list-cluster-allocation
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../nodes-info/">
+<a class="md-nav__link" href="../../elasticsearch/nodes-info/">
         elasticsearch nodes-info
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../open-index/">
+<a class="md-nav__link" href="../../elasticsearch/open-index/">
         elasticsearch open-index
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../pending-tasks/">
+<a class="md-nav__link" href="../../elasticsearch/pending-tasks/">
         elasticsearch pending-tasks
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../raw/">
+<a class="md-nav__link" href="../../elasticsearch/raw/">
         elasticsearch raw
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../recoveries/">
+<a class="md-nav__link" href="../../elasticsearch/recoveries/">
         elasticsearch recoveries
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../rollover/">
+<a class="md-nav__link" href="../../elasticsearch/rollover/">
         elasticsearch rollover
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../search/">
+<a class="md-nav__link" href="../../elasticsearch/search/">
         elasticsearch search
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../shrink-index/">
+<a class="md-nav__link" href="../../elasticsearch/shrink-index/">
         elasticsearch shrink-index
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../split-index/">
+<a class="md-nav__link" href="../../elasticsearch/split-index/">
         elasticsearch split-index
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../start-ilm/">
+<a class="md-nav__link" href="../../elasticsearch/start-ilm/">
         elasticsearch start-ilm
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../stop-ilm/">
+<a class="md-nav__link" href="../../elasticsearch/stop-ilm/">
         elasticsearch stop-ilm
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../update-by-query/">
+<a class="md-nav__link" href="../../elasticsearch/update-by-query/">
         elasticsearch update-by-query
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../update-cluster-settings/">
+<a class="md-nav__link" href="../../elasticsearch/update-cluster-settings/">
         elasticsearch update-cluster-settings
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../update-document/">
+<a class="md-nav__link" href="../../elasticsearch/update-document/">
         elasticsearch update-document
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          elasticsearch update-index-settings
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../elasticsearch/update-index-settings/">
         elasticsearch update-index-settings
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#description">
-    Description
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#synopsis">
-    Synopsis
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#arguments">
-    Arguments
-  </a>
-<nav aria-label="Arguments" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#site-string">
-    site - (string)
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cluster-string">
-    cluster - (string)
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#index-string">
-    index - (string)
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#settings-string">
-    settings - (string)
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#examples">
-    Examples
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#access-control">
-    Access Control
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -2997,18 +2992,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cluster-string">
-    cluster - (string)
+<a class="md-nav__link" href="#start-time">
+    start - (time)
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#index-string">
-    index - (string)
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#settings-string">
-    settings - (string)
+<a class="md-nav__link" href="#end-time">
+    end - (time)
   </a>
 </li>
 </ul>
@@ -3031,16 +3021,15 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="elasticsearch-update-index-settings">elasticsearch update-index-settings</h1>
-<p>update elastic search index settings</p>
+<h1 id="datadog-get-custom-metrics-hourly-usage">datadog get-custom-metrics-hourly-usage</h1>
+<p>Get hourly usage for custom metrics</p>
 <h2 id="description">Description</h2>
-<p>Changes settings for indices</p>
+<p>Get hourly usage for custom metrics</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>elasticsearch<span class="w"> </span>update-index-settings
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog<span class="w"> </span>get-custom-metrics-hourly-usage
 <a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--cluster<span class="w"> </span>&lt;cluster&gt;<span class="o">]</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>&lt;index&gt;<span class="o">]</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="o">[</span>--settings<span class="w"> </span>&lt;settings&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span>--start<span class="w"> </span>&lt;start&gt;
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--end<span class="w"> </span>&lt;end&gt;<span class="o">]</span>
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3048,29 +3037,23 @@
      Example:  <code>--site  "site-1"</code> <br/>
      Default: <code>input.site</code>
      Attributes: <em>optional</em> <br/> </p>
-<h4 id="cluster-string"><code>cluster</code> - (string)</h4>
-<p>     Name of elastic search cluster  <br/>
-     Example:  <code>--cluster  "elastic-default"</code> <br/>
-     Default: <code>elastic-default</code>
-     Attributes: <em>optional</em> <br/> </p>
-<h4 id="index-string"><code>index</code> - (string)</h4>
-<p>     Name of indices (supports wild card expression)  <br/>
-     Example:  <code>"students,class or _all or log_2099_*"</code> <br/>
-     Default: <code>_all</code>
-     Attributes: <em>optional, multiple allowed</em> <br/> </p>
-<h4 id="settings-string"><code>settings</code> - (string)</h4>
-<p>     Map of settings to update in indices. Set a property to null to revert it to default setting  <br/>
-     Example:  <code>--settings  "{ "index.refresh_interval" : null, "index.number_of_replicas" : 1 }"</code> <br/>
+<h4 id="start-time"><code>start</code> - (time)</h4>
+<p>     For usage beginning at this hour  <br/>
+     Example:  <code>--start  "2019-10-12T07:20:50.52Z"</code> <br/>
+     Default: <code>5 hours ago</code>
+     Attributes: <em>required</em> <br/> </p>
+<h4 id="end-time"><code>end</code> - (time)</h4>
+<p>     For usage ending before this hour  <br/>
+     Example:  <code>--end  "2019-10-12T07:20:50.52Z"</code> <br/>
      Default: <code>_None_</code>
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span> <span class="n">elasticsearch</span> <span class="n">update</span><span class="o">-</span><span class="n">index</span><span class="o">-</span><span class="n">settings</span> <span class="o">--</span><span class="n">cluster</span> <span class="s2">"elastic-1"</span> <span class="s2">"class"</span> <span class="s2">"test"</span> <span class="o">--</span><span class="n">settings</span> <span class="err">`</span><span class="p">{</span><span class="s2">"index.number_of_replicas"</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span><span class="err">`</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">datadog</span> <span class="n">get</span><span class="o">-</span><span class="n">custom</span><span class="o">-</span><span class="n">metrics</span><span class="o">-</span><span class="n">hourly</span><span class="o">-</span><span class="n">usage</span> <span class="o">--</span><span class="n">start</span> <span class="s2">"1month ago"</span>
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">"acknowledged"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ID      ORG-NAME    HOUR                      CUSTOM-TIMESERIES INPUT-TIMESERIES OUTPUT-TIMESERIES
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>65421     testOrg     2022-12-26T17:45:07.000Z  25                10               15
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>
@@ -3084,15 +3067,15 @@ Output:
 <tbody>
 <tr>
 <td>Action</td>
-<td>"update"</td>
+<td>"read"</td>
 </tr>
 <tr>
 <td>Service Type</td>
-<td>"elasticsearch"</td>
+<td>"datadog"</td>
 </tr>
 <tr>
 <td>Service Instance</td>
-<td>cluster</td>
+<td></td>
 </tr>
 <tr>
 <td>Namespace</td>
@@ -3100,11 +3083,11 @@ Output:
 </tr>
 <tr>
 <td>Object Type</td>
-<td>"index"</td>
+<td>"metrics"</td>
 </tr>
 <tr>
 <td>Object ID</td>
-<td>index</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -3139,7 +3122,7 @@ Output:
 <!-- Link to previous and/or next page -->
 <nav aria-label="" class="md-footer__inner md-grid">
 <!-- Link to previous page -->
-<a aria-label="Previous: elasticsearch update-document" class="md-footer__link md-footer__link--prev" href="../update-document/" rel="prev">
+<a aria-label="Previous: datadog get-custom-metrices-hourly-usage" class="md-footer__link md-footer__link--prev" href="../get-custom-metrices-hourly-usage/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -3148,18 +3131,18 @@ Output:
 <span class="md-footer__direction">
                 Previous
               </span>
-              elasticsearch update-document
+              datadog get-custom-metrices-hourly-usage
             </div>
 </div>
 </a>
 <!-- Link to next page -->
-<a aria-label="Next: find" class="md-footer__link md-footer__link--next" href="../../find/" rel="next">
+<a aria-label="Next: datadog get-custom-metrics" class="md-footer__link md-footer__link--next" href="../get-custom-metrics/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              find
+              datadog get-custom-metrics
             </div>
 </div>
 <div class="md-footer__button md-icon">

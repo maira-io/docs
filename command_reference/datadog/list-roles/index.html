@@ -715,6 +715,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../get-custom-metrics-hourly-usage/">
+        datadog get-custom-metrics-hourly-usage
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../get-custom-metrics/">
         datadog get-custom-metrics
       </a>
@@ -3051,19 +3056,19 @@
 <h2 id="description">Description</h2>
 <p>Returns all roles or specific role detail</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog list-roles
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--role &lt;role&gt;]
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [--size &lt;size&gt;]
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    [--number &lt;number&gt;]
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    [--sort &lt;sort&gt;]
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    [--filter &lt;filter&gt;]
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog<span class="w"> </span>list-roles
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--role<span class="w"> </span>&lt;role&gt;<span class="o">]</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--size<span class="w"> </span>&lt;size&gt;<span class="o">]</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="o">[</span>--number<span class="w"> </span>&lt;number&gt;<span class="o">]</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="o">[</span>--sort<span class="w"> </span>&lt;sort&gt;<span class="o">]</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="o">[</span>--filter<span class="w"> </span>&lt;filter&gt;<span class="o">]</span>
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
 <p>     Site where this command will be executed  <br/>
      Example:  <code>--site  "site-1"</code> <br/>
-     Default: <code>localhost:8081</code>
+     Default: <code>input.site</code>
      Attributes: <em>optional</em> <br/> </p>
 <h4 id="role-string"><code>role</code> - (string)</h4>
 <p>     The unique identifier of the role  <br/>
@@ -3095,7 +3100,15 @@
      Default: <code>_None_</code>
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
-<p>datadog list-roles --role  "role-1" --size  1 --number  1 --sort  "sort-1" --filter  "filter-1"</p>
+<p>Input: 
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">datadog</span> <span class="nb">list</span><span class="o">-</span><span class="n">roles</span> 
+</code></pre></div>
+Output: 
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ID                                      TYPE    NAME                    USERS
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>ba26c340-82a9-11ed-b5cb-da7ad0900005    roles   Datadog Admin Role          1
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>ba36c25e-82a9-11ed-b5cb-da7ad0900005    roles   Datadog Read Only Role      0
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>ba30590a-82a9-11ed-b5cb-da7ad0900005    roles   Datadog Standard Role       0
+</code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>
 <table>

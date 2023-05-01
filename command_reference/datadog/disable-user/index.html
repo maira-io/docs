@@ -767,6 +767,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../get-custom-metrics-hourly-usage/">
+        datadog get-custom-metrics-hourly-usage
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../get-custom-metrics/">
         datadog get-custom-metrics
       </a>
@@ -3011,15 +3016,15 @@
 <h2 id="description">Description</h2>
 <p>Disable a user</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog disable-user
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    &lt;user&gt;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog<span class="w"> </span>disable-user
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span>&lt;user&gt;
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
 <p>     Site where this command will be executed  <br/>
      Example:  <code>--site  "site-1"</code> <br/>
-     Default: <code>localhost:8081</code>
+     Default: <code>input.site</code>
      Attributes: <em>optional</em> <br/> </p>
 <h4 id="user-string"><code>user</code> - (string)</h4>
 <p>     ID of the user  <br/>
@@ -3028,11 +3033,11 @@
      Attributes: <em>required</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!datadog disable-user  "141af100-efaa-4a9f-b1f0-4fc92058d441"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">datadog</span> <span class="n">disable</span><span class="o">-</span><span class="n">user</span>  <span class="s2">"141af100-efaa-4a9f-b1f0-4fc92058d441"</span>
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ID                                      NAME    EMAIL           TITLE   STATUS  VERIFIED    DISABLED          
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>141af100-efaa-4a9f-b1f0-4fc92058d441    test    test@test.com   test    Pending     false       false   
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ID                                      NAME    EMAIL           TITLE   STATUS  VERIFIED    DISABLED
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>141af100-efaa-4a9f-b1f0-4fc92058d441    test    test@test.com   test    Pending false       false
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

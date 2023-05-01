@@ -715,6 +715,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../get-custom-metrics-hourly-usage/">
+        datadog get-custom-metrics-hourly-usage
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../get-custom-metrics/">
         datadog get-custom-metrics
       </a>
@@ -3011,15 +3016,15 @@
 <h2 id="description">Description</h2>
 <p>Search for metrics from the last 24 hours in Datadog</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog search-metrics
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    &lt;query&gt;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog<span class="w"> </span>search-metrics
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span>&lt;query&gt;
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
 <p>     Site where this command will be executed  <br/>
      Example:  <code>--site  "site-1"</code> <br/>
-     Default: <code>localhost:8081</code>
+     Default: <code>input.site</code>
      Attributes: <em>optional</em> <br/> </p>
 <h4 id="query-string"><code>query</code> - (string)</h4>
 <p>     Query string to search metrics upon. Can optionally be prefixed with metrics  <br/>
@@ -3028,7 +3033,7 @@
      Attributes: <em>required</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!datadog search-metrics "datadog.agent.running"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">datadog</span> <span class="n">search</span><span class="o">-</span><span class="n">metrics</span> <span class="s2">"datadog.agent.running"</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>

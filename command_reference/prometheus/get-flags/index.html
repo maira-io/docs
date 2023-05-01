@@ -715,6 +715,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../datadog/get-custom-metrics-hourly-usage/">
+        datadog get-custom-metrics-hourly-usage
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../datadog/get-custom-metrics/">
         datadog get-custom-metrics
       </a>
@@ -3011,9 +3016,9 @@
 <h2 id="description">Description</h2>
 <p>Returns flag values that Prometheus was configured with</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>prometheus get-flags
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--cluster &lt;cluster&gt;]
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>prometheus<span class="w"> </span>get-flags
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--cluster<span class="w"> </span>&lt;cluster&gt;<span class="o">]</span>
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3028,56 +3033,56 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>! prometheus get-flags --site "localhost"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span> <span class="n">prometheus</span> <span class="n">get</span><span class="o">-</span><span class="n">flags</span>
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>{
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>  "status": "success",
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>  "data": {
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>    "alertmanager.notification-queue-capacity": "10000",
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>    "alertmanager.timeout": "",
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>    "config.file": "/usr/local/bin/prometheus/prometheus.yml",
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>    "enable-feature": "",
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>    "log.format": "logfmt",
-<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>    "log.level": "info",
-<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>    "query.lookback-delta": "5m",
-<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>    "query.max-concurrency": "20",
-<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>    "query.max-samples": "50000000",
-<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>    "query.timeout": "2m",
-<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>    "rules.alert.for-grace-period": "10m",
-<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>    "rules.alert.for-outage-tolerance": "1h",
-<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>    "rules.alert.resend-delay": "1m",
-<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>    "scrape.adjust-timestamps": "true",
-<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>    "storage.exemplars.exemplars-limit": "0",
-<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>    "storage.remote.flush-deadline": "1m",
-<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>    "storage.remote.read-concurrent-limit": "10",
-<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>    "storage.remote.read-max-bytes-in-frame": "1048576",
-<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>    "storage.remote.read-sample-limit": "50000000",
-<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>    "storage.tsdb.allow-overlapping-blocks": "false",
-<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>    "storage.tsdb.max-block-duration": "1d12h",
-<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>    "storage.tsdb.min-block-duration": "2h",
-<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>    "storage.tsdb.no-lockfile": "false",
-<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>    "storage.tsdb.path": "data/",
-<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>    "storage.tsdb.retention": "0s",
-<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>    "storage.tsdb.retention.size": "0B",
-<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a>    "storage.tsdb.retention.time": "0s",
-<a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a>    "storage.tsdb.wal-compression": "true",
-<a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a>    "storage.tsdb.wal-segment-size": "0B",
-<a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a>    "web.config.file": "",
-<a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a>    "web.console.libraries": "console_libraries",
-<a href="#__codelineno-2-35" id="__codelineno-2-35" name="__codelineno-2-35"></a>    "web.console.templates": "consoles",
-<a href="#__codelineno-2-36" id="__codelineno-2-36" name="__codelineno-2-36"></a>    "web.cors.origin": ".*",
-<a href="#__codelineno-2-37" id="__codelineno-2-37" name="__codelineno-2-37"></a>    "web.enable-admin-api": "false",
-<a href="#__codelineno-2-38" id="__codelineno-2-38" name="__codelineno-2-38"></a>    "web.enable-lifecycle": "false",
-<a href="#__codelineno-2-39" id="__codelineno-2-39" name="__codelineno-2-39"></a>    "web.external-url": "",
-<a href="#__codelineno-2-40" id="__codelineno-2-40" name="__codelineno-2-40"></a>    "web.listen-address": "0.0.0.0:9090",
-<a href="#__codelineno-2-41" id="__codelineno-2-41" name="__codelineno-2-41"></a>    "web.max-connections": "512",
-<a href="#__codelineno-2-42" id="__codelineno-2-42" name="__codelineno-2-42"></a>    "web.page-title": "Prometheus Time Series Collection and Processing Server",
-<a href="#__codelineno-2-43" id="__codelineno-2-43" name="__codelineno-2-43"></a>    "web.read-timeout": "5m",
-<a href="#__codelineno-2-44" id="__codelineno-2-44" name="__codelineno-2-44"></a>    "web.route-prefix": "/",
-<a href="#__codelineno-2-45" id="__codelineno-2-45" name="__codelineno-2-45"></a>    "web.user-assets": ""
-<a href="#__codelineno-2-46" id="__codelineno-2-46" name="__codelineno-2-46"></a>  }
-<a href="#__codelineno-2-47" id="__codelineno-2-47" name="__codelineno-2-47"></a>}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nt">"alertmanager.notification-queue-capacity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000"</span><span class="p">,</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="nt">"alertmanager.timeout"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nt">"config.file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/usr/local/bin/prometheus/prometheus.yml"</span><span class="p">,</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="nt">"enable-feature"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="nt">"log.format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"logfmt"</span><span class="p">,</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="nt">"log.level"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info"</span><span class="p">,</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="nt">"query.lookback-delta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5m"</span><span class="p">,</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="nt">"query.max-concurrency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20"</span><span class="p">,</span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="nt">"query.max-samples"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50000000"</span><span class="p">,</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="nt">"query.timeout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2m"</span><span class="p">,</span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="nt">"rules.alert.for-grace-period"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10m"</span><span class="p">,</span>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="nt">"rules.alert.for-outage-tolerance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1h"</span><span class="p">,</span>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">    </span><span class="nt">"rules.alert.resend-delay"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1m"</span><span class="p">,</span>
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="nt">"scrape.adjust-timestamps"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span>
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">    </span><span class="nt">"storage.exemplars.exemplars-limit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span>
+<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">    </span><span class="nt">"storage.remote.flush-deadline"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1m"</span><span class="p">,</span>
+<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">    </span><span class="nt">"storage.remote.read-concurrent-limit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span>
+<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="nt">"storage.remote.read-max-bytes-in-frame"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1048576"</span><span class="p">,</span>
+<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="nt">"storage.remote.read-sample-limit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50000000"</span><span class="p">,</span>
+<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="nt">"storage.tsdb.allow-overlapping-blocks"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span>
+<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="nt">"storage.tsdb.max-block-duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1d12h"</span><span class="p">,</span>
+<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">    </span><span class="nt">"storage.tsdb.min-block-duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2h"</span><span class="p">,</span>
+<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">    </span><span class="nt">"storage.tsdb.no-lockfile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span>
+<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">    </span><span class="nt">"storage.tsdb.path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data/"</span><span class="p">,</span>
+<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">    </span><span class="nt">"storage.tsdb.retention"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0s"</span><span class="p">,</span>
+<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">    </span><span class="nt">"storage.tsdb.retention.size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0B"</span><span class="p">,</span>
+<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">    </span><span class="nt">"storage.tsdb.retention.time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0s"</span><span class="p">,</span>
+<a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">    </span><span class="nt">"storage.tsdb.wal-compression"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span>
+<a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">    </span><span class="nt">"storage.tsdb.wal-segment-size"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0B"</span><span class="p">,</span>
+<a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">    </span><span class="nt">"web.config.file"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">    </span><span class="nt">"web.console.libraries"</span><span class="p">:</span><span class="w"> </span><span class="s2">"console_libraries"</span><span class="p">,</span>
+<a href="#__codelineno-2-35" id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="w">    </span><span class="nt">"web.console.templates"</span><span class="p">:</span><span class="w"> </span><span class="s2">"consoles"</span><span class="p">,</span>
+<a href="#__codelineno-2-36" id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w">    </span><span class="nt">"web.cors.origin"</span><span class="p">:</span><span class="w"> </span><span class="s2">".*"</span><span class="p">,</span>
+<a href="#__codelineno-2-37" id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="w">    </span><span class="nt">"web.enable-admin-api"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span>
+<a href="#__codelineno-2-38" id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="w">    </span><span class="nt">"web.enable-lifecycle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"false"</span><span class="p">,</span>
+<a href="#__codelineno-2-39" id="__codelineno-2-39" name="__codelineno-2-39"></a><span class="w">    </span><span class="nt">"web.external-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<a href="#__codelineno-2-40" id="__codelineno-2-40" name="__codelineno-2-40"></a><span class="w">    </span><span class="nt">"web.listen-address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0.0.0:9090"</span><span class="p">,</span>
+<a href="#__codelineno-2-41" id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="w">    </span><span class="nt">"web.max-connections"</span><span class="p">:</span><span class="w"> </span><span class="s2">"512"</span><span class="p">,</span>
+<a href="#__codelineno-2-42" id="__codelineno-2-42" name="__codelineno-2-42"></a><span class="w">    </span><span class="nt">"web.page-title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Prometheus Time Series Collection and Processing Server"</span><span class="p">,</span>
+<a href="#__codelineno-2-43" id="__codelineno-2-43" name="__codelineno-2-43"></a><span class="w">    </span><span class="nt">"web.read-timeout"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5m"</span><span class="p">,</span>
+<a href="#__codelineno-2-44" id="__codelineno-2-44" name="__codelineno-2-44"></a><span class="w">    </span><span class="nt">"web.route-prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="p">,</span>
+<a href="#__codelineno-2-45" id="__codelineno-2-45" name="__codelineno-2-45"></a><span class="w">    </span><span class="nt">"web.user-assets"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span>
+<a href="#__codelineno-2-46" id="__codelineno-2-46" name="__codelineno-2-46"></a><span class="w">  </span><span class="p">}</span>
+<a href="#__codelineno-2-47" id="__codelineno-2-47" name="__codelineno-2-47"></a><span class="p">}</span>
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

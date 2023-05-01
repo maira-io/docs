@@ -715,6 +715,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../datadog/get-custom-metrics-hourly-usage/">
+        datadog get-custom-metrics-hourly-usage
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../datadog/get-custom-metrics/">
         datadog get-custom-metrics
       </a>
@@ -2097,6 +2102,11 @@
     annotations - (string)
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resources-string">
+    resources - (string)
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -3026,6 +3036,11 @@
     annotations - (string)
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resources-string">
+    resources - (string)
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -3051,13 +3066,14 @@
 <h2 id="description">Description</h2>
 <p>Update k8s deployment with the provided labels and annotations</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>k8s update-deployment
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--cluster &lt;cluster&gt;]
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [--namespace|-n &lt;namespace&gt;]
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    &lt;name&gt;
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    [--labels &lt;labels&gt;]
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    [--annotations &lt;annotations&gt;]
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>k8s<span class="w"> </span>update-deployment
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--cluster<span class="w"> </span>&lt;cluster&gt;<span class="o">]</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--namespace<span class="p">|</span>-n<span class="w"> </span>&lt;namespace&gt;<span class="o">]</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span>&lt;name&gt;
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="o">[</span>--labels<span class="w"> </span>&lt;labels&gt;<span class="o">]</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="o">[</span>--annotations<span class="w"> </span>&lt;annotations&gt;<span class="o">]</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="o">[</span>--resources<span class="w"> </span>&lt;resources&gt;<span class="o">]</span>
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3090,9 +3106,14 @@
      Example:  <code>--annotations  "{"key1":"value1"}"</code> <br/>
      Default: <code>_None_</code>
      Attributes: <em>optional</em> <br/> </p>
+<h4 id="resources-string"><code>resources</code> - (string)</h4>
+<p>     To modify resource requirements on deployment  <br/>
+     Example:  <code>--resources  "{"container1": {"limit": { "cpu": "value", "memory": "value" },"requests": { "cpu": "value", "memory": "value" }}}"</code> <br/>
+     Default: <code>_None_</code>
+     Attributes: <em>optional, multiple allowed</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>! k8s update-deployment --labels `{"abc":"def"}` --annotations `{"ghi":"jkl"}` "kafka3"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span> <span class="n">k8s</span> <span class="n">update</span><span class="o">-</span><span class="n">deployment</span> <span class="o">--</span><span class="n">labels</span> <span class="s1">'{"abc":"def"}'</span> <span class="o">--</span><span class="n">annotations</span> <span class="s1">'{"ghi":"jkl"}'</span> <span class="s2">"kafka3"</span> <span class="o">--</span><span class="n">resources</span> <span class="s1">'{"container1": {"limit": { "cpu": "0.2", "memory": "20" },"requests": { "cpu": "0.2", "memory": "20" }}}'</span> 
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>deployment kafka3 updated

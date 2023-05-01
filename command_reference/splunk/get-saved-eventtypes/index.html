@@ -715,6 +715,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../datadog/get-custom-metrics-hourly-usage/">
+        datadog get-custom-metrics-hourly-usage
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../datadog/get-custom-metrics/">
         datadog get-custom-metrics
       </a>
@@ -3031,11 +3036,11 @@
 <h2 id="description">Description</h2>
 <p>Manage saved event types.</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>splunk get-saved-eventtypes
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    --site &lt;site&gt;
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--count &lt;count&gt;]
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [--sort_key &lt;sort_key&gt;]
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    [--sort_dir &lt;sort_dir&gt;]
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>splunk<span class="w"> </span>get-saved-eventtypes
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span>--site<span class="w"> </span>&lt;site&gt;
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--count<span class="w"> </span>&lt;count&gt;<span class="o">]</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--sort_key<span class="w"> </span>&lt;sort_key&gt;<span class="o">]</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="o">[</span>--sort_dir<span class="w"> </span>&lt;sort_dir&gt;<span class="o">]</span>
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3062,7 +3067,7 @@
           allowed values: <code>asc, desc</code></p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!splunk get-saved-eventtypes
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">splunk</span> <span class="n">get</span><span class="o">-</span><span class="n">saved</span><span class="o">-</span><span class="n">eventtypes</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>UPDATED                     AUTHOR  NAME                  
@@ -3071,75 +3076,75 @@ Output:
 <a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>1970-01-01T05:30:00+05:30   nobody  splunkd-log  
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>x= !splunk get-saved-eventtypes
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">x</span><span class="o">=</span> <span class="err">!</span><span class="n">splunk</span> <span class="n">get</span><span class="o">-</span><span class="n">saved</span><span class="o">-</span><span class="n">eventtypes</span>
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>{
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>   "links": {
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>     "create": "/servicesNS/admin/-/saved/eventtypes/_new",
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>     "_reload": "/servicesNS/admin/-/saved/eventtypes/_reload",
-<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>     "_acl": "/servicesNS/admin/-/saved/eventtypes/_acl"
-<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>   },
-<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>   "origin": "https://localhost:8089/servicesNS/admin/-/saved/eventtypes",
-<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>   "updated": "2023-02-07T15:31:48+05:30",
-<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>   "generator": {
-<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>     "build": "dd0128b1f8cd",
-<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>     "version": "9.0.3"
-<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>   },
-<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>   "entry": [
-<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>     {
-<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>       "name": "internal_search_terms",
-<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>       "id": "https://localhost:8089/servicesNS/nobody/system/saved/eventtypes/internal_search_terms",
-<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a>       "updated": "1970-01-01T05:30:00+05:30",
-<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>       "links": {
-<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a>         "alternate": "/servicesNS/nobody/system/saved/eventtypes/internal_search_terms",
-<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>         "list": "/servicesNS/nobody/system/saved/eventtypes/internal_search_terms",
-<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a>         "_reload": "/servicesNS/nobody/system/saved/eventtypes/internal_search_terms/_reload",
-<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a>         "edit": "/servicesNS/nobody/system/saved/eventtypes/internal_search_terms",
-<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a>         "disable": "/servicesNS/nobody/system/saved/eventtypes/internal_search_terms/disable"
-<a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a>       },
-<a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a>       "author": "nobody",
-<a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a>       "acl": {
-<a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a>         "app": "system",
-<a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a>         "can_change_perms": true,
-<a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a>         "can_list": true,
-<a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a>         "can_share_app": true,
-<a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a>         "can_share_global": true,
-<a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a>         "can_share_user": false,
-<a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a>         "can_write": true,
-<a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a>         "modifiable": true,
-<a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a>         "owner": "nobody",
-<a href="#__codelineno-4-36" id="__codelineno-4-36" name="__codelineno-4-36"></a>         "perms": {
-<a href="#__codelineno-4-37" id="__codelineno-4-37" name="__codelineno-4-37"></a>           "read": [
-<a href="#__codelineno-4-38" id="__codelineno-4-38" name="__codelineno-4-38"></a>             "*"
-<a href="#__codelineno-4-39" id="__codelineno-4-39" name="__codelineno-4-39"></a>           ],
-<a href="#__codelineno-4-40" id="__codelineno-4-40" name="__codelineno-4-40"></a>           "write": [
-<a href="#__codelineno-4-41" id="__codelineno-4-41" name="__codelineno-4-41"></a>             "admin"
-<a href="#__codelineno-4-42" id="__codelineno-4-42" name="__codelineno-4-42"></a>           ]
-<a href="#__codelineno-4-43" id="__codelineno-4-43" name="__codelineno-4-43"></a>         },
-<a href="#__codelineno-4-44" id="__codelineno-4-44" name="__codelineno-4-44"></a>         "removable": false,
-<a href="#__codelineno-4-45" id="__codelineno-4-45" name="__codelineno-4-45"></a>         "sharing": "system"
-<a href="#__codelineno-4-46" id="__codelineno-4-46" name="__codelineno-4-46"></a>       },
-<a href="#__codelineno-4-47" id="__codelineno-4-47" name="__codelineno-4-47"></a>       "content": {
-<a href="#__codelineno-4-48" id="__codelineno-4-48" name="__codelineno-4-48"></a>         "color": "none",
-<a href="#__codelineno-4-49" id="__codelineno-4-49" name="__codelineno-4-49"></a>         "description": "",
-<a href="#__codelineno-4-50" id="__codelineno-4-50" name="__codelineno-4-50"></a>         "disabled": false,
-<a href="#__codelineno-4-51" id="__codelineno-4-51" name="__codelineno-4-51"></a>         "eai:acl": null,
-<a href="#__codelineno-4-52" id="__codelineno-4-52" name="__codelineno-4-52"></a>         "eai:appName": "system",
-<a href="#__codelineno-4-53" id="__codelineno-4-53" name="__codelineno-4-53"></a>         "eai:userName": "nobody",
-<a href="#__codelineno-4-54" id="__codelineno-4-54" name="__codelineno-4-54"></a>         "priority": 1,
-<a href="#__codelineno-4-55" id="__codelineno-4-55" name="__codelineno-4-55"></a>         "search": "( \"After evaluating args\" OR \"Before evaluating args\" OR \"context dispatched for search=\" OR \"SearchParser - PARSING\" OR \"got search\" OR \"_dispatchNewSearch - search\" OR \"search:* - q\" OR ( decomposition fullsearch ) OR \"PAAAAAARSER! - search\" OR \"view:* - DECOMPOSITION\" OR \"Splunk.Module.SearchBar .setInputField\" OR ( typeahead prefix ) OR \"DEBUG HTTPServer - Deleting request=GET\" OR /en-US/api/search/typeahead )",
-<a href="#__codelineno-4-56" id="__codelineno-4-56" name="__codelineno-4-56"></a>         "tags": []
-<a href="#__codelineno-4-57" id="__codelineno-4-57" name="__codelineno-4-57"></a>       }
-<a href="#__codelineno-4-58" id="__codelineno-4-58" name="__codelineno-4-58"></a>     }   
-<a href="#__codelineno-4-59" id="__codelineno-4-59" name="__codelineno-4-59"></a>   ],
-<a href="#__codelineno-4-60" id="__codelineno-4-60" name="__codelineno-4-60"></a>   "paging": {
-<a href="#__codelineno-4-61" id="__codelineno-4-61" name="__codelineno-4-61"></a>     "total": 4,
-<a href="#__codelineno-4-62" id="__codelineno-4-62" name="__codelineno-4-62"></a>     "perPage": 30,
-<a href="#__codelineno-4-63" id="__codelineno-4-63" name="__codelineno-4-63"></a>     "offset": 0
-<a href="#__codelineno-4-64" id="__codelineno-4-64" name="__codelineno-4-64"></a>   },
-<a href="#__codelineno-4-65" id="__codelineno-4-65" name="__codelineno-4-65"></a>   "messages": []
-<a href="#__codelineno-4-66" id="__codelineno-4-66" name="__codelineno-4-66"></a> }
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">{</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">   </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">     </span><span class="nt">"create"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/servicesNS/admin/-/saved/eventtypes/_new"</span><span class="p">,</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">     </span><span class="nt">"_reload"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/servicesNS/admin/-/saved/eventtypes/_reload"</span><span class="p">,</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">     </span><span class="nt">"_acl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/servicesNS/admin/-/saved/eventtypes/_acl"</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">   </span><span class="p">},</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">   </span><span class="nt">"origin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8089/servicesNS/admin/-/saved/eventtypes"</span><span class="p">,</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">   </span><span class="nt">"updated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-02-07T15:31:48+05:30"</span><span class="p">,</span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">   </span><span class="nt">"generator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">     </span><span class="nt">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dd0128b1f8cd"</span><span class="p">,</span>
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">     </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9.0.3"</span>
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">   </span><span class="p">},</span>
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">   </span><span class="nt">"entry"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">     </span><span class="p">{</span>
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">       </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"internal_search_terms"</span><span class="p">,</span>
+<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">       </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://localhost:8089/servicesNS/nobody/system/saved/eventtypes/internal_search_terms"</span><span class="p">,</span>
+<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">       </span><span class="nt">"updated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1970-01-01T05:30:00+05:30"</span><span class="p">,</span>
+<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">       </span><span class="nt">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">         </span><span class="nt">"alternate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/servicesNS/nobody/system/saved/eventtypes/internal_search_terms"</span><span class="p">,</span>
+<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">         </span><span class="nt">"list"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/servicesNS/nobody/system/saved/eventtypes/internal_search_terms"</span><span class="p">,</span>
+<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">         </span><span class="nt">"_reload"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/servicesNS/nobody/system/saved/eventtypes/internal_search_terms/_reload"</span><span class="p">,</span>
+<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">         </span><span class="nt">"edit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/servicesNS/nobody/system/saved/eventtypes/internal_search_terms"</span><span class="p">,</span>
+<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">         </span><span class="nt">"disable"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/servicesNS/nobody/system/saved/eventtypes/internal_search_terms/disable"</span>
+<a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">       </span><span class="p">},</span>
+<a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">       </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nobody"</span><span class="p">,</span>
+<a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">       </span><span class="nt">"acl"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="w">         </span><span class="nt">"app"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system"</span><span class="p">,</span>
+<a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="w">         </span><span class="nt">"can_change_perms"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="w">         </span><span class="nt">"can_list"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="w">         </span><span class="nt">"can_share_app"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="w">         </span><span class="nt">"can_share_global"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="w">         </span><span class="nt">"can_share_user"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="w">         </span><span class="nt">"can_write"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="w">         </span><span class="nt">"modifiable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="w">         </span><span class="nt">"owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nobody"</span><span class="p">,</span>
+<a href="#__codelineno-4-36" id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="w">         </span><span class="nt">"perms"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-37" id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="w">           </span><span class="nt">"read"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-38" id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="w">             </span><span class="s2">"*"</span>
+<a href="#__codelineno-4-39" id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="w">           </span><span class="p">],</span>
+<a href="#__codelineno-4-40" id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="w">           </span><span class="nt">"write"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-41" id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="w">             </span><span class="s2">"admin"</span>
+<a href="#__codelineno-4-42" id="__codelineno-4-42" name="__codelineno-4-42"></a><span class="w">           </span><span class="p">]</span>
+<a href="#__codelineno-4-43" id="__codelineno-4-43" name="__codelineno-4-43"></a><span class="w">         </span><span class="p">},</span>
+<a href="#__codelineno-4-44" id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="w">         </span><span class="nt">"removable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a href="#__codelineno-4-45" id="__codelineno-4-45" name="__codelineno-4-45"></a><span class="w">         </span><span class="nt">"sharing"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system"</span>
+<a href="#__codelineno-4-46" id="__codelineno-4-46" name="__codelineno-4-46"></a><span class="w">       </span><span class="p">},</span>
+<a href="#__codelineno-4-47" id="__codelineno-4-47" name="__codelineno-4-47"></a><span class="w">       </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-48" id="__codelineno-4-48" name="__codelineno-4-48"></a><span class="w">         </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span>
+<a href="#__codelineno-4-49" id="__codelineno-4-49" name="__codelineno-4-49"></a><span class="w">         </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<a href="#__codelineno-4-50" id="__codelineno-4-50" name="__codelineno-4-50"></a><span class="w">         </span><span class="nt">"disabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a href="#__codelineno-4-51" id="__codelineno-4-51" name="__codelineno-4-51"></a><span class="w">         </span><span class="nt">"eai:acl"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-4-52" id="__codelineno-4-52" name="__codelineno-4-52"></a><span class="w">         </span><span class="nt">"eai:appName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system"</span><span class="p">,</span>
+<a href="#__codelineno-4-53" id="__codelineno-4-53" name="__codelineno-4-53"></a><span class="w">         </span><span class="nt">"eai:userName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nobody"</span><span class="p">,</span>
+<a href="#__codelineno-4-54" id="__codelineno-4-54" name="__codelineno-4-54"></a><span class="w">         </span><span class="nt">"priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a href="#__codelineno-4-55" id="__codelineno-4-55" name="__codelineno-4-55"></a><span class="w">         </span><span class="nt">"search"</span><span class="p">:</span><span class="w"> </span><span class="s2">"( \"After evaluating args\" OR \"Before evaluating args\" OR \"context dispatched for search=\" OR \"SearchParser - PARSING\" OR \"got search\" OR \"_dispatchNewSearch - search\" OR \"search:* - q\" OR ( decomposition fullsearch ) OR \"PAAAAAARSER! - search\" OR \"view:* - DECOMPOSITION\" OR \"Splunk.Module.SearchBar .setInputField\" OR ( typeahead prefix ) OR \"DEBUG HTTPServer - Deleting request=GET\" OR /en-US/api/search/typeahead )"</span><span class="p">,</span>
+<a href="#__codelineno-4-56" id="__codelineno-4-56" name="__codelineno-4-56"></a><span class="w">         </span><span class="nt">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<a href="#__codelineno-4-57" id="__codelineno-4-57" name="__codelineno-4-57"></a><span class="w">       </span><span class="p">}</span>
+<a href="#__codelineno-4-58" id="__codelineno-4-58" name="__codelineno-4-58"></a><span class="w">     </span><span class="p">}</span><span class="w">   </span>
+<a href="#__codelineno-4-59" id="__codelineno-4-59" name="__codelineno-4-59"></a><span class="w">   </span><span class="p">],</span>
+<a href="#__codelineno-4-60" id="__codelineno-4-60" name="__codelineno-4-60"></a><span class="w">   </span><span class="nt">"paging"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-61" id="__codelineno-4-61" name="__codelineno-4-61"></a><span class="w">     </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<a href="#__codelineno-4-62" id="__codelineno-4-62" name="__codelineno-4-62"></a><span class="w">     </span><span class="nt">"perPage"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<a href="#__codelineno-4-63" id="__codelineno-4-63" name="__codelineno-4-63"></a><span class="w">     </span><span class="nt">"offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<a href="#__codelineno-4-64" id="__codelineno-4-64" name="__codelineno-4-64"></a><span class="w">   </span><span class="p">},</span>
+<a href="#__codelineno-4-65" id="__codelineno-4-65" name="__codelineno-4-65"></a><span class="w">   </span><span class="nt">"messages"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<a href="#__codelineno-4-66" id="__codelineno-4-66" name="__codelineno-4-66"></a><span class="w"> </span><span class="p">}</span>
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

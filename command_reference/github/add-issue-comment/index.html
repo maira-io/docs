@@ -715,6 +715,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../datadog/get-custom-metrics-hourly-usage/">
+        datadog get-custom-metrics-hourly-usage
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../datadog/get-custom-metrics/">
         datadog get-custom-metrics
       </a>
@@ -3031,11 +3036,11 @@
 <h2 id="description">Description</h2>
 <p>Add a comment to a github issue</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>github add-issue-comment
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    --repo &lt;repo&gt;
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    --issue &lt;issue&gt;
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    [--comment &lt;comment&gt;]
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>github<span class="w"> </span>add-issue-comment
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span>--repo<span class="w"> </span>&lt;repo&gt;
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span>--issue<span class="w"> </span>&lt;issue&gt;
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="o">[</span>--comment<span class="w"> </span>&lt;comment&gt;<span class="o">]</span>
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3060,53 +3065,53 @@
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>x=!github add-issue-comment --site "localhost:8080" --repo "maira-io/apiserver" --issue 108 --comment "new comment"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">x</span><span class="o">=</span><span class="err">!</span><span class="n">github</span> <span class="n">add</span><span class="o">-</span><span class="n">issue</span><span class="o">-</span><span class="n">comment</span> <span class="o">--</span><span class="n">repo</span> <span class="s2">"maira-io/apiserver"</span> <span class="o">--</span><span class="n">issue</span> <span class="mi">108</span> <span class="o">--</span><span class="n">comment</span> <span class="s2">"new comment"</span>
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>{
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>    "url": "https://api.github.com/repos/maira-io/apiserver/issues/comments/1159210585",
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>    "html_url": "https://github.com/maira-io/apiserver/issues/108#issuecomment-1159210585",
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>    "issue_url": "https://api.github.com/repos/maira-io/apiserver/issues/108",
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>    "id": 1159210585,
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>    "node_id": "IC_kwDOE8hIb85FGCZZ",
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>    "user": {
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a>        "login": "sbansal7",
-<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a>        "id": 1282760,
-<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>        "node_id": "MDQ6VXNlcjEyODI3NjA=",
-<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a>        "avatar_url": "https://avatars.githubusercontent.com/u/1282760?v=4",
-<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>        "gravatar_id": "",
-<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a>        "url": "https://api.github.com/users/sbansal7",
-<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a>        "html_url": "https://github.com/sbansal7",
-<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>        "followers_url": "https://api.github.com/users/sbansal7/followers",
-<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a>        "following_url": "https://api.github.com/users/sbansal7/following{/other_user}",
-<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a>        "gists_url": "https://api.github.com/users/sbansal7/gists{/gist_id}",
-<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>        "starred_url": "https://api.github.com/users/sbansal7/starred{/owner}{/repo}",
-<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a>        "subscriptions_url": "https://api.github.com/users/sbansal7/subscriptions",
-<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a>        "organizations_url": "https://api.github.com/users/sbansal7/orgs",
-<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a>        "repos_url": "https://api.github.com/users/sbansal7/repos",
-<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a>        "events_url": "https://api.github.com/users/sbansal7/events{/privacy}",
-<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a>        "received_events_url": "https://api.github.com/users/sbansal7/received_events",
-<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a>        "type": "User",
-<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a>        "site_admin": false
-<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a>    },
-<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a>    "created_at": "2022-06-17T20:35:18Z",
-<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a>    "updated_at": "2022-06-17T20:35:18Z",
-<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a>    "author_association": "CONTRIBUTOR",
-<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a>    "body": "new comment",
-<a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a>    "reactions": {
-<a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a>        "url": "https://api.github.com/repos/maira-io/apiserver/issues/comments/1159210585/reactions",
-<a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a>        "total_count": 0,
-<a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a>        "+1": 0,
-<a href="#__codelineno-2-35" id="__codelineno-2-35" name="__codelineno-2-35"></a>        "-1": 0,
-<a href="#__codelineno-2-36" id="__codelineno-2-36" name="__codelineno-2-36"></a>        "laugh": 0,
-<a href="#__codelineno-2-37" id="__codelineno-2-37" name="__codelineno-2-37"></a>        "hooray": 0,
-<a href="#__codelineno-2-38" id="__codelineno-2-38" name="__codelineno-2-38"></a>        "confused": 0,
-<a href="#__codelineno-2-39" id="__codelineno-2-39" name="__codelineno-2-39"></a>        "heart": 0,
-<a href="#__codelineno-2-40" id="__codelineno-2-40" name="__codelineno-2-40"></a>        "rocket": 0,
-<a href="#__codelineno-2-41" id="__codelineno-2-41" name="__codelineno-2-41"></a>        "eyes": 0
-<a href="#__codelineno-2-42" id="__codelineno-2-42" name="__codelineno-2-42"></a>    },
-<a href="#__codelineno-2-43" id="__codelineno-2-43" name="__codelineno-2-43"></a>    "performed_via_github_app": null
-<a href="#__codelineno-2-44" id="__codelineno-2-44" name="__codelineno-2-44"></a>}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.github.com/repos/maira-io/apiserver/issues/comments/1159210585"</span><span class="p">,</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nt">"html_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/maira-io/apiserver/issues/108#issuecomment-1159210585"</span><span class="p">,</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nt">"issue_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.github.com/repos/maira-io/apiserver/issues/108"</span><span class="p">,</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1159210585</span><span class="p">,</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nt">"node_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IC_kwDOE8hIb85FGCZZ"</span><span class="p">,</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="nt">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sbansal7"</span><span class="p">,</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1282760</span><span class="p">,</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">        </span><span class="nt">"node_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MDQ6VXNlcjEyODI3NjA="</span><span class="p">,</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">        </span><span class="nt">"avatar_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatars.githubusercontent.com/u/1282760?v=4"</span><span class="p">,</span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">        </span><span class="nt">"gravatar_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.github.com/users/sbansal7"</span><span class="p">,</span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">        </span><span class="nt">"html_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://github.com/sbansal7"</span><span class="p">,</span>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">        </span><span class="nt">"followers_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.github.com/users/sbansal7/followers"</span><span class="p">,</span>
+<a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">        </span><span class="nt">"following_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.github.com/users/sbansal7/following{/other_user}"</span><span class="p">,</span>
+<a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">        </span><span class="nt">"gists_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.github.com/users/sbansal7/gists{/gist_id}"</span><span class="p">,</span>
+<a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">        </span><span class="nt">"starred_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.github.com/users/sbansal7/starred{/owner}{/repo}"</span><span class="p">,</span>
+<a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">        </span><span class="nt">"subscriptions_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.github.com/users/sbansal7/subscriptions"</span><span class="p">,</span>
+<a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">        </span><span class="nt">"organizations_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.github.com/users/sbansal7/orgs"</span><span class="p">,</span>
+<a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">        </span><span class="nt">"repos_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.github.com/users/sbansal7/repos"</span><span class="p">,</span>
+<a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">        </span><span class="nt">"events_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.github.com/users/sbansal7/events{/privacy}"</span><span class="p">,</span>
+<a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">        </span><span class="nt">"received_events_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.github.com/users/sbansal7/received_events"</span><span class="p">,</span>
+<a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span>
+<a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">        </span><span class="nt">"site_admin"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">    </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-06-17T20:35:18Z"</span><span class="p">,</span>
+<a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">    </span><span class="nt">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-06-17T20:35:18Z"</span><span class="p">,</span>
+<a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">    </span><span class="nt">"author_association"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CONTRIBUTOR"</span><span class="p">,</span>
+<a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">    </span><span class="nt">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new comment"</span><span class="p">,</span>
+<a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">    </span><span class="nt">"reactions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.github.com/repos/maira-io/apiserver/issues/comments/1159210585/reactions"</span><span class="p">,</span>
+<a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">        </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">        </span><span class="nt">"+1"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-2-35" id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="w">        </span><span class="nt">"-1"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-2-36" id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w">        </span><span class="nt">"laugh"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-2-37" id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="w">        </span><span class="nt">"hooray"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-2-38" id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="w">        </span><span class="nt">"confused"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-2-39" id="__codelineno-2-39" name="__codelineno-2-39"></a><span class="w">        </span><span class="nt">"heart"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-2-40" id="__codelineno-2-40" name="__codelineno-2-40"></a><span class="w">        </span><span class="nt">"rocket"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-2-41" id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="w">        </span><span class="nt">"eyes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<a href="#__codelineno-2-42" id="__codelineno-2-42" name="__codelineno-2-42"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-2-43" id="__codelineno-2-43" name="__codelineno-2-43"></a><span class="w">    </span><span class="nt">"performed_via_github_app"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<a href="#__codelineno-2-44" id="__codelineno-2-44" name="__codelineno-2-44"></a><span class="p">}</span>
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

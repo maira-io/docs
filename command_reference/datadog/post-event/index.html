@@ -715,6 +715,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../get-custom-metrics-hourly-usage/">
+        datadog get-custom-metrics-hourly-usage
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../get-custom-metrics/">
         datadog get-custom-metrics
       </a>
@@ -3111,25 +3116,25 @@
 <h2 id="description">Description</h2>
 <p>post events to the stream</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog post-event
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--aggregation_key &lt;aggregation_key&gt;]
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [--alert_type &lt;alert_type&gt;]
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    [--date_happened &lt;date_happened&gt;]
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    [--device &lt;device&gt;]
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    [--host &lt;host&gt;]
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>    [--priority &lt;priority&gt;]
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>    [--related_event &lt;related_event&gt;]
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>    [--source_type &lt;source_type&gt;]
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>    [--tags &lt;tags&gt;]
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>    --text &lt;text&gt;
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>    --title &lt;title&gt;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog<span class="w"> </span>post-event
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--aggregation_key<span class="w"> </span>&lt;aggregation_key&gt;<span class="o">]</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--alert_type<span class="w"> </span>&lt;alert_type&gt;<span class="o">]</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="o">[</span>--date_happened<span class="w"> </span>&lt;date_happened&gt;<span class="o">]</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="o">[</span>--device<span class="w"> </span>&lt;device&gt;<span class="o">]</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="o">[</span>--host<span class="w"> </span>&lt;host&gt;<span class="o">]</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="o">[</span>--priority<span class="w"> </span>&lt;priority&gt;<span class="o">]</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="o">[</span>--related_event<span class="w"> </span>&lt;related_event&gt;<span class="o">]</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="o">[</span>--source_type<span class="w"> </span>&lt;source_type&gt;<span class="o">]</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="o">[</span>--tags<span class="w"> </span>&lt;tags&gt;<span class="o">]</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span>--text<span class="w"> </span>&lt;text&gt;
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span>--title<span class="w"> </span>&lt;title&gt;
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
 <p>     Site where this command will be executed  <br/>
      Example:  <code>--site  "site-1"</code> <br/>
-     Default: <code>localhost:8081</code>
+     Default: <code>input.site</code>
      Attributes: <em>optional</em> <br/> </p>
 <h4 id="aggregation_key-string"><code>aggregation_key</code> - (string)</h4>
 <p>     An arbitrary string to use for aggregation  <br/>
@@ -3193,7 +3198,13 @@
      Default: <code>_None_</code>
      Attributes: <em>required</em> <br/> </p>
 <h2 id="examples">Examples</h2>
-<p>datadog post-event --aggregation_key  "aggregation_key-1" --alert_type  "error" --date_happened  1 --device  "device-1" --host  "host-1" --priority  "normal" --related_event  1 --source_type  "source_type-1" --tags  "tags-1" --text  "text-1" --title  "title-1"</p>
+<p>Input: 
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">datadog</span> <span class="n">post</span><span class="o">-</span><span class="n">event</span> <span class="o">--</span><span class="n">title</span> <span class="s2">"testTitle"</span> <span class="o">--</span><span class="n">text</span> <span class="s2">"testtext"</span>
+</code></pre></div>
+Output: 
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ID                  TITLE       DESCRIPTION PRIORITY    TAGS    OCCURED-ON  PARENT
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>6873692775913593094 testTitle   testtext    null        null    1673966882  null
+</code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>
 <table>

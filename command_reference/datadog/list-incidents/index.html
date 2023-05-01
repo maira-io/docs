@@ -715,6 +715,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../get-custom-metrics-hourly-usage/">
+        datadog get-custom-metrics-hourly-usage
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../get-custom-metrics/">
         datadog get-custom-metrics
       </a>
@@ -3031,17 +3036,17 @@
 <h2 id="description">Description</h2>
 <p>Get incident details</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog list-incidents
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [--incident &lt;incident&gt;]
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [--size &lt;size&gt;]
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    [--offset &lt;offset&gt;]
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog<span class="w"> </span>list-incidents
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>--incident<span class="w"> </span>&lt;incident&gt;<span class="o">]</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--size<span class="w"> </span>&lt;size&gt;<span class="o">]</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="o">[</span>--offset<span class="w"> </span>&lt;offset&gt;<span class="o">]</span>
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
 <p>     Site where this command will be executed  <br/>
      Example:  <code>--site  "site-1"</code> <br/>
-     Default: <code>localhost:8081</code>
+     Default: <code>input.site</code>
      Attributes: <em>optional</em> <br/> </p>
 <h4 id="incident-string"><code>incident</code> - (string)</h4>
 <p>     The UUID of the incident  <br/>
@@ -3061,7 +3066,14 @@
      Default: <code>_None_</code>
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
-<p>datadog list-incidents --incident  "incident-1" --size  1 --offset  1</p>
+<p>Input: 
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">datadog</span> <span class="nb">list</span><span class="o">-</span><span class="n">incidents</span> <span class="o">--</span><span class="n">size</span> <span class="mi">10</span>
+</code></pre></div>
+Output: 
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ID                                      TYPE        TITLE       DETECTED                            RESOLVED    CREATED-BY
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>e42d2dc1-f906-583b-8667-743f5a8852ab    incidents   hard Impact 2023-01-10T12:06:50.999600+00:00    null        0a587d98-0727-41fc-b926-027cb686ec8d
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>5411d415-7eac-5743-9eee-5fd808bb4754    incidents   hard Impact 2023-01-10T12:15:07.660862+00:00    null        0a587d98-0727-41fc-b926-027cb686ec8d
+</code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>
 <table>

@@ -715,6 +715,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../datadog/get-custom-metrics-hourly-usage/">
+        datadog get-custom-metrics-hourly-usage
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../datadog/get-custom-metrics/">
         datadog get-custom-metrics
       </a>
@@ -3021,10 +3026,10 @@
 <h2 id="description">Description</h2>
 <p>List existing services.</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>pagerduty get-service-event-rules
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    --site &lt;site&gt;
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    --id &lt;id&gt;
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    --rule_id &lt;rule_id&gt;
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>pagerduty<span class="w"> </span>get-service-event-rules
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span>--site<span class="w"> </span>&lt;site&gt;
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span>--id<span class="w"> </span>&lt;id&gt;
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span>--rule_id<span class="w"> </span>&lt;rule_id&gt;
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
@@ -3044,50 +3049,50 @@
      Attributes: <em>required</em> <br/> </p>
 <h2 id="examples">Examples</h2>
 <p>Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>!pagerduty get-service-event-rules --site "localhost:8081" --id "PKAT53N" --rule_id "778916bf-1606-472a-a29c-7b4c918c1240"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">pagerduty</span> <span class="n">get</span><span class="o">-</span><span class="n">service</span><span class="o">-</span><span class="n">event</span><span class="o">-</span><span class="n">rules</span> <span class="o">--</span><span class="nb">id</span> <span class="s2">"PKAT53N"</span> <span class="o">--</span><span class="n">rule_id</span> <span class="s2">"778916bf-1606-472a-a29c-7b4c918c1240"</span>
 </code></pre></div>
 Output: 
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ID                                      POSITION    DISABLED    SEVERITY-ACTION 
 <a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>778916bf-1606-472a-a29c-7b4c918c1240           0    false       -               
 </code></pre></div>
 Input: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>x=!pagerduty get-service-event-rules --site "localhost:8081" --id "PKAT53N" --rule_id "778916bf-1606-472a-a29c-7b4c918c1240"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">x</span><span class="o">=</span><span class="err">!</span><span class="n">pagerduty</span> <span class="n">get</span><span class="o">-</span><span class="n">service</span><span class="o">-</span><span class="n">event</span><span class="o">-</span><span class="n">rules</span> <span class="o">--</span><span class="nb">id</span> <span class="s2">"PKAT53N"</span> <span class="o">--</span><span class="n">rule_id</span> <span class="s2">"778916bf-1606-472a-a29c-7b4c918c1240"</span>
 </code></pre></div>
 Output: 
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>{
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>  "rule": {
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>    "actions": {
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>      "annotate": null,
-<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>      "automation_actions": [],
-<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>      "event_action": null,
-<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>      "extractions": [],
-<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>      "priority": null,
-<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>      "severity": null,
-<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>      "suppress": {
-<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>        "threshold_time_amount": null,
-<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a>        "threshold_time_unit": null,
-<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a>        "threshold_value": null,
-<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a>        "value": true
-<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a>      },
-<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>      "suspend": null
-<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a>    },
-<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a>    "conditions": {
-<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a>      "operator": "and",
-<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a>      "subconditions": [
-<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a>        {
-<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a>          "operator": "contains",
-<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a>          "parameters": { "path": "class", "value": "TEST" }
-<a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a>        }
-<a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a>      ]
-<a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a>    },
-<a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a>    "disabled": false,
-<a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a>    "id": "778916bf-1606-472a-a29c-7b4c918c1240",
-<a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a>    "position": 0,
-<a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a>    "self": "https://api.pagerduty.com/services/PKAT53N/rules/778916bf-1606-472a-a29c-7b4c918c1240",
-<a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a>    "time_frame": null,
-<a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a>    "variables": []
-<a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a>  }
-<a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a>}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">{</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="nt">"rule"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="nt">"actions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">      </span><span class="nt">"annotate"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">      </span><span class="nt">"automation_actions"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">      </span><span class="nt">"event_action"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">      </span><span class="nt">"extractions"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">      </span><span class="nt">"priority"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">      </span><span class="nt">"severity"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">      </span><span class="nt">"suppress"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">        </span><span class="nt">"threshold_time_amount"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">        </span><span class="nt">"threshold_time_unit"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">        </span><span class="nt">"threshold_value"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">        </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">      </span><span class="p">},</span>
+<a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">      </span><span class="nt">"suspend"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">    </span><span class="nt">"conditions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">      </span><span class="nt">"operator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"and"</span><span class="p">,</span>
+<a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">      </span><span class="nt">"subconditions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">        </span><span class="p">{</span>
+<a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">          </span><span class="nt">"operator"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contains"</span><span class="p">,</span>
+<a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">          </span><span class="nt">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"class"</span><span class="p">,</span><span class="w"> </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TEST"</span><span class="w"> </span><span class="p">}</span>
+<a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">        </span><span class="p">}</span>
+<a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">      </span><span class="p">]</span>
+<a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">    </span><span class="p">},</span>
+<a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="w">    </span><span class="nt">"disabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="w">    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"778916bf-1606-472a-a29c-7b4c918c1240"</span><span class="p">,</span>
+<a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="w">    </span><span class="nt">"position"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="w">    </span><span class="nt">"self"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.pagerduty.com/services/PKAT53N/rules/778916bf-1606-472a-a29c-7b4c918c1240"</span><span class="p">,</span>
+<a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="w">    </span><span class="nt">"time_frame"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="w">    </span><span class="nt">"variables"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="w">  </span><span class="p">}</span>
+<a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="p">}</span>
 </code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>

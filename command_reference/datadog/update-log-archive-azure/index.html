@@ -715,6 +715,11 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="../get-custom-metrics-hourly-usage/">
+        datadog get-custom-metrics-hourly-usage
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../get-custom-metrics/">
         datadog get-custom-metrics
       </a>
@@ -3121,26 +3126,26 @@
 <h2 id="description">Description</h2>
 <p>Update an existing archive</p>
 <h2 id="synopsis">Synopsis</h2>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog update-log-archive-azure
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    [--site &lt;site&gt;]
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>    [&lt;archive&gt;]
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    [--include_tags]
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>    --name &lt;name&gt;
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>    --query &lt;query&gt;
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>    [--rehydration_size &lt;rehydration_size&gt;]
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>    [--rehydration_tags &lt;rehydration_tags&gt;]
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>    --container &lt;container&gt;
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>    [--path &lt;path&gt;]
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>    [--region &lt;region&gt;]
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>    [--client_id &lt;client_id&gt;]
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>    [--tenant_id &lt;tenant_id&gt;]
-<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>    [--storage_account &lt;storage_account&gt;]
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>datadog<span class="w"> </span>update-log-archive-azure
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="o">[</span>--site<span class="w"> </span>&lt;site&gt;<span class="o">]</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">[</span>&lt;archive&gt;<span class="o">]</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">[</span>--include_tags<span class="o">]</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span>--name<span class="w"> </span>&lt;name&gt;
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span>--query<span class="w"> </span>&lt;query&gt;
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="o">[</span>--rehydration_size<span class="w"> </span>&lt;rehydration_size&gt;<span class="o">]</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="o">[</span>--rehydration_tags<span class="w"> </span>&lt;rehydration_tags&gt;<span class="o">]</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span>--container<span class="w"> </span>&lt;container&gt;
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="o">[</span>--path<span class="w"> </span>&lt;path&gt;<span class="o">]</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="o">[</span>--region<span class="w"> </span>&lt;region&gt;<span class="o">]</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="o">[</span>--client_id<span class="w"> </span>&lt;client_id&gt;<span class="o">]</span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="o">[</span>--tenant_id<span class="w"> </span>&lt;tenant_id&gt;<span class="o">]</span>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="o">[</span>--storage_account<span class="w"> </span>&lt;storage_account&gt;<span class="o">]</span>
 </code></pre></div>
 <h2 id="arguments">Arguments</h2>
 <h4 id="site-string"><code>site</code> - (string)</h4>
 <p>     Site where this command will be executed  <br/>
      Example:  <code>--site  "site-1"</code> <br/>
-     Default: <code>localhost:8081</code>
+     Default: <code>input.site</code>
      Attributes: <em>optional</em> <br/> </p>
 <h4 id="archive-string"><code>archive</code> - (string)</h4>
 <p>     Archive ID  <br/>
@@ -3203,7 +3208,13 @@
      Default: <code>_None_</code>
      Attributes: <em>optional</em> <br/> </p>
 <h2 id="examples">Examples</h2>
-<p>datadog update-log-archive-azure "archive-1" --name  "name-1" --query  "query-1" --rehydration_size  1 --rehydration_tags  "rehydration_tags-1" --container  "container-1" --path  "path-1" --region  "region-1" --client_id  "client_id-1" --tenant_id  "tenant_id-1" --storage_account  "storage_account-1"</p>
+<p>Input: 
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">!</span><span class="n">datadog</span> <span class="n">update</span><span class="o">-</span><span class="n">log</span><span class="o">-</span><span class="n">archive</span><span class="o">-</span><span class="n">azure</span>  <span class="s2">"a2zcMylnM4OCHpYusxIi3g"</span> <span class="o">--</span><span class="n">container</span> <span class="s2">"Container1"</span> <span class="o">--</span><span class="n">query</span> <span class="s2">"*"</span> <span class="o">--</span><span class="n">name</span> <span class="s2">"Nginx Archive"</span>  
+</code></pre></div>
+Output: 
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ID                      NAME          QUERY         STATE    DESTINATION-ACCOUNT DESTINATION-CONTAINER  DESTINATION-PATH                  CLIENT                TENANT
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>a2zcMylnM4OCHpYusxIi3g  Nginx Archive source:nginx  WORKING  testAcc             Container1             /container/a2zcMylnM4OCHpYusxIi3g aaaa-1a1a-1a1a-aaaa   aaaa-1a1a-1a1a-aaaa
+</code></pre></div></p>
 <h2 id="access-control">Access Control</h2>
 <p>To use this command, you need access to the following:</p>
 <table>
