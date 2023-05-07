@@ -2,2422 +2,2422 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.maira.io/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/access-control/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/confirm/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/curl/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/send-email/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/ssh/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/create-event/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/delete-collector/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/get-actions/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/get-applications/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/get-backends/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/get-business-transactions/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/get-collector/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/get-dbagent-events/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/get-events/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/get-health-rule-violations/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/get-health-rules/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/get-metrics-data/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/get-metrics/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/get-nodes/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/get-policies/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/get-server/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/appd/get-tiers/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/bitbucket/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/bitbucket/add-issue-comment/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/bitbucket/create-issue/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/bitbucket/edit-issue/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/bitbucket/get-issue/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/bitbucket/list-issues/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/bitbucket/search-issues/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/cloudwatch/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/cloudwatch/describe-alarm/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/cloudwatch/get-metric-data/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/cloudwatch/get-metric-stats/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/cloudwatch/list-metrics/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/cloudwatch/set-alarm-state/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/create/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/create/ticket/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/add-tags-host/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/aggregate-logs/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/cancel-downtime/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/create-incident-attachment/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/create-incident-team/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/create-incident/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/create-log-archive-azure/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/create-log-archive-gcs/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/create-log-archive-s3/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/create-log-index/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/create-monitor/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/create-role/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/create-rum-application/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/create-user/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/delete-incident-attachment/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/delete-incident-team/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/delete-incident/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/delete-log-archive/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/delete-monitor/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/delete-rum-application/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/delete-tags-host/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/disable-user/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-active-metrics/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-custom-metrices-hourly-usage/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-custom-metrics-hourly-usage/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-custom-metrics/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-dashboard/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-downtime/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-hosts-count/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-hosts/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-hourly-usage-attribution/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-hourly-usage-product-family/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-incident-teams/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-logs-hourly-usage/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-metric/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-monitor-details/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-monthly-usage-attribution/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-rum-application/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/grant-role-archive/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-active-tags-aggregations/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-downtimes/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-events/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-incident-attachments/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-incidents/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-log-archives/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-log-indexes/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-logs/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-metric-volumes/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-metrics/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-monitors/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-permissions/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-processes/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-roles/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-rum-applications/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-tags-config-metric/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-tags/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/list-users/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/mute-host/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/mute-monitor/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/post-event/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/query-timeseries-points/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/revoke-role-archive/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/schedule-downtime/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/search-logs/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/search-metrics/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/service-check/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/tag-configuration-cardinality-estimator/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/unmute-host/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/unmute-monitor/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/update-downtime/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/update-host-tags/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/update-incident-attachment/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/update-incident-team/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/update-incident/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/update-log-archive-azure/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/update-log-archive-gcs/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/update-log-archive-s3/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/update-log-index/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/update-metric/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/update-rum-application/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/update-user/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/dynamodb/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/dynamodb/describe-table/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/dynamodb/get-table-item/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/dynamodb/list-table-items/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/dynamodb/list-tables/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/ec2/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/ec2/delete-volume/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/ec2/get-instance/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/ec2/list-instances/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/ec2/list-volumes/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/ec2/reboot-instance/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/ec2/resize-autoscaling-group/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/ec2/terminate-instance/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/cancel-tasks/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/clear-cache/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/close-index/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/cluster-reroute/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/create-index/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/delete-by-query/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/delete-document/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/delete-index/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/get-cluster-allocation/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/get-cluster-health/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/get-cluster-settings/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/get-cluster-state/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/get-cluster-statistics/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/get-document/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/get-ilm-status/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/get-index-segments/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/get-index-settings/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/get-index-stats/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/get-index/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/get-node-stats/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/get-shards/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/get-tasks/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/ilm-explain/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/ilm-retry/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/list-cluster-allocation/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/nodes-info/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/open-index/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/pending-tasks/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/raw/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/recoveries/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/rollover/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/search/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/shrink-index/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/split-index/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/start-ilm/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/stop-ilm/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/update-by-query/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/update-cluster-settings/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/update-document/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/elasticsearch/update-index-settings/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/find/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/find/stacktrace/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/create-bucket/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/create-log-metric/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/create-object/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/delete-bucket/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/delete-instance/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/delete-log-metric/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/get-buckets/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/get-instances/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/get-log-metric/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/get-log-names/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/get-log-resources/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/get-logs/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/get-object/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/list-objects/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/run-sql/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/start-instance/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/stop-instance/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/update-instance/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gcp/update-log-metric/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/github/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/github/add-issue-comment/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/github/create-issue/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/github/edit-issue/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/github/get-issue/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/github/list-issues/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/github/search-issues/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gitlab/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gitlab/create-discussion/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gitlab/create-issue/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gitlab/edit-issue/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/gitlab/list-issues/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/icinga/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/icinga/create-check-command/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/icinga/create-host/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/icinga/create-service/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/icinga/delete-object/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/icinga/modify-check-command/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/icinga/modify-host/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/icinga/modify-service/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/icinga/query-configuration-objects/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/add-issue-comment/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/add-issue-labels/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/add-vote/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/add-watcher/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/archive-project/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/assign-issue/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/clone-issue/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/copy-attachments/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/create-custom-field/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/create-issue/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/create-project-version/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/create-project/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/create-user/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/create-workflow/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/delete-attachment/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/delete-issue-comment/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/delete-issue/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/delete-project/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/delete-user/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/delete-vote/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/delete-watcher/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/delete-workflow/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-all-workflows-transition-rule-configuration/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-all-workflows/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-attachment/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-fields/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-issue-changelogs/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-issue-comment/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-issue-labels/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-issue/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-permissions/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-project-version-issues-count/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-project-version-unresolved-issue-count/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-project-versions/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-project/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-users/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-vote/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/get-watcher/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/list-issue-types/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/list-issues/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/list-projects/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/list-recent-projects/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/merge-project-versions/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/remove-issue-labels/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/restore-deleted-project/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/update-custom-field/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/update-issue-comment/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/update-issue/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/update-project-version/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/jira/update-project/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/junos/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/junos/ping/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/junos/show-bgp-neighbor/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/junos/show-bgp-summary/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/junos/show-route/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/create-job/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/delete-configmap/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/delete-cronjob/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/delete-deployment/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/delete-hpa/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/delete-job/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/delete-pod/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/delete-service/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/delete-statefulset/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/get-configmap/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/get-cronjob/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/get-deployment/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/get-job/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/get-namespace/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/get-pod-logs/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/get-pod/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/get-service/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/get-statefulset/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/list-configmaps/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/list-cronjobs/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/list-deployments/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/list-events/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/list-jobs/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/list-namespaces/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/list-pods/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/list-services/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/list-statefulsets/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/resize-hpa/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/update-deployment/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/k8s/update-statefulset/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/add-consumer/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/alter-partition-assignments/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/alter-resource-config/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/create-consumer/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/create-partitions/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/create-topic/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/delete-topic/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/describe-topics/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/get-broker-config/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/get-broker-metrics/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/get-brokers/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/get-consumer-metrics/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/get-leader/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/get-offset/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/get-producer-metrics/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/get-topic-config/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/get-topics/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/restart-consumer/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/send-messages/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kafka/send-receive-messages/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kinesis/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kinesis/get-stream/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/kinesis/update-shard-count/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/maira/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/maira/list-resources/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/maira/list-sites/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/maira/update-resources/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/mongodb/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/mongodb/create-collection/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/mongodb/create-document/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/mongodb/delete-document/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/mongodb/drop-collection/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/mongodb/drop-database/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/mongodb/get-collection/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/mongodb/get-document/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/mongodb/list-collections/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/mongodb/list-databases/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/mongodb/update-document/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/add-team-user/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/create-event-rule/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/create-incidents/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/create-ruleset/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/create-service/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/create-team/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/create-user/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/delete-event-rule/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/delete-ruleset/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/delete-service-event-rules/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/delete-service/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/delete-team-user/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/delete-team/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/delete-user/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/get-escalation-policies/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/get-event-rule/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/get-incident-alerts/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/get-incident-logs/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/get-incident/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/get-ruleset/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/get-service-event-rules/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/get-service/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/get-team/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/get-user/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/list-event-rules/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/list-incident-alert/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/list-incidents/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/list-on-calls/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/list-priorities/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/list-ruleset/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/list-schedules/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/list-service-event-rules/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/list-services/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/list-team-users/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/list-teams/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/list-users/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/related-incidents/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/update-event-rule/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/update-incident-alert/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/update-incidents/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/update-ruleset/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/update-services/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/pagerduty/update-user/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/clean-tombstones/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/delete-series/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/get-alertmanagers/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/get-alerts/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/get-build-info/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/get-config/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/get-flags/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/get-label-values/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/get-labels/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/get-metric-metadata/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/get-rules/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/get-runtime-info/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/get-series/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/get-target-metadata/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/get-targets/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/get-tsdb-stats/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/get-wal-replay-stats/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/query-exemplars/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/query/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/range-query/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/prometheus/snapshot/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/rds/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/rds/run-sql/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/s3/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/s3/add-object/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/s3/create-bucket/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/s3/delete-object/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/s3/get-object/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/s3/list-buckets/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/s3/list-objects/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/slack/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/slack/add-users/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/slack/ask/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/slack/create-channel/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/slack/list-channels/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/slack/list-users/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/slack/send-message/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/slack/survey/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/get-alert-actions/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/get-app-templates/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/get-catalog-metrics-rollup/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/get-catalog-metrics/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/get-cluster-config/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/get-data-commands/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/get-fired-alerts/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/get-index-volume/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/get-kvstore-status/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/get-saved-eventtypes/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/get-search-job-results/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/get-search-job/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/get-workloads-status/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/list-datamodels/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/list-saved-searches/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/list-search-job/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/user/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/user/disable/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/user/reset-password/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/deployment/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/events/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/appdynamics/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/aws/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/bitbucket/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/cloudwatch/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/custom/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/datadog/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/elasticsearch/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/gcp/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/github/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/gitlab/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/icinga/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/jira/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/junos/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/kafka/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/kubernetes/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/mongodb/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/pagerduty/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/prometheus/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/slack/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/splunk/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/ssh/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/stackdriver/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/twilio-sendgrid/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/integrations/docs/zookeeper/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/language/basics/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/language/command/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/language/filter/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/language/introduction/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/language/json-comprehension/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/language/operator/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/language/projection/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/language/types/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/slack/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.maira.io/workflow/</loc>
-         <lastmod>2023-05-01</lastmod>
+         <lastmod>2023-05-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
