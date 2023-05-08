@@ -121,6 +121,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.maira.io/command_reference/auth0/</loc>
+         <lastmod>2023-05-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.maira.io/command_reference/auth0/disable-user/</loc>
+         <lastmod>2023-05-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.maira.io/command_reference/auth0/reset-password/</loc>
+         <lastmod>2023-05-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.maira.io/command_reference/bitbucket/</loc>
          <lastmod>2023-05-08</lastmod>
          <changefreq>daily</changefreq>
@@ -357,6 +372,11 @@
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/datadog/get-hourly-usage-product-family/</loc>
+         <lastmod>2023-05-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.maira.io/command_reference/datadog/get-hourly-usage/</loc>
          <lastmod>2023-05-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1586,6 +1606,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.maira.io/command_reference/kafka/get-consumer-group-offsets/</loc>
+         <lastmod>2023-05-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.maira.io/command_reference/kafka/get-consumer-metrics/</loc>
          <lastmod>2023-05-08</lastmod>
          <changefreq>daily</changefreq>
@@ -2217,6 +2242,16 @@
     </url>
     <url>
          <loc>https://docs.maira.io/command_reference/splunk/list-search-job/</loc>
+         <lastmod>2023-05-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.maira.io/command_reference/sql/</loc>
+         <lastmod>2023-05-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.maira.io/command_reference/sql/run-sql/</loc>
          <lastmod>2023-05-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
